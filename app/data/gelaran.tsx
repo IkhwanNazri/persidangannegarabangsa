@@ -1,0 +1,16 @@
+export const gelaran = [
+  "Encik",
+  "Puan",
+  "Cik",
+  "Dr.",
+  "Prof.",
+  "Prof. Madya",
+  "Datuk",
+  "Datin",
+  "Dato'",
+  "Datin Paduka",
+  "Tan Sri",
+  "Puan Sri",
+  "Tuan",
+  "Lain-lain",
+] as const;

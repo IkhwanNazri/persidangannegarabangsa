@@ -548,15 +548,16 @@ setModal({
   //   ...previousSessions,
   //   ...currentSessions,
   // ];
-      const allSessions: SessionId[] = [
-  "perasmian",
-  "sesi-1",
-  "sesi-2",
-  "sesi-3",
-  "sesi-4",
-  "sesi-5",
-  "penutup",
-];
+//       const allSessions: SessionId[] = [
+//   "perasmian",
+//   "sesi-1",
+//   "sesi-2",
+//   "sesi-3",
+//   "sesi-4",
+//   "sesi-5",
+//   "penutup",
+// ];
+const allSessions: SessionId[] = participant.sessions;
 
 
   try {

@@ -205,22 +205,23 @@ export default function Hero() {
           <div className="overflow-hidden rounded-xl border border-white/25 bg-white/[0.12] shadow-[0_20px_60px_rgba(0,0,0,.3),inset_0_1px_0_rgba(255,255,255,.3)] backdrop-blur-xl backdrop-saturate-150 ">
             <div className="h-[3px] w-full bg-linear-to-r from-[#FFD21C] via-[#E30620] to-transparent" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-4 tracking-widest">
+            <div className="grid grid-cols-3 sm:grid-cols-1 tracking-widest">
               <EventInfo
-                icon={
-                  <CalendarDaysIcon className="h-5 w-5 sm:h-6 sm:w-6" />
-                }
-                label="TARIKH"
-                value="30 November - 2 Disember 2026"
-              />
-              <EventInfo
-                icon={
-                  <CalendarDaysIcon className="h-5 w-5 sm:h-6 sm:w-6" />
-                }
-                label="HARI"
-                value="Isnin - Rabu"
-                bordered
-              />
+                    icon={
+                      <CalendarDaysIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+                    }
+                    label="TARIKH"
+                    value={
+                      <>
+                        <span>30 November - 2 Disember 2026</span>
+
+                        <span className="inline-flex w-fit bg-yellow-500 text-black text-lg font-semibold tracking-normal px-5 rounded-lg mt-1">
+                          Isnin – Rabu
+                        </span>
+                      </>
+                    }
+                  />
+              
 
               <EventInfo
                 icon={
@@ -268,7 +269,7 @@ function EventInfo({
 }: {
   icon: React.ReactNode;
   label: string;
-  value: string;
+  value: React.ReactNode;
   bordered?: boolean;
 }) {
   return (

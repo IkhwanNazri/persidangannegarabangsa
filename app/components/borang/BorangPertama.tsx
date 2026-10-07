@@ -11,12 +11,15 @@ import {
 
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
+import { QRCodeCanvas } from "qrcode.react";
+import Tentatif from "@/app/components/Tentatif";
 import {
   kategoriUtama,
   kategoriLain,
 } from "@/app/data/kategori";
 
 import { kementerian } from "@/app/data/kementerian";
+import { gelaran } from "@/app/data/gelaran";
 
 import {
   ArrowLeftIcon,
@@ -52,6 +55,12 @@ type Participant = {
   kategoriUtama: string;
   kategoriLain: string;
   kementerian: string;
+  gelaran: string;
+   kategoriLainDetail: string;
+
+  jabatanAgensi: string;
+  jawatan: string;
+  gred: string;
   sessions: SessionId[];
 };
 
@@ -97,7 +106,7 @@ const cards: RSVPCard[] = [
   {
     id: "forum",
     number: "02",
-    title: "FORUM",
+    title: "PESERTA PERSIDANGAN",
     date: "30 NOVEMBER – 2 DISEMBER 2026",
    
     sessions: [
@@ -199,6 +208,7 @@ function RSVPContent() {
 
   const [participant, setParticipant] =
     useState<Participant | null>(null);
+    // const [showTentatif, setShowTentatif] = useState(false);
 
 const [selectedSessions, setSelectedSessions] =
   useState<SessionId[]>([]);
@@ -214,7 +224,12 @@ const [loading, setLoading] = useState(false);
   phone: "",
   kategoriUtama: "",
   kategoriLain: "",
+    kategoriLainDetail: "",
   kementerian: "",
+  jabatanAgensi: "",
+  jawatan: "",
+  gred: "",
+  gelaran: "",
 });
 
   const [modal, setModal] = useState<{
@@ -342,30 +357,45 @@ function getNextDay(): DayId | null {
 ) {
   event.preventDefault();
 
-  const currentSessions = selectedSessions.filter((id) =>
-    daySessions[currentDay].includes(id)
-  );
+  // const currentSessions = selectedSessions.filter((id) =>
+  //   daySessions[currentDay].includes(id)
+  // );
 
-  if (currentSessions.length === 0) {
-    setModal({
-      open: true,
-      type: "error",
-      title: "Sesi Belum Dipilih",
-      message: "Sila pilih sekurang-kurangnya satu sesi.",
-    });
-    return;
-  }
+  // if (currentSessions.length === 0) {
+  //   setModal({
+  //     open: true,
+  //     type: "error",
+  //     title: "Sesi Belum Dipilih",
+  //     message: "Sila pilih sekurang-kurangnya satu sesi.",
+  //   });
+  //   return;
+  // }
 
   if (
-    !form.name.trim() ||
-    !form.email.trim() ||
-    !form.phone.trim() ||
-    !form.kategoriUtama.trim() ||
-    (form.kategoriUtama === "Kementerian" &&
-      !form.kementerian.trim()) ||
-    (form.kategoriUtama === "Lain-lain" &&
-      !form.kategoriLain.trim())
-  ) {
+  !form.name.trim() ||
+  !form.email.trim() ||
+  !form.phone.trim() ||
+  !form.kategoriUtama.trim() ||
+  !form.gelaran.trim() ||
+
+  (
+    form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" &&
+    (
+      !form.kementerian.trim() ||
+      !form.jabatanAgensi.trim() ||
+      !form.jawatan.trim() ||
+      !form.gred.trim()
+    )
+  ) ||
+
+  (
+    form.kategoriUtama === "Lain-lain" &&
+    (
+      !form.kategoriLain.trim() ||
+      !form.kategoriLainDetail.trim()
+    )
+  )
+){
     setModal({
       open: true,
       type: "error",
@@ -384,8 +414,23 @@ function getNextDay(): DayId | null {
     phone: form.phone.trim(),
     kategoriUtama: form.kategoriUtama,
     kategoriLain: form.kategoriLain,
+     kategoriLainDetail: form.kategoriLainDetail,
     kementerian: form.kementerian,
-    sessions: currentSessions,
+      
+  jabatanAgensi: form.jabatanAgensi,
+  jawatan: form.jawatan,
+  gred: form.gred,
+
+    gelaran: form.gelaran,
+   sessions: [
+  "perasmian",
+  "sesi-1",
+  "sesi-2",
+  "sesi-3",
+  "sesi-4",
+  "sesi-5",
+  "penutup",
+],
   };
 
   try {
@@ -402,6 +447,11 @@ function getNextDay(): DayId | null {
         phone: data.phone,
         kategoriUtama: data.kategoriUtama,
         kategoriLain: data.kategoriLain,
+        kategoriLainDetail: data.kategoriLainDetail,
+        gelaran: data.gelaran,
+        jabatanAgensi: data.jabatanAgensi,
+jawatan: data.jawatan,
+gred: data.gred,
         kementerian: data.kementerian,
         days: getDaysFromSessions(data.sessions),
         sessions: data.sessions,
@@ -411,8 +461,15 @@ function getNextDay(): DayId | null {
     const result = await response.json();
 
     if (!result.success) {
-      throw new Error(result.error || "Pendaftaran gagal.");
-    }
+  throw new Error(result.error || "Pendaftaran gagal.");
+}
+
+if (!result.emailSent) {
+  throw new Error(
+    result.emailError ||
+    "Pendaftaran berjaya tetapi email QR gagal dihantar."
+  );
+}
 
     if (result.id) {
       data.id = result.id;
@@ -424,6 +481,7 @@ function getNextDay(): DayId | null {
     );
 
     setParticipant(data);
+    // setShowTentatif(true);
 
     // TERUS KE HARI SETERUSNYA
     if (currentDay < 3) {
@@ -463,33 +521,43 @@ setModal({
 ) {
   event.preventDefault();
 
-  const currentSessions = selectedSessions.filter((id) =>
-    daySessions[currentDay].includes(id)
-  );
+  // const currentSessions = selectedSessions.filter((id) =>
+  //   daySessions[currentDay].includes(id)
+  // );
 
-  if (currentSessions.length === 0) {
-    setModal({
-      open: true,
-      type: "error",
-      title: "Sesi Belum Dipilih",
-      message: "Sila pilih sekurang-kurangnya satu sesi.",
-    });
-    return;
-  }
+  // if (currentSessions.length === 0) {
+  //   setModal({
+  //     open: true,
+  //     type: "error",
+  //     title: "Sesi Belum Dipilih",
+  //     message: "Sila pilih sekurang-kurangnya satu sesi.",
+  //   });
+  //   return;
+  // }
 
   if (!participant) return;
 
   setLoading(true);
 
   // Kekalkan sesi hari-hari sebelumnya
-  const previousSessions = participant.sessions.filter(
-    (id) => !daySessions[currentDay].includes(id)
-  );
+  // const previousSessions = participant.sessions.filter(
+  //   (id) => !daySessions[currentDay].includes(id)
+  // );
 
-  const allSessions = [
-    ...previousSessions,
-    ...currentSessions,
-  ];
+  // const allSessions = [
+  //   ...previousSessions,
+  //   ...currentSessions,
+  // ];
+      const allSessions: SessionId[] = [
+  "perasmian",
+  "sesi-1",
+  "sesi-2",
+  "sesi-3",
+  "sesi-4",
+  "sesi-5",
+  "penutup",
+];
+
 
   try {
     const response = await fetch(API_URL, {
@@ -505,7 +573,9 @@ setModal({
         phone: participant.phone,
         kategoriUtama: participant.kategoriUtama,
         kategoriLain: participant.kategoriLain,
+          kategoriLainDetail: form.kategoriLainDetail,
         kementerian: participant.kementerian,
+        gelaran: participant.gelaran,
         sessions: allSessions,
         days: getDaysFromSessions(allSessions),
       }),
@@ -583,7 +653,8 @@ setModal({
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1100px]">
-
+        
+        
         <div
           id="rsvp-form"
           className="overflow-hidden rounded-[24px] bg-white shadow-[0_30px_80px_rgba(0,0,0,.3)]"
@@ -610,7 +681,7 @@ setModal({
                   RSVP
                 </span>
 
-                <h3 className="mt-2 font-montserrat text-2xl font-semibold tracking-wider text-[#062F63]">
+                <h3 className="mt-2 font-poppins text-2xl font-semibold  text-slate-800">
                   {activeCardData.title}
                 </h3>
 
@@ -624,8 +695,36 @@ setModal({
 
             {/* EXISTING PARTICIPANT */}
             {participant ? (
+              
 
               <>
+                           <div className="mt-7   p-6 text-center ">
+            <p className="font-montserrat text-xs font-bold uppercase tracking-[0.25em] text-[#E30620]">
+              QR PESERTA
+            </p>
+
+            <h3 className="mt-2 font-poppins text-xl font-bold text-[#062F63]">
+              Pas Masuk Persidangan
+            </h3>
+
+            <div className="mt-6 flex justify-center">
+              <QRCodeCanvas
+                value={participant.id}
+                size={220}
+                level="H"
+                includeMargin
+              />
+            </div>
+
+            <p className="mt-4 font-mono text-sm font-bold tracking-widest text-[#062F63]">
+              {participant.id}
+            </p>
+          </div>
+                <div className="mt-7">
+                <Tentatif />
+              </div>
+ 
+
                 <div className="mt-7 rounded-xl border border-slate-100 bg-slate-50 p-4">
 
                   <div className="flex items-center justify-between gap-3">
@@ -696,16 +795,16 @@ setModal({
                   onSubmit={handleExistingParticipant}
                 >
 
-                  <SessionSelection
+                  {/* <SessionSelection
   selectedSessions={selectedSessions}
   onToggle={toggleSession}
   currentDay={currentDay}
-/>
-
+/> */}
+{/* 
                   <Summary
                     sessions={participant.sessions}
                     currentSessions={selectedSessions}
-                  />
+                  /> */}
 
                   <button
                     type="submit"
@@ -736,15 +835,108 @@ setModal({
                   Maklumat Peserta
                 </h4>
 
-                <p className="mt-1 font-inter text-xs leading-5 text-slate-400">
+                <p className="mt-1 font-poppins text-md leading-5 text-slate-400">
                   Maklumat ini hanya perlu diisi sekali untuk pendaftaran anda.
                 </p>
 
                 <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                  {/* gelaran */}
+                <div>
+                    <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
+                      Gelaran *
+                    </label>
+
+                    <select
+                      required
+                      value={form.gelaran}
+                      onChange={(e) =>
+                        updateForm("gelaran", e.target.value)
+                      }
+                      className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+                    >
+                      <option value="">Pilih gelaran</option>
+
+                      {gelaran.map((item) => (
+                        <option key={item} value={item}>
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  {/* nama penuh */}
+                  {/* NAMA */}
+                  <InputField
+                    icon={
+                      <UserIcon className="h-5 w-5" />
+                    }
+                    label="Nama Penuh"
+                    placeholder="Nama penuh"
+                    value={form.name}
+                    onChange={(value) =>
+                      updateForm("name", value)
+                    }
+
+                    labelClassName="font-poppins text-md font-medium text-slate-600"
+                    inputClassName="font-poppins text-md font-medium text-[#062F63]"
+                    placeholderClassName="placeholder:font-poppins placeholder:text-md placeholder:text-slate-400"
+                    iconClassName="text-[#E30620]"
+                    containerClassName="rounded-xl border-[#062F63]/20 bg-slate-50"
+                  />
+                  
+                  {/* emel*/}
+                  {/* EMAIL */}
+                  <InputField
+                    icon={
+                      <EnvelopeIcon className="h-5 w-5" />
+                    }
+                    label="Email"
+                    placeholder="nama@email.com"
+                    type="email"
+                    value={form.email}
+                    onChange={(value) =>
+                      updateForm("email", value)
+                    }
+
+                    labelClassName="font-poppins text-md font-bold text-slate-600"
+                    inputClassName="font-poppins text-md text-[#062F63]"
+                    placeholderClassName="placeholder:font-poppins placeholder:text-md placeholder:text-slate-400"
+                    iconClassName="text-[#062F63]"
+                    containerClassName="rounded-xl border-[#062F63]/20 bg-white"
+                  />
+                  {/* no tel */}
+                  {/* PHONE */}
+                  <InputField
+                    icon={
+                      <PhoneIcon className="h-5 w-5" />
+                    }
+                    label="No. Telefon"
+                    placeholder="01X-XXXXXXX"
+                    value={form.phone}
+                    onChange={(value) =>
+                      updateForm("phone", value)
+                    }
+
+                    labelClassName="font-poppins text-md font-semibold text-slate-600"
+                    inputClassName="font-poppins text-md font-medium text-[#062F63]"
+                    placeholderClassName="placeholder:font-poppins placeholder:text-md placeholder:text-slate-400"
+                    iconClassName="text-[#E30620]"
+                    containerClassName="rounded-xl border-slate-200 "
+                  />
+                  {/* kategori */}
+                  
+                  {/* jabatan/agensi */}
+                  {/* gred */}
+                  {/* Vegetarian - dropdwon */}
+                  {/* OKU -dropdown */}
+                  {/* Kategori OKU -TEXTFIELD OKU */}
+                  {/* Tentatif nk tunjuk list bila dah daftar */}
+                  
+
+
 
                   {/* KATEGORI UTAMA */}
                   <div>
-                    <label className="mb-1.5 block font-montserrat text-[8px] font-semibold text-slate-500">
+                    <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600 ">
                       Kategori Jemputan *
                     </label>
 
@@ -759,10 +951,13 @@ setModal({
                         // Reset pilihan sebelumnya
                         updateForm("kategoriLain", "");
                         updateForm("kementerian", "");
+                        updateForm("jabatanAgensi", "");
+                        updateForm("jawatan", "");
+                        updateForm("gred", "");
                       }}
-                      className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-inter text-[11px] text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+                      className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
                     >
-                      <option value="">Pilih kategori</option>
+                      <option value="">Pilih Kategori</option>
 
                       {kategoriUtama.map((item) => (
                         <option key={item} value={item}>
@@ -774,36 +969,33 @@ setModal({
 
 
                   {/* KATEGORI LAIN-LAIN */}
-                  {form.kategoriUtama === "Lain-lain" && (
-                    <div>
-                      <label className="mb-1.5 block font-montserrat text-[8px] font-semibold text-slate-500">
-                        Kategori *
-                      </label>
+                 {form.kategoriUtama === "Lain-lain" && (
+                      <div>
+                        <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-500">
+                          Kategori
+                        </label>
 
-                      <select
-                        required
-                        value={form.kategoriLain}
-                        onChange={(e) =>
-                          updateForm("kategoriLain", e.target.value)
-                        }
-                        className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-inter text-[11px] text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
-                      >
-                        <option value="">Pilih kategori</option>
+                        <select
+                          value={form.kategoriLain}
+                          onChange={(e) => updateForm("kategoriLain", e.target.value)}
+                          className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+                        >
+                          <option value="">Pilih Kategori</option>
 
-                        {kategoriLain.map((item) => (
-                          <option key={item} value={item}>
-                            {item}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  )}
+                          {kategoriLain.map((kategori) => (
+                            <option key={kategori} value={kategori}>
+                              {kategori}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
 
 
                   {/* KEMENTERIAN */}
-                  {form.kategoriUtama === "Kementerian" && (
+                  {form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" && (
                     <div>
-                      <label className="mb-1.5 block font-montserrat text-[8px] font-semibold text-slate-500">
+                      <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600 ">
                         Kementerian *
                       </label>
 
@@ -813,9 +1005,9 @@ setModal({
                         onChange={(e) =>
                           updateForm("kementerian", e.target.value)
                         }
-                        className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-inter text-[11px] text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+                        className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
                       >
-                        <option value="">Pilih kementerian</option>
+                        <option value="">Pilih Kementerian</option>
 
                         {kementerian.map((item) => (
                           <option key={item} value={item}>
@@ -825,75 +1017,94 @@ setModal({
                       </select>
                     </div>
                   )}
+                  {/* JABATAN / AGENSI */}
+                    {form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" && (
+                      <>
+                        <InputField
+                        icon={<BuildingOffice2Icon className="h-5 w-5" />}
+                        label="Jabatan / Agensi"
+                        placeholder="Contoh: Kementerian Perpaduan Negara"
+                        value={form.jabatanAgensi}
+                        onChange={(value) =>
+                          updateForm("jabatanAgensi", value)
+                        }
+                        labelClassName="font-poppins text-md font-semibold text-slate-600"
+                        inputClassName="font-poppins text-md font-medium text-[#062F63]"
+                        placeholderClassName="placeholder:font-poppins placeholder:text-md placeholder:text-slate-400"
+                        containerClassName="rounded-xl border-[#062F63]/20 "
+                        iconClassName="text-[#062F63]"
+                      />
 
-                  {/* NAMA */}
-                  <InputField
-                    icon={
-                      <UserIcon className="h-4 w-4" />
-                    }
-                    label="Nama Penuh"
-                    placeholder="Nama penuh"
-                    value={form.name}
-                    onChange={(value) =>
-                      updateForm("name", value)
-                    }
+                        {/* JAWATAN */}
+                       <InputField
+                        icon={<UserIcon className="h-5 w-5" />}
+                        label="Jawatan"
+                        placeholder="Contoh: Pembantu Tadbir"
+                        value={form.jawatan}
+                        onChange={(value) =>
+                          updateForm("jawatan", value)
+                        }
+                        labelClassName="font-poppins text-md font-semibold text-slate-600"
+                        inputClassName="font-poppins text-md font-medium text-[#062F63]"
+                        placeholderClassName="placeholder:font-poppins placeholder:text-md placeholder:text-slate-400"
+                        containerClassName="rounded-xl border-[#062F63]/20 "
+                        iconClassName="text-[#062F63]"
+                      />
 
-                    labelClassName="font-poppins text-[9px] font-bold text-[#062F63]"
-                    inputClassName="font-jakarta text-[13px] font-semibold text-[#062F63]"
-                    placeholderClassName="placeholder:font-poppins placeholder:text-[11px] placeholder:text-slate-300"
-                    iconClassName="text-[#E30620]"
-                    containerClassName="rounded-xl border-[#062F63]/20 bg-slate-50"
-                  />
+                        {/* GRED */}
+                        <InputField
+                        icon={<BuildingOffice2Icon className="h-5 w-5" />}
+                        label="Gred"
+                        placeholder="Contoh: S9 / S10 / N9"
+                        value={form.gred}
+                        onChange={(value) =>
+                          updateForm("gred", value)
+                        }
+                        labelClassName="font-poppins text-md font-semibold text-slate-600"
+                        inputClassName="font-poppins text-md font-medium text-[#062F63]"
+                        placeholderClassName="placeholder:font-poppins placeholder:text-md placeholder:text-slate-400"
+                        containerClassName="rounded-xl border-[#062F63]/20 "
+                        iconClassName="text-[#062F63]"
+                      />
+                      </>
+                    )}
+                  
 
-                  {/* EMAIL */}
-                  <InputField
-                    icon={
-                      <EnvelopeIcon className="h-4 w-4" />
-                    }
-                    label="Email"
-                    placeholder="nama@email.com"
-                    type="email"
-                    value={form.email}
-                    onChange={(value) =>
-                      updateForm("email", value)
-                    }
+                  
 
-                    labelClassName="font-poppins text-[9px] font-bold text-[#062F63]"
-                    inputClassName="font-inter text-[12px] text-[#062F63]"
-                    placeholderClassName="placeholder:font-poppins placeholder:text-[11px] placeholder:text-slate-300"
-                    iconClassName="text-[#062F63]"
-                    containerClassName="rounded-xl border-[#062F63]/20 bg-white"
-                  />
+                  
 
-                  {/* PHONE */}
-                  <InputField
-                    icon={
-                      <PhoneIcon className="h-4 w-4" />
-                    }
-                    label="No. Telefon"
-                    placeholder="01X-XXXXXXX"
-                    value={form.phone}
-                    onChange={(value) =>
-                      updateForm("phone", value)
-                    }
+                  
 
-                    labelClassName="font-montserrat text-[8px] font-semibold text-slate-500"
-                    inputClassName="font-inter text-[12px] font-medium text-[#062F63]"
-                    placeholderClassName="placeholder:font-inter placeholder:text-[11px] placeholder:text-slate-300"
-                    iconClassName="text-[#E30620]"
-                    containerClassName="rounded-xl border-slate-200 bg-slate-50"
-                  />
+
+                  {form.kategoriUtama === "Lain-lain" && form.kategoriLain && (
+                    <div className="sm:col-start-1 sm:row-start-4">
+                      <label className="mb-1.5 block font-poppins text-md font-medium text-slate-600">
+                        Maklumat Kategori
+                      </label>
+
+                      <input
+                        type="text"
+                        value={form.kategoriLainDetail}
+                        onChange={(e) =>
+                          updateForm("kategoriLainDetail", e.target.value)
+                        }
+                        placeholder="Sila nyatakan kategori"
+                        className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md font-medium text-[#062F63] outline-none placeholder:font-poppins placeholder:text-md placeholder:text-slate-400 focus:border-[#062F63] focus:bg-white"
+                      />
+                    </div>
+                  )}
 
                   {/* ORGANISATION */}
                   
 
                 </div>
 
-  <SessionSelection
+  {/* <SessionSelection
   selectedSessions={selectedSessions}
   onToggle={toggleSession}
   currentDay={currentDay}
-/>
+/> */}
 
                 <button
                   type="submit"
@@ -998,9 +1209,9 @@ setModal({
                     message: "",
                   });
 
-                  if (modal.type === "success") {
-    router.push("/?rsvpSuccess=1#rsvp");
-  }
+  //                 if (modal.type === "success") {
+  //   router.push("/?rsvpSuccess=1#rsvp");
+  // }
                 }}
                 className={`mt-7 h-[50px] w-full rounded-xl font-montserrat text-[10px] font-black uppercase tracking-wide text-white transition ${
                   modal.type === "success"
@@ -1184,7 +1395,6 @@ function InputField({
   value,
   onChange,
   type = "text",
-
   labelClassName = "",
   inputClassName = "",
   placeholderClassName = "",
@@ -1192,16 +1402,12 @@ function InputField({
   containerClassName = "",
 }: {
   icon: ReactNode;
-
   label: string;
   placeholder: string;
-
   value: string;
   onChange: (value: string) => void;
-
   type?: string;
 
-  /* CUSTOM STYLE */
   labelClassName?: string;
   inputClassName?: string;
   placeholderClassName?: string;
@@ -1209,73 +1415,73 @@ function InputField({
   containerClassName?: string;
 }) {
   return (
-    <div
-      className={`
-        flex h-[54px] items-center rounded-lg
-        border border-slate-200
-        bg-slate-50
-        px-3
-        focus-within:border-[#062F63]
-        focus-within:bg-white
-        ${containerClassName}
-      `}
-    >
+    <div className={`${containerClassName}`}>
 
-      {/* ICON */}
-      <div
+      {/* LABEL - LUAR INPUT */}
+      <label
         className={`
-          mr-3 flex h-7 w-7 shrink-0
-          items-center justify-center
-          text-slate-500
-          ${iconClassName}
+          mb-1.5
+          block
+          font-poppins
+          font-semibold
+          text-[#062F63]
+          ${labelClassName}
         `}
       >
-        {icon}
-      </div>
+        {label}
+      </label>
 
-      {/* CONTENT */}
-      <div className="min-w-0 flex-1">
-
-        {/* LABEL */}
-        <label
+      {/* INPUT */}
+      <div
+        className="
+          flex
+          h-[54px]
+          items-center
+          rounded-lg
+          border
+          border-slate-200
+          bg-slate-50
+          px-3
+          transition
+          focus-within:border-[#062F63]
+          focus-within:bg-white
+        "
+      >
+        {/* ICON */}
+        <div
           className={`
-            block
-            font-montserrat
-            text-[8px]
-            font-semibold
-            text-slate-400
-            ${labelClassName}
+            mr-3
+            flex
+            h-7
+            w-7
+            shrink-0
+            items-center
+            justify-center
+            text-slate-500
+            ${iconClassName}
           `}
         >
-          {label}
-        </label>
+          {icon}
+        </div>
 
         {/* INPUT */}
         <input
           type={type}
           required
           value={value}
-          onChange={(event) =>
-            onChange(event.target.value)
-          }
+          onChange={(event) => onChange(event.target.value)}
           placeholder={placeholder}
           className={`
-            mt-0.5
             block
             w-full
             bg-transparent
-            font-inter
-            text-[11px]
-            text-[#062F63]
+          
             outline-none
-
             placeholder:text-slate-300
-
             ${inputClassName}
             ${placeholderClassName}
           `}
         />
-
       </div>
     </div>
   );
@@ -1301,10 +1507,10 @@ function LockedField({
       <div className="mr-3 flex h-7 w-7 shrink-0 items-center justify-center text-slate-400">
         {icon}
       </div>
-
+    {/* ORI */}
       <div className="min-w-0 flex-1">
 
-        <p className="font-montserrat text-[8px] font-semibold text-slate-400">
+        <p className="font-montserrat  font-semibold text-slate-400">
           {label}
         </p>
 

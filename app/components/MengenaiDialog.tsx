@@ -88,7 +88,7 @@ export default function MengenaiDialog() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-7 max-w-[650px] font-inter text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:text-[17px]"
+              className="mt-7 max-w-[650px] font-poppins text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:text-[17px]"
             >
               Persidangan Negara Bangsa merupakan platform ilmiah yang
               menghimpunkan pemimpin, pakar, pengamal dan masyarakat untuk
@@ -130,7 +130,7 @@ export default function MengenaiDialog() {
                         {item.title}
                       </h3>
 
-                      <p className="mt-1 font-inter text-xs leading-5 text-slate-500 sm:text-sm sm:leading-6">
+                      <p className="mt-1 font-poppins text-base leading-5 text-black sm:text-base sm:leading-6">
                         {item.text}
                       </p>
                     </div>

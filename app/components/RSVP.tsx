@@ -17,7 +17,7 @@ type SessionId =
   | "sesi-5"
   | "penutup";
 
-type CardId = "forum" | "penutup";
+type CardId = "Persidangan" | "penutup";
 
 type Participant = {
   id: string;
@@ -46,25 +46,25 @@ type RSVPCard = {
 
 const cards: RSVPCard[] = [
   {
-    id: "forum",
+    id: "Persidangan",
     number: "01",
-    title: "FORUM",
+    title: "PERSIDANGAN",
     date: "30 NOVEMBER • 1 DISEMBER • 2 DISEMBER 2026",
     description:
-      "Daftar kehadiran untuk Persidangan Pembinaan Negara Bangsa selama tiga hari.",
+      "Daftar kehadiran untuk Persidangan  Negara Bangsa selama tiga hari.",
     sessions: [
       {
         id: "perasmian",
         title: "Perasmian",
         description:
-          "Majlis Perasmian Persidangan Pembinaan Negara Bangsa.",
+          "Majlis Perasmian Persidangan  Negara Bangsa.",
         icon: "building",
       },
       {
         id: "sesi-1",
         title: "Sesi 1",
         description:
-          "Perlembagaan dan Rukun Negara Teras Pembinaan Negara Bangsa.",
+          "Perlembagaan dan Rukun Negara Teras  Negara Bangsa.",
         icon: "people",
       },
       {
@@ -104,13 +104,13 @@ const cards: RSVPCard[] = [
     title: "PENUTUP",
     date: "2 DISEMBER 2026",
     description:
-      "Majlis Penutupan Persidangan Pembinaan Negara Bangsa.",
+      "Majlis Penutupan Persidangan  Negara Bangsa.",
     sessions: [
       {
         id: "penutup",
         title: "Penutup",
         description:
-          "Majlis Penutupan Persidangan Pembinaan Negara Bangsa.",
+          "Majlis Penutupan Persidangan  Negara Bangsa.",
         icon: "building",
       },
     ],

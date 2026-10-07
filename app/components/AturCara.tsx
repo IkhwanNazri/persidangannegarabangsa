@@ -13,54 +13,129 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 const schedules = {
-  "30 NOVEMBER | ISNIN": [
-    {
-      session:
-        "MAJLIS PERASMIAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
-      venue: "Dewan Perdana",
+  "MAJLIS PERASMIAN": [
+  {
+    session: "MAJLIS PERASMIAN PERSIDANGAN NEGARA BANGSA",
+    venue: "Dewan Perdana",
 
-      events: [
-        {
-          time: "8:00 - 10:00 PAGI",
-          title: "Pendaftaran Peserta & Ketibaan Jemputan",
-          description: "Semua Peserta",
-          type: "PENDAFTARAN PESERTA",
-        },
+    events: [
+      {
+        time: "10:30 Pagi ",
+        type: "MASJLIS PERASMIAN",
+        title: "Ketibaan para jemputan & dif-dif kenamaan",
+        description: "",
+      },
 
-        {
-          time: "10:00 - 10:30 PAGI",
-          title:
-            "Peserta dan jemputan mengambil tempat dalam Dewan Perdana.",
-          description: "Semua Peserta dan Jemputan",
-          type: "PERSEDIAAN PERASMIAN",
-        },
+      {
+        time: "10:45 Pagi",
+        type: "MAJLIS PERASMIAN",
+        title:
+          "Ketibaan Menteri Perpaduan Negara",
+        description: "YB Datuk Aaron Ago Dagang",
+      },
 
-        {
-          time: "11:00 PAGI - 1:00 TENGAHARI",
-          title: "Ucapan Alu-Aluan",
-          description:
-            "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
-          type: "UCAPAN ALU-ALUAN",
-        },
+      {
+        time: "11:00 Pagi",
+        type: "MAJLIS PERASMIAN",
+        title: "Keberangkatan tiba DYMM Paduka Seri Sultan Perak Darul Ridzuan, ",
+        description: "Sultan Nazrin Muizzuddin Shah",
+      },
 
-        {
-          time: "11:00 PAGI - 1:00 TENGAHARI",
-          title: "Titah Perasmian",
-          description:
-            "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
-          type: "TITAH PERASMIAN",
-        },
+      {
+        time: "11::00 Pagi",
+        type: "MAJLIS PERASMIAN",
+        title: "Nyanyian Lagu Negaraku",
+        description: "",
+      },
 
-        {
-          time: "1:00 - 2:30 PETANG",
-          title: "Rehat",
-          description: "Makan Tengah Hari & Rehat",
-          type: "REHAT",
-        },
-      ],
-    },
+      {
+        time: "11::00 Pagi",
+        type: "MAJLIS PERASMIAN",
+        title: "Bacaan Doa",
+        description: "",
+      },
 
-    {
+      {
+        time: "11::00 Pagi",
+        type: "MAJLIS PERASMIAN",
+        title: "Ucapan Alu-Aluan Menjunjung Kasih oleh YB Menteri Perpaduan Negara",
+        description: "",
+      },
+      {
+        time: "11::00 Pagi",
+        type: "TITAH PERASMIAN",
+        title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
+        description: "",
+      },
+      {
+        time: "11::00 Pagi",
+        type: "MAJLIS PERASMIAN",
+        title: "Sesi bergambar bersama DYMM Paduka Seri Sultan Perak Darul Ridzuan",
+        description: "Sultan Nazrin Muizzuddin Shah",
+      },
+
+      
+
+      
+
+      {
+        time: "1.00 Petang",
+        type: "MAJLIS PERASMIAN",
+        title: "Keberangkatan DYMM Paduka Seri Sultan Perak Darul Ridzuan,",
+        description: "Sultan Nazrin Muizzuddin Shah meninggalkan majlis",
+      },
+    ],
+  },
+],
+
+  "MAJLIS PERSIDANGAN": [
+    // {
+    //   session:
+    //     "MAJLIS PERASMIAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
+    //   venue: "Putra Hall B",
+
+    //   events: [
+    //     {
+    //       time: "8:00 - 10:00 PAGI",
+    //       title: "Pendaftaran Peserta & Ketibaan Jemputan",
+    //       description: "Semua Peserta",
+    //       type: "PENDAFTARAN PESERTA",
+    //     },
+
+    //     {
+    //       time: "10:00 - 10:30 PAGI",
+    //       title:
+    //         "Peserta dan jemputan mengambil tempat dalam Dewan Perdana.",
+    //       description: "Semua Peserta dan Jemputan",
+    //       type: "PERSEDIAAN PERASMIAN",
+    //     },
+
+    //     {
+    //       time: "11:00 PAGI - 1:00 TENGAHARI",
+    //       title: "Ucapan Alu-Aluan",
+    //       description:
+    //         "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
+    //       type: "UCAPAN ALU-ALUAN",
+    //     },
+
+    //     {
+    //       time: "11:00 PAGI - 1:00 TENGAHARI",
+    //       title: "Titah Perasmian",
+    //       description:
+    //         "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
+    //       type: "TITAH PERASMIAN",
+    //     },
+
+    //     {
+    //       time: "1:00 - 2:30 PETANG",
+    //       title: "Rehat",
+    //       description: "Makan Tengah Hari & Rehat",
+    //       type: "REHAT",
+    //     },
+    //   ],
+    // },
+  
+{
       session:
         "SESI 1: PERLEMBAGAAN DAN RUKUN NEGARA TERAS PEMBINAAN NEGARA BANGSA",
       venue: "Putra Hall B",
@@ -106,9 +181,11 @@ const schedules = {
         },
       ],
     },
-  ],
 
-  "1 DISEMBER | SELASA": [
+
+
+
+
   {
     session:
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
@@ -215,10 +292,8 @@ const schedules = {
       },
     ],
   },
-],
 
-"2 DISEMBER | RABU": [
-  {
+{
     session:
       "SESI 4: POLITIK DAN CABARAN DALAM MEMBINA NEGARA BANGSA",
     venue: "Putra Hall B",
@@ -304,22 +379,90 @@ const schedules = {
     ],
   },
 
+
+],
+
+"MAJLIS PENUTUP": [
   {
-    session:
-      "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP",
+    session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP",
     venue: "Dewan Perdana",
+
     events: [
       {
-        time: "3:00 – 4:30 ptg",
-        type: "Majlis Penutup",
-        title:
-          "Rumusan dan Majlis Penutup oleh YAB Perdana Menteri",
+        time: "2:30 PETANG",
+        type: "KETIBAAN",
+        title: "Ketibaan para jemputan & dif-dif kenamaan",
         description: "",
       },
+
       {
-        time: "4:30 ptg",
-        type: "Penutup Hari",
-        title: "Minum Petang & Bersurai",
+        time: "2:45 PETANG",
+        type: "KETIBAAN",
+        title:
+          "Ketibaan YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
+        description: "",
+      },
+
+      {
+        time: "2:50 PETANG",
+        type: "KETIBAAN",
+        title: "Ketibaan YAB Perdana Menteri",
+        description: "",
+      },
+
+      {
+        time: "3:00 PETANG",
+        type: "MAJLIS PENUTUP",
+        title: "Nyanyian Lagu Negaraku",
+        description: "",
+      },
+
+      {
+        time: "3:05 PETANG",
+        type: "MAJLIS PENUTUP",
+        title: "Lafaz Ikrar Rukun Negara",
+        description: "",
+      },
+
+      {
+        time: "3:10 PETANG",
+        type: "MAJLIS PENUTUP",
+        title: "Bacaan Doa",
+        description: "",
+      },
+
+      {
+        time: "3:15 PETANG",
+        type: "UCAPAN",
+        title: "Ucapan Alu-Aluan oleh YB Menteri Perpaduan Negara",
+        description: "YB Datuk Aaron Ago Dagang",
+      },
+
+      {
+        time: "3:30 PETANG",
+        type: "RUMUSAN & MAJLIS PENUTUP",
+        title: "Rumusan Persidangan dan Majlis Penutup",
+        description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
+      },
+
+      {
+        time: "4:00 PETANG",
+        type: "SESI BERGAMBAR",
+        title: "Sesi bergambar bersama YAB Perdana Menteri",
+        description: "",
+      },
+
+      {
+        time: "4:15 PETANG",
+        type: "JAMUAN",
+        title: "Sesi Minum Petang bersama YAB Perdana Menteri",
+        description: "",
+      },
+
+      {
+        time: "4:30 PETANG",
+        type: "BERSURAI",
+        title: "YAB Perdana Menteri meninggalkan majlis",
         description: "",
       },
     ],
@@ -328,12 +471,42 @@ const schedules = {
 };
 
 type Day = keyof typeof schedules;
+const dayInfo: Record<
+  Day,
+  {
+    name: string;
+    date: string;
+    masa: string;
+    tempat: string;
+  }
+> = {
+  "MAJLIS PERASMIAN": {
+    name: "MAJLIS PERASMIAN",
+    date: "30 November 2026",
+    masa: "11:00 Pagi - 1:00 Petang",
+    tempat:"Dewan Perdana",
+  },
+
+  "MAJLIS PERSIDANGAN": {
+    name: "MAJLIS PERSIDANGAN",
+    date: "1 Disember 2026",
+    masa: "8:00 Pagi - 4:30 Petang",
+    tempat:"Putra Hall B",
+  },
+
+  "MAJLIS PENUTUP": {
+    name: "MAJLIS PENUTUP",
+    date: "2 Disember 2026",
+    masa: "2:30 Petang - 4:30 Petang",
+    tempat:"Dewan Perdana",
+  },
+};
 
 
 
 export default function AturCara() {
   const [activeDay, setActiveDay] =
-    useState<Day>("30 NOVEMBER | ISNIN");
+    useState<Day>("MAJLIS PERASMIAN");
 
   /*
    * Simpan sesi yang sedang dibuka.
@@ -491,35 +664,47 @@ export default function AturCara() {
             transition={{ duration: 0.4 }}
             className="lg:sticky lg:top-24 lg:h-fit"
           >
-            <div className="relative overflow-hidden rounded-[28px] bg-[#062F63] p-7 text-white shadow-[0_20px_60px_rgba(6,47,99,.15)] sm:p-8">
+            <div className="relative overflow-hidden rounded-2xl bg-[#062F63] p-7 px-12 text-white shadow-[0_20px_60px_rgba(6,47,99,.15)] sm:p-2">
 
               <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full border-[18px] border-[#FFD21C]/20" />
 
               <div className="absolute -bottom-12 -left-12 h-32 w-32 rounded-full border-[20px] border-[#E30620]/10" />
 
-              <CalendarDaysIcon className="relative h-10 w-10 text-white" />
+              
 
-              <p className="relative mt-8 font-poppins text-[10px] font-semibold uppercase tracking-[.3em] text-white">
-                Tarikh
-              </p>
+              
 
-              <h3 className="relative mt-2 font-poppins text-4xl font-bold wrap-break-word">
-                {activeDay}
+              <h3 className="relative mt-2 font-poppins text-3xl font-bold leading-[1.05] break-normal sm:text-4xl`">
+                {dayInfo[activeDay].name}
               </h3>
 
               <div className="mt-6 h-px bg-white/15" />
+              
+              <div className="mt-5 flex items-start gap-3">
+                <CalendarDaysIcon className="mt-0.5 h-5 w-5 shrink-0 text-white" />
+
+                <div>
+                  <p className="font-poppins text-sm font-semibold uppercase tracking-wider text-white">
+                    Tarikh
+                  </p>
+
+                  <p className="mt-1 font-poppins text-sm font-medium tracking-wider">
+                    {dayInfo[activeDay].date}
+                  </p>
+                </div>
+              </div>
 
               {/* LOCATION */}
               <div className="mt-5 flex items-start gap-3">
                 <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-white" />
 
                 <div>
-                  <p className="font-poppins text-[9px] font-semibold uppercase tracking-wider text-white">
+                  <p className="font-poppins text-sm font-semibold uppercase tracking-wider text-white">
                     Lokasi
                   </p>
 
                   <p className="mt-1 font-poppins text-sm font-medium tracking-wider">
-                    Pusat Konvensyen Antarabangsa Putrajaya (PICC)
+                   {dayInfo[activeDay].tempat}
                   </p>
                 </div>
               </div>
@@ -529,12 +714,12 @@ export default function AturCara() {
                 <ClockIcon className="mt-0.5 h-5 w-5 shrink-0 text-white" />
 
                 <div>
-                  <p className="font-poppins text-[9px] font-semibold uppercase tracking-wider text-white">
+                  <p className="font-poppins text-sm font-semibold uppercase tracking-wider text-white">
                     Masa
                   </p>
 
-                  <p className="mt-1 font-poppins text-sm font-semibold">
-                    8:00 Pagi – 4:30 Petang
+                  <p className="mt-1 font-poppins text-sm font-medium whitespace-nowrap">
+                   {dayInfo[activeDay].masa}
                   </p>
                 </div>
               </div>

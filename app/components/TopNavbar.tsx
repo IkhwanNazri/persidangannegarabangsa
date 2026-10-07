@@ -28,11 +28,7 @@ const navItems = [
     href: "#aturcara",
     icon: CalendarDaysIcon,
   },
-  {
-    label: "RSVP",
-    href: "#rsvp",
-    icon: ClipboardDocumentCheckIcon,
-  },
+ 
   {
     label: "Panel",
     href: "#panel",
@@ -42,6 +38,11 @@ const navItems = [
     label: "Rakan Strategik",
     href: "#rakan",
     icon: SwatchIcon,
+  },
+   {
+    label: "RSVP",
+    href: "#rsvp",
+    icon: ClipboardDocumentCheckIcon,
   },
 ];
 
@@ -98,7 +99,7 @@ export default function Navbar() {
               href="#rsvp"
               className="rounded-xl bg-[#FFD21C] px-5 py-3 font-montserrat text-sm tracking-wider font-extrabold uppercase text-[#062F63] transition hover:bg-white"
             >
-              Daftar Sekarang
+              Pra Pendaftaran
             </a>
 
           </nav>

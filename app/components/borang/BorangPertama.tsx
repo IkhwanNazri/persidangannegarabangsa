@@ -466,8 +466,8 @@ gred: data.gred,
 
 if (!result.emailSent) {
   throw new Error(
-    result.emailError ||
-    "Pendaftaran berjaya tetapi email QR gagal dihantar."
+    "EMAIL ERROR: " +
+    (result.emailError || "Tiada error diterima daripada Apps Script.")
   );
 }
 

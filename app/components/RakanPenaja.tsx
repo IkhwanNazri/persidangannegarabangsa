@@ -6,31 +6,31 @@ import { motion } from "motion/react";
 const sponsors = [
   {
     name: "Kementerian Perpaduan Negara",
-    image: "/images/logo.png",
+    image: "/images/logo.PNG",
   },
   {
     name: "Chevening Alumni Malaysia",
-    image: "/images/logo.png",
+    image: "/images/logo.PNG",
   },
   {
     name: "Koperasi Serbaguna Kebangsaan Berhad",
-    image: "/images/logo.png",
+    image: "/images/logo.PNG",
   },
   {
     name: "Perintis Akal",
-    image: "/images/logo.png",
+    image: "/images/logo.PNG",
   },
   {
     name: "Intramiles",
-    image: "/images/logo.png",
+    image: "/images/logo.PNG",
   },
   {
     name: "HEYA Inc.",
-    image: "/images/logo.png",
+    image: "/images/logo.PNG",
   },
   {
     name: "British High Commission Kuala Lumpur",
-    image: "/images/logo.png",
+    image: "/images/logo.PNG",
   },
 ];
 

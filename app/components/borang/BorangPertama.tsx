@@ -57,6 +57,8 @@ type Participant = {
   kategoriLain: string;
   kementerian: string;
   gelaran: string;
+  oku: string;
+kategoriOku: string;
    kategoriLainDetail: string;
 
   jabatanAgensi: string;
@@ -233,6 +235,8 @@ const [loading, setLoading] = useState(false);
   gred: "",
   gelaran: "",
   vegeterian: "",
+  oku: "",
+kategoriOku: "",
 });
 
   const [modal, setModal] = useState<{
@@ -381,6 +385,8 @@ function getNextDay(): DayId | null {
   !form.kategoriUtama.trim() ||
   !form.gelaran.trim() ||
   !form.vegeterian.trim() ||
+  !form.oku.trim() ||
+(form.oku === "Ya" && !form.kategoriOku.trim()) ||
 
   (
     form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" &&
@@ -420,6 +426,8 @@ function getNextDay(): DayId | null {
     kategoriLain: form.kategoriLain,
      kategoriLainDetail: form.kategoriLainDetail,
     kementerian: form.kementerian,
+    oku: form.oku,
+kategoriOku: form.kategoriOku,
     
       
   jabatanAgensi: form.jabatanAgensi,
@@ -458,6 +466,8 @@ function getNextDay(): DayId | null {
 jawatan: data.jawatan,
 gred: data.gred,
 vegeterian: data.vegeterian,
+oku: data.oku,
+kategoriOku: data.kategoriOku,
         kementerian: data.kementerian,
         days: getDaysFromSessions(data.sessions),
         sessions: data.sessions,
@@ -1128,8 +1138,51 @@ setModal({
                     </select>
                   </div>
                   
+{/* OKU */}
+<div>
+  <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
+    OKU *
+  </label>
 
-                </div>
+  <select
+    required
+    value={form.oku}
+    onChange={(e) => {
+      const value = e.target.value;
+      updateForm("oku", value);
+
+      if (value !== "Ya") {
+        updateForm("kategoriOku", "");
+      }
+    }}
+    className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+  >
+    <option value="">Pilih</option>
+    <option value="Ya">Ya</option>
+    <option value="Tidak">Tidak</option>
+  </select>
+</div>
+
+{/* KATEGORI OKU - PAPAR JIKA YA */}
+{form.oku === "Ya" && (
+  <div>
+    <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
+      Kategori OKU *
+    </label>
+
+    <input
+      type="text"
+      required
+      value={form.kategoriOku}
+      onChange={(e) =>
+        updateForm("kategoriOku", e.target.value)
+      }
+      placeholder="Nyatakan kategori OKU"
+      className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+    />
+  </div>
+)}
+ </div>
 
   {/* <SessionSelection
   selectedSessions={selectedSessions}

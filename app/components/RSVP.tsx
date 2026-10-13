@@ -245,11 +245,13 @@ export default function RSVP() {
                   </p>
 
                   <Link
-                    href={
-  card.id === "penutup"
-    ? "/penutup"
-    : `/borang/borangpertama?type=${card.id}`
-}
+  href={
+    card.id === "perasmian"
+      ? "/perasmian"
+      : card.id === "penutup"
+        ? "/penutup"
+        : `/borang/borangpertama?type=${card.id}`
+  }
                     className={`mt-auto flex h-[48px] w-full items-center justify-center gap-3 rounded-xl font-montserrat text-md font-bold tracking-wide text-white transition-all duration-300 ${
                       registered
                         ? "bg-[#062F63] hover:bg-[#E30620]"

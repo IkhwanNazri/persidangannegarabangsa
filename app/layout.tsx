@@ -39,10 +39,15 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+
 export const metadata: Metadata = {
   title: "Persidangan Negara Bangsa",
   description: "Persidangan Negara Bangsa 2026",
+  icons: {
+    icon: "/icon.png",
+  },
 };
+
 
 export default function RootLayout({
   children,

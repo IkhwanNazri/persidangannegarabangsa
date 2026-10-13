@@ -224,7 +224,7 @@ export default function RSVP() {
               >
                 <div className="h-[5px] bg-gradient-to-r from-[#FFD21C] via-[#E30620] to-[#062F63]" />
 
-                <div className="flex min-h-[370px] flex-col p-4 mb-6 sm:p-2">
+                <div className="flex min-h-[370px] flex-col p-5 mb-6 sm:p-2">
                   <div className="font-jakarta text-[46px] font-black leading-none tracking-[-3px] text-slate-200">
                     {card.number}
                   </div>

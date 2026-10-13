@@ -53,7 +53,7 @@ export default function RakanPenaja() {
          
 
           <h2 className="mt-3 font-montserrat text-4xl font-bold uppercase tracking-[-1.5px] text-[#062F63] sm:text-5xl lg:text-6xl">
-            Rakan <span className="text-[#E30620]">&amp; Strategik</span>
+            Rakan <span className="text-[#E30620]"> Strategik</span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl font-poppins text-sm leading-7 text-slate-500">

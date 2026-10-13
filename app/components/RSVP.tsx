@@ -17,7 +17,7 @@ type SessionId =
   | "sesi-5"
   | "penutup";
 
-type CardId = "Persidangan" | "penutup";
+type CardId = "perasmian" | "Persidangan" | "penutup";
 
 type Participant = {
   id: string;
@@ -45,9 +45,27 @@ type RSVPCard = {
 };
 
 const cards: RSVPCard[] = [
+
+  {
+    id: "perasmian",
+    number: "01",
+    title: "PERASMIAN",
+    date: "30 NOVEMBER 2026",
+    description:
+      "Majlis Perasmian Persidangan  Negara Bangsa.",
+    sessions: [
+      {
+        id: "perasmian",
+        title: "Perasmian ",
+        description:
+          "Majlis Perasmian Persidangan  Negara Bangsa.",
+        icon: "building",
+      },
+    ],
+  },
   {
     id: "Persidangan",
-    number: "01",
+    number: "02",
     title: "PERSIDANGAN",
     date: "30 NOVEMBER • 1 DISEMBER • 2 DISEMBER 2026",
     description:
@@ -100,7 +118,7 @@ const cards: RSVPCard[] = [
 
   {
     id: "penutup",
-    number: "02",
+    number: "03",
     title: "PENUTUP",
     date: "2 DISEMBER 2026",
     description:
@@ -115,6 +133,7 @@ const cards: RSVPCard[] = [
       },
     ],
   },
+  
 ];
 
 export default function RSVP() {
@@ -193,7 +212,7 @@ export default function RSVP() {
         {/* 3 CARD KEKAL DI SINI */}
         <div
           id="rsvp-cards"
-          className="grid grid-cols-1 gap-5 md:grid-cols-2"
+          className="grid grid-cols-1 gap-3 md:grid-cols-3 p-3 px-10 "
         >
           {cards.map((card) => {
             const registered = isCardRegistered(card);
@@ -205,7 +224,7 @@ export default function RSVP() {
               >
                 <div className="h-[5px] bg-gradient-to-r from-[#FFD21C] via-[#E30620] to-[#062F63]" />
 
-                <div className="flex min-h-[370px] flex-col p-7 sm:p-8">
+                <div className="flex min-h-[370px] flex-col p-4 mb-6 sm:p-2">
                   <div className="font-jakarta text-[46px] font-black leading-none tracking-[-3px] text-slate-200">
                     {card.number}
                   </div>
@@ -214,12 +233,12 @@ export default function RSVP() {
                     {card.title}
                   </h3>
 
-                  <div className="mt-3 flex items-center gap-2">
-                    <span className="h-1 w-1 rounded-full bg-[#E30620]" />
-                    <p className="font-montserrat text-sm font-bold leading-5 tracking-[.08em] text-[#E30620]">
-                      {card.date}
-                    </p>
-                  </div>
+                 <div className="mt-3 flex items-center gap-2">
+  
+  <p className="whitespace-nowrap font-montserrat text-[13px] font-bold leading-5 tracking-normal text-[#E30620]">
+    {card.date}
+  </p>
+</div>
 
                   <p className="mt-5 min-h-[72px] font-poppins text-sm leading-5 text-[#64748B]">
                     {card.description}
@@ -240,6 +259,7 @@ export default function RSVP() {
                     {registered ? "TAMBAH / LIHAT SESI" : `DAFTAR ${card.title}`}
                     <ArrowRightIcon className="h-4 w-4" />
                   </Link>
+                  
 
                   <div className="mt-4 flex items-center justify-center gap-1.5">
                     <CheckCircleIcon

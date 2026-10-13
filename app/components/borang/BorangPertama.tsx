@@ -20,6 +20,7 @@ import {
 
 import { kementerian } from "@/app/data/kementerian";
 import { gelaran } from "@/app/data/gelaran";
+import { vegeterian } from "@/app/data/vegeterian";
 
 import {
   ArrowLeftIcon,
@@ -61,6 +62,7 @@ type Participant = {
   jabatanAgensi: string;
   jawatan: string;
   gred: string;
+  vegeterian: string;
   sessions: SessionId[];
 };
 
@@ -230,6 +232,7 @@ const [loading, setLoading] = useState(false);
   jawatan: "",
   gred: "",
   gelaran: "",
+  vegeterian: "",
 });
 
   const [modal, setModal] = useState<{
@@ -377,6 +380,7 @@ function getNextDay(): DayId | null {
   !form.phone.trim() ||
   !form.kategoriUtama.trim() ||
   !form.gelaran.trim() ||
+  !form.vegeterian.trim() ||
 
   (
     form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" &&
@@ -416,11 +420,12 @@ function getNextDay(): DayId | null {
     kategoriLain: form.kategoriLain,
      kategoriLainDetail: form.kategoriLainDetail,
     kementerian: form.kementerian,
+    
       
   jabatanAgensi: form.jabatanAgensi,
   jawatan: form.jawatan,
   gred: form.gred,
-
+    vegeterian: form.vegeterian,
     gelaran: form.gelaran,
    sessions: [
   "perasmian",
@@ -452,6 +457,7 @@ function getNextDay(): DayId | null {
         jabatanAgensi: data.jabatanAgensi,
 jawatan: data.jawatan,
 gred: data.gred,
+vegeterian: data.vegeterian,
         kementerian: data.kementerian,
         days: getDaysFromSessions(data.sessions),
         sessions: data.sessions,
@@ -577,6 +583,7 @@ const allSessions: SessionId[] = participant.sessions;
           kategoriLainDetail: form.kategoriLainDetail,
         kementerian: participant.kementerian,
         gelaran: participant.gelaran,
+        vegeterian: participant.vegeterian,
         sessions: allSessions,
         days: getDaysFromSessions(allSessions),
       }),
@@ -842,7 +849,7 @@ setModal({
 
                 <div className="mt-5 grid gap-2 sm:grid-cols-2">
                   {/* gelaran */}
-                <div>
+                  <div>
                     <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
                       Gelaran *
                     </label>
@@ -1096,7 +1103,30 @@ setModal({
                     </div>
                   )}
 
-                  {/* ORGANISATION */}
+                  {/* vegeterian */}
+
+                     <div>
+                    <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
+                      Vegeterian *
+                    </label>
+
+                    <select
+                      required
+                      value={form.vegeterian}
+                      onChange={(e) =>
+                        updateForm("vegeterian", e.target.value)
+                      }
+                      className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+                    >
+                      <option value="">Pilih Vegeterian</option>
+
+                      {vegeterian.map((item) => (
+                        <option key={item} value={item}>
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                   
 
                 </div>

@@ -45,7 +45,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto min-h-screen w-full max-w-[1600px]">
+      <div className="relative mx-auto min-h-screen w-full max-w-[1600px] overflow-hidden">
         {/* <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -59,7 +59,13 @@ export default function Hero() {
           </span>
         </motion.div> */}
 
-        <div className="absolute left-6 top-[120px] z-20 max-w-[720px] sm:left-10 sm:top-[145px] md:top-[165px] lg:left-16 lg:top-[180px] xl:left-20">
+        <div className="  relative z-20
+            px-5 pt-24 pb-8 mt-8
+            sm:px-10 sm:pt-28
+            lg:absolute lg:left-16 lg:top-[180px]
+            lg:px-0 lg:pt-0 lg:pb-0
+            xl:left-20
+            max-w-[720px]">
           <motion.h1
             initial="hidden"
             animate="show"
@@ -192,57 +198,129 @@ export default function Hero() {
           
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 1.1,
-            ease: "easeOut",
-          }}
-          className="absolute bottom-7 left-5 right-5 z-10 sm:bottom-8 sm:left-10 sm:right-10 lg:bottom-10 lg:left-16 lg:right-16 xl:left-20 xl:right-20"
-        >
-          <div className="overflow-hidden rounded-xl border border-white/25 bg-white/[0.12] shadow-[0_20px_60px_rgba(0,0,0,.3),inset_0_1px_0_rgba(255,255,255,.3)] backdrop-blur-xl backdrop-saturate-150 ">
-            <div className="h-[3px] w-full bg-linear-to-r from-[#FFD21C] via-[#E30620] to-transparent" />
+       <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.8,
+    delay: 1.1,
+    ease: "easeOut",
+  }}
+  className="absolute bottom-7 left-5 right-5 z-10 sm:bottom-10 md:bottom-10 sm:left-10 sm:right-10 lg:bottom-10 lg:left-16 lg:right-16 xl:left-20 xl:right-20"
+>
+  {/* MOBILE: KAD TARIKH, MASA DAN LOKASI */}
+  <div className="flex flex-col gap-3 lg:hidden font-poppins">
+    {/* TARIKH */}
+    <div className="relative flex min-h-[122px] overflow-hidden rounded-2xl bg-slate-50 text-[#071B45] shadow-lg">
+      <div className="flex w-[90px] shrink-0 items-center justify-center bg-amber-500 text-white ">
+        <CalendarDaysIcon className="h-10 w-10" />
+      </div>
 
-            <div className="grid grid-cols-3 sm:grid-cols-1 tracking-widest">
-              <EventInfo
-                    icon={
-                      <CalendarDaysIcon className="h-5 w-5 sm:h-6 sm:w-6" />
-                    }
-                    label="TARIKH"
-                    value={
-                      <>
-                        <span>30 November - 2 Disember 2026</span>
+      <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
+        <span className="mb-2 text-md  font-bold tracking-[0.3em] text-slate-500">
+          TARIKH
+        </span>
 
-                        <span className="inline-flex w-fit bg-yellow-500 text-black text-lg font-semibold tracking-normal px-5 rounded-lg mt-1">
-                          Isnin – Rabu
-                        </span>
-                      </>
-                    }
-                  />
-              
+        <span className="text-base font-extrabold leading-5 sm:text-lg">
+          30 November –
+          <br />
+          2 Disember 2026
+        </span>
 
-              <EventInfo
-                icon={
-                  <ClockIcon className="h-5 w-5 sm:h-6 sm:w-6" />
-                }
-                label="MASA"
-                value="8:00 Pagi – 4:30 Petang"
-                bordered
-              />
+        <span className="mt-2 w-fit rounded-lg bg-[#FFD21C] px-3 py-1 text-xs font-bold text-[#062F63]">
+          Isnin – Rabu
+        </span>
+      </div>
 
-              <EventInfo
-                icon={
-                  <MapPinIcon className="h-5 w-5 sm:h-6 sm:w-6 " />
-                }
-                label="LOKASI"
-                value="Pusat Konvensyen Antarabangsa Putrajaya (PICC)"
-                bordered
-              />
-            </div>
-          </div>
-        </motion.div>
+      <CalendarDaysIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/70" />
+    </div>
+
+    {/* MASA */}
+    <div className="relative flex min-h-[108px] overflow-hidden rounded-2xl bg-slate-50 text-[#071B45] shadow-lg">
+      <div className="flex w-[90px] shrink-0 items-center justify-center bg-gradient-to-br from-sky-500 to-blue-900 text-white">
+        <ClockIcon className="h-10 w-10" />
+      </div>
+
+      <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
+        <span className="mb-2 text-[10px] font-extrabold tracking-[0.3em] text-slate-500">
+          MASA
+        </span>
+
+        <span className="text-base font-extrabold leading-5 sm:text-lg">
+          8:00 Pagi –
+          <br />
+          4:30 Petang
+        </span>
+      </div>
+
+      <ClockIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/70" />
+    </div>
+
+    {/* LOKASI */}
+    <div className="relative flex min-h-[114px] overflow-hidden rounded-2xl bg-slate-50 text-[#071B45] shadow-lg">
+      <div className="flex w-[90px] shrink-0 items-center justify-center bg-gradient-to-br from-yellow-300 to-yellow-600 text-white">
+        <MapPinIcon className="h-10 w-10" />
+      </div>
+
+      <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
+        <span className="mb-2 text-[10px] font-extrabold tracking-[0.3em] text-slate-500">
+          LOKASI
+        </span>
+
+        <span className="text-sm font-extrabold leading-5 sm:text-base">
+          Pusat Konvensyen
+          <br />
+          Antarabangsa Putrajaya
+          <br />
+          (PICC)
+        </span>
+      </div>
+
+      <MapPinIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/70" />
+    </div>
+  </div>
+
+  {/* DESKTOP: KEKALKAN DESIGN ASAL */}
+  <div className="hidden overflow-hidden rounded-xl border border-white/25 bg-white/[0.12] shadow-[0_20px_60px_rgba(0,0,0,.3),inset_0_1px_0_rgba(255,255,255,.3)] backdrop-blur-xl backdrop-saturate-150 lg:block">
+    <div className="h-[3px] w-full bg-gradient-to-r from-[#FFD21C] via-[#E30620] to-transparent" />
+
+    <div className="grid grid-cols-3 tracking-widest">
+      <EventInfo
+        icon={
+          <CalendarDaysIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+        }
+        label="TARIKH"
+        value={
+          <>
+            <span>30 November - 2 Disember 2026</span>
+
+            <span className="mt-1 inline-flex w-fit rounded-lg bg-yellow-500 px-5 text-lg font-semibold tracking-normal text-black">
+              Isnin – Rabu
+            </span>
+          </>
+        }
+      />
+
+      <EventInfo
+        icon={
+          <ClockIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+        }
+        label="MASA"
+        value="8:00 Pagi – 4:30 Petang"
+        bordered
+      />
+
+      <EventInfo
+        icon={
+          <MapPinIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+        }
+        label="LOKASI"
+        value="Pusat Konvensyen Antarabangsa Putrajaya (PICC)"
+        bordered
+      />
+    </div>
+  </div>
+</motion.div>
 
         
 

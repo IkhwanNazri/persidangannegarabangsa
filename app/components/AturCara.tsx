@@ -63,15 +63,15 @@ const schedules = {
       },
       {
         time: "11::00 Pagi",
-        type: "TITAH PERASMIAN",
+        type: "UCAPTAMA DIRAJA DAN TITAH PERASMIAN",
         title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
-        description: "",
+        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM Paduka Seri Sultan Perak Darul Ridzuan",
       },
       {
         time: "11::00 Pagi",
         type: "MAJLIS PERASMIAN",
         title: "Sesi bergambar bersama DYMM Paduka Seri Sultan Perak Darul Ridzuan",
-        description: "Sultan Nazrin Muizzuddin Shah",
+        description: "",
       },
 
       
@@ -82,7 +82,7 @@ const schedules = {
         time: "1.00 Petang",
         type: "MAJLIS PERASMIAN",
         title: "Keberangkatan DYMM Paduka Seri Sultan Perak Darul Ridzuan,",
-        description: "Sultan Nazrin Muizzuddin Shah meninggalkan majlis",
+        description: "",
       },
     ],
   },

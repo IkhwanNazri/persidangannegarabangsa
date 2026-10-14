@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { motion } from "motion/react";
 
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#062F63]">
@@ -59,13 +60,11 @@ export default function Hero() {
           </span>
         </motion.div> */}
 
-        <div className="  relative z-20
-            px-5 pt-24 pb-8 mt-8
-            sm:px-10 sm:pt-28
-            lg:absolute lg:left-16 lg:top-[180px]
-            lg:px-0 lg:pt-0 lg:pb-0
-            xl:left-20
-            max-w-[720px]">
+        <div className="relative z-20 mt-0 max-w-[720px] px-5 pt-15 pb-4
+  sm:px-10 sm:pt-28
+  lg:absolute lg:left-16 lg:top-[180px]
+  lg:px-0 lg:pt-0 lg:pb-0
+  xl:left-20">
           <motion.h1
             initial="hidden"
             animate="show"
@@ -193,22 +192,32 @@ export default function Hero() {
     delay: 1.1,
     ease: "easeOut",
   }}
-  className="absolute bottom-7 left-5 right-5 z-10 sm:bottom-10 md:bottom-10 sm:left-10 sm:right-10 lg:bottom-10 lg:left-16 lg:right-16 xl:left-20 xl:right-20"
+  className="relative z-10 mt-8 px-5 pb-28
+  sm:px-10 sm:pb-32
+  lg:absolute lg:bottom-10 lg:left-16 lg:right-16
+  lg:mt-0 lg:px-0 lg:pb-0
+  xl:left-20 xl:right-20"
 >
   {/* MOBILE: KAD TARIKH, MASA DAN LOKASI */}
   <div className="flex flex-col gap-3 lg:hidden font-poppins">
     {/* TARIKH */}
-    <div className="relative flex min-h-[122px] overflow-hidden rounded-2xl bg-slate-50 text-[#071B45] shadow-lg">
-      <div className="flex w-[90px] shrink-0 items-center justify-center bg-amber-500 text-white ">
-        <CalendarDaysIcon className="h-10 w-10" />
+    <div className="relative flex min-h-[122px] overflow-hidden rounded-2xl
+border border-white/30 bg-[#062F63]/35 text-white
+shadow-lg backdrop-blur-xl backdrop-saturate-150">
+      <div className="flex w-[90px] shrink-0 items-center justify-center  text-white ">
+        <img
+    src="/images/calendar.svg"
+    alt="Google Calendar"
+    className="h-20 w-20 object-contain"
+  />
       </div>
 
       <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
-        <span className="mb-2 text-md  font-bold tracking-[0.3em] text-slate-500">
+        <span className="mb-2 text-md  font-semibold tracking-[0.3em] text-white/70">
           TARIKH
         </span>
 
-        <span className="text-base font-extrabold leading-5 sm:text-lg">
+        <span className="text-base font-medium leading-5 sm:text-lg">
           30 November –
           <br />
           2 Disember 2026
@@ -219,42 +228,54 @@ export default function Hero() {
         </span>
       </div>
 
-      <CalendarDaysIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/70" />
+      <CalendarDaysIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/10" />
     </div>
 
     {/* MASA */}
-    <div className="relative flex min-h-[108px] overflow-hidden rounded-2xl bg-slate-50 text-[#071B45] shadow-lg">
-      <div className="flex w-[90px] shrink-0 items-center justify-center bg-gradient-to-br from-sky-500 to-blue-900 text-white">
-        <ClockIcon className="h-10 w-10" />
+    <div className="relative flex min-h-[108px] overflow-hidden rounded-2xl
+border border-white/30 bg-[#062F63]/35 text-white
+shadow-lg backdrop-blur-xl backdrop-saturate-150">
+      <div className="flex w-[90px] shrink-0 items-center justify-center  text-white">
+         <img
+    src="/images/jam-01.svg"
+    alt="Google Calendar"
+    className="h-18 w-18 object-contain"
+  />
       </div>
 
       <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
-        <span className="mb-2 text-[10px] font-extrabold tracking-[0.3em] text-slate-500">
+        <span className="mb-2 text-sm font-semibold tracking-[0.3em] text-white/70">
           MASA
         </span>
 
-        <span className="text-base font-extrabold leading-5 sm:text-lg">
+        <span className="text-base font-medium leading-5 sm:text-lg">
           8:00 Pagi –
           <br />
           4:30 Petang
         </span>
       </div>
 
-      <ClockIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/70" />
+      <ClockIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/10" />
     </div>
 
     {/* LOKASI */}
-    <div className="relative flex min-h-[114px] overflow-hidden rounded-2xl bg-slate-50 text-[#071B45] shadow-lg">
-      <div className="flex w-[90px] shrink-0 items-center justify-center bg-gradient-to-br from-yellow-300 to-yellow-600 text-white">
-        <MapPinIcon className="h-10 w-10" />
+    <div className="relative flex min-h-[114px] overflow-hidden rounded-2xl
+border border-white/30 bg-[#062F63]/35 text-white
+shadow-lg backdrop-blur-xl backdrop-saturate-150">
+      <div className="flex w-[90px] shrink-0 items-center justify-center  text-white">
+        <img
+    src="/images/maps.svg"
+    alt="Maps"
+    className="h-18 w-18 object-contain"
+  />
       </div>
 
       <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
-        <span className="mb-2 text-[10px] font-extrabold tracking-[0.3em] text-slate-500">
+        <span className="mb-2 text-sm font-semibold tracking-[0.3em] text-white/70">
           LOKASI
         </span>
 
-        <span className="text-sm font-extrabold leading-5 sm:text-base">
+        <span className="text-sm font-medium leading-5 sm:text-base">
           Pusat Konvensyen
           <br />
           Antarabangsa Putrajaya
@@ -263,7 +284,7 @@ export default function Hero() {
         </span>
       </div>
 
-      <MapPinIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/70" />
+      <MapPinIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-slate-200/10" />
     </div>
   </div>
 

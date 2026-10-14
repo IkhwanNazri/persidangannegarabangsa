@@ -212,7 +212,7 @@ export default function RSVP() {
         {/* 3 CARD KEKAL DI SINI */}
         <div
           id="rsvp-cards"
-          className="grid grid-cols-1 gap-3 md:grid-cols-3 p-3 px-10 "
+          className="grid grid-cols-1 gap-3 md:grid-cols-3 p-3 px-4 "
         >
           {cards.map((card) => {
             const registered = isCardRegistered(card);

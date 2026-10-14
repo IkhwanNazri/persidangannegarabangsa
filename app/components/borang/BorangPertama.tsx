@@ -8,7 +8,18 @@ import {
   useMemo,
   useState,
 } from "react";
-
+import {
+  ArrowRight,
+  ArrowUpRight,
+  CalendarDays,
+  MapPin,
+  Flag,
+  Users,
+  Lightbulb,
+  ShieldCheck,
+  Landmark,
+} from "lucide-react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { QRCodeCanvas } from "qrcode.react";
@@ -505,7 +516,7 @@ if (!result.emailSent) {
   open: true,
   type: "success",
   title: "Pendaftaran Berjaya",
-  message: `Kehadiran ${dayInfo[currentDay].date} telah berjaya direkodkan.`,
+  message: `Pra Pendaftaran Kehadiran ke Persidangan Negara Bangsa 2026 telah berjaya direkodkan`,
 });
   setLoading(false);
   return;
@@ -627,7 +638,7 @@ if (currentDay < 3) {
     open: true,
     type: "success",
     title: `HARI ${currentDay} BERJAYA`,
-    message: `Kehadiran ${dayInfo[currentDay].date} telah berjaya direkodkan..`,
+    message: `Pra Pendaftaran Kehadiran ke Persidangan Negara Bangsa 2026 telah berjaya direkodkan`,
   });
   setLoading(false);
   return;
@@ -637,7 +648,7 @@ setModal({
   open: true,
   type: "success",
   title: "PENDAFTARAN BERJAYA",
-  message: "Semua pendaftaran kehadiran anda telah berjaya disimpan.",
+  message: "Pra Pendaftaran Kehadiran ke Persidangan Negara Bangsa 2026 telah berjaya direkodkan",
 });
   } catch (error) {
     setModal({
@@ -700,12 +711,12 @@ setModal({
                 </span>
 
                 <h3 className="mt-2 font-poppins text-2xl font-semibold  text-slate-800">
-                  {activeCardData.title}
+                  PENDAFTARAN
                 </h3>
 
-                <p className="mt-1 font-poppins text-xs text-slate-800">
+                {/* <p className="mt-1 font-poppins text-xs text-slate-800">
                   {activeCardData.date}
-                </p>
+                </p> */}
 
               </div>
 
@@ -824,7 +835,7 @@ setModal({
                     currentSessions={selectedSessions}
                   /> */}
 
-                  <button
+                  {/* <button
                     type="submit"
                     disabled={loading}
                     className="mt-5 flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-[#062F63] font-montserrat text-xl font-bold uppercase tracking-wide text-white hover:bg-[#E30620] disabled:opacity-50"
@@ -836,7 +847,10 @@ setModal({
                     {!loading && (
                       <CheckCircleIcon className="h-4 w-4" />
                     )}
-                  </button>
+                  </button> */}
+                    <Link href="/" className=" inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-[#062F63] px-8 py-4 font-poppins text-sm font-semibold text-white transition hover:bg-red-500 hover:text-yellow-400">
+            Kembali ke Halaman Utama
+          </Link>
 
                 </form>
               </>
@@ -1040,7 +1054,7 @@ setModal({
                       <>
                         <InputField
                         icon={<BuildingOffice2Icon className="h-5 w-5" />}
-                        label="Jabatan / Agensi"
+                        label="Bahagian /Jabatan / Agensi"
                         placeholder="Contoh: Kementerian Perpaduan Negara"
                         value={form.jabatanAgensi}
                         onChange={(value) =>
@@ -1098,7 +1112,7 @@ setModal({
                   {form.kategoriUtama === "Lain-lain" && form.kategoriLain && (
                     <div className="sm:col-start-1 sm:row-start-4">
                       <label className="mb-1.5 block font-poppins text-md font-medium text-slate-600">
-                        Maklumat Kategori
+                        Nama pertubahan/Kelab/Persatuan
                       </label>
 
                       <input
@@ -1197,7 +1211,7 @@ setModal({
                 >
                   {loading
                     ? "Menyimpan..."
-                    : `Daftar ${activeCardData.title}`}
+                    : `Daftar `}
 
                   {!loading && (
                     <ArrowRightIcon className="h-4 w-4" />

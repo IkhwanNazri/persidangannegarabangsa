@@ -11,20 +11,20 @@ import { motion } from "motion/react";
 
 const contents = [
   {
-    title: "OBJEKTIF",
-    text: "Menjana idea dan cadangan strategik untuk masa depan negara bangsa yang lebih bersatu dan berdaya saing.",
+    title: "LATAR BELAKANG",
+    text: "Pembinaan negara bangsa merupakan agenda strategik untuk memastikan Malaysia kekal aman, stabil, berdaulat dan dihormati. Agenda ini memperkukuh identiti kebangsaan, rasa kepunyaan bersama serta kepercayaan antara komuniti.",
     icon: FlagIcon,
     color: "bg-[#062F63]",
   },
   {
-    title: "PESERTA",
-    text: "Pemimpin, pakar, pengamal, belia, institusi, NGO dan masyarakat umum.",
+    title: "OBJEKTIF PERSIDANGAN",
+    text: "Menyediakan platform wacana nasional selaras dengan RMK13 serta menghimpunkan pelbagai pemegang taruh bagi merumuskan cadangan praktikal untuk memperkukuh agenda pembinaan negara bangsa.",
     icon: UserGroupIcon,
     color: "bg-[#E30620]",
   },
   {
-    title: "TUMPUAN",
-    text: "Perpaduan, kesejahteraan, tadbir urus, ekonomi, pembangunan sosial dan inovasi.",
+    title: "PELAKSANAAN PERSIDANGAN",
+    text: "",
     icon: LightBulbIcon,
     color: "bg-[#FFD21C]",
   },
@@ -34,12 +34,10 @@ export default function MengenaiDialog() {
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-24 lg:min-h-screen lg:py-28">
       <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#062F63]/[0.025]" />
-
       <div className="pointer-events-none absolute right-0 top-0 h-[420px] w-[220px] bg-[#FFD21C]/[0.04] [clip-path:polygon(45%_0,100%_0,100%_100%,0_100%)]" />
 
       <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="grid items-center gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-16 xl:gap-24">
-
           <div>
             <motion.div
               initial={{ opacity: 0, x: -25 }}
@@ -49,8 +47,7 @@ export default function MengenaiDialog() {
               className="mb-5 flex items-center gap-3"
             >
               <span className="h-1 w-12 bg-[#FFD21C] sm:w-16" />
-
-              <span className="font-inter text-[10px] font-bold uppercase tracking-[.35em] text-[#062F63] sm:text-xs">
+              <span className="font-poppins text-base font-bold uppercase tracking-[.35em] text-[#062F63]">
                 Mengenai
               </span>
             </motion.div>
@@ -64,10 +61,8 @@ export default function MengenaiDialog() {
             >
               Persidangan
               <span className="block text-[#E30620]">
-                NEGARA{" "}
-                <span className="text-[#062F63]">
-                  BANGSA
-                </span>
+                PEMBINAAN{" "}
+                <span className="text-[#062F63]">NEGARA BANGSA</span>
               </span>
             </motion.h2>
 
@@ -90,10 +85,10 @@ export default function MengenaiDialog() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-7 max-w-[650px] font-poppins text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:text-[17px]"
             >
-              Persidangan Negara Bangsa merupakan platform ilmiah yang
-              menghimpunkan pemimpin, pakar, pengamal dan masyarakat untuk
-              membincangkan isu-isu strategik demi memperkukuh perpaduan,
-              kesejahteraan dan daya saing negara.
+              Persidangan Pembinaan Negara Bangsa merupakan medan wacana
+              nasional untuk membincangkan hala tuju, cabaran dan pendekatan
+              pelaksanaan agenda pembinaan negara bangsa selaras dengan
+              Rancangan Malaysia Ketiga Belas (RMK13).
             </motion.p>
 
             <div className="mt-9 space-y-3 sm:mt-10 sm:space-y-4">
@@ -106,11 +101,8 @@ export default function MengenaiDialog() {
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.25 }}
-                    transition={{
-                      duration: 0.6,
-                      delay: 0.15 * index,
-                    }}
-                    className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/70 p-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white hover:shadow-[0_15px_40px_rgba(6,47,99,.08)] sm:p-4"
+                    transition={{ duration: 0.6, delay: 0.15 * index }}
+                    className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-slate-50/70 p-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white hover:shadow-[0_15px_40px_rgba(6,47,99,.08)] sm:p-4"
                   >
                     <div
                       className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${item.color} ${
@@ -119,20 +111,43 @@ export default function MengenaiDialog() {
                           : "text-white"
                       } sm:h-16 sm:w-16`}
                     >
-                      <Icon
-                        className="h-7 w-7 sm:h-8 sm:w-8"
-                        strokeWidth={1.8}
-                      />
+                      <Icon className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={1.8} />
                     </div>
 
-                    <div className="min-w-0">
+                    <div className="min-w-0 flex-1">
                       <h3 className="font-montserrat text-xs font-extrabold tracking-[.08em] text-[#062F63] sm:text-sm">
                         {item.title}
                       </h3>
 
-                      <p className="mt-1 font-poppins text-base leading-5 text-black sm:text-base sm:leading-6">
-                        {item.text}
-                      </p>
+                      {item.title.startsWith("") ? (
+                        <div className="mt-3 overflow-hidden rounded-lg border border-slate-300 bg-white">
+                          <table className="w-full table-fixed border-collapse text-left font-poppins text-sm text-slate-800 sm:text-base">
+                            <tbody>
+                              <tr className="border-b border-slate-300">
+                                <th scope="row" className="w-1/3 border-r border-slate-300 bg-slate-100 px-3 py-2 font-bold sm:w-1/4 sm:px-4">
+                                  Tarikh
+                                </th>
+                                <td className="break-words px-3 py-2 sm:px-4">
+                                  30 Nov – 2 Dis 2026 (Isnin – Rabu)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row" className="border-r border-slate-300 bg-slate-100 px-3 py-2 align-top font-bold sm:px-4">
+                                  Tempat
+                                </th>
+                                <td className="break-words px-3 py-2 sm:px-4">
+                                  Pusat Konvensyen Antarabangsa Putrajaya
+                                  (PICC), Putrajaya
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      ) : (
+                        <p className="mt-1 font-poppins text-sm leading-6 text-black sm:text-base sm:leading-6">
+                          {item.text}
+                        </p>
+                      )}
                     </div>
                   </motion.div>
                 );
@@ -140,7 +155,7 @@ export default function MengenaiDialog() {
             </div>
 
             <motion.a
-              href="#"
+              href="/Mengenai"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -150,11 +165,7 @@ export default function MengenaiDialog() {
               className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#062F63] px-6 py-3.5 font-montserrat text-sm font-bold text-white transition-all duration-300 hover:bg-[#E30620] sm:w-auto sm:min-w-[190px] sm:px-7 sm:py-4"
             >
               Ketahui Lebih Lanjut
-
-              <ArrowUpRightIcon
-                className="h-5 w-5"
-                strokeWidth={2}
-              />
+              <ArrowUpRightIcon className="h-5 w-5" strokeWidth={2} />
             </motion.a>
           </div>
 
@@ -166,9 +177,7 @@ export default function MengenaiDialog() {
             className="relative mx-auto w-full max-w-[620px]"
           >
             <div className="pointer-events-none absolute -right-3 -top-5 z-10 h-36 w-8 rotate-[28deg] rounded-full bg-[#FFD21C] sm:-right-5 sm:-top-8 sm:h-48 sm:w-10" />
-
             <div className="pointer-events-none absolute -left-4 top-24 z-10 h-32 w-9 rotate-[28deg] rounded-full bg-[#E30620] sm:-left-7 sm:top-28 sm:h-40 sm:w-11" />
-
             <div className="pointer-events-none absolute -bottom-5 right-8 z-10 h-28 w-8 rotate-[28deg] rounded-full bg-[#E30620] sm:right-12 sm:h-36 sm:w-10" />
 
             <div className="relative z-20 overflow-hidden rounded-[28px] border-[8px] border-white bg-[#062F63] shadow-[0_30px_80px_rgba(6,47,99,.18)] sm:rounded-[36px]">
@@ -180,21 +189,16 @@ export default function MengenaiDialog() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
-
                 <div className="absolute inset-0 bg-gradient-to-t from-[#062F63]/35 via-transparent to-transparent" />
               </div>
             </div>
 
             <div className="pointer-events-none absolute -bottom-8 left-10 z-10 grid h-20 w-28 grid-cols-6 gap-2 opacity-50 sm:left-16">
               {Array.from({ length: 36 }).map((_, index) => (
-                <span
-                  key={index}
-                  className="h-1.5 w-1.5 rounded-full bg-[#062F63]"
-                />
+                <span key={index} className="h-1.5 w-1.5 rounded-full bg-[#062F63]" />
               ))}
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>

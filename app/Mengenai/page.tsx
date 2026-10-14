@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 const backgroundPoints = [
   {
     number: "1.2",
@@ -459,7 +460,11 @@ export default function MengenaiDialog() {
               <ArrowUpRightIcon className="absolute right-5 top-5 h-6 w-6 text-white opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
             </motion.figure>
           </div> */}
+           <Link href="/" className=" inline-flex min-h-13 mt-8 items-center justify-center gap-2 rounded-full bg-[#062F63] px-8 py-4 font-poppins text-sm font-semibold text-white transition hover:bg-red-500 hover:text-yellow-400">
+                    Kembali ke Halaman Utama
+                  </Link>
         </div>
+        
       </section>
     </main>
   );

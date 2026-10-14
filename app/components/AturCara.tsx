@@ -143,25 +143,25 @@ const schedules = {
       events: [
         {
           time: "2:30 - 4:30 PETANG",
-          title: "Ucapatama 1",
+          title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
           description:
-            "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa ",
+            " ",
           type: "UCAPTAMA 1",
         },
 
         {
           time: "2:30 - 4:30 PETANG",
-          title: "Kertas 1",
+          title: "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa",
           description:
-            "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa ",
+            " ",
           type: "KERTAS 1",
         },
 
         {
           time: "2:30 - 4:30 PETANG",
-          title: "Kertas 2",
+          title: "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa",
           description:
-            "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa",
+            "",
           type: "KERTAS 2",
         },
 
@@ -184,27 +184,10 @@ const schedules = {
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
     venue: "Putra Hall B",
     events: [
-      {
-        time: "8:00 – 9:00 pg",
-        type: "Sarapan",
-        title: "Sarapan Pagi & Peserta Mengambil Tempat",
-        description: "Semua Peserta",
-      },
-      {
-        time: "9:00 – 10:00 pg",
-        type: "Slot Khas",
-        title: "TBC – Dewan Perdana",
-        description: "TBC",
-      },
-      {
-        time: "10:30 – 11:00 pg",
-        type: "Rehat",
-        title: "Minum Pagi & Networking",
-        description: "Semua Peserta",
-      },
+    
       {
         time: "11:00 pg – 1:00 tgh",
-        type: "Ucapan",
+        type: "UCAPTAMA 2",
         title:
           "Naratif Sejarah Inklusif: Memperkukuh Identiti Nasional dalam Kepelbagaian",
         description:
@@ -243,7 +226,7 @@ const schedules = {
     events: [
       {
         time: "2:30 – 4:30 ptg",
-        type: "Ucapan",
+        type: "UCAPTAMA 3",
         title:
           "Memperkasa Perpaduan, Memperkukuh Kesepaduan, Menjayakan Penyatuan",
         description:
@@ -260,7 +243,7 @@ const schedules = {
         time: "2:30 – 4:30 ptg",
         type: "Kertas 6",
         title:
-          "poppinsaksi Rentas Etnik Sebagai Wahana Penyatuan Negara Bangsa",
+          "Interaksi Rentas Etnik Sebagai Wahana Penyatuan Negara Bangsa",
         description:
           "",
       },
@@ -279,15 +262,10 @@ const schedules = {
       "SESI 4: POLITIK DAN CABARAN DALAM MEMBINA NEGARA BANGSA",
     venue: "Putra Hall B",
     events: [
-      {
-        time: "8:00 – 9:00 pg",
-        type: "Sarapan",
-        title: "Sarapan Pagi & Peserta Mengambil Tempat",
-        description: "Semua Peserta",
-      },
+     
       {
         time: "9:00 – 10:30 pg",
-        type: "Ucapan",
+        type: "Ucaptama 4",
         title:
           "Keterangkuman dan Kesaksamaan Rentas Wilayah",
         description:
@@ -305,7 +283,7 @@ const schedules = {
       {
         time: "10:30 – 11:00 pg",
         type: "Rehat",
-        title: "Minum Pagi & Networking",
+        title: "Minum Pagi & Sesi Jaringan",
         description: "Semua Peserta",
       },
     ],
@@ -318,7 +296,7 @@ const schedules = {
     events: [
       {
         time: "11:00 pg – 1:00 tgh",
-        type: "Ucapan",
+        type: "UCAPTAMA 5",
         title:
           "Komunikasi Sivil: Mengurus Naratif Untuk Keharmonian",
         description:
@@ -360,7 +338,7 @@ const schedules = {
 
     events: [
       {
-        time: "2:30 PETANG",
+        time: "3:00-4:00 PETANG",
         type: "KETIBAAN",
         title: "Ketibaan para jemputan & dif-dif kenamaan",
         description: "",
@@ -377,7 +355,7 @@ const schedules = {
       {
         time: "2:50 PETANG",
         type: "KETIBAAN",
-        title: "Ketibaan YAB Perdana Menteri",
+        title: "Ketibaan YAB Datuk Seri Anwar Ibrahim",
         description: "",
       },
 
@@ -391,7 +369,7 @@ const schedules = {
       {
         time: "3:05 PETANG",
         type: "MAJLIS PENUTUP",
-        title: "Lafaz Ikrar Rukun Negara",
+        title: "Bacaan Lafaz Ikrar Rukun Negara",
         description: "",
       },
 
@@ -412,7 +390,7 @@ const schedules = {
       {
         time: "3:30 PETANG",
         type: "RUMUSAN & MAJLIS PENUTUP",
-        title: "Rumusan Persidangan dan Majlis Penutup",
+        title: "Rumusan dan Penutup",
         description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
       },
 
@@ -423,17 +401,12 @@ const schedules = {
         description: "",
       },
 
-      {
-        time: "4:15 PETANG",
-        type: "JAMUAN",
-        title: "Sesi Minum Petang bersama YAB Perdana Menteri",
-        description: "",
-      },
+    
 
       {
         time: "4:30 PETANG",
         type: "BERSURAI",
-        title: "YAB Perdana Menteri meninggalkan majlis",
+        title: "Majlis Bersurai",
         description: "",
       },
     ],

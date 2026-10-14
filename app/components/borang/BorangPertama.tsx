@@ -1318,7 +1318,7 @@ setModal({
                 }`}
               >
                 {modal.type === "success"
-                  ? "KEMBALI KE RSVP"
+                  ? "Lihat Tentatif"
                   : "TUTUP"}
               </button>
 

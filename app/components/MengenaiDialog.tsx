@@ -61,8 +61,8 @@ export default function MengenaiDialog() {
             >
               Persidangan
               <span className="block text-[#E30620]">
-                PEMBINAAN{" "}
-                <span className="text-[#062F63]">NEGARA BANGSA</span>
+                NEGARA{" "}
+                <span className="text-[#062F63]">BANGSA</span>
               </span>
             </motion.h2>
 

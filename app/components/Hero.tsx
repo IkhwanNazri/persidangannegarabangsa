@@ -164,8 +164,9 @@ export default function Hero() {
             
           </motion.p>
             <div className="flex space-x-4  items-center">
+          
           <motion.a
-            href="#"
+            href="#rsvp"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -177,23 +178,9 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             className="inline-flex w-full items-center justify-center rounded-xl bg-[#FFD21C] px-6 py-3.5 font-montserrat text-sm font-bold text-[#062F63] shadow-lg transition-all duration-300 hover:bg-white sm:w-auto sm:min-w-[190px] sm:px-7 sm:py-4 sm:text-base"
           >
-            Daftar Sekarang
-          </motion.a>
-         <motion.a
-            href="#rsvp"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 1,
-              ease: "easeOut",
-            }}
-            whileHover={{ y: -3 }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-flex w-full items-center justify-center rounded-xl border border-yellow-400  text-yellow-400 px-6 py-3.5 font-montserrat text-md font-bold  shadow-lg transition-all duration-300 hover:bg-yellow-400 hover:text-purple-900 sm:w-auto sm:min-w-[190px] sm:px-7 sm:py-4 sm:text-base"
-          >
            Pra Pendaftaran
           </motion.a>
+         
           </div>
           
         </div>

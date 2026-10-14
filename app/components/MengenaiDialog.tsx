@@ -11,19 +11,19 @@ import { motion } from "motion/react";
 
 const contents = [
   {
-    title: "LATAR BELAKANG",
+    title: "1.0 LATAR BELAKANG",
     text: "Pembinaan negara bangsa merupakan agenda strategik untuk memastikan Malaysia kekal aman, stabil, berdaulat dan dihormati. Agenda ini memperkukuh identiti kebangsaan, rasa kepunyaan bersama serta kepercayaan antara komuniti.",
     icon: FlagIcon,
     color: "bg-[#062F63]",
   },
   {
-    title: "OBJEKTIF PERSIDANGAN",
+    title: " 2.0 OBJEKTIF PERSIDANGAN",
     text: "Menyediakan platform wacana nasional selaras dengan RMK13 serta menghimpunkan pelbagai pemegang taruh bagi merumuskan cadangan praktikal untuk memperkukuh agenda pembinaan negara bangsa.",
     icon: UserGroupIcon,
     color: "bg-[#E30620]",
   },
   {
-    title: "PELAKSANAAN PERSIDANGAN",
+    title: "4.0 PELAKSANAAN PERSIDANGAN",
     text: "",
     icon: LightBulbIcon,
     color: "bg-[#FFD21C]",
@@ -119,7 +119,7 @@ export default function MengenaiDialog() {
                         {item.title}
                       </h3>
 
-                      {item.title.startsWith("") ? (
+                      {item.title.startsWith("4.0") ? (
                         <div className="mt-3 overflow-hidden rounded-lg border border-slate-300 bg-white">
                           <table className="w-full table-fixed border-collapse text-left font-poppins text-sm text-slate-800 sm:text-base">
                             <tbody>

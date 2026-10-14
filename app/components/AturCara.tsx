@@ -145,7 +145,7 @@ const schedules = {
           time: "2:30 - 4:30 PETANG",
           title: "Ucapatama 1",
           description:
-            "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa — Tun Tengku Maimun Tuan Mat (UKM)",
+            "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa ",
           type: "UCAPTAMA 1",
         },
 
@@ -153,7 +153,7 @@ const schedules = {
           time: "2:30 - 4:30 PETANG",
           title: "Kertas 1",
           description:
-            "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa — Prof. Emeritus Datuk Dr. Shad Saleem Faruqi (UM)",
+            "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa ",
           type: "KERTAS 1",
         },
 
@@ -161,18 +161,11 @@ const schedules = {
           time: "2:30 - 4:30 PETANG",
           title: "Kertas 2",
           description:
-            "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa — Edin Khoo (ISIS)",
+            "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa",
           type: "KERTAS 2",
         },
 
-        {
-          time: "2:30 - 4:30 PETANG",
-          title: "Moderator",
-          description:
-            "Dr. Sheila Ramalingam (UM) | Moderator Gantian: Dr. Mohd Noor Nirwandy bin Mat Noordin (UiTM)",
-          // type: "MODERATOR", ,
-        },
-
+        
         {
           time: "4:30 PETANG",
           title: "Penutup Hari",
@@ -215,7 +208,7 @@ const schedules = {
         title:
           "Naratif Sejarah Inklusif: Memperkukuh Identiti Nasional dalam Kepelbagaian",
         description:
-          "YM Tunku Zain Al-'Abidin Tuanku Muhriz, Tunku Panglima Besar Negeri Sembilan / Presiden IDEAS",
+          "",
       },
       {
         time: "11:00 pg – 1:00 tgh",
@@ -223,7 +216,7 @@ const schedules = {
         title:
           "Nilai, Seni, Bahasa dan Budaya: Jiwa dan Warisan Negara Bangsa",
         description:
-          "Profesor Datuk Dr. Lim Swee Tin\nPanel Ganti: Prof Dr Nasrul? Mohd Yusof (USM)",
+          "",
       },
       {
         time: "11:00 pg – 1:00 tgh",
@@ -231,15 +224,9 @@ const schedules = {
         title:
           "Sejarah, Identiti dan Kesatuan: Membina Negara Bangsa",
         description:
-          "Prof. Emeritus Dato' Dr. Abdul Rahman Embong (UKM)\nPanel Ganti: Prof Madya Dr Bilcher Bala (UMS)",
+          "",
       },
-      {
-        time: "11:00 pg – 1:00 tgh",
-        type: "Moderator",
-        title: "Moderator",
-        description:
-          "Dr Gregory Anak Kyai @ Keai (UM)\nModerator Ganti: Prof Madya Dr Ho Hui Ling (UM)",
-      },
+    
       {
         time: "1:00 – 2:30 ptg",
         type: "Rehat",
@@ -260,14 +247,14 @@ const schedules = {
         title:
           "Memperkasa Perpaduan, Memperkukuh Kesepaduan, Menjayakan Penyatuan",
         description:
-          "Prof Ulung Datuk Dr Shamsul Amri Baharuddin (UKM)",
+          "",
       },
       {
         time: "2:30 – 4:30 ptg",
         type: "Kertas 5",
         title:
           "Harmoni Dalam Kepelbagaian: Menghayati Nilai Kebersamaan",
-        description: "Tan Sri Lee Lam Thye",
+        description: "",
       },
       {
         time: "2:30 – 4:30 ptg",
@@ -275,15 +262,9 @@ const schedules = {
         title:
           "poppinsaksi Rentas Etnik Sebagai Wahana Penyatuan Negara Bangsa",
         description:
-          "Prof Emeritus Datuk Dr Osman Bakar (UIAM)\nPanel Ganti: Prof Dr Ong Puay Liu (UKM)",
+          "",
       },
-      {
-        time: "2:30 – 4:30 ptg",
-        type: "Moderator",
-        title: "Moderator",
-        description:
-          "Dr Nurul Aqmie Badrul Hisam (UKM)\nModerator Ganti: Dr Pue Gioh Kun (UKM)",
-      },
+     
       {
         time: "4:30 ptg",
         type: "Penutup Hari",
@@ -310,7 +291,7 @@ const schedules = {
         title:
           "Keterangkuman dan Kesaksamaan Rentas Wilayah",
         description:
-          "Tun Pehin Sri (Dr.) Haji Wan Junaidi bin Tuanku Jaafar, Yang di-Pertua Negeri Sarawak",
+          "",
       },
       {
         time: "9:00 – 10:30 pg",
@@ -318,14 +299,9 @@ const schedules = {
         title:
           "Politik Berasaskan Kaum & Agama dan Cabaran Membina Negara Bangsa",
         description:
-          "Professor Dr Mohd. Tajuddin Bin Mohd. Rasdi (UCSI University)",
+          "",
       },
-      {
-        time: "9:00 – 10:30 pg",
-        type: "Moderator",
-        title: "Moderator",
-        description: "Luqman Hariz (AWANI)",
-      },
+    
       {
         time: "10:30 – 11:00 pg",
         type: "Rehat",
@@ -346,7 +322,7 @@ const schedules = {
         title:
           "Komunikasi Sivil: Mengurus Naratif Untuk Keharmonian",
         description:
-          "Prof. Madya Dr. Chang Peng Kee (Taylor's University)",
+          "",
       },
       {
         time: "11:00 pg – 1:00 tgh",
@@ -354,7 +330,7 @@ const schedules = {
         title:
           "Pembangunan Ekonomi Inklusif: Memperluas Penyertaan dan Kesejahteraan Rakyat",
         description:
-          "Prof. Dr. Jomo Kwame Sundaram\nPanel Ganti: Dato' Sri Mustapa Mohamed (United Nations Association of Malaysia - UNAM)",
+          "",
       },
       {
         time: "11:00 pg – 1:00 tgh",
@@ -362,14 +338,9 @@ const schedules = {
         title:
           "Modal Insan Berkualiti, Negara Bangsa Berdaya Saing",
         description:
-          "Tan Sri Idris Jusoh (Pro-Canselor UiTM)\nPanel Ganti: Prof. Emeritus Tan Sri Dr Ibrahim Bajunid (Presiden Persatuan Pendidikan Malaysia)",
+          "",
       },
-      {
-        time: "11:00 pg – 1:00 tgh",
-        type: "Moderator",
-        title: "Moderator",
-        description: "Dr Muhammad bin Abdul Khalid (UKM)",
-      },
+      
       {
         time: "1:00 – 2:30 ptg",
         type: "Rehat",
@@ -489,7 +460,7 @@ const dayInfo: Record<
 
   "MAJLIS PERSIDANGAN": {
     name: "MAJLIS PERSIDANGAN",
-    date: "1 Disember 2026",
+    date: "30 NOVEMBER - 2 Disember 2026",
     masa: "8:00 Pagi - 4:30 Petang",
     tempat:"Putra Hall B",
   },
@@ -664,7 +635,7 @@ export default function AturCara() {
             transition={{ duration: 0.4 }}
             className="lg:sticky lg:top-24 lg:h-fit"
           >
-            <div className="relative overflow-hidden rounded-2xl bg-[#062F63] p-7 px-12 text-white shadow-[0_20px_60px_rgba(6,47,99,.15)] sm:p-2">
+            <div className="relative overflow-hidden rounded-2xl bg-[#062F63] p-12 px-6 text-white shadow-[0_20px_60px_rgba(6,47,99,.15)] sm:p-4">
 
               <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full border-[18px] border-[#FFD21C]/20" />
 

@@ -192,7 +192,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             className="inline-flex w-full items-center justify-center rounded-xl border border-yellow-400  text-yellow-400 px-6 py-3.5 font-montserrat text-md font-bold  shadow-lg transition-all duration-300 hover:bg-yellow-400 hover:text-purple-900 sm:w-auto sm:min-w-[190px] sm:px-7 sm:py-4 sm:text-base"
           >
-            Pendaftaran
+           Pra Pendaftaran
           </motion.a>
           </div>
           

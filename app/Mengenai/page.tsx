@@ -199,16 +199,16 @@ export default function MengenaiDialog() {
               whileInView={{ scale: 1.02 }}
               viewport={{ once: true }}
               transition={{ duration: 1.6, ease: "easeOut" }}
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover opacity-50 transition-transform duration-[1400ms] group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#07152f]/90 via-[#07152f]/50 to-[#07152f]/10" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#07152f]/85 via-transparent to-[#07152f]/10" />
             <div className="conference-grain pointer-events-none absolute inset-0 opacity-35" />
             <div className="relative flex min-h-[460px] flex-col justify-center p-6 sm:min-h-[520px] sm:px-10 sm:py-12 lg:min-h-[600px] lg:px-14 lg:py-14">
               <div className="flex items-center gap-3">
-                <span className="h-px w-10 bg-amber-300" />
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-200 sm:text-sm">
-                  PERSIDANGAN NEGARA BANGSA · 2026
+                {/* <span className="h-px w-10 bg-amber-300" /> */}
+                <p className="text-sm font-medium uppercase tracking-[0.2em] text-white sm:text-sm">
+                  PERSIDANGAN NEGARA BANGSA 2026
                 </p>
               </div>
               <div className="mt-5 max-w-6xl pb-2 sm:mt-6">
@@ -223,7 +223,7 @@ export default function MengenaiDialog() {
                   <br />
                   Pembinaan Negara Bangsa
                 </motion.h1>
-                <div className="mt-8 flex flex-col gap-3 border-t border-white/30 pt-5 text-sm text-white/90 sm:flex-row sm:items-center sm:gap-8 sm:text-base">
+                <div className="mt-8 flex flex-col gap-3 border-t border-white pt-5 text-sm text-white sm:flex-row sm:items-center sm:gap-8 sm:text-base">
                   <span className="inline-flex items-center gap-2">
                     <CalendarDaysIcon className="h-5 w-5 text-amber-300" />
                     30 November – 2 Disember 2026
@@ -378,20 +378,20 @@ export default function MengenaiDialog() {
                 aria-hidden="true"
                 className="absolute inset-0 -z-20 h-full w-full object-cover "
               />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-red-900/75 via-red-800/50 to-[#671e2c]/70" />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-red-900/75 via-red-800/80 to-[#671e2c]/70" />
               <div className="conference-grain absolute inset-0 opacity-30" />
-              <CalendarDaysIcon className="h-10 w-10 text-amber-300" />
-              <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-white/70">
+              <CalendarDaysIcon className="h-10 w-10 text-white" />
+              <p className="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-white">
                 Tarikh
               </p>
               <p className="mt-3 text-3xl font-bold leading-tight tracking-[-0.035em] sm:text-4xl">
                 30 Nov – 2 Dis 2026
               </p>
-              <p className="mt-3 text-base text-white/80 sm:text-lg">
+              <p className="mt-3 text-base text-white sm:text-lg">
                 Isnin – Rabu
               </p>
-              <div className="mt-8 h-px w-full bg-white/30" />
-              <p className="mt-5 text-sm leading-7 text-white/80">
+              <div className="mt-8 h-px w-full bg-white" />
+              <p className="mt-5 text-sm leading-7 text-white">
                 Tiga hari perbincangan dan perkongsian pandangan.
               </p>
             </div>
@@ -409,14 +409,14 @@ export default function MengenaiDialog() {
                   </p>
                 </div>
               </div>
-              <div className="mt-8 border-l-2 border-amber-400 bg-[#f7f4ed] p-5 sm:p-6">
+              {/* <div className="mt-8 border-l-2 border-amber-400 bg-[#f7f4ed] p-5 sm:p-6">
                 <LightBulbIcon className="h-7 w-7 text-red-700" />
                 <p className="mt-4 text-base leading-8 text-slate-700 sm:text-lg sm:leading-9">
                   Persidangan ini menyokong usaha merumuskan cadangan strategik
                   untuk memperkukuh pembinaan negara bangsa di peringkat
                   nasional, wilayah dan komuniti.
                 </p>
-              </div>
+              </div> */}
             </div>
           </motion.div>
           {/* <div className="mt-8 grid gap-4 sm:grid-cols-2">

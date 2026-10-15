@@ -98,16 +98,16 @@ export default function RakanPenaja() {
             {[...sponsors, ...sponsors].map((sponsor, index) => (
               <div
                 key={`left-${sponsor.name}-${index}`}
-                className="group flex min-h-[280px] w-[180px] shrink-0 flex-col items-center justify-center gap-3 border border-slate-200 bg-[#F8F7F3] px-6 shadow-[0_8px_25px_rgba(6,47,99,.05)] transition-all duration-300 hover:bg-white hover:border-[#C8A23A]/60 hover:shadow-[0_12px_30px_rgba(6,47,99,.08)] sm:h-[135px] sm:w-[210px]"
+                className="group flex min-h-[180px] w-[180px] shrink-0 flex-col items-center justify-center gap-3 px-6 transition-all duration-300 hover:bg-white hover:border-[#C8A23A]/60 hover:shadow-[0_12px_30px_rgba(6,47,99,.08)] sm:h-[135px] sm:w-[210px]"
               >
                 <Image
                   src={sponsor.image}
                   alt={sponsor.name}
                   width={220}
                   height={140}
-                  className="h-[140px] w-full  object-contain transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-[90px] sm:h-[170px]"
+                  className="max-h-[80px] w-full  object-contain transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-[90px] sm:h-[170px]"
                 />
-                <h3 className="w-full whitespace-normal break-words text-center font-poppins text-sm font-semibold leading-6 text-[#062F63] sm:text-base">
+                <h3 className="w-full whitespace-normal break-words text-center font-poppins text-sm font-semibold leading-4 text-[#062F63] sm:text-base">
           {sponsor.name}
         </h3>
               </div>
@@ -132,7 +132,7 @@ export default function RakanPenaja() {
               (sponsor, index) => (
                 <div
                   key={`right-${sponsor.name}-${index}`}
-                  className="group flex min-h-[280px] w-[180px] flex-col gap-3  shrink-0 items-center justify-center border border-slate-200 bg-[#F8F7F3] px-6 transition-all duration-300 hover:border-[#C8A23A]/60 hover:bg-white sm:h-[135px] sm:w-[210px]"
+                  className="group flex min-h-[180px] w-[180px] flex-col gap-3  shrink-0 items-center justify-center px-6 transition-all duration-300 hover:border-[#C8A23A]/60 hover:bg-white sm:h-[135px] sm:w-[210px] hover:shadow-[0_12px_30px_rgba(6,47,99,.08)]"
                 >
                   <Image
                     src={sponsor.image}
@@ -141,7 +141,7 @@ export default function RakanPenaja() {
                     height={140}
                     className="max-h-[80px] w-full max-w-[150px] object-contain  transition-all duration-500  sm:max-h-[90px] sm:max-w-[175px]"
                   />
-                   <h3 className="w-full whitespace-normal break-words text-center font-poppins text-sm font-semibold leading-6 text-[#062F63] sm:text-base">
+                   <h3 className="w-full whitespace-normal break-words text-center font-poppins text-sm font-semibold leading-4 text-[#062F63] sm:text-base">
           {sponsor.name}
         </h3>
                 </div>

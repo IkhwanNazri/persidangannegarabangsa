@@ -9,8 +9,10 @@ import {
   GlobeAsiaAustraliaIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
+
 import { motion } from "motion/react";
 import Link from "next/link";
+import Footer from "../components/Footer";
 const backgroundPoints = [
   {
     number: "1.2",
@@ -464,6 +466,7 @@ export default function MengenaiDialog() {
                     Kembali ke Halaman Utama
                   </Link>
         </div>
+        <Footer/>
         
       </section>
     </main>

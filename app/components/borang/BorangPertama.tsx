@@ -780,43 +780,109 @@ setModal({
 
                   </div>
 
-                  <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                  ```tsx
+<div className="mt-4 grid gap-2 sm:grid-cols-2">
 
-                    <LockedField
-                      icon={
-                        <UserIcon className="h-8 w-8" />
-                      }
-                      label="Nama Penuh"
-                      value={participant.name}
-                    />
+  <LockedField
+    icon={<UserIcon className="h-4 w-4" />}
+    label="Nama Penuh"
+    value={participant.name || "-"}
+  />
 
-                    <LockedField
-                      icon={
-                        <EnvelopeIcon className="h-4 w-4" />
-                      }
-                      label="Email"
-                      value={participant.email}
-                    />
+  <LockedField
+    icon={<EnvelopeIcon className="h-4 w-4" />}
+    label="Email"
+    value={participant.email || "-"}
+  />
 
-                    <LockedField
-                      icon={
-                        <PhoneIcon className="h-4 w-4" />
-                      }
-                      label="No. Telefon"
-                      value={participant.phone}
-                    />
+  <LockedField
+    icon={<PhoneIcon className="h-4 w-4" />}
+    label="No. Telefon"
+    value={participant.phone || "-"}
+  />
 
-                    <LockedField
-                      icon={
-                        <BuildingOffice2Icon className="h-4 w-4" />
-                      }
-                      label="Organisasi / Agensi"
-                      value={participant.kategoriUtama === "Kementerian"
-      ? participant.kementerian
-      : participant.kategoriLain}
-                    />
+  <LockedField
+    icon={<BuildingOffice2Icon className="h-4 w-4" />}
+    label="Kategori Jemputan"
+    value={participant.kategoriUtama || "-"}
+  />
 
-                  </div>
+  <LockedField
+    icon={<Flag className="h-4 w-4" />}
+    label="Gelaran"
+    value={participant.gelaran || "-"}
+  />
+
+  {participant.kementerian && (
+    <LockedField
+      icon={<BuildingOffice2Icon className="h-4 w-4" />}
+      label="Kementerian"
+      value={participant.kementerian}
+    />
+  )}
+
+  {participant.jabatanAgensi && (
+    <LockedField
+      icon={<BuildingOffice2Icon className="h-4 w-4" />}
+      label="Bahagian / Jabatan / Agensi"
+      value={participant.jabatanAgensi}
+    />
+  )}
+
+  {participant.jawatan && (
+    <LockedField
+      icon={<UserIcon className="h-4 w-4" />}
+      label="Jawatan"
+      value={participant.jawatan}
+    />
+  )}
+
+  {participant.gred && (
+    <LockedField
+      icon={<BuildingOffice2Icon className="h-4 w-4" />}
+      label="Gred"
+      value={participant.gred}
+    />
+  )}
+
+  {participant.kategoriLain && (
+    <LockedField
+      icon={<BuildingOffice2Icon className="h-4 w-4" />}
+      label="Kategori Organisasi"
+      value={participant.kategoriLain}
+    />
+  )}
+
+  {participant.kategoriLainDetail && (
+    <LockedField
+      icon={<BuildingOffice2Icon className="h-4 w-4" />}
+      label="Nama Organisasi / Kelab / Persatuan"
+      value={participant.kategoriLainDetail}
+    />
+  )}
+
+  <LockedField
+    icon={<Users className="h-4 w-4" />}
+    label="Vegetarian"
+    value={participant.vegeterian || "-"}
+  />
+
+  <LockedField
+    icon={<ShieldCheck className="h-4 w-4" />}
+    label="Status OKU"
+    value={participant.oku || "-"}
+  />
+
+  {participant.oku === "Ya" && participant.kategoriOku && (
+    <LockedField
+      icon={<ShieldCheck className="h-4 w-4" />}
+      label="Kategori OKU"
+      value={participant.kategoriOku}
+    />
+  )}
+
+</div>
+```
                 </div>
 
                 <form

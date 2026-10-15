@@ -235,7 +235,7 @@ export default function RSVP() {
 
                  <div className="mt-3 flex items-center gap-2">
   
-  <p className="whitespace-nowrap font-montserrat text-[13px] font-bold leading-5 tracking-normal text-[#E30620]">
+  <p className="whitespace-nowrap font-montserrat text-[12px] font-semibold md:text-[13px] md:font-bold sm:text-[11px] sm:font-bold  xs:text-[10px] xs:font-bold  leading-5  tracking-wide md:tracking-normal sm:tracking-normal xs:tracking-normal text-[#E30620]">
     {card.date}
   </p>
 </div>

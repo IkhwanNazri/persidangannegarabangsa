@@ -142,32 +142,39 @@ const schedules = {
 
       events: [
         {
-          time: "2:30 - 4:30 PETANG",
+          time: "2:30 - 4:30 ptg",
           title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
           description:
-            " ",
+            " YAA Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
           type: "UCAPTAMA 1",
         },
 
         {
-          time: "2:30 - 4:30 PETANG",
+          time: "2:30 - 4:30 ptg",
           title: "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa",
           description:
-            " ",
+            "YBhg. Prof Emeritus Datuk Dr. Shad Saleem Faruqi - Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
           type: "KERTAS 1",
         },
 
         {
-          time: "2:30 - 4:30 PETANG",
+          time: "2:30 - 4:30 ptg",
           title: "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa",
           description:
-            "",
+            "Tuan Eddin Khoo - Felo Kanan Institut Kajian Strategik dan Antarabangsa (ISIS) Malaysia",
           type: "KERTAS 2",
+        },
+        {
+          time: "2:30 - 4:30 ptg",
+          title: "Moderator",
+          description:
+            "YBrs. Dr. Sheila Ramalingam - Fakulti Undang-Undang Universiti Malaya",
+          
         },
 
         
         {
-          time: "4:30 PETANG",
+          time: "4:30 ptg",
           title: "Penutup Hari",
           description: "Minum Petang & Bersurai",
           type: "PENUTUP HARI",
@@ -186,28 +193,34 @@ const schedules = {
     events: [
     
       {
-        time: "11:00 pg – 1:00 tgh",
+        time: "11:00 pg – 1:00 ptg",
         type: "UCAPTAMA 2",
         title:
           "Naratif Sejarah Inklusif: Memperkukuh Identiti Nasional dalam Kepelbagaian",
         description:
-          "",
+          "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
       },
       {
-        time: "11:00 pg – 1:00 tgh",
+        time: "11:00 pg – 1:00 ptg",
         type: "Kertas 3",
         title:
           "Nilai, Seni, Bahasa dan Budaya: Jiwa dan Warisan Negara Bangsa",
         description:
-          "",
+          "YBhg. Prof. Dr. Juli a/l Edo - Ahli Panel Majlis Kebudayaan Negara (MAKEN) ",
       },
       {
-        time: "11:00 pg – 1:00 tgh",
+        time: "11:00 pg – 1:00 ptg",
         type: "Kertas 4",
         title:
           "Sejarah, Identiti dan Kesatuan: Membina Negara Bangsa",
         description:
-          "",
+          "YBhg. Prof Emeritus Dato’ Dr. Abdul Rahman Embong -  Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
+      },
+      {
+        time: "11:00 pg - 1:00 ptg",
+        
+        title: "Moderator",
+        description: "YBrs. Dr. Gregory Anak Kiyai@Keai - Pensyarah Kanan Fakulti Seni Kreatif Universiti Malaya",
       },
     
       {
@@ -230,14 +243,14 @@ const schedules = {
         title:
           "Memperkasa Perpaduan, Memperkukuh Kesepaduan, Menjayakan Penyatuan",
         description:
-          "",
+          "YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
       },
       {
         time: "2:30 – 4:30 ptg",
         type: "Kertas 5",
         title:
           "Harmoni Dalam Kepelbagaian: Menghayati Nilai Kebersamaan",
-        description: "",
+        description: "YBhg. Tan Sri Lee Lam Thye - Pengerusi Pertubuhan Ikatan Komuniti Selamat",
       },
       {
         time: "2:30 – 4:30 ptg",
@@ -245,14 +258,21 @@ const schedules = {
         title:
           "Interaksi Rentas Etnik Sebagai Wahana Penyatuan Negara Bangsa",
         description:
-          "",
+          "YBhg. Prof Emeritus Datuk Azizan Baharudin - Pusat Dialog Peradaban (UMCCD)Universiti Malaya",
+      },
+     
+      {
+        time: "2:30 - 4:30 ptg",
+        
+        title: "Moderator",
+        description: "YBrs. Dr. Teo Lee Ken - Pegawai Penyelidik KSI Strategic Institute for Asia Pacific",
       },
      
       {
         time: "4:30 ptg",
         type: "Penutup Hari",
         title: "Minum Petang & Bersurai",
-        description: "",
+        description: "Semua Peserta",
       },
     ],
   },
@@ -269,7 +289,7 @@ const schedules = {
         title:
           "Keterangkuman dan Kesaksamaan Rentas Wilayah",
         description:
-          "",
+          "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar - Tuan Yang Terutama Yang di-Pertua Negeri Sarawak",
       },
       {
         time: "9:00 – 10:30 pg",
@@ -277,9 +297,15 @@ const schedules = {
         title:
           "Politik Berasaskan Kaum & Agama dan Cabaran Membina Negara Bangsa",
         description:
-          "",
+          "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi - Ahli Majlis Penasihat Perpaduan Negara ",
       },
     
+      {
+        time: "9:00 – 10:30 pg",
+        
+        title: "Moderator",
+        description: "Tuan Luqman Hariz - Personaliti TV Astro Awani",
+      },
       {
         time: "10:30 – 11:00 pg",
         type: "Rehat",
@@ -295,30 +321,36 @@ const schedules = {
     venue: "Putra Hall B",
     events: [
       {
-        time: "11:00 pg – 1:00 tgh",
+        time: "11:00 - 1:00 ptg",
         type: "UCAPTAMA 5",
         title:
           "Komunikasi Sivil: Mengurus Naratif Untuk Keharmonian",
         description:
-          "",
+          "YBrs. Prof. Madya Dr. Chang Peng Kee - Felo Kanan Bersekutu Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
       },
       {
-        time: "11:00 pg – 1:00 tgh",
+        time: "11:00 - 1:00 ptg",
         type: "Kertas 8",
         title:
           "Pembangunan Ekonomi Inklusif: Memperluas Penyertaan dan Kesejahteraan Rakyat",
         description:
-          "",
+          "YBhg. Tan Sri Dato’ Sri Nazir Razak - Pengerusi Yayasan Tun Razak",
       },
       {
-        time: "11:00 pg – 1:00 tgh",
+        time: "11:00 - 1:00 ptg",
         type: "Kertas 9",
         title:
           "Modal Insan Berkualiti, Negara Bangsa Berdaya Saing",
         description:
-          "",
+          "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Raza",
       },
       
+      {
+        time: "11:00 - 1:00 ptg",
+   
+        title: "Moderator",
+        description: "YBrs. Dr. Muhammad bin Abdul Khalid - Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
+      },
       {
         time: "1:00 – 2:30 ptg",
         type: "Rehat",

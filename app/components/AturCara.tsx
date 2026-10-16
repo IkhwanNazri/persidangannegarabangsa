@@ -13,21 +13,21 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 const schedules = {
-  "MAJLIS PERASMIAN": [
+  "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN": [
   {
     session: "MAJLIS PERASMIAN PERSIDANGAN NEGARA BANGSA",
-    venue: "Dewan Perdana",
+    venue: "Dewan Perdana - 11:00 Pagi - 1:00 tghari",
 
     events: [
       {
-        time: "10:30 Pagi ",
+        time: " ",
         type: "MASJLIS PERASMIAN",
         title: "Ketibaan para jemputan & dif-dif kenamaan",
         description: "",
       },
 
       {
-        time: "10:45 Pagi",
+        time: "",
         type: "MAJLIS PERASMIAN",
         title:
           "Ketibaan Menteri Perpaduan Negara",
@@ -35,40 +35,40 @@ const schedules = {
       },
 
       {
-        time: "11:00 Pagi",
+        time: "",
         type: "MAJLIS PERASMIAN",
         title: "Keberangkatan tiba DYMM Paduka Seri Sultan Perak Darul Ridzuan, ",
         description: "Sultan Nazrin Muizzuddin Shah",
       },
 
       {
-        time: "11::00 Pagi",
+        time: "",
         type: "MAJLIS PERASMIAN",
         title: "Nyanyian Lagu Negaraku",
         description: "",
       },
 
       {
-        time: "11::00 Pagi",
+        time: "",
         type: "MAJLIS PERASMIAN",
         title: "Bacaan Doa",
         description: "",
       },
 
       {
-        time: "11::00 Pagi",
+        time: "",
         type: "MAJLIS PERASMIAN",
         title: "Ucapan Alu-Aluan Menjunjung Kasih oleh YB Menteri Perpaduan Negara",
         description: "",
       },
       {
-        time: "11::00 Pagi",
+        time: "",
         type: "UCAPTAMA DIRAJA DAN TITAH PERASMIAN",
         title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
         description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM Paduka Seri Sultan Perak Darul Ridzuan",
       },
       {
-        time: "11::00 Pagi",
+        time: "",
         type: "MAJLIS PERASMIAN",
         title: "Sesi bergambar bersama DYMM Paduka Seri Sultan Perak Darul Ridzuan",
         description: "",
@@ -79,7 +79,7 @@ const schedules = {
       
 
       {
-        time: "1.00 Petang",
+        time: "",
         type: "MAJLIS PERASMIAN",
         title: "Keberangkatan DYMM Paduka Seri Sultan Perak Darul Ridzuan,",
         description: "",
@@ -88,61 +88,17 @@ const schedules = {
   },
 ],
 
-  "MAJLIS PERSIDANGAN": [
-    // {
-    //   session:
-    //     "MAJLIS PERASMIAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
-    //   venue: "Putra Hall B",
-
-    //   events: [
-    //     {
-    //       time: "8:00 - 10:00 PAGI",
-    //       title: "Pendaftaran Peserta & Ketibaan Jemputan",
-    //       description: "Semua Peserta",
-    //       type: "PENDAFTARAN PESERTA",
-    //     },
-
-    //     {
-    //       time: "10:00 - 10:30 PAGI",
-    //       title:
-    //         "Peserta dan jemputan mengambil tempat dalam Dewan Perdana.",
-    //       description: "Semua Peserta dan Jemputan",
-    //       type: "PERSEDIAAN PERASMIAN",
-    //     },
-
-    //     {
-    //       time: "11:00 PAGI - 1:00 TENGAHARI",
-    //       title: "Ucapan Alu-Aluan",
-    //       description:
-    //         "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
-    //       type: "UCAPAN ALU-ALUAN",
-    //     },
-
-    //     {
-    //       time: "11:00 PAGI - 1:00 TENGAHARI",
-    //       title: "Titah Perasmian",
-    //       description:
-    //         "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
-    //       type: "TITAH PERASMIAN",
-    //     },
-
-    //     {
-    //       time: "1:00 - 2:30 PETANG",
-    //       title: "Rehat",
-    //       description: "Makan Tengah Hari & Rehat",
-    //       type: "REHAT",
-    //     },
-    //   ],
-    // },
+  "PERSIDANGAN PEMBINAAN NEGARA BANGSA": [
+    
   
 {
       session:
         "SESI 1: PERLEMBAGAAN DAN RUKUN NEGARA TERAS PEMBINAAN NEGARA BANGSA",
-      venue: "Putra Hall B",
+      venue: "Putra Hall B - 2:30 ptg - 4:30 ptg",
 
       events: [
         {
-          time: "2:30 - 4:30 ptg",
+          time: "",
           title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
           description:
             " YAA Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
@@ -150,7 +106,7 @@ const schedules = {
         },
 
         {
-          time: "2:30 - 4:30 ptg",
+          time: "",
           title: "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa",
           description:
             "YBhg. Prof Emeritus Datuk Dr. Shad Saleem Faruqi - Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
@@ -158,27 +114,27 @@ const schedules = {
         },
 
         {
-          time: "2:30 - 4:30 ptg",
+          time: "",
           title: "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa",
           description:
             "Tuan Eddin Khoo - Felo Kanan Institut Kajian Strategik dan Antarabangsa (ISIS) Malaysia",
           type: "KERTAS 2",
         },
-        {
-          time: "2:30 - 4:30 ptg",
-          title: "Moderator",
-          description:
-            "YBrs. Dr. Sheila Ramalingam - Fakulti Undang-Undang Universiti Malaya",
+        // {
+        //   time: "2:30 - 4:30 ptg",
+        //   title: "Moderator",
+        //   description:
+        //     "YBrs. Dr. Sheila Ramalingam - Fakulti Undang-Undang Universiti Malaya",
           
-        },
+        // },
 
         
-        {
-          time: "4:30 ptg",
-          title: "Penutup Hari",
-          description: "Minum Petang & Bersurai",
-          type: "PENUTUP HARI",
-        },
+        // {
+        //   time: "4:30 ptg",
+        //   title: "Penutup Hari",
+        //   description: "Minum Petang & Bersurai",
+        //   type: "PENUTUP HARI",
+        // },
       ],
     },
 
@@ -189,11 +145,11 @@ const schedules = {
   {
     session:
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
-    venue: "Putra Hall B",
+    venue: "Putra Hall B - 11:00 pg - 1:00 ptg",
     events: [
     
       {
-        time: "11:00 pg – 1:00 ptg",
+        time: "",
         type: "UCAPTAMA 2",
         title:
           "Naratif Sejarah Inklusif: Memperkukuh Identiti Nasional dalam Kepelbagaian",
@@ -201,7 +157,7 @@ const schedules = {
           "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
       },
       {
-        time: "11:00 pg – 1:00 ptg",
+        time: "",
         type: "Kertas 3",
         title:
           "Nilai, Seni, Bahasa dan Budaya: Jiwa dan Warisan Negara Bangsa",
@@ -209,36 +165,36 @@ const schedules = {
           "YBhg. Prof. Dr. Juli a/l Edo - Ahli Panel Majlis Kebudayaan Negara (MAKEN) ",
       },
       {
-        time: "11:00 pg – 1:00 ptg",
+        time: "",
         type: "Kertas 4",
         title:
           "Sejarah, Identiti dan Kesatuan: Membina Negara Bangsa",
         description:
           "YBhg. Prof Emeritus Dato’ Dr. Abdul Rahman Embong -  Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
       },
-      {
-        time: "11:00 pg - 1:00 ptg",
+      // {
+      //   time: "",
         
-        title: "Moderator",
-        description: "YBrs. Dr. Gregory Anak Kiyai@Keai - Pensyarah Kanan Fakulti Seni Kreatif Universiti Malaya",
-      },
+      //   title: "Moderator",
+      //   description: "YBrs. Dr. Gregory Anak Kiyai@Keai - Pensyarah Kanan Fakulti Seni Kreatif Universiti Malaya",
+      // },
     
-      {
-        time: "1:00 – 2:30 ptg",
-        type: "Rehat",
-        title: "Makan Tengah Hari & Rehat",
-        description: "Semua Peserta",
-      },
+      // {
+      //   time: "",
+      //   type: "Rehat",
+      //   title: "Makan Tengah Hari & Rehat",
+      //   description: "Semua Peserta",
+      // },
     ],
   },
 
   {
     session:
       "SESI 3: KEPELBAGAIAN, KEHARMONIAN DAN KESPADUAN SOSIAL",
-    venue: "Putra Hall B",
+    venue: "Putra Hall B - 2:30 ptg - 4:30 ptg",
     events: [
       {
-        time: "2:30 – 4:30 ptg",
+        time: "",
         type: "UCAPTAMA 3",
         title:
           "Memperkasa Perpaduan, Memperkukuh Kesepaduan, Menjayakan Penyatuan",
@@ -246,14 +202,14 @@ const schedules = {
           "YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
       },
       {
-        time: "2:30 – 4:30 ptg",
+        time: "",
         type: "Kertas 5",
         title:
           "Harmoni Dalam Kepelbagaian: Menghayati Nilai Kebersamaan",
         description: "YBhg. Tan Sri Lee Lam Thye - Pengerusi Pertubuhan Ikatan Komuniti Selamat",
       },
       {
-        time: "2:30 – 4:30 ptg",
+        time: "",
         type: "Kertas 6",
         title:
           "Interaksi Rentas Etnik Sebagai Wahana Penyatuan Negara Bangsa",
@@ -261,30 +217,30 @@ const schedules = {
           "YBhg. Prof Emeritus Datuk Azizan Baharudin - Pusat Dialog Peradaban (UMCCD)Universiti Malaya",
       },
      
-      {
-        time: "2:30 - 4:30 ptg",
+      // {
+      //   time: "",
         
-        title: "Moderator",
-        description: "YBrs. Dr. Teo Lee Ken - Pegawai Penyelidik KSI Strategic Institute for Asia Pacific",
-      },
+      //   title: "Moderator",
+      //   description: "YBrs. Dr. Teo Lee Ken - Pegawai Penyelidik KSI Strategic Institute for Asia Pacific",
+      // },
      
-      {
-        time: "4:30 ptg",
-        type: "Penutup Hari",
-        title: "Minum Petang & Bersurai",
-        description: "Semua Peserta",
-      },
+      // {
+      //   time: "",
+      //   type: "Penutup Hari",
+      //   title: "Minum Petang & Bersurai",
+      //   description: "Semua Peserta",
+      // },
     ],
   },
 
 {
     session:
       "SESI 4: POLITIK DAN CABARAN DALAM MEMBINA NEGARA BANGSA",
-    venue: "Putra Hall B",
+    venue: "Putra Hall B - 9:00 pg - 11:00 pg",
     events: [
      
       {
-        time: "9:00 – 10:30 pg",
+        time: "",
         type: "Ucaptama 4",
         title:
           "Keterangkuman dan Kesaksamaan Rentas Wilayah",
@@ -292,7 +248,7 @@ const schedules = {
           "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar - Tuan Yang Terutama Yang di-Pertua Negeri Sarawak",
       },
       {
-        time: "9:00 – 10:30 pg",
+        time: "",
         type: "Kertas 7",
         title:
           "Politik Berasaskan Kaum & Agama dan Cabaran Membina Negara Bangsa",
@@ -300,28 +256,28 @@ const schedules = {
           "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi - Ahli Majlis Penasihat Perpaduan Negara ",
       },
     
-      {
-        time: "9:00 – 10:30 pg",
+      // {
+      //   time: "",
         
-        title: "Moderator",
-        description: "Tuan Luqman Hariz - Personaliti TV Astro Awani",
-      },
-      {
-        time: "10:30 – 11:00 pg",
-        type: "Rehat",
-        title: "Minum Pagi & Sesi Jaringan",
-        description: "Semua Peserta",
-      },
+      //   title: "Moderator",
+      //   description: "Tuan Luqman Hariz - Personaliti TV Astro Awani",
+      // },
+      // {
+      //   time: "",
+      //   type: "Rehat",
+      //   title: "Minum Pagi & Sesi Jaringan",
+      //   description: "Semua Peserta",
+      // },
     ],
   },
 
   {
     session:
       "SESI 5: TRANSFORMASI NEGARA BANGSA: NARATIF NASIONAL, EKONOMI INKLUSIF DAN MODAL INSAN",
-    venue: "Putra Hall B",
+    venue: "Putra Hall B - 11:00 pg - 1:00 ptg",
     events: [
       {
-        time: "11:00 - 1:00 ptg",
+        time: "",
         type: "UCAPTAMA 5",
         title:
           "Komunikasi Sivil: Mengurus Naratif Untuk Keharmonian",
@@ -329,7 +285,7 @@ const schedules = {
           "YBrs. Prof. Madya Dr. Chang Peng Kee - Felo Kanan Bersekutu Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
       },
       {
-        time: "11:00 - 1:00 ptg",
+        time: "",
         type: "Kertas 8",
         title:
           "Pembangunan Ekonomi Inklusif: Memperluas Penyertaan dan Kesejahteraan Rakyat",
@@ -337,7 +293,7 @@ const schedules = {
           "YBhg. Tan Sri Dato’ Sri Nazir Razak - Pengerusi Yayasan Tun Razak",
       },
       {
-        time: "11:00 - 1:00 ptg",
+        time: "",
         type: "Kertas 9",
         title:
           "Modal Insan Berkualiti, Negara Bangsa Berdaya Saing",
@@ -345,39 +301,39 @@ const schedules = {
           "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Raza",
       },
       
-      {
-        time: "11:00 - 1:00 ptg",
+      // {
+      //   time: "",
    
-        title: "Moderator",
-        description: "YBrs. Dr. Muhammad bin Abdul Khalid - Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
-      },
-      {
-        time: "1:00 – 2:30 ptg",
-        type: "Rehat",
-        title: "Makan Tengah Hari & Rehat",
-        description: "Semua Peserta",
-      },
+      //   title: "Moderator",
+      //   description: "YBrs. Dr. Muhammad bin Abdul Khalid - Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
+      // },
+      // {
+      //   time: "",
+      //   type: "Rehat",
+      //   title: "Makan Tengah Hari & Rehat",
+      //   description: "Semua Peserta",
+      // },
     ],
   },
 
 
 ],
 
-"MAJLIS PENUTUP": [
+"SESI RUMUSAN DAN MAJLIS PENUTUP": [
   {
     session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP",
-    venue: "Dewan Perdana",
+    venue: "Dewan Perdana - 2.30 ptg -4.30 ptg ",
 
     events: [
       {
-        time: "3:00-4:00 PETANG",
+        time: "",
         type: "KETIBAAN",
         title: "Ketibaan para jemputan & dif-dif kenamaan",
         description: "",
       },
 
       {
-        time: "2:45 PETANG",
+        time: "",
         type: "KETIBAAN",
         title:
           "Ketibaan YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
@@ -385,49 +341,49 @@ const schedules = {
       },
 
       {
-        time: "2:50 PETANG",
+        time: "",
         type: "KETIBAAN",
         title: "Ketibaan YAB Datuk Seri Anwar Ibrahim",
         description: "",
       },
 
       {
-        time: "3:00 PETANG",
+        time: "",
         type: "MAJLIS PENUTUP",
         title: "Nyanyian Lagu Negaraku",
         description: "",
       },
 
       {
-        time: "3:05 PETANG",
+        time: "",
         type: "MAJLIS PENUTUP",
         title: "Bacaan Lafaz Ikrar Rukun Negara",
         description: "",
       },
 
       {
-        time: "3:10 PETANG",
+        time: "",
         type: "MAJLIS PENUTUP",
         title: "Bacaan Doa",
         description: "",
       },
 
       {
-        time: "3:15 PETANG",
+        time: "",
         type: "UCAPAN",
         title: "Ucapan Alu-Aluan oleh YB Menteri Perpaduan Negara",
         description: "YB Datuk Aaron Ago Dagang",
       },
 
       {
-        time: "3:30 PETANG",
+        time: "",
         type: "RUMUSAN & MAJLIS PENUTUP",
         title: "Rumusan dan Penutup",
         description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
       },
 
       {
-        time: "4:00 PETANG",
+        time: "",
         type: "SESI BERGAMBAR",
         title: "Sesi bergambar bersama YAB Perdana Menteri",
         description: "",
@@ -436,7 +392,7 @@ const schedules = {
     
 
       {
-        time: "4:30 PETANG",
+        time: "",
         type: "BERSURAI",
         title: "Majlis Bersurai",
         description: "",
@@ -456,22 +412,22 @@ const dayInfo: Record<
     tempat: string;
   }
 > = {
-  "MAJLIS PERASMIAN": {
-    name: "MAJLIS PERASMIAN",
+  "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN": {
+    name: "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN",
     date: "30 November 2026",
-    masa: "11:00 Pagi - 1:00 Petang",
+    masa: "11:00 Pagi - 1:00 tghari",
     tempat:"Dewan Perdana",
   },
 
-  "MAJLIS PERSIDANGAN": {
-    name: "MAJLIS PERSIDANGAN",
+  "PERSIDANGAN PEMBINAAN NEGARA BANGSA": {
+    name: "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     date: "30 NOVEMBER - 2 Disember 2026",
     masa: "8:00 Pagi - 4:30 Petang",
     tempat:"Putra Hall B",
   },
 
-  "MAJLIS PENUTUP": {
-    name: "MAJLIS PENUTUP",
+  "SESI RUMUSAN DAN MAJLIS PENUTUP": {
+    name: "SESI RUMUSAN DAN MAJLIS PENUTUP",
     date: "2 Disember 2026",
     masa: "2:30 Petang - 4:30 Petang",
     tempat:"Dewan Perdana",
@@ -482,7 +438,7 @@ const dayInfo: Record<
 
 export default function AturCara() {
   const [activeDay, setActiveDay] =
-    useState<Day>("MAJLIS PERASMIAN");
+    useState<Day>("UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN");
 
   /*
    * Simpan sesi yang sedang dibuka.
@@ -583,7 +539,7 @@ export default function AturCara() {
 
           <p className="mx-auto mt-6 max-w-[650px] font-poppins text-sm leading-7 text-slate-900 sm:text-base sm:leading-8">
             Ikuti rangkaian program dan sesi perbincangan sepanjang
-            Persidangan Negara Bangsa 2026.
+            Persidangan Pembinaan Negara Bangsa 2026.
           </p>
         </motion.div>
 
@@ -606,17 +562,17 @@ export default function AturCara() {
                   key={day}
                   type="button"
                   onClick={() => changeDay(day)}
-                  className={`rounded-xl px-3 py-3.5 transition-all duration-300 sm:py-4 ${
+                  className={`rounded-xl px-3 py-3.5 transition-all  duration-300 sm:py-4 ${
                     active
                       ? "bg-[#FFD21C] text-[#062F63] shadow-lg"
                       : "text-white/60 hover:bg-white/10 hover:text-white"
                   }`}
                 >
-                  <span className="block font-montserrat text-[9px] font-bold uppercase tracking-[.15em] sm:text-[10px]">
+                  {/* <span className="block font-montserrat text-[9px] font-bold uppercase tracking-[.15em] sm:text-[10px]">
                     Hari {index + 1}
-                  </span>
+                  </span> */}
 
-                  <span className="mt-1 block font-jakarta text-sm font-extrabold sm:text-base">
+                  <span className="mt-1 block font-poppins text-sm font-semibold sm:text-base">
                     {day}
                   </span>
                 </button>
@@ -650,7 +606,7 @@ export default function AturCara() {
 
               
 
-              <h3 className="relative mt-2 font-poppins text-3xl font-bold leading-[1.05] break-normal sm:text-4xl`">
+              <h3 className="relative mt-2 font-poppins text-3xl font-medium leading-[1.10] break-normal sm:text-4xl`">
                 {dayInfo[activeDay].name}
               </h3>
 

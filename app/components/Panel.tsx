@@ -19,37 +19,31 @@ const ucapUtama: PanelPerson[] = [
     name: "Sultan Nazrin Muizzuddin Shah",
     position: "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
     organization: "Ucaptama Diraja Dan Titah Perasmian",
-    image: "/images/panel/sultan.png",
+    image: "/images/panel/",
     tag: "UCAPTAMA DIRAJA",
   },
   {
     name: "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj",
     position: "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
     organization: "",
-    image: "/images/panel/tunku.png",
+    image: "/images/panel/",
     tag: "UCAPTAMA 2",
   },
   {
     name: "Tun Pehin Sri Dr. Haji Wan Junaidi",
     position: "Yang di-Pertua Negeri Sarawak",
     organization: "",
-    image: "/images/panel/sarawak.png",
+    image: "/images/panel/",
     tag: "UCAPTAMA 4",
   },
     {
     name: "YAB Datuk Seri Anwar Ibrahim",
     position: "Perdana Menteri Malaysia",
     organization: "",
-    image: "/images/panel/anwar.png",
+    image: "/images/panel/",
     tag: "RUMUSAN PERSIDANGAN",
   },
-  {
-    name: "YBhg. Tan Sri Dato' Sri Nazir Razak",
-    position: "Pengerusi Yayasan Tun Razak",
-    organization: "",
-    image: "/images/panel/nazir.png",
-    tag: "PEMBENTANG KERTAS 8",
-  },
+
  ];
 
 
@@ -58,7 +52,7 @@ const sesi1: PanelPerson[] = [
     name: "YAA Wan Ahmad Farid Wan Salleh",
     position: "Ketua Hakim Negara",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "UCAPTAMA 1",
   },
   {
@@ -66,7 +60,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 1",
   },
   {
@@ -74,7 +68,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Felo Kanan Institut Kajian Strategik dan Antarabangsa (ISIS) Malaysia",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 2",
   },
   {
@@ -82,7 +76,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Pensyarah Kanan Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "MODERATOR",
   },
 ];
@@ -93,7 +87,7 @@ const sesi2: PanelPerson[] = [
     position:
       "Ahli Panel Majlis Kebudayaan Negara (MAKEN), Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 3",
   },
   {
@@ -101,14 +95,14 @@ const sesi2: PanelPerson[] = [
     position:
       "Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 4",
   },
   {
     name: "YBrs. Dr. Gregory Anak Kiyai@Keai",
     position: "Pensyarah Kanan Fakulti Seni Kreatif Universiti Malaya",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "MODERATOR",
   },
 ];
@@ -119,21 +113,21 @@ const sesi3: PanelPerson[] = [
     position:
       "Profesor Ulung Institut Kajian Etnik (KITA), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "UCAPTAMA 3",
   },
   {
     name: "YBhg. Tan Sri Lee Lam Thye",
     position: "Pengerusi Pertubuhan Ikatan Komuniti Selama",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 5",
   },
   {
     name: "YBhg. Prof Emeritus Datuk Azizan Baharudin",
     position: "Pusat Dialog Peradaban (UMCCD), Universiti Malaya",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 6",
   },
   {
@@ -141,7 +135,7 @@ const sesi3: PanelPerson[] = [
     position:
       "Pegawai Penyelidik KSI Strategic Institute for Asia Pacific",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "MODERATOR",
   },
 ];
@@ -151,14 +145,22 @@ const sesi4: PanelPerson[] = [
     name: "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi",
     position: "Ahli Majlis Penasihat Perpaduan Negara",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 7",
   },
+ 
   {
+  name: "YBhg. Tan Sri Dato' Sri Nazir Razak",
+  position: "Pengerusi Yayasan Tun Razak",
+  organization: "",
+  image: "/images/panel/",
+  tag: "PEMBENTANG KERTAS 8",
+},
+ {
     name: "Tuan Luqman Hariz",
     position: "Personaliti TV Astro AWANI",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "MODERATOR",
   },
 ];
@@ -169,7 +171,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Felo Kanan Bersekutu Institut Kajian Etnik (KITA), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "UCAPTAMA 5",
   },
   {
@@ -177,7 +179,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 5",
   },
   {
@@ -185,7 +187,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/hakim.png",
+    image: "/images/panel/",
     tag: "MODERATOR",
   },
 ];
@@ -276,7 +278,7 @@ export default function Panel() {
         <PanelSection
           title="Titah Diraja, Sesi Ucaptama dan Pembentangan Khas"
           panels={ucapUtama}
-          columns={3}
+          columns={4}
         />
 
         {/* DROPDOWN: RUMUSAN DAN SEMUA SESI */}
@@ -309,13 +311,15 @@ export default function Panel() {
             <PanelSection title="Sesi 1" panels={sesi1} columns={4} />
             <PanelSection title="Sesi 2" panels={sesi2} columns={3} />
             <PanelSection title="Sesi 3" panels={sesi3} columns={4} />
+            <PanelSection title="Sesi 4" panels={sesi4} columns={3} />
+            <PanelSection title="Sesi 5" panels={sesi5} columns={3} />
           </motion.div>
         )}
 
         {/* LIHAT SEMUA PEMBENTANG */}
         <div className="mt-10 flex justify-center">
           <a
-            href="/Panel"
+            href="/#"
             className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border-2 border-purple-900 px-8 py-4 font-poppins text-sm font-semibold text-purple-950 transition-all duration-500 after:absolute after:bottom-0 after:left-5 after:z-0 after:h-1 after:w-1 after:translate-y-full after:rounded-md after:bg-[#062F63] after:transition-all after:duration-700 hover:after:scale-[300] hover:text-white"
           >
             <span className="relative z-10">Lihat Semua Pembentang</span>
@@ -393,7 +397,7 @@ function PanelSection({
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/10 to-transparent" />
 
               {/* GOLD TAG */}
-              <div className="absolute right-0 top-4 bg-[#D4AF37] px-4 py-2 sm:px-5">
+              <div className="absolute right-0 bottom-8 bg-[#D4AF37] px-4 py-2 sm:px-5">
                 <span className="font-poppins text-[9px] font-bold uppercase tracking-[.18em] text-[#062F63]">
                   {panel.tag}
                 </span>

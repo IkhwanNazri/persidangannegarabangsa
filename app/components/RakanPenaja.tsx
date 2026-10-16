@@ -57,7 +57,7 @@ export default function RakanPenaja() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl font-poppins text-lg leading-7 text-slate-800">
-            Bersama menyokong usaha persidangan negara bangsa.
+            Bersama menyokong usaha persidangan pembinaan negara bangsa.
           </p>
 
           {/* Divider */}

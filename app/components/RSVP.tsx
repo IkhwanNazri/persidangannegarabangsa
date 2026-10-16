@@ -52,7 +52,7 @@ const cards: RSVPCard[] = [
     title: "PERASMIAN",
     date: "30 NOVEMBER 2026",
     description:
-      "Majlis Perasmian Persidangan  Negara Bangsa.",
+      "Majlis Perasmian Persidangan Pembinaan Negara Bangsa.",
     sessions: [
       {
         id: "perasmian",
@@ -69,13 +69,13 @@ const cards: RSVPCard[] = [
     title: "PERSIDANGAN",
     date: "30 NOVEMBER • 1 DISEMBER • 2 DISEMBER 2026",
     description:
-      "Daftar kehadiran untuk Persidangan  Negara Bangsa selama tiga hari.",
+      "Daftar kehadiran untuk Persidangan Pembinaan  Negara Bangsa selama tiga hari.",
     sessions: [
       {
         id: "perasmian",
         title: "Perasmian",
         description:
-          "Majlis Perasmian Persidangan  Negara Bangsa.",
+          "Majlis Perasmian Persidangan Pembinaan  Negara Bangsa.",
         icon: "building",
       },
       {
@@ -122,13 +122,13 @@ const cards: RSVPCard[] = [
     title: "PENUTUP",
     date: "2 DISEMBER 2026",
     description:
-      "Majlis Penutupan Persidangan  Negara Bangsa.",
+      "Majlis Penutupan Persidangan Pembinaan  Negara Bangsa.",
     sessions: [
       {
         id: "penutup",
         title: "Penutup",
         description:
-          "Majlis Penutupan Persidangan  Negara Bangsa.",
+          "Majlis Penutupan Persidangan Pembinaan  Negara Bangsa.",
         icon: "building",
       },
     ],
@@ -204,8 +204,8 @@ export default function RSVP() {
             RSVP
           </h2>
 
-          <p className="mt-3 font-poppins text-sm text-white">
-            Persidangan Negara Bangsa 2026
+          <p className="mt-3 font-poppins text-md text-white">
+            Persidangan Pembinaan Negara Bangsa 2026
           </p>
         </div>
 

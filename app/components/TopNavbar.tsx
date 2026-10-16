@@ -13,20 +13,20 @@ import {
 
 const navItems = [
   { label: "Utama", href: "#home", icon: HomeIcon },
-  { label: "Mengenai", href: "#mengenai", icon: InformationCircleIcon },
+  { label: "Pengenalan", href: "#pengenalan", icon: InformationCircleIcon },
   { label: "Atur Cara", href: "#aturcara", icon: CalendarDaysIcon },
   { label: "Panel", href: "#panel", icon: UserIcon },
   { label: "Rakan Strategik", href: "#rakan", icon: SwatchIcon },
   {
     label: "RSVP",
-    href: "#rsvp",
+    href: "#rsvp", 
     icon: ClipboardDocumentCheckIcon,
   },
 ];
 
 const mobileItems = navItems.filter(
   (item) =>
-    ["#home", "#mengenai", "#aturcara", "#rsvp"].includes(item.href)
+    ["#home", "#pengenalan", "#aturcara", "#rsvp"].includes(item.href)
 );
 
 export default function Navbar() {
@@ -41,7 +41,7 @@ export default function Navbar() {
             <a href="#home" className="flex items-center gap-3">
               <div>
                 <p className="font-poppins text-sm font-semibold uppercase text-white/70">
-                  Persidangan
+                  Persidangan Pembinaan
                 </p>
                 <p className="font-montserrat text-lg font-bold uppercase tracking-wider text-white">
                   Negara Bangsa

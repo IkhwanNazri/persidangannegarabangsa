@@ -62,7 +62,7 @@ function ReadMore({ text, light = false }: { text: string; light?: boolean }) {
         aria-expanded={expanded}
         className={`mt-3 inline-flex items-center gap-2 text-sm font-bold transition-colors  focus-visible:outline-offset-4 ${light ? "text-yellow-300 hover:text-yellow-200 focus-visible:outline-yellow-300" : "text-red-700 hover:text-red-900 focus-visible:outline-red-700"}`}
       >
-        {expanded ? "Read less" : "Read more"}
+        {expanded ? "Tutup" : "Baca Lagi"}
         {/* <ChevronDownIcon className={`h-4 w-4 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`} /> */}
       </button>
     </div>
@@ -196,7 +196,7 @@ export default function MengenaiDialog() {
             className="conference-sweep group relative left-1/2 isolate min-h-[460px] w-screen -translate-x-1/2 overflow-hidden bg-[#102653] sm:min-h-[520px] lg:min-h-[600px]"
           >
             <motion.img
-              src="/images/Picture1.png"
+              src="/images/desktop.svg"
               alt="Persidangan Pembinaan Negara Bangsa"
               initial={{ scale: 1.12 }}
               whileInView={{ scale: 1.02 }}
@@ -294,7 +294,7 @@ export default function MengenaiDialog() {
               transition={{ duration: 0.7, delay: 0.12 }}
               className="group relative min-h-[260px] overflow-hidden bg-[#102653] sm:min-h-[330px]"
             >
-              <img src="/images/Picture1.png" alt="Persidangan Pembinaan Negara Bangsa" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <img src="/images/desktop.svg" alt="Persidangan Pembinaan Negara Bangsa" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07152f]/65 via-transparent to-transparent" />
             </motion.div>
           </div>

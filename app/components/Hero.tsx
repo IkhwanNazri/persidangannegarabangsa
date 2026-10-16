@@ -47,18 +47,7 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto min-h-screen w-full max-w-[1600px] overflow-hidden">
-        {/* <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="absolute left-6 top-8 z-20 flex items-center gap-3 sm:left-10 sm:top-10 lg:left-16 lg:top-14 xl:left-20"
-        >
-          <span className="h-1 w-10 bg-[#FFD21C] sm:w-16" />
-
-          <span className="font-inter text-[10px] font-bold uppercase tracking-[.35em] text-white sm:text-xs">
-            Persidangan
-          </span>
-        </motion.div> */}
+       
 
         <div className="relative z-20 mt-0 max-w-[720px] px-5 pt-15 pb-4
   sm:px-10 sm:pt-28
@@ -87,7 +76,7 @@ export default function Hero() {
               }}
               className="block text-3xl tracking-widest font-medium font-poppins text-orange-300"
             >
-              Persidangan
+              Persidangan Pembinaan 
             </motion.span>
             <motion.span
               variants={{

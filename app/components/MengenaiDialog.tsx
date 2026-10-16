@@ -58,11 +58,11 @@ export default function MengenaiDialog() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7 }}
               className="font-jakarta text-[52px] font-black uppercase leading-[.86] tracking-[-3px] text-[#062F63] sm:text-[68px] md:text-[78px] lg:text-[82px] xl:text-[94px]"
-            >
-              Persidangan
+            > 
+              Persidangan 
               <span className="block text-[#E30620]">
-                NEGARA{" "}
-                <span className="text-[#062F63]">BANGSA</span>
+                PEMBINAAN{" "}
+                <span className="text-[#062F63]">NEGARA BANGSA</span>
               </span>
             </motion.h2>
 
@@ -183,7 +183,7 @@ export default function MengenaiDialog() {
             <div className="relative z-20 overflow-hidden rounded-[28px] border-[8px] border-white bg-[#062F63] shadow-[0_30px_80px_rgba(6,47,99,.18)] sm:rounded-[36px]">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/images/Picture1.png"
+                  src="/images/Picture1.jpg"
                   alt="Dialog Negara Bangsa"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

@@ -240,12 +240,14 @@ const [loading, setLoading] = useState(false);
   kategoriUtama: "",
   kategoriLain: "",
     kategoriLainDetail: "",
-  kementerian: "",
+    kementerian: "",
+    kementerianDetail: "",
   jabatanAgensi: "",
   jawatan: "",
   gred: "",
   gelaran: "",
   vegeterian: "",
+  vegeterianDetail: "",
   oku: "",
 kategoriOku: "",
 });
@@ -403,11 +405,17 @@ function getNextDay(): DayId | null {
     form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" &&
     (
       !form.kementerian.trim() ||
+      (
+  form.kementerian === "Lain-lain" &&
+  !form.kementerianDetail.trim()
+) ||
       !form.jabatanAgensi.trim() ||
       !form.jawatan.trim() ||
       !form.gred.trim()
     )
   ) ||
+
+  
 
   (
     form.kategoriUtama === "Lain-lain" &&
@@ -436,7 +444,10 @@ function getNextDay(): DayId | null {
     kategoriUtama: form.kategoriUtama,
     kategoriLain: form.kategoriLain,
      kategoriLainDetail: form.kategoriLainDetail,
-    kementerian: form.kementerian,
+   kementerian:
+  form.kementerian === "Lain-lain"
+    ? form.kementerianDetail
+    : form.kementerian,
     oku: form.oku,
 kategoriOku: form.kategoriOku,
     
@@ -882,7 +893,7 @@ setModal({
   )}
 
 </div>
-```
+
                 </div>
 
                 <form
@@ -967,7 +978,7 @@ setModal({
                     icon={
                       <UserIcon className="h-5 w-5" />
                     }
-                    label="Nama Penuh"
+                    label="Nama Penuh *"
                     placeholder="Nama penuh"
                     value={form.name}
                     onChange={(value) =>
@@ -987,7 +998,7 @@ setModal({
                     icon={
                       <EnvelopeIcon className="h-5 w-5" />
                     }
-                    label="Email"
+                    label="Email *"
                     placeholder="nama@email.com"
                     type="email"
                     value={form.email}
@@ -1007,7 +1018,7 @@ setModal({
                     icon={
                       <PhoneIcon className="h-5 w-5" />
                     }
-                    label="No. Telefon"
+                    label="No. Telefon *"
                     placeholder="01X-XXXXXXX"
                     value={form.phone}
                     onChange={(value) =>
@@ -1115,13 +1126,29 @@ setModal({
                       </select>
                     </div>
                   )}
+                  {/* NAMA KEMENTERIAN LAIN-LAIN */}
+{form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" &&
+  form.kementerian === "Lain-lain" && (
+    <InputField
+      icon={<BuildingOffice2Icon className="h-5 w-5" />}
+      label="Nama Kementerian*"
+      placeholder="Sila nyatakan nama kementerian"
+      value={form.kementerianDetail}
+      onChange={(value) => updateForm("kementerianDetail", value)}
+      labelClassName="font-poppins text-md font-semibold text-slate-600"
+      inputClassName="font-poppins text-md font-medium text-[#062F63]"
+      placeholderClassName="placeholder:font-poppins placeholder:text-md placeholder:text-slate-400"
+      containerClassName="rounded-xl border-[#062F63]/20"
+      iconClassName="text-[#062F63]"
+    />
+)}
                   {/* JABATAN / AGENSI */}
                     {form.kategoriUtama === "Agensi Kerajaan Persekutuan & Negeri" && (
                       <>
                         <InputField
                         icon={<BuildingOffice2Icon className="h-5 w-5" />}
                         label="Bahagian /Jabatan / Agensi"
-                        placeholder="Contoh: Kementerian Perpaduan Negara"
+                        placeholder="Contoh: Bahagian Pengurusan Sumber Maklumat"
                         value={form.jabatanAgensi}
                         onChange={(value) =>
                           updateForm("jabatanAgensi", value)
@@ -1136,7 +1163,7 @@ setModal({
                         {/* JAWATAN */}
                        <InputField
                         icon={<UserIcon className="h-5 w-5" />}
-                        label="Jawatan"
+                        label="Jawatan *"
                         placeholder="Contoh: Pembantu Tadbir"
                         value={form.jawatan}
                         onChange={(value) =>
@@ -1152,7 +1179,7 @@ setModal({
                         {/* GRED */}
                         <InputField
                         icon={<BuildingOffice2Icon className="h-5 w-5" />}
-                        label="Gred"
+                        label="Gred *"
                         placeholder="Contoh: S9 / S10 / N9"
                         value={form.gred}
                         onChange={(value) =>
@@ -1195,33 +1222,58 @@ setModal({
 
                   {/* vegeterian */}
 
-                     <div>
-                    <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
-                      Vegeterian *
-                    </label>
-
-                    <select
-                      required
-                      value={form.vegeterian}
-                      onChange={(e) =>
-                        updateForm("vegeterian", e.target.value)
-                      }
-                      className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
-                    >
-                      <option value="">Pilih Vegeterian</option>
-
-                      {vegeterian.map((item) => (
-                        <option key={item} value={item}>
-                          {item}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  
-{/* OKU */}
+{/* VEGETARIAN */}
 <div>
   <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
-    OKU *
+    Status Vegetarian *
+  </label>
+
+  <select
+    required
+    value={form.vegeterian}
+    onChange={(e) => {
+      const value = e.target.value;
+      updateForm("vegeterian", value);
+
+      if (value !== "Ya") {
+        updateForm("vegeterianDetail", "");
+      }
+    }}
+    className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+  >
+    <option value="">Pilih</option>
+    <option value="Ya">Ya</option>
+    <option value="Tidak">Tidak</option>
+  </select>
+</div>
+
+{/* BUTIRAN VEGETARIAN - PAPAR JIKA YA */}
+{form.vegeterian === "Ya" && (
+  <div>
+    <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
+      Diet Vegetarian *
+    </label>
+
+    <input
+      type="text"
+      required
+      value={form.vegeterianDetail}
+      onChange={(e) =>
+        updateForm("vegeterianDetail", e.target.value)
+      }
+      placeholder="Sila Nyatakan"
+      className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
+    />
+  </div>
+)}
+
+
+                   
+                  
+
+<div>
+  <label className="mb-1.5 block font-poppins text-md font-semibold text-slate-600">
+    Status OKU *
   </label>
 
   <select
@@ -1257,7 +1309,7 @@ setModal({
       onChange={(e) =>
         updateForm("kategoriOku", e.target.value)
       }
-      placeholder="Nyatakan kategori OKU"
+      placeholder="Sila Nyatakan"
       className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md text-[#062F63] outline-none focus:border-[#062F63] focus:bg-white"
     />
   </div>

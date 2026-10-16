@@ -153,7 +153,7 @@ export default function Hero() {
           </motion.p>
             <div className="flex space-x-4  items-center">
           
-          <motion.a
+          {/* <motion.a
             href="#rsvp"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ export default function Hero() {
             className="inline-flex w-full items-center justify-center rounded-xl bg-[#FFD21C] px-6 py-3.5 font-montserrat text-sm font-bold text-[#062F63] shadow-lg transition-all duration-300 hover:bg-white sm:w-auto sm:min-w-[190px] sm:px-7 sm:py-4 sm:text-base"
           >
            Pra Pendaftaran
-          </motion.a>
+          </motion.a> */}
          
           </div>
           

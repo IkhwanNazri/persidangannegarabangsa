@@ -28,6 +28,7 @@ export const kementerian = [
   "Kementerian Sains, Teknologi dan Inovasi",
   "Kementerian Sumber Asli dan Kelestarian Alam",
   "Kementerian Sumber Manusia",
+  "Lain-lain",
 ];
 
 // Senarai Jabatan/Agensi bagi setiap kementerian
@@ -60,4 +61,5 @@ export const jabatanAgensi: Record<string, string[]> = {
   "Kementerian Sains, Teknologi dan Inovasi": [],
   "Kementerian Sumber Asli dan Kelestarian Alam": [],
   "Kementerian Sumber Manusia": [],
+  
 };

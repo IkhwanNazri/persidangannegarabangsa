@@ -37,7 +37,7 @@ const ucapUtama: PanelPerson[] = [
     tag: "UCAPTAMA 4",
   },
     {
-    name: "YAB Datuk Seri Anwar Ibrahim",
+    name: "YAB Dato' Seri Anwar Ibrahim",
     position: "Perdana Menteri Malaysia",
     organization: "",
     image: "/images/panel/",

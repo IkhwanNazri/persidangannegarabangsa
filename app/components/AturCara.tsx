@@ -886,17 +886,30 @@ export default function AturCara() {
 
             </div>
           </motion.div>
-              <div className="mt-14 flex justify-center">
+              
+<div className="mt-14 flex flex-wrap justify-center gap-4">
+  {/* VIEW PDF */}
   <a
-    href="/documents/atur-cara-negara-bangsa-2026.pdf"
-    download
-    className="group inline-flex items-center gap-3 rounded-xl bg-[#E30620] px-7 py-4 font-poppins text-xs font-bold uppercase tracking-[.12em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#062F63] hover:shadow-xl"
+    href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-3 rounded-xl bg-[#062F63] px-7 py-4 font-poppins text-xs font-bold uppercase tracking-[.12em] text-white transition hover:bg-[#E30620]"
   >
-    <ArrowDownTrayIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
-
-    <span>Download Atur Cara</span>
+    <ArrowDownTrayIcon className="h-5 w-5" />
+    <span>View Atur Cara</span>
   </a>
+
+  {/* DOWNLOAD PDF */}
+  <a
+  href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA.pdf"
+  download
+  className="group inline-flex items-center gap-3 rounded-xl bg-[#E30620] px-7 py-4 font-poppins text-xs font-bold uppercase tracking-[.12em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#062F63] hover:shadow-xl"
+>
+  <ArrowDownTrayIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
+  <span>Download Atur Cara</span>
+</a>
 </div>
+
         </div>
       </div>
     </section>

@@ -1205,7 +1205,7 @@ setModal({
                   {form.kategoriUtama === "Lain-lain" && form.kategoriLain && (
                     <div className="sm:col-start-1 sm:row-start-4">
                       <label className="mb-1.5 block font-poppins text-md font-medium text-slate-600">
-                        Nama pertubahan/Kelab/Persatuan
+                        Nama pertubuhan/Kelab/Persatuan
                       </label>
 
                       <input
@@ -1214,7 +1214,7 @@ setModal({
                         onChange={(e) =>
                           updateForm("kategoriLainDetail", e.target.value)
                         }
-                        placeholder="Sila nyatakan kategori"
+                        placeholder="Sila Nyatakan Nama Pertubuhan/ Kelab/ Persatuan"
                         className="h-[54px] w-full rounded-lg border border-slate-200 bg-slate-50 px-3 font-poppins text-md font-medium text-[#062F63] outline-none placeholder:font-poppins placeholder:text-md placeholder:text-slate-400 focus:border-[#062F63] focus:bg-white"
                       />
                     </div>

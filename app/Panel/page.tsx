@@ -7,9 +7,9 @@ import { useState } from "react";
 
 const panelMembers = [
   {
-    name: "Tan Sri Nazir Razak",
+    name: "Dato' Mustapha Mohamed",
     role: "Pengerusi",
-    organization: "Yayasan Tun Razak",
+    organization: "",
     image: "/images/panel/nazir-razak.png",
   },
   {

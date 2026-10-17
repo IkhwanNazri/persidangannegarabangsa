@@ -150,8 +150,8 @@ const sesi4: PanelPerson[] = [
   },
  
   {
-  name: "YBhg. Tan Sri Dato' Sri Nazir Razak",
-  position: "Pengerusi Yayasan Tun Razak",
+  name: "Dato' Mustapha Mohamed",
+  position: "",
   organization: "",
   image: "/images/panel/",
   tag: "PEMBENTANG KERTAS 8",

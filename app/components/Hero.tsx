@@ -201,7 +201,7 @@ shadow-lg backdrop-blur-xl backdrop-saturate-150">
   />
       </div>
 
-      <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
+      <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3 gap-5">
         <span className="mb-2 text-md  font-semibold tracking-[0.3em] text-white/70">
           TARIKH
         </span>

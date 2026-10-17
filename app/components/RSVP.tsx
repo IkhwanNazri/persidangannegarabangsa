@@ -247,9 +247,9 @@ export default function RSVP() {
                   <Link
   href={
     card.id === "perasmian"
-      ? "/perasmian"
+      ? "https://forms.gle/9B5YuRGrXZjjzwg8A"
       : card.id === "penutup"
-        ? "/penutup"
+        ? "https://forms.gle/JJ7XVdxgoAwRTv7h8"
         : `/borang/borangpertama?type=${card.id}`
   }
                     className={`mt-auto flex h-[48px] w-full items-center justify-center gap-3 rounded-xl font-montserrat text-md font-bold tracking-wide text-white transition-all duration-300 ${

@@ -887,7 +887,7 @@ export default function AturCara() {
             </div>
           </motion.div>
               
-<div className="mt-14 flex flex-wrap justify-center gap-4">
+<div className="mt-14 flex flex-wrap justify-center gap-4 ">
   {/* VIEW PDF */}
   <a
     href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA.pdf"

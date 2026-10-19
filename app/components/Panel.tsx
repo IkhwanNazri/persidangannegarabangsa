@@ -299,7 +299,7 @@ export default function Panel() {
         }`}
       >
         <span
-          className={`block min-w-0 font-montserrat text-[8px] font-extrabold leading-tight sm:text-sm ${
+          className={`block min-w-0 font-montserrat text-[8px] font-bold leading-tight sm:text-sm ${
             active ? "text-black" : "whitespace-nowrap"
           }`}
         >

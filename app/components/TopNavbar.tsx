@@ -49,7 +49,7 @@ export default function Navbar() {
               </div>
             </a>
 
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1.5">
               {navItems.map((item) => {
                 const Icon = item.icon;
 
@@ -57,7 +57,7 @@ export default function Navbar() {
                   <a
                     key={item.href}
                     href={item.href}
-                    className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-montserrat text-md font-semibold uppercase tracking-wide text-white transition hover:text-yellow-400"
+                    className="flex items-center gap-1.5 rounded-xl px-2.5 py-2.5 whitespace-break-spaces font-montserrat text-md font-semibold uppercase tracking-normal text-white transition hover:text-yellow-400"
                   >
                     <Icon className="h-6 w-6" />
                     {item.label}
@@ -68,7 +68,7 @@ export default function Navbar() {
 
             <a
               href="#rsvp"
-              className="rounded-xl bg-[#FFD21C] px-5 py-3 font-montserrat text-sm font-extrabold uppercase tracking-wider text-[#062F63] transition hover:bg-white"
+              className="rounded-xl bg-[#FFD21C] px-5 py-3 font-montserrat whitespace-nowrap text-sm font-extrabold uppercase tracking-wider text-[#062F63] transition hover:bg-white"
             >
               Pra Pendaftaran
             </a>
@@ -103,7 +103,7 @@ export default function Navbar() {
                   </span>
 
                   <span
-                    className={`whitespace-nowrap font-poppins text-sm leading-none ${
+                    className={`whitespace-nowrap font-poppins text-sm leading-none  ${
                       isActive ? "font-bold" : "font-medium"
                     }`}
                   >

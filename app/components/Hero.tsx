@@ -183,7 +183,7 @@ export default function Hero() {
   }}
   className="relative z-10 mt-8 px-5 pb-28
   sm:px-10 sm:pb-32
-  lg:absolute lg:bottom-10 lg:left-16 lg:right-16
+  lg:absolute lg:bottom-6 lg:left-16 lg:right-16
   lg:mt-0 lg:px-0 lg:pb-0
   xl:left-20 xl:right-20"
 >
@@ -281,7 +281,7 @@ shadow-lg backdrop-blur-xl backdrop-saturate-150">
   <div className="hidden overflow-hidden rounded-xl border border-white/25 bg-white/[0.12] shadow-[0_20px_60px_rgba(0,0,0,.3),inset_0_1px_0_rgba(255,255,255,.3)] backdrop-blur-xl backdrop-saturate-150 lg:block">
     <div className="h-[3px] w-full bg-gradient-to-r from-[#FFD21C] via-[#E30620] to-transparent" />
 
-    <div className="grid grid-cols-3 tracking-widest">
+    <div className="grid grid-cols-3 tracking-normal gap-3 ">
       <EventInfo
         icon={
           <CalendarDaysIcon className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -291,7 +291,7 @@ shadow-lg backdrop-blur-xl backdrop-saturate-150">
           <>
             <span>30 November - 2 Disember 2026</span>
 
-            <span className="mt-1 inline-flex w-fit rounded-lg bg-yellow-500 px-5 text-lg font-semibold tracking-normal text-black">
+            <span className="  mt-2 inline-flex w-fit rounded-lg bg-yellow-500 px-4 py-1 text-sm xl:ms-2 lg:ms-2 font-semibold leading-tight tracking-normal text-black">
               Isnin – Rabu
             </span>
           </>
@@ -365,7 +365,7 @@ function EventInfo({
           {label}
         </p>
 
-        <p className="mt-1 font-jakarta text-sm font-extrabold text-white sm:text-base lg:text-lg">
+        <p className="mt-1 break-words font-jakarta text-sm font-extrabold leading-snug text-white sm:text-base lg:text-base">
           {value}
         </p>
       </div>

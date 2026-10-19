@@ -16,6 +16,7 @@ const schedules = {
   "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN": [
   {
     session: "MAJLIS PERASMIAN PERSIDANGAN NEGARA BANGSA",
+    hari: "30 November",
     venue: "Dewan Perdana - 11:00 Pagi - 1:00 tghari",
 
     events: [
@@ -94,6 +95,7 @@ const schedules = {
 {
       session:
         "SESI 1: PERLEMBAGAAN DAN RUKUN NEGARA TERAS PEMBINAAN NEGARA BANGSA",
+         hari: "30 November",
       venue: "Putra Hall B - 2:30 ptg - 4:30 ptg",
 
       events: [
@@ -145,6 +147,7 @@ const schedules = {
   {
     session:
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
+       hari: "1 Disember",
     venue: "Putra Hall B - 11:00 pg - 1:00 ptg",
     events: [
     
@@ -191,6 +194,7 @@ const schedules = {
   {
     session:
       "SESI 3: KEPELBAGAIAN, KEHARMONIAN DAN KESPADUAN SOSIAL",
+       hari: "1 Disember",
     venue: "Putra Hall B - 2:30 ptg - 4:30 ptg",
     events: [
       {
@@ -236,6 +240,7 @@ const schedules = {
 {
     session:
       "SESI 4: POLITIK DAN CABARAN DALAM MEMBINA NEGARA BANGSA",
+       hari: "2 Disember",
     venue: "Putra Hall B - 9:00 pg - 11:00 pg",
     events: [
      
@@ -274,6 +279,7 @@ const schedules = {
   {
     session:
       "SESI 5: TRANSFORMASI NEGARA BANGSA: NARATIF NASIONAL, EKONOMI INKLUSIF DAN MODAL INSAN",
+       hari: "2 Disember",
     venue: "Putra Hall B - 11:00 pg - 1:00 ptg",
     events: [
       {
@@ -322,6 +328,7 @@ const schedules = {
 "SESI RUMUSAN DAN MAJLIS PENUTUP": [
   {
     session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP",
+     hari: "2 Disember",
     venue: "Dewan Perdana - 2.30 ptg -4.30 ptg ",
 
     events: [
@@ -562,7 +569,7 @@ export default function AturCara() {
                   key={day}
                   type="button"
                   onClick={() => changeDay(day)}
-                  className={`rounded-xl px-3 py-3.5 transition-all  duration-300 sm:py-4 ${
+                  className={`rounded-xl px-3 py-3.5 transition-all   duration-300 sm:py-4 ${
                     active
                       ? "bg-[#FFD21C] text-[#062F63] shadow-lg"
                       : "text-white/60 hover:bg-white/10 hover:text-white"
@@ -707,7 +714,7 @@ export default function AturCara() {
 
                             {/* SESSION INFO */}
                             <div className="min-w-0 flex-1">
-                              <p className="font-poppins text-[10px] font-bold uppercase tracking-[.3em] text-[#FFD21C]">
+                              <p className="font-poppins text-[1px] font-bold uppercase tracking-[.3em] text-[#FFD21C]">
                                 SESI
                               </p>
 
@@ -716,8 +723,11 @@ export default function AturCara() {
                               </h3>
 
                               <div className="mt-3 flex items-center gap-2">
-                                <MapPinIcon className="h-4 w-4 shrink-0 text-[#FFD21C]" />
+                                {/* <MapPinIcon className="h-4 w-4 shrink-0 text-[#FFD21C]" /> */}
 
+                                <p className="font-poppins bg-gradient-to-b from-[#F9E7A1] to-[#D6A936] whitespace-nowrap  px-3 text-sm text-black rounded-2xl font-semibold py-1">
+                                  {session.hari}
+                                </p>
                                 <p className="font-poppins text-sm text-white/60">
                                   {session.venue}
                                 </p>

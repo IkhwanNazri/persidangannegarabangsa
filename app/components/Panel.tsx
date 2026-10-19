@@ -19,28 +19,28 @@ const ucapUtama: PanelPerson[] = [
     name: "Sultan Nazrin Muizzuddin Shah",
     position: "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
     organization: "Ucaptama Diraja Dan Titah Perasmian",
-    image: "/images/panel/",
+    image: "/images/panel/sultan.png",
     tag: "UCAPTAMA DIRAJA",
   },
   {
     name: "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj",
     position: "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/tunku.png",
     tag: "UCAPTAMA 2",
   },
   {
     name: "Tun Pehin Sri Dr. Haji Wan Junaidi",
     position: "Yang di-Pertua Negeri Sarawak",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/sarawak.png",
     tag: "UCAPTAMA 4",
   },
     {
     name: "YAB Dato' Seri Anwar Ibrahim",
     position: "Perdana Menteri Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/anwar.png",
     tag: "RUMUSAN PERSIDANGAN",
   },
 
@@ -52,7 +52,7 @@ const sesi1: PanelPerson[] = [
     name: "YAA Wan Ahmad Farid Wan Salleh",
     position: "Ketua Hakim Negara",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/hakimnegara.png",
     tag: "UCAPTAMA 1",
   },
   {
@@ -60,7 +60,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/emeri",
     tag: "PEMBENTANG KERTAS 1",
   },
   {
@@ -68,7 +68,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Felo Kanan Institut Kajian Strategik dan Antarabangsa (ISIS) Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/edin",
     tag: "PEMBENTANG KERTAS 2",
   },
   {
@@ -76,7 +76,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Pensyarah Kanan Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/sheila.png",
     tag: "MODERATOR",
   },
 ];
@@ -87,7 +87,7 @@ const sesi2: PanelPerson[] = [
     position:
       "Ahli Panel Majlis Kebudayaan Negara (MAKEN), Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/juli.",
     tag: "PEMBENTANG KERTAS 3",
   },
   {
@@ -95,14 +95,14 @@ const sesi2: PanelPerson[] = [
     position:
       "Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/emerti.",
     tag: "PEMBENTANG KERTAS 4",
   },
   {
     name: "YBrs. Dr. Gregory Anak Kiyai@Keai",
     position: "Pensyarah Kanan Fakulti Seni Kreatif Universiti Malaya",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/gregory.png",
     tag: "MODERATOR",
   },
 ];
@@ -113,21 +113,21 @@ const sesi3: PanelPerson[] = [
     position:
       "Profesor Ulung Institut Kajian Etnik (KITA), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/ulung.",
     tag: "UCAPTAMA 3",
   },
   {
     name: "YBhg. Tan Sri Lee Lam Thye",
     position: "Pengerusi Pertubuhan Ikatan Komuniti Selama",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/lee.png",
     tag: "PEMBENTANG KERTAS 5",
   },
   {
     name: "YBhg. Prof Emeritus Datuk Azizan Baharudin",
     position: "Pusat Dialog Peradaban (UMCCD), Universiti Malaya",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/azizah.png",
     tag: "PEMBENTANG KERTAS 6",
   },
   {
@@ -135,7 +135,7 @@ const sesi3: PanelPerson[] = [
     position:
       "Pegawai Penyelidik KSI Strategic Institute for Asia Pacific",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/teo.png",
     tag: "MODERATOR",
   },
 ];
@@ -145,7 +145,7 @@ const sesi4: PanelPerson[] = [
     name: "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi",
     position: "Ahli Majlis Penasihat Perpaduan Negara",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/tajuddin.png",
     tag: "PEMBENTANG KERTAS 7",
   },
  
@@ -153,14 +153,14 @@ const sesi4: PanelPerson[] = [
   name: "Dato' Mustapha Mohamed",
   position: "",
   organization: "",
-  image: "/images/panel/",
+  image: "/images/panel/mustapa.",
   tag: "PEMBENTANG KERTAS 8",
 },
  {
     name: "Tuan Luqman Hariz",
     position: "Personaliti TV Astro AWANI",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/luqman.png",
     tag: "MODERATOR",
   },
 ];
@@ -171,7 +171,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Felo Kanan Bersekutu Institut Kajian Etnik (KITA), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/change.png",
     tag: "UCAPTAMA 5",
   },
   {
@@ -179,7 +179,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/zul.",
     tag: "PEMBENTANG KERTAS 5",
   },
   {
@@ -187,7 +187,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/kalidd.",
     tag: "MODERATOR",
   },
 ];
@@ -210,12 +210,18 @@ const dots = [
 ];
 
 export default function Panel() {
-  const [showSessions, setShowSessions] = useState(false);
+  const [selectedDay, setSelectedDay] = useState<1 | 2 | 3>(1);
+
+  const days = [
+    { id: 1 as const, label: "", date: "30 NOVEMBER", day: "" },
+    { id: 2 as const, label: "", date: "1 DISEMBER", day: "" },
+    { id: 3 as const, label: "", date: "2 DISEMBER", day: "" },
+  ];
 
   return (
     <section
       id="panel"
-      className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white py-12 sm:py-24 lg:py-28"
     >
       {/* BACKGROUND DOTS */}
       <div className="pointer-events-none absolute inset-0">
@@ -255,15 +261,13 @@ export default function Panel() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <h2 className="font-montserrat text-[46px] font-bold uppercase leading-none tracking-[-2px] text-[#062F63] sm:text-[60px] md:text-[72px] lg:text-[82px]">
+          <h2 className="font-montserrat text-[40px] font-bold uppercase leading-tight tracking-[-2px] text-[#062F63] sm:text-[60px] md:text-[72px] lg:text-[82px]">
             AHLI PANEL
           </h2>
-
           <p className="mx-auto mt-5 max-w-[720px] font-poppins text-sm leading-7 text-[#062F63]/80 sm:text-base">
             Perspektif pelbagai. Perbincangan bermakna untuk pembinaan negara
             bangsa.
           </p>
-
           <div className="mx-auto mt-8 flex w-fit items-center gap-3">
             <span className="h-px w-20 bg-[#D4AF37] sm:w-24" />
             <span className="relative flex h-5 w-5 items-center justify-center">
@@ -274,53 +278,105 @@ export default function Panel() {
           </div>
         </motion.div>
 
-        {/* PAPARAN UTAMA: SEMUA TITAH DIRAJA DAN PEMBENTANGAN KHAS */}
-        <PanelSection
-          title="Titah Diraja, Sesi Ucaptama dan Pembentangan Khas"
-          panels={ucapUtama}
-          columns={4}
-        />
+        
 
-        {/* DROPDOWN: RUMUSAN DAN SEMUA SESI */}
-        <div className="mt-8 flex flex-col items-center">
-          <button
-            type="button"
-            onClick={() => setShowSessions((current) => !current)}
-            aria-expanded={showSessions}
-            className="group inline-flex items-center gap-3 rounded-md border-2 border-[#062F63] px-6 py-3 font-poppins text-sm font-semibold text-[#062F63] transition-colors duration-300 hover:bg-[#062F63] hover:text-white"
-          >
-            {showSessions ? "Tutup Senarai Sesi" : "Lihat Lebih"}
-            <svg
-              className={`h-4 w-4 transition-transform duration-300 ${showSessions ? "rotate-180" : ""}`}
-              viewBox="0 0 20 20"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path d="m5 7.5 5 5 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-        </div>
 
-        {showSessions && (
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            
-            <PanelSection title="Sesi 1" panels={sesi1} columns={4} />
-            <PanelSection title="Sesi 2" panels={sesi2} columns={3} />
-            <PanelSection title="Sesi 3" panels={sesi3} columns={4} />
-            <PanelSection title="Sesi 4" panels={sesi4} columns={3} />
-            <PanelSection title="Sesi 5" panels={sesi5} columns={3} />
-          </motion.div>
-        )}
+{/* PILIHAN HARI */}
+<div className="mx-auto mt-10 grid w-full max-w-3xl grid-cols-3 items-center rounded-full  border border-[#F0D47A] bg-white p-2 shadow-xl sm:mt-12 sm:p-3">
+  {days.map((day) => {
+    const active = selectedDay === day.id;
+
+    return (
+      <button
+        key={day.id}
+        type="button"
+        onClick={() => setSelectedDay(day.id)}
+        aria-pressed={active}
+        className={`   shadow-xs relative flex min-w-0 items-center justify-center gap-1 overflow-hidden rounded-full px-1.5 py-3 transition-all duration-300 sm:gap-2 sm:px-3 sm:py-4 ${
+          active
+            ? "z-10 bg-gradient-to-b from-[#F9E7A1] to-[#D6A936] text-black shadow-[0_3px_10px_rgba(48,21,104,0.25)]"
+            : "bg-transparent text-black hover:bg-[#F8F5FC]"
+        }`}
+      >
+        <span
+          className={`block min-w-0 font-montserrat text-[8px] font-extrabold leading-tight sm:text-sm ${
+            active ? "text-black" : "whitespace-nowrap"
+          }`}
+        >
+          {day.date}
+        </span>
+
+        <span
+          className={`font-poppins text-[8px] leading-tight sm:text-[11px] ${
+            active
+              ? "mt-1 block"
+              : "shrink-0 border-l border-[#E7E1F0] pl-1.5 text-[#77718A] sm:pl-2"
+          }`}
+        >
+          {day.day}
+        </span>
+      </button>
+    );
+  })}
+</div>
+
+
+
+
+        {/* KANDUNGAN MENGIKUT HARI */}
+        <motion.div
+          key={selectedDay}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mt-8"
+        >
+          {selectedDay === 1 && (
+            <>
+              <PanelSection
+                title="Ucaptama Diraja dan Majlis Perasmian"
+                panels={[ucapUtama[0]]}
+                columns={2}
+              />
+              <PanelSection title="Sesi 1" panels={sesi1} columns={4} />
+            </>
+          )}
+
+          {selectedDay === 2 && (
+            <>
+              <PanelSection
+                title="Ucaptama 2"
+                panels={[ucapUtama[1]]}
+                columns={2}
+              />
+              <PanelSection title="Sesi 2" panels={sesi2} columns={3} />
+              <PanelSection title="Sesi 3" panels={sesi3} columns={4} />
+            </>
+          )}
+
+          {selectedDay === 3 && (
+            <>
+              <PanelSection
+                title="Ucaptama 4"
+                panels={[ucapUtama[2]]}
+                columns={2}
+              />
+              <PanelSection title="Sesi 4" panels={sesi4} columns={3} />
+              <PanelSection title="Sesi 5" panels={sesi5} columns={3} />
+              <PanelSection
+                title="Rumusan Persidangan dan Majlis Penutupan"
+                panels={[ucapUtama[3]]}
+                columns={2}
+              />
+            </>
+          )}
+        </motion.div>
 
         {/* LIHAT SEMUA PEMBENTANG */}
         <div className="mt-10 flex justify-center">
           <a
             href="/#"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border-2 border-purple-900 px-8 py-4 font-poppins text-sm font-semibold text-purple-950 transition-all duration-500 after:absolute after:bottom-0 after:left-5 after:z-0 after:h-1 after:w-1 after:translate-y-full after:rounded-md after:bg-[#062F63] after:transition-all after:duration-700 hover:after:scale-[300] hover:text-white"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border-2 border-[#062F63] px-8 py-4 font-poppins text-sm font-semibold text-[#062F63] transition-all duration-500 after:absolute after:bottom-0 after:left-5 after:z-0 after:h-1 after:w-1 after:translate-y-full after:rounded-md after:bg-[#062F63] after:transition-all after:duration-700 hover:after:scale-[300] hover:text-white"
           >
             <span className="relative z-10">Lihat Semua Pembentang</span>
             <ArrowUpRightIcon className="relative z-10 ml-3 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -365,60 +421,81 @@ function PanelSection({
     columns === 2 ? "max-w-[900px]" : "max-w-full";
 
   return (
-    <section className="mt-12 sm:mt-16">
-      <h3 className="bg-amber-500 p-3 text-center font-montserrat text-xl font-bold text-slate-900 sm:text-3xl">
-        {title}
-      </h3>
-
-      <hr className="mt-6 border-2 border-slate-200" />
+    <section className="mt-10 sm:mt-14">
+      <div className="mb-5 text-center sm:mb-7">
+         <div className="mx-auto mt-3 flex max-w-[800px] items-center gap-2">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]" />
+          <span className="h-2.5 w-2.5 rotate-45 border border-[#D4AF37] bg-white" />
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]" />
+        </div>
+        <h3 className="font-montserrat text-lg mt-3 font-extrabold uppercase tracking-wide text-black sm:text-2xl">
+          {title}
+        </h3>
+        <div className="mx-auto mt-3 flex max-w-[800px] items-center gap-2">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#D4AF37]" />
+          <span className="h-2.5 w-2.5 rotate-45 border border-[#D4AF37] bg-white" />
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#D4AF37]" />
+        </div>
+      </div>
 
       <div
-        className={`mx-auto mt-8 grid w-full ${containerWidth} grid-cols-1 gap-6 ${gridColumns[columns]} lg:mt-10`}
+        className={`mx-auto grid w-full ${containerWidth} grid-cols-2 gap-3 ${gridColumns[columns]} sm:gap-5 lg:gap-6`}
       >
         {panels.map((panel, index) => (
           <motion.article
             key={panel.name}
-            initial={{ opacity: 0, y: 35 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.6, delay: (index % columns) * 0.08 }}
-            className="group relative overflow-hidden border border-slate-200 bg-white shadow-[0_10px_35px_rgba(6,47,99,.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(6,47,99,.12)]"
+            transition={{ duration: 0.5, delay: (index % columns) * 0.07 }}
+           className={`group relative isolate flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
+  panel.name === "Sultan Nazrin Muizzuddin Shah"||
+    panel.name === "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj" ||
+    panel.name === "Tun Pehin Sri Dr. Haji Wan Junaidi" ||
+    panel.name === "YAB Dato' Seri Anwar Ibrahim"
+    ? "col-span-2 mx-auto w-1/2"
+    : ""
+}`}
           >
-            {/* IMAGE — KEKALKAN DESIGN ASAL */}
-            <div className="relative aspect-[4/5.5] overflow-hidden bg-slate-100">
+            <div className="relative aspect-[4/5.5] w-full overflow-hidden rounded-b bg-gradient-to-br from-[#E9EEFA] via-[#F8F9FD] to-[#DCE5F7]">
+              <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-br from-[#1F3B91]/15 via-transparent to-transparent" />
               <Image
                 src={panel.image}
-                alt={panel.name}
+                alt={panel.name}              
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
               />
 
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/10 to-transparent" />
+              {/* Lengkungan emas */}
+              {/* <div className="pointer-events-none absolute -left-8 top-[28%] z-[2] h-24 w-[130%] -rotate-[36deg] rounded-[50%] border-b-[5px] border-[#E6B943] sm:h-32 sm:border-b-[7px]" /> */}
 
-              {/* GOLD TAG */}
-              <div className="absolute right-0 bottom-8 bg-[#D4AF37] px-4 py-2 sm:px-5">
-                <span className="font-poppins text-[9px] font-bold uppercase tracking-[.18em] text-[#062F63]">
+              {/* Label gelaran */}
+              <div className="absolute bottom-8  flex  sm: sm:bottom-8 ">
+                <span className="max-w-full  border border-[#F8E4A0] bg-gradient-to-r from-[#F8E8B0] via-[#EBCB6B] to-[#F8E8B0] px-2.5 py-1.5 text-center font-poppins text-[9px] font-bold leading-tight text-black shadow-md sm:px-4 sm:text-sm">
                   {panel.tag}
                 </span>
               </div>
             </div>
 
-            {/* CONTENT — KEKALKAN DESIGN ASAL */}
-            <div className="p-5 sm:p-6">
-              <h4 className="break-words font-serif text-xl font-bold leading-snug text-[#062F63] sm:text-[21px]">
+            <div className="relative flex flex-1 flex-col px-2.5 pb-3 pt-3 text-center sm:px-4 sm:pb-5 sm:pt-4">
+              <h4 className="break-words font-montserrat text-[11px] font-bold leading-snug text-black sm:text-base">
                 {panel.name}
               </h4>
 
-              <p className="mt-3 break-words font-poppins text-sm leading-6 text-[#062F63]/75">
-                {panel.position}
-              </p>
+              {panel.position && (
+                <p className="mt-2 break-words font-poppins  rounded-2xl text-[9px] leading-relaxed text-black sm:text-sm sm:leading-6">
+                  {panel.position}
+                </p>
+              )}
 
               {panel.organization && (
-                <p className="mt-1 break-words font-poppins text-sm font-semibold leading-6 text-[#062F63]/60">
+                <p className="mt-1 break-words font-poppins text-[9px] font-semibold leading-relaxed text-slate-800 sm:text-xs">
                   {panel.organization}
                 </p>
               )}
+
+              <div className="mx-auto mt-3 h-0.5 w-9 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
             </div>
           </motion.article>
         ))}

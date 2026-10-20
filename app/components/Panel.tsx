@@ -41,7 +41,7 @@ const ucapUtama: PanelPerson[] = [
     position: "Perdana Menteri Malaysia",
     organization: "",
     image: "/images/panel/anwar.png",
-    tag: "RUMUSAN PERSIDANGAN",
+    tag: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
   },
 
  ];
@@ -49,7 +49,7 @@ const ucapUtama: PanelPerson[] = [
 
 const sesi1: PanelPerson[] = [
   {
-    name: "YAA Wan Ahmad Farid Wan Salleh",
+    name: "YAA Tun Wan Ahmad Farid Wan Salleh",
     position: "Ketua Hakim Negara",
     organization: "",
     image: "/images/panel/hakimnegara.png",
@@ -151,9 +151,9 @@ const sesi4: PanelPerson[] = [
  
   {
   name: "Dato' Mustapha Mohamed",
-  position: "",
+  position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
   organization: "",
-  image: "/images/panel/mustapa.",
+  image: "/images/panel/mustapa.png",
   tag: "PEMBENTANG KERTAS 8",
 },
  {

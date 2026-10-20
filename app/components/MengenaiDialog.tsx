@@ -38,7 +38,7 @@ export default function MengenaiDialog() {
 
       <div className="mx-auto w-full max-w-[1500px] px-6 sm:px-10 lg:px-16 xl:px-20">
         <div className="grid items-center gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-16 xl:gap-24">
-          <div>
+          <div className="order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, x: -25 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -65,6 +65,28 @@ export default function MengenaiDialog() {
                 <span className="text-[#062F63]">NEGARA BANGSA</span>
               </span>
             </motion.h2>
+            <div className="my-8 w-full lg:hidden">
+               <Image
+    src="/images/negarabangsa.png"
+    alt="Dialog Negara Bangsa"
+    width={1200}
+    height={450}
+    sizes="100vw"
+    className="block h-auto w-full rounded-xl object-cover"
+  />
+  <video
+    src="/images/dialog.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    controls
+    preload="metadata"
+    className="block h-auto w-full  object-cover"
+  />
+    {/* Gambar Negara Bangsa di bawah video */}
+ 
+</div>
 
             <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
@@ -170,35 +192,46 @@ export default function MengenaiDialog() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.8 }}
-            className="relative mx-auto w-full max-w-[620px]"
-          >
-            {/* <div className="pointer-events-none absolute -right-3 -top-5 z-10 h-36 w-8 rotate-[28deg] rounded-full bg-[#FFD21C] sm:-right-5 sm:-top-8 sm:h-48 sm:w-10" /> */}
-            {/* <div className="pointer-events-none absolute -left-4 top-24 z-10 h-32 w-9 rotate-[28deg] rounded-full bg-[#E30620] sm:-left-7 sm:top-28 sm:h-40 sm:w-11" /> */}
-            {/* <div className="pointer-events-none absolute -bottom-5 right-8 z-10 h-28 w-8 rotate-[28deg] rounded-full bg-[#E30620] sm:right-12 sm:h-36 sm:w-10" /> */}
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, amount: 0.25 }}
+  transition={{ duration: 0.8 }}
+  className="relative order-1 mx-auto w-full max-w-[620px] lg:order-2"
+>
+  {/* MOBILE & TABLET */}
+  
 
-            <div className="relative z-20 overflow-hidden ">
-              <div className="relative aspect-[8/3] ">
-                <Image
-                  src="/images/negarabangsa.png"
-                  alt="Dialog Negara Bangsa"
-                  fill
-                  sizes="(max-width: auto) 100vw, 50vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 object-fill " />
-              </div>
-            </div>
+  {/* DESKTOP — KEKALKAN SUSUNAN ASAL */}
+  <div className="hidden lg:block">
+   
 
-            {/* <div className="pointer-events-none absolute -bottom-8 left-10 z-10 grid h-20 w-28 grid-cols-6 gap-2 opacity-50 sm:left-16">
-              {Array.from({ length: 36 }).map((_, index) => (
-                <span key={index} className="h-1.5 w-1.5 rounded-full bg-[#062F63]" />
-              ))}
-            </div> */}
-          </motion.div>
+    <div className="relative z-20 mt-4 overflow-hidden">
+     
+    </div>
+     <div className="relative z-20 overflow-hidden">
+      <div className="relative aspect-[8/3]">
+        <Image
+          src="/images/negarabangsa.png"
+          alt="Dialog Negara Bangsa"
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
+    </div>
+     <div className="relative aspect-[5/3]">
+        <video
+  src="/images/dialog.mp4"
+  autoPlay
+  loop
+  playsInline
+  controls
+  className="absolute inset-0 h-full w-full object-cover"
+/>
+      </div>
+    
+  </div>
+</motion.div>
         </div>
       </div>
     </section>

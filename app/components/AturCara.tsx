@@ -8,6 +8,7 @@ import {
   ChevronRightIcon,
   ChevronDownIcon,
     ArrowDownTrayIcon,
+  TrophyIcon,
 } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
@@ -446,6 +447,7 @@ const dayInfo: Record<
 export default function AturCara() {
   const [activeDay, setActiveDay] =
     useState<Day>("UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN");
+  const [showDetails, setShowDetails] = useState(false);
 
   /*
    * Simpan sesi yang sedang dibuka.
@@ -553,354 +555,152 @@ export default function AturCara() {
           </p>
         </motion.div>
 
-        {/* =====================================================
-            DAY SELECTOR
-        ===================================================== */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="mx-auto mt-10 grid max-w-[720px] grid-cols-3 gap-2 rounded-2xl bg-[#062F63] p-2 sm:mt-12 sm:gap-3"
-        >
-          {(Object.keys(schedules) as Day[]).map(
-            (day, index) => {
-              const active = activeDay === day;
+        {/* PILIH PROGRAM: REKA BENTUK KAD PREMIUM */}
+        {!showDetails ? (
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="mt-12 grid gap-5 md:grid-cols-3"
+          >
+            {(Object.keys(schedules) as Day[]).map((day, index) => {
+              const cardTitles = [
+                "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN",
+                "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
+                "SESI RUMUSAN DAN MAJLIS PENUTUP",
+              ];
+              const subtitles = [
+                "Majlis perasmian dan Ucaptama Diraja",
+                "Rangkaian sesi perbincangan selama tiga hari",
+                "Rumusan persidangan dan majlis penutup rasmi",
+              ];
+              const dates = ["30 NOVEMBER 2026", "30 NOV – 2 DIS 2026", "2 DISEMBER 2026"];
+              const symbols = ["01", "02", "03"];
 
               return (
-                <button
+                <motion.button
                   key={day}
                   type="button"
-                  onClick={() => changeDay(day)}
-                  className={`rounded-xl px-3 py-3.5 transition-all   duration-300 sm:py-4 ${
-                    active
-                      ? "bg-[#FFD21C] text-[#062F63] shadow-lg"
-                      : "text-white/60 hover:bg-white/10 hover:text-white"
-                  }`}
+                  onClick={() => {
+                    changeDay(day);
+                    setShowDetails(true);
+                  }}
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.985 }}
+                  className="group relative isolate flex min-h-[340px] flex-col overflow-hidden rounded-[26px] border border-white/15 bg-[#082B59] p-0 text-left shadow-[0_18px_45px_rgba(5,31,66,.24)] transition-shadow duration-300 hover:shadow-[0_24px_55px_rgba(5,31,66,.34)]"
                 >
-                  {/* <span className="block font-montserrat text-[9px] font-bold uppercase tracking-[.15em] sm:text-[10px]">
-                    Hari {index + 1}
-                  </span> */}
+                  {/* Dekorasi latar */}
+                  <span className="pointer-events-none absolute -right-14 -top-14 -z-10 h-48 w-48 rounded-full border-[24px] border-white/[0.04]" />
+                  <span className="pointer-events-none absolute -bottom-20 -left-16 -z-10 h-56 w-56 rounded-full border-[28px] border-[#FFD21C]/[0.08]" />
+                  {/* <span className="pointer-events-none absolute right-0 top-0 h-full w-1.5 bg-[#FFD21C] transition-all duration-300 group-hover:w-2.5" /> */}
 
-                  <span className="mt-1 block font-poppins text-sm font-semibold sm:text-base">
-                    {day}
-                  </span>
-                </button>
+                  {/* Kotak nombor kuning + ikon mahkota */}
+                  <div className="relative flex items-start justify-between px-0 pt-0">
+  <div className="flex h-[58px] w-[58px] flex-col items-center justify-center bg-[#FFD21C] text-[#082B59] shadow-lg ring-1 ring-black/5">
+    <span className="font-poppins text-2xl font-extrabold leading-none">
+      {symbols[index]}
+    </span>
+  </div>
+
+  <span className="rounded-full border border-white/15 bg-white/[0.07] px-3 py-1.5 font-poppins text-[10px] font-bold uppercase tracking-[.16em] text-white/75">
+    Program rasmi
+  </span>
+</div>
+
+                  <div className="relative flex flex-1 flex-col px-6 pb-6 pt-7 sm:px-7 sm:pb-7">
+                    {/* <p className="font-poppins text-[11px] font-bold uppercase tracking-[.2em] text-[#FFD21C]/80">Pilihan {symbols[index]}</p> */}
+                    <h3 className="mt-3 max-w-[95%] font-poppins text-xl font-extrabold uppercase leading-[1.2] text-white sm:text-[22px]">
+                      {cardTitles[index]}
+                    </h3>
+                    <p className="mt-3 font-poppins text-sm leading-6 text-slate-300">
+                      {subtitles[index]}.
+                    </p>
+
+                    <div className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-2">
+                      <CalendarDaysIcon className="h-6 w-6 text-[#FFD21C]" />
+                      <span className="font-poppins text-[11px] font-bold tracking-wide text-white">{dates[index]}</span>
+                    </div>
+                  
+
+                    <div className=" flex items-center justify-between gap-3 border-t border-white/15 pt-6 mt-7">
+                      <span className="font-poppins text-xs font-bold uppercase tracking-[.15em] text-white">Lihat butiran program</span>
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#E30620] text-white transition duration-300 group-hover:bg-[#FFD21C] group-hover:text-[#082B59]">
+                        <ChevronRightIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </div>
+                  <span className="absolute bottom-0 left-0 h-1.5 w-0 bg-[#E30620] transition-all duration-500 group-hover:w-full" />
+                </motion.button>
               );
-            }
-          )}
-        </motion.div>
-
-        {/* =====================================================
-            MAIN CONTENT
-        ===================================================== */}
-        <div className="mt-12 grid gap-12 lg:grid-cols-[280px_1fr]  lg:gap-20">
-
-          {/* ===================================================
-              DATE / LOCATION / TIME CARD
-          =================================================== */}
+            })}
+          </motion.div>
+        ) : (
           <motion.div
             key={activeDay}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="lg:sticky lg:top-24 lg:h-fit"
-          >
-            <div className="relative overflow-hidden rounded-2xl bg-[#062F63] p-12 px-6 text-white shadow-[0_20px_60px_rgba(6,47,99,.15)] sm:p-4">
-
-              <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full border-[18px] border-[#FFD21C]/20" />
-
-              <div className="absolute -bottom-12 -left-12 h-32 w-32 rounded-full border-[20px] border-[#E30620]/10" />
-
-              
-
-              
-
-              <h3 className="relative mt-2 font-poppins text-3xl font-medium leading-[1.10] break-normal sm:text-4xl`">
-                {dayInfo[activeDay].name}
-              </h3>
-
-              <div className="mt-6 h-px bg-white/15" />
-              
-              <div className="mt-5 flex items-start gap-3">
-                <CalendarDaysIcon className="mt-0.5 h-5 w-5 shrink-0 text-white" />
-
-                <div>
-                  <p className="font-poppins text-sm font-semibold uppercase tracking-wider text-white">
-                    Tarikh
-                  </p>
-
-                  <p className="mt-1 font-poppins text-sm font-medium tracking-wider">
-                    {dayInfo[activeDay].date}
-                  </p>
-                </div>
-              </div>
-
-              {/* LOCATION */}
-              <div className="mt-5 flex items-start gap-3">
-                <MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-white" />
-
-                <div>
-                  <p className="font-poppins text-sm font-semibold uppercase tracking-wider text-white">
-                    Lokasi
-                  </p>
-
-                  <p className="mt-1 font-poppins text-sm font-medium tracking-wider">
-                   {dayInfo[activeDay].tempat}
-                  </p>
-                </div>
-              </div>
-
-              {/* TIME */}
-              <div className="mt-6 flex items-start gap-3">
-                <ClockIcon className="mt-0.5 h-5 w-5 shrink-0 text-white" />
-
-                <div>
-                  <p className="font-poppins text-sm font-semibold uppercase tracking-wider text-white">
-                    Masa
-                  </p>
-
-                  <p className="mt-1 font-poppins text-sm font-medium whitespace-nowrap">
-                   {dayInfo[activeDay].masa}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* ===================================================
-              SCHEDULE
-          =================================================== */}
-          <motion.div
-            key={`schedule-${activeDay}`}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-            className="relative"
+            transition={{ duration: 0.35 }}
+            className="mt-12"
           >
-            <div className="space-y-8">
+            <button
+              type="button"
+              onClick={() => setShowDetails(false)}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#062F63]/15 bg-white px-5 py-2.5 font-poppins text-sm font-bold text-[#062F63] transition hover:bg-[#FFD21C]"
+            >
+              <ChevronRightIcon className="h-4 w-4 rotate-180" />
+              Kembali ke pilihan program
+            </button>
 
-              {schedules[activeDay].map(
-                (session, sessionIndex) => {
-                  const sessionKey =
-                    `${activeDay}-session-${sessionIndex}`;
+            <div className="grid items-start gap-6 lg:grid-cols-[minmax(280px,0.8fr)_minmax(0,1.7fr)] lg:gap-8">
+              {/* KAD MAKLUMAT PROGRAM DI KIRI — NAVY + LATAR SENI BINA */}
+              <div className="relative isolate min-h-[440px] overflow-hidden rounded-2xl bg-[#062F63] p-6 text-white shadow-[0_20px_60px_rgba(6,47,99,.28)] sm:p-8 lg:sticky lg:top-24">
+                {/* Letakkan gambar seni bina di public/images/architecture-bg.png */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-52 bg-contain bg-bottom bg-no-repeat opacity-55"
+                  style={{ backgroundImage: "url('/images/architecture-bg.png')" }}
+                />
+                <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#062F63] via-[#062F63]/95 to-[#062F63]/45" />
+                <div className="pointer-events-none absolute -right-8 -top-8 -z-10 h-28 w-28 rounded-full border-[18px] border-[#FFD21C]/20" />
+                <div className="pointer-events-none absolute -bottom-12 -left-12 -z-10 h-32 w-32 rounded-full border-[20px] border-[#E30620]/15" />
+                <p className="relative text-xs font-bold uppercase tracking-[.2em] text-[#FFD21C] font-poppins">Maklumat Program</p>
+                <h3 className="relative mt-4 font-poppins text-2xl font-semibold uppercase leading-tight sm:text-3xl">
+                  {dayInfo[activeDay].name}
+                </h3>
+                <div className="my-6 h-px bg-white/20" />
+                <div className="space-y-5 font-poppins">
+                  <div className="flex items-start gap-3"><CalendarDaysIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#FFD21C]" /><div><p className="text-xs font-bold uppercase tracking-wider text-white/60">Tarikh</p><p className="mt-1 text-sm font-semibold">{dayInfo[activeDay].date}</p></div></div>
+                  <div className="flex items-start gap-3"><MapPinIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#FFD21C]" /><div><p className="text-xs font-bold uppercase tracking-wider text-white/60">Lokasi</p><p className="mt-1 text-sm font-semibold">{dayInfo[activeDay].tempat}</p></div></div>
+                  <div className="flex items-start gap-3"><ClockIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#FFD21C]" /><div><p className="text-xs font-bold uppercase tracking-wider text-white/60">Masa</p><p className="mt-1 text-sm font-semibold">{dayInfo[activeDay].masa}</p></div></div>
+                </div>
+              </div>
 
-                  const isOpen =
-                    openSessions[sessionKey] ?? false;
-
+              {/* SENARAI SESI DI KANAN */}
+              <div className="min-w-0 space-y-4">
+                <div className="mb-5"><p className="font-poppins text-xs font-bold uppercase tracking-[.2em] text-[#E30620]">Jadual Program</p><h3 className="mt-2 font-poppins text-2xl font-extrabold text-[#062F63] sm:text-3xl">Senarai Sesi</h3></div>
+                {schedules[activeDay].map((session, sessionIndex) => {
+                  const sessionKey = `${activeDay}-session-${sessionIndex}`;
+                  const isOpen = openSessions[sessionKey] ?? false;
                   return (
-                    <div
-                      key={sessionKey}
-                      className="relative"
-                    >
-
-                      {/* =====================================
-                          SESSION HEADER
-                      ===================================== */}
-                      <motion.div
-                        initial={{
-                          opacity: 0,
-                          y: 15,
-                        }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                        }}
-                        transition={{
-                          duration: 0.4,
-                        }}
-                        className="overflow-hidden rounded-2xl bg-[#062F63] shadow-lg"
-                      >
-                        <div className="border-l-8 border-[#FFD21C] px-6 py-5 sm:px-8">
-
-                          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-
-                            {/* SESSION INFO */}
-                            <div className="min-w-0 flex-1">
-                              <p className="font-poppins text-[1px] font-bold uppercase tracking-[.3em] text-[#FFD21C]">
-                                SESI
-                              </p>
-
-                              <h3 className="mt-2 font-jakarta text-lg font-extrabold uppercase leading-snug text-white sm:text-2xl">
-                                {session.session}
-                              </h3>
-
-                              <div className="mt-3 flex items-center gap-2">
-                                {/* <MapPinIcon className="h-4 w-4 shrink-0 text-[#FFD21C]" /> */}
-
-                                <p className="font-poppins bg-gradient-to-b from-[#F9E7A1] to-[#D6A936] whitespace-nowrap  px-3 text-sm text-black rounded-2xl font-semibold py-1">
-                                  {session.hari}
-                                </p>
-                                <p className="font-poppins text-sm text-white/60">
-                                  {session.venue}
-                                </p>
-                              </div>
-                            </div>
-
-                            {/* BUTTON */}
-                            <button
-                              type="button"
-                              onClick={() =>
-                                toggleSession(
-                                  sessionKey
-                                )
-                              }
-                              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#FFD21C] px-5 py-3 font-poppins text-md font-bold uppercase tracking-[.12em] text-[#062F63] transition-all duration-300 hover:bg-white"
-                            >
-                              {isOpen
-                                ? "Tutup Program"
-                                : "Lihat Program"}
-
-                              <ChevronDownIcon
-                                className={`h-4 w-4 transition-transform duration-300 ${
-                                  isOpen
-                                    ? "rotate-180"
-                                    : ""
-                                }`}
-                              />
-                            </button>
-
-                          </div>
-
+                    <div key={sessionKey} className="overflow-hidden rounded-2xl bg-[#062F63] shadow-lg">
+                      <div className="border-l-[6px] border-[#FFD21C] p-5 sm:p-6">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                          <div className="min-w-0 flex-1"><span className="inline-flex rounded-full font-poppins bg-[#FFD21C] px-3 py-1 text-xs font-bold text-[#062F63]">{session.hari}</span><h4 className="mt-3 font-poppins text-base font-semibold uppercase leading-snug text-white sm:text-lg">{session.session}</h4><p className="mt-2 font-poppins text-sm leading-6 text-white/65">{session.venue}</p></div>
+                          <button type="button" onClick={() => toggleSession(sessionKey)} aria-expanded={isOpen} className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#FFD21C] px-4 py-3 font-poppins text-xs font-extrabold uppercase tracking-wider text-[#062F63] transition hover:bg-white">{isOpen ? "Tutup Program" : "Lihat Program"}<ChevronDownIcon className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} /></button>
                         </div>
-                      </motion.div>
-
-                      {/* =====================================
-                          TIMELINE
-                          HIDDEN UNTIL BUTTON CLICKED
-                      ===================================== */}
+                      </div>
                       <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            initial={{
-                              height: 0,
-                              opacity: 0,
-                            }}
-                            animate={{
-                              height: "auto",
-                              opacity: 1,
-                            }}
-                            exit={{
-                              height: 0,
-                              opacity: 0,
-                            }}
-                            transition={{
-                              duration: 0.45,
-                              ease: "easeInOut",
-                            }}
-                            className="overflow-hidden"
-                          >
-                            <div className="relative mt-6 pl-0">
-
-                              {/* TIMELINE LINE */}
-                              <div className="absolute bottom-7 left-[21px] top-7 w-px bg-[#062F63]/15 sm:left-[27px]" />
-
-                              <div className="space-y-5 sm:space-y-6">
-
-                                {session.events.map(
-                                  (item, index) => (
-                                    <motion.div
-                                      key={`${sessionKey}-${index}`}
-                                      initial={{
-                                        opacity: 0,
-                                        x: 20,
-                                      }}
-                                      animate={{
-                                        opacity: 1,
-                                        x: 0,
-                                      }}
-                                      transition={{
-                                        duration: 0.4,
-                                        delay:
-                                          index *
-                                          0.08,
-                                      }}
-                                      className="relative flex gap-5 sm:gap-7"
-                                    >
-
-                                      {/* TIMELINE DOT */}
-                                      <div className="relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-4 border-[#F8F4E8] bg-[#FFD21C] shadow-[0_0_0_1px_rgba(6,47,99,.15)] sm:h-14 sm:w-14">
-                                        <ClockIcon
-                                          className="h-5 w-5 text-[#062F63] sm:h-6 sm:w-6"
-                                          strokeWidth={2}
-                                        />
-                                      </div>
-
-                                      {/* EVENT CARD */}
-                                      <div className="flex-1 rounded-2xl border border-[#062F63]/10 bg-white/95 p-5 shadow-[0_8px_30px_rgba(6,47,99,.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#062F63]/20 hover:shadow-[0_15px_40px_rgba(6,47,99,.08)] sm:p-6">
-
-                                        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-
-                                          <div>
-
-                                            {/* TYPE + TIME */}
-                                            <div className="flex flex-wrap items-center gap-2">
-
-                                              <span className="bg-[#E30620] px-4 py-1.5 font-poppins text-[10px] font-bold uppercase tracking-[.12em] text-white">
-                                                {item.type}
-                                              </span>
-
-                                              <span className="font-poppins text-xs font-semibold text-slate-400">
-                                                {item.time}
-                                              </span>
-
-                                            </div>
-
-                                            {/* TITLE */}
-                                            <h3 className="mt-3 font-jakarta text-lg font-extrabold text-[#062F63] sm:text-xl">
-                                              {item.title}
-                                            </h3>
-
-                                            {/* DESCRIPTION */}
-                                            <p className="mt-2 max-w-[650px] font-poppins text-sm leading-6 text-slate-500">
-                                              {item.description}
-                                            </p>
-
-                                          </div>
-
-                                          <ChevronRightIcon className="hidden h-5 w-5 shrink-0 text-slate-300 sm:block" />
-
-                                        </div>
-
-                                      </div>
-
-                                    </motion.div>
-                                  )
-                                )}
-
-                              </div>
-
-                              {/* CLOSE BUTTON */}
-                              <div className="mt-6 flex justify-center">
-                                <button
-                                  type="button"
-                                  onClick={() =>
-                                    toggleSession(
-                                      sessionKey
-                                    )
-                                  }
-                                  className="inline-flex items-center gap-2 rounded-full border border-[#062F63]/10 bg-white px-5 py-2.5 font-poppins text-[10px] font-bold uppercase tracking-[.12em] text-[#062F63]/60 transition-all duration-300 hover:bg-[#062F63] hover:text-white"
-                                >
-                                  Tutup Program
-
-                                  <ChevronDownIcon className="h-4 w-4 rotate-180" />
-                                </button>
-                              </div>
-
-                            </div>
-                          </motion.div>
-                        )}
+                        {isOpen && <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden"><div className="space-y-3 bg-slate-50 p-4 sm:p-6">{session.events.map((event, eventIndex) => <div key={`${sessionKey}-event-${eventIndex}`} className="rounded-xl border border-slate-200 bg-white p-4">{event.time && <p className="text-xs font-bold text-[#E30620]">{event.time}</p>}{event.type && <span className="mt-1 inline-block rounded bg-[#E30620] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">{event.type}</span>}<h5 className="mt-2 font-poppins font-bold leading-relaxed text-[#062F63]">{event.title}</h5>{event.description && <p className="mt-1 font-poppins text-sm leading-6 text-slate-500">{event.description}</p>}</div>)}</div></motion.div>}
                       </AnimatePresence>
-
                     </div>
                   );
-                }
-              )}
-
+                })}
+              </div>
             </div>
           </motion.div>
-              
-<div className="mt-14 flex flex-wrap justify-center gap-4 ">
+        )}
+
+        <div className="mt-14 flex flex-wrap justify-center gap-4 ">
   {/* VIEW PDF */}
   <a
     href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA.pdf"
@@ -924,7 +724,7 @@ export default function AturCara() {
 </div>
 
         </div>
-      </div>
+     
     </section>
   );
 }

@@ -493,7 +493,7 @@ export default function AturCara() {
 
       <div className="popoppins-events-none absolute inset-0 bg-[#F8F4E8]/20" /> */}
 
-     
+  <div className="pointer-events-none absolute left-3 -bottom-5 z-10 h-36 w-8 rotate-[28deg] rounded-full bg-purple-800 sm:left-3 sm:-bottom-5 sm:h-48 sm:w-10" />    
 <div className="pointer-events-none absolute -bottom-5 right-8 z-10 h-28 w-8 rotate-[28deg] rounded-full bg-[#E30620] sm:right-12 sm:h-36 sm:w-10" />
       
 

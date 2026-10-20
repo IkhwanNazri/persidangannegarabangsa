@@ -49,7 +49,7 @@ const cards: RSVPCard[] = [
   {
     id: "perasmian",
     number: "01",
-    title: "PERASMIAN",
+    title: "UCAPTAMA DIRAJA",
     date: "30 NOVEMBER 2026",
     description:
       "Majlis Perasmian Persidangan Pembinaan Negara Bangsa.",
@@ -119,16 +119,16 @@ const cards: RSVPCard[] = [
   {
     id: "penutup",
     number: "03",
-    title: "PENUTUP",
+    title: "MAJLIS PENUTUP",
     date: "2 DISEMBER 2026",
     description:
-      "Majlis Penutupan Persidangan Pembinaan  Negara Bangsa.",
+      "Sesi Rumusan dan Majlis Penutupan Persidangan Pembinaan Negara Bangsa..",
     sessions: [
       {
         id: "penutup",
         title: "Penutup",
         description:
-          "Majlis Penutupan Persidangan Pembinaan  Negara Bangsa.",
+          "Sesi Rumusan dan Majlis Penutupan Persidangan Pembinaan Negara Bangsa.",
         icon: "building",
       },
     ],

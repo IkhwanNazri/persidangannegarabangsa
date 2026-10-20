@@ -474,11 +474,14 @@ export default function AturCara() {
   return (
     <section
       id="aturcara"
-      className="relative overflow-hidden bg-[#062F63] py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-white/95 py-20 sm:py-24 lg:py-28"
+      
     >
-      <div className="absolute inset-0">
+       <div className="pointer-events-none absolute -left-4 top-24 z-10 h-32 w-9 rotate-[28deg] rounded-full bg-[#E30620] sm:-left-7 sm:top-28 sm:h-40 sm:w-11" />
+      <div className="pointer-events-none absolute -right-3 -top-5 z-10 h-36 w-8 rotate-[28deg] rounded-full bg-[#FFD21C] sm:-right-5 sm:-top-8 sm:h-48 sm:w-10" />
+      {/* <div className="absolute inset-0">
               <Image
-                src="/images/yellow.png"
+                src="/images/"
                 alt="PICC Putrajaya"
                 fill
                 priority
@@ -488,10 +491,10 @@ export default function AturCara() {
               <div className="absolute inset-0 bg-[#062F63]/0 " />
             </div>
 
-      <div className="popoppins-events-none absolute inset-0 bg-[#F8F4E8]/20" />
+      <div className="popoppins-events-none absolute inset-0 bg-[#F8F4E8]/20" /> */}
 
      
-
+<div className="pointer-events-none absolute -bottom-5 right-8 z-10 h-28 w-8 rotate-[28deg] rounded-full bg-[#E30620] sm:right-12 sm:h-36 sm:w-10" />
       
 
       <div

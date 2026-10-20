@@ -83,7 +83,7 @@ export default function MengenaiDialog() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-7 max-w-[650px] font-poppins text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:text-[17px]"
+              className="mt-7 max-w-[650px] text-justify font-poppins text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:text-[17px]"
             >
               Persidangan Pembinaan Negara Bangsa merupakan medan wacana
               nasional untuk membincangkan hala tuju, cabaran dan pendekatan
@@ -91,7 +91,7 @@ export default function MengenaiDialog() {
               Rancangan Malaysia Ketiga Belas (RMK13).
             </motion.p>
 
-            <div className="mt-9 space-y-3 sm:mt-10 sm:space-y-4">
+            <div className="mt-9 space-y-3 sm:mt-10 sm:space-y-4 text-justify">
               {contents.map((item, index) => {
                 const Icon = item.icon;
 
@@ -176,28 +176,28 @@ export default function MengenaiDialog() {
             transition={{ duration: 0.8 }}
             className="relative mx-auto w-full max-w-[620px]"
           >
-            <div className="pointer-events-none absolute -right-3 -top-5 z-10 h-36 w-8 rotate-[28deg] rounded-full bg-[#FFD21C] sm:-right-5 sm:-top-8 sm:h-48 sm:w-10" />
-            <div className="pointer-events-none absolute -left-4 top-24 z-10 h-32 w-9 rotate-[28deg] rounded-full bg-[#E30620] sm:-left-7 sm:top-28 sm:h-40 sm:w-11" />
-            <div className="pointer-events-none absolute -bottom-5 right-8 z-10 h-28 w-8 rotate-[28deg] rounded-full bg-[#E30620] sm:right-12 sm:h-36 sm:w-10" />
+            {/* <div className="pointer-events-none absolute -right-3 -top-5 z-10 h-36 w-8 rotate-[28deg] rounded-full bg-[#FFD21C] sm:-right-5 sm:-top-8 sm:h-48 sm:w-10" /> */}
+            {/* <div className="pointer-events-none absolute -left-4 top-24 z-10 h-32 w-9 rotate-[28deg] rounded-full bg-[#E30620] sm:-left-7 sm:top-28 sm:h-40 sm:w-11" /> */}
+            {/* <div className="pointer-events-none absolute -bottom-5 right-8 z-10 h-28 w-8 rotate-[28deg] rounded-full bg-[#E30620] sm:right-12 sm:h-36 sm:w-10" /> */}
 
-            <div className="relative z-20 overflow-hidden rounded-[28px] border-[8px] border-white bg-[#062F63] shadow-[0_30px_80px_rgba(6,47,99,.18)] sm:rounded-[36px]">
-              <div className="relative aspect-[4/3]">
+            <div className="relative z-20 overflow-hidden ">
+              <div className="relative aspect-[8/3] ">
                 <Image
-                  src="/images/Picture1.jpg"
+                  src="/images/negarabangsa.png"
                   alt="Dialog Negara Bangsa"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: auto) 100vw, 50vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#062F63]/35 via-transparent to-transparent" />
+                <div className="absolute inset-0 object-fill " />
               </div>
             </div>
 
-            <div className="pointer-events-none absolute -bottom-8 left-10 z-10 grid h-20 w-28 grid-cols-6 gap-2 opacity-50 sm:left-16">
+            {/* <div className="pointer-events-none absolute -bottom-8 left-10 z-10 grid h-20 w-28 grid-cols-6 gap-2 opacity-50 sm:left-16">
               {Array.from({ length: 36 }).map((_, index) => (
                 <span key={index} className="h-1.5 w-1.5 rounded-full bg-[#062F63]" />
               ))}
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

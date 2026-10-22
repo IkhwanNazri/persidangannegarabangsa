@@ -15,11 +15,18 @@ type PanelPerson = {
 };
 
 const ucapUtama: PanelPerson[] = [
+  // {
+  //   name: "Sultan Nazrin Muizzuddin Shah",
+  //   position: "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
+  //   organization: "Ucaptama Diraja Dan Titah Perasmian",
+  //   image: "/images/panel/sultan",
+  //   tag: "UCAPTAMA DIRAJA",
+  // },
   {
-    name: "Sultan Nazrin Muizzuddin Shah",
-    position: "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
-    organization: "Ucaptama Diraja Dan Titah Perasmian",
-    image: "/images/panel/sultan.png",
+    name: "",
+    position: "",
+    organization: "",
+    image: "/images/panel/sultan",
     tag: "UCAPTAMA DIRAJA",
   },
   {

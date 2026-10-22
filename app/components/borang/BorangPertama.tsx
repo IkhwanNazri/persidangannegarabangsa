@@ -76,6 +76,7 @@ kategoriOku: string;
   jawatan: string;
   gred: string;
   vegeterian: string;
+  vegeterianDetail?: string;
   sessions: SessionId[];
 };
 
@@ -456,6 +457,7 @@ kategoriOku: form.kategoriOku,
   jawatan: form.jawatan,
   gred: form.gred,
     vegeterian: form.vegeterian,
+    vegeterianDetail: form.vegeterianDetail,
     gelaran: form.gelaran,
    sessions: [
   "perasmian",
@@ -488,6 +490,7 @@ kategoriOku: form.kategoriOku,
 jawatan: data.jawatan,
 gred: data.gred,
 vegeterian: data.vegeterian,
+vegeterianDetail: data.vegeterianDetail,
 oku: data.oku,
 kategoriOku: data.kategoriOku,
         kementerian: data.kementerian,

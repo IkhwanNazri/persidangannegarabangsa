@@ -615,7 +615,7 @@ export default function AturCara() {
                     </h3>
                     <p className="mt-3 font-poppins text-sm leading-6 text-slate-300">
                       {subtitles[index]}.
-                    </p>
+                    </p> 
 
                     <div className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-2">
                       <CalendarDaysIcon className="h-6 w-6 text-[#FFD21C]" />

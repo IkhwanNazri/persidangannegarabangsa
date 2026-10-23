@@ -59,7 +59,7 @@ const sesi1: PanelPerson[] = [
     name: "YAA Tun Wan Ahmad Farid Wan Salleh",
     position: "Ketua Hakim Negara",
     organization: "",
-    image: "/images/panel/hakimnegara.png",
+    image: "/images/panel/yaa.png",
     tag: "UCAPTAMA 1",
   },
   {
@@ -67,7 +67,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/emeri",
+    image: "/images/panel/shad.jpeg",
     tag: "PEMBENTANG KERTAS 1",
   },
   {
@@ -83,7 +83,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Pensyarah Kanan Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/sheila.png",
+    image: "/images/panel/sheila.jpeg",
     tag: "MODERATOR",
   },
 ];
@@ -94,7 +94,7 @@ const sesi2: PanelPerson[] = [
     position:
       "Ahli Panel Majlis Kebudayaan Negara (MAKEN), Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
     organization: "",
-    image: "/images/panel/juli.",
+    image: "/images/panel/juli.png",
     tag: "PEMBENTANG KERTAS 3",
   },
   {
@@ -109,7 +109,7 @@ const sesi2: PanelPerson[] = [
     name: "YBrs. Dr. Gregory Anak Kiyai@Keai",
     position: "Pensyarah Kanan Fakulti Seni Kreatif Universiti Malaya",
     organization: "",
-    image: "/images/panel/gregory.png",
+    image: "/images/panel/gregory.jpeg",
     tag: "MODERATOR",
   },
 ];
@@ -134,7 +134,7 @@ const sesi3: PanelPerson[] = [
     name: "YBhg. Prof Emeritus Datuk Azizan Baharudin",
     position: "Pusat Dialog Peradaban (UMCCD), Universiti Malaya",
     organization: "",
-    image: "/images/panel/azizah.png",
+    image: "/images/panel/azizah.jpg",
     tag: "PEMBENTANG KERTAS 6",
   },
   {
@@ -142,7 +142,7 @@ const sesi3: PanelPerson[] = [
     position:
       "Pegawai Penyelidik KSI Strategic Institute for Asia Pacific",
     organization: "",
-    image: "/images/panel/teo.png",
+    image: "/images/panel/teo.jpeg",
     tag: "MODERATOR",
   },
 ];
@@ -152,7 +152,7 @@ const sesi4: PanelPerson[] = [
     name: "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi",
     position: "Ahli Majlis Penasihat Perpaduan Negara",
     organization: "",
-    image: "/images/panel/tajuddin.png",
+    image: "/images/panel/tajudin.jpeg",
     tag: "PEMBENTANG KERTAS 7",
   },
  
@@ -160,14 +160,14 @@ const sesi4: PanelPerson[] = [
   name: "Dato' Mustapha Mohamed",
   position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
   organization: "",
-  image: "/images/panel/mustapa.png",
+  image: "/images/panel/mustapa.jpg",
   tag: "PEMBENTANG KERTAS 8",
 },
  {
     name: "Tuan Luqman Hariz",
     position: "Personaliti TV Astro AWANI",
     organization: "",
-    image: "/images/panel/luqman.png",
+    image: "/images/panel/luqman.jpeg",
     tag: "MODERATOR",
   },
 ];
@@ -178,7 +178,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Felo Kanan Bersekutu Institut Kajian Etnik (KITA), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/change.png",
+    image: "/images/panel/chang.jpg",
     tag: "UCAPTAMA 5",
   },
   {
@@ -186,7 +186,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/zul.",
+    image: "/images/panel/zul.jpg",
     tag: "PEMBENTANG KERTAS 5",
   },
   {

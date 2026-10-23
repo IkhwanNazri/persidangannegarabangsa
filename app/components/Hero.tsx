@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Background mobile dan tablet */}
 <div className="absolute inset-0 lg:hidden">
   <Image
-    src="/images/bg-mobile-01.jpg"
+    src="/images/bgsmart-01.jpg"
     alt="Background Mobile"
     fill
     priority
@@ -27,7 +27,7 @@ export default function Hero() {
 {/* Background desktop */}
 <div className="absolute inset-0 hidden lg:block">
   <Image
-    src="/images/bg.jpeg"
+    src="/images/bgts-01.jpg"
     alt="Background Desktop"
     fill
     priority
@@ -106,7 +106,7 @@ export default function Hero() {
                   },
                 },
               }}
-              className="block text-red-600"
+              className="block text-purple-950 font-poppins font-bold"
             >
               NEGARA
             </motion.span>

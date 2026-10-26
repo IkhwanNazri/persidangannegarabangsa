@@ -92,7 +92,7 @@ const sesi2: PanelPerson[] = [
   {
     name: "YBhg. Prof. Dr. Juli Edo",
     position:
-      "Ahli Majlis Kebudayaan Negara (MAKEN), Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
+      "Ahli Majlis Kebudayaan Negara (MAKEN)",
     organization: "",
     image: "/images/panel/juli.png",
     tag: "PEMBENTANG KERTAS 3",
@@ -157,7 +157,7 @@ const sesi4: PanelPerson[] = [
   },
  
   {
-  name: "YBhg. Dato' Sri  Mustapha Mohamed",
+  name: "YBhg. Dato' Sri  Mustapa Mohamed",
   position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
   organization: "",
   image: "/images/panel/mustapa.jpg",
@@ -184,7 +184,7 @@ const sesi5: PanelPerson[] = [
   {
     name: "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Razak",
     position:
-      "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
+      "Profesor Emeritus Pusat Racun Negara Universiti Universiti Sains Malaysia",
     organization: "",
     image: "/images/panel/zul.jpg",
     tag: "PEMBENTANG KERTAS 9",

@@ -37,8 +37,8 @@ const ucapUtama: PanelPerson[] = [
     tag: "UCAPTAMA 2",
   },
   {
-    name: "Tun Pehin Sri Dr. Haji Wan Junaidi",
-    position: "Yang di-Pertua Negeri Sarawak",
+    name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
+    position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
     image: "/images/panel/sarawak.png",
     tag: "UCAPTAMA 4",
@@ -65,7 +65,7 @@ const sesi1: PanelPerson[] = [
   {
     name: "YBhg. Prof Emeritus Datuk Dr. Shad Saleem Faruqi",
     position:
-      "Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
+      "Felo Penyelidik Kanan Universiti Malaya",
     organization: "",
     image: "/images/panel/shad.jpeg",
     tag: "PEMBENTANG KERTAS 1",
@@ -90,15 +90,15 @@ const sesi1: PanelPerson[] = [
 
 const sesi2: PanelPerson[] = [
   {
-    name: "YBhg. Prof. Dr. Juli a/l Edo",
+    name: "YBhg. Prof. Dr. Juli Edo",
     position:
-      "Ahli Panel Majlis Kebudayaan Negara (MAKEN), Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
+      "Ahli Majlis Kebudayaan Negara (MAKEN), Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
     organization: "",
     image: "/images/panel/juli.png",
     tag: "PEMBENTANG KERTAS 3",
   },
   {
-    name: "YBhg. Prof Emeritus Dato’ Dr. Abdul Rahman Embong",
+    name: "YBhg. Prof. Emeritus Dato’ Dr. Abdul Rahman Embong",
     position:
       "Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
@@ -107,7 +107,7 @@ const sesi2: PanelPerson[] = [
   },
   {
     name: "YBrs. Dr. Gregory Anak Kiyai@Keai",
-    position: "Pensyarah Kanan Fakulti Seni Kreatif Universiti Malaya",
+    position: "Pensyarah Kanan Program Seni Rupa Fakulti Seni Kreatif Universiti Malaya",
     organization: "",
     image: "/images/panel/gregory.jpeg",
     tag: "MODERATOR",
@@ -116,7 +116,7 @@ const sesi2: PanelPerson[] = [
 
 const sesi3: PanelPerson[] = [
   {
-    name: "YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin",
+    name: "YBhg. Prof. Ulung Datuk Dr. Shamsul Amri Baharuddin",
     position:
       "Profesor Ulung Institut Kajian Etnik (KITA), Universiti Kebangsaan Malaysia",
     organization: "",
@@ -125,14 +125,14 @@ const sesi3: PanelPerson[] = [
   },
   {
     name: "YBhg. Tan Sri Lee Lam Thye",
-    position: "Pengerusi Pertubuhan Ikatan Komuniti Selama",
+    position: "Pengerusi Pertubuhan Ikatan Komuniti Selamat",
     organization: "",
     image: "/images/panel/lee.png",
     tag: "PEMBENTANG KERTAS 5",
   },
   {
-    name: "YBhg. Prof Emeritus Datuk Azizan Baharudin",
-    position: "Pusat Dialog Peradaban (UMCCD), Universiti Malaya",
+    name: "YBhg. Prof. Emeritus Datuk Azizan Baharudin",
+    position: "Penasihat Pusat Dialog Peradaban (UMCCD), Universiti Malaya",
     organization: "",
     image: "/images/panel/azizah.jpg",
     tag: "PEMBENTANG KERTAS 6",
@@ -140,7 +140,7 @@ const sesi3: PanelPerson[] = [
   {
     name: "YBrs. Dr. Teo Lee Ken",
     position:
-      "Pegawai Penyelidik KSI Strategic Institute for Asia Pacific",
+      "Pengarah Jabatan penyelarasan Kawasan Parlimen Kumpulan Rentas Parti Parlimen Malaysia Untuk Matlamat Pembangunan Mampan (APPGM-SDG)",
     organization: "",
     image: "/images/panel/teo.jpeg",
     tag: "MODERATOR",
@@ -150,14 +150,14 @@ const sesi3: PanelPerson[] = [
 const sesi4: PanelPerson[] = [
   {
     name: "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi",
-    position: "Ahli Majlis Penasihat Perpaduan Negara",
+    position: "Ahli Majlis Penasihat Perpaduan Negara (MPPN)",
     organization: "",
     image: "/images/panel/tajudin.jpeg",
     tag: "PEMBENTANG KERTAS 7",
   },
  
   {
-  name: "Dato' Mustapha Mohamed",
+  name: "YBhg. Dato' Sri  Mustapha Mohamed",
   position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
   organization: "",
   image: "/images/panel/mustapa.jpg",
@@ -165,7 +165,7 @@ const sesi4: PanelPerson[] = [
 },
  {
     name: "Tuan Luqman Hariz",
-    position: "Personaliti TV Astro AWANI",
+    position: "Hos dan Wartawan Astro AWANI",
     organization: "",
     image: "/images/panel/luqman.jpeg",
     tag: "MODERATOR",
@@ -182,17 +182,17 @@ const sesi5: PanelPerson[] = [
     tag: "UCAPTAMA 5",
   },
   {
-    name: "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Raza",
+    name: "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Razak",
     position:
       "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
     image: "/images/panel/zul.jpg",
-    tag: "PEMBENTANG KERTAS 5",
+    tag: "PEMBENTANG KERTAS 9",
   },
   {
-    name: "YBrs. Dr. Muhammad bin Abdul Khalid",
+    name: "YBrs. Dr. Muhammed Abdul Khalid",
     position:
-      "Fellow Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
+      "Penyelidik Kanan Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
     image: "/images/panel/kalidd.",
     tag: "MODERATOR",

@@ -20,18 +20,94 @@ const sponsors = [
     name: "Institut Intergriti Malaysia",
     image: "/images/rakan/iim.png",
   },
-  // {
-  //   name: "Intramiles",
-  //   image: "/images/logo.PNG",
-  // },
-  // {
-  //   name: "HEYA Inc.",
-  //   image: "/images/logo.PNG",
-  // },
-  // {
-  //   name: "British High Commission Kuala Lumpur",
-  //   image: "/images/logo.PNG",
-  // },
+  {
+    name: "Majlis Perbandaran Kota Bharu",
+    image: "/images/rakan/mpkb.png",
+  },
+  {
+    name: "Majlis Bandaraya Shah Alam",
+    image: "/images/rakan/mbsa.png",
+  },
+  {
+    name: "Majlis Bandaraya Alor Setar",
+    image: "/images/rakan/mbas.png",
+  },
+  {
+    name: "Majlis Bandaraya Pulau Pinang",
+    image: "/images/rakan/mbpp.png",
+  },
+  {
+    name: "Majlis Bandaraya Melaka Bersejarah",
+    image: "/images/rakan/mbmb.png",
+  },
+  {
+    name: "Majlis Bandaraya Johor Bahru",
+    image: "/images/rakan/mbjb.jpeg",
+  },
+  {
+    name: "MRCB",
+    image: "/images/rakan/mrcb.png",
+  },
+  {
+    name: "Celcom Digi",
+    image: "/images/rakan/celcom digi.png",
+  },
+  {
+    name: "Perbadanan Putrajaya",
+    image: "/images/rakan/putrajaya.png",
+  },
+  {
+    name: "Kementerian Pengangkutan Malaysia",
+    image: "/images/rakan/mot.png",
+  },
+  {
+    name: "FINAS",
+    image: "/images/rakan/finas.png",
+  },
+  {
+    name: "Penerbit USM",
+    image: "/images/rakan/USM Penerbit.png",
+  },
+  {
+    name: "Penerbit UKM",
+    image: "/images/rakan/UKM.png",
+  },
+  {
+    name: "Universiti Sains Malaysia",
+    image: "/images/rakan/USM.png",
+  },
+  {
+    name: "Global Tourism Penang",
+    image: "/images/rakan/Global tourism Penang.png",
+  },
+  {
+    name: "Menara Kuala Lumpur",
+    image: "/images/rakan/menara kuala lumpur.png",
+  },
+  {
+    name: "Seni Jaya",
+    image: "/images/rakan/SENI JAYA.png",
+  },
+  {
+    name: "Parlimen Malaysia",
+    image: "/images/rakan/logoparlimenmalaysia.png",
+  },
+  {
+    name: "Mydin",
+    image: "/images/rakan/mydin.png",
+  },
+  {
+    name: "Alamanda",
+    image: "/images/rakan/alamanda.jpg",
+  },
+  {
+    name: "Suria KLCC",
+    image: "/images/rakan/suria KLCC.png",
+  },
+  {
+    name: "MAHB",
+    image: "/images/rakan/MAHB.png",
+  },
 ];
 
 export default function RakanPenaja() {

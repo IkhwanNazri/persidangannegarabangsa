@@ -456,10 +456,12 @@ function PanelSection({
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: (index % columns) * 0.07 }}
            className={`group relative isolate flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
+            
   panel.name === "Sultan Nazrin Muizzuddin Shah"||
     panel.name === "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj" ||
-    panel.name === "Tun Pehin Sri Dr. Haji Wan Junaidi" ||
+    panel.name.trim() === "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar" ||
     panel.name === "YAB Dato' Seri Anwar Ibrahim"
+      
     ? "col-span-2 mx-auto w-1/2"
     : ""
 }`}

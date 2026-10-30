@@ -55,6 +55,7 @@ const ucapUtama: PanelPerson[] = [
 
 
 const sesi1: PanelPerson[] = [
+  
   {
     name: "YAA Tun Wan Ahmad Farid Wan Salleh",
     position: "Ketua Hakim Negara",
@@ -89,6 +90,13 @@ const sesi1: PanelPerson[] = [
 ];
 
 const sesi2: PanelPerson[] = [
+  {
+    name: "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj",
+    position: "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
+    organization: "",
+    image: "/images/panel/tunku.png",
+    tag: "UCAPTAMA 2",
+  },
   {
     name: "YBhg. Prof. Dr. Juli Edo",
     position:
@@ -149,6 +157,13 @@ const sesi3: PanelPerson[] = [
 
 const sesi4: PanelPerson[] = [
   {
+    name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
+    position: "TYT Yang di-Pertua Negeri Sarawak",
+    organization: "",
+    image: "/images/panel/sarawak.png",
+    tag: "UCAPTAMA 4",
+  },
+  {
     name: "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi",
     position: "Ahli Majlis Penasihat Perpaduan Negara (MPPN)",
     organization: "",
@@ -156,13 +171,13 @@ const sesi4: PanelPerson[] = [
     tag: "PEMBENTANG KERTAS 7",
   },
  
-  {
-  name: "YBhg. Dato' Sri  Mustapa Mohamed",
-  position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
-  organization: "",
-  image: "/images/panel/mustapa.jpg",
-  tag: "PEMBENTANG KERTAS 8",
-},
+//   {
+//   name: "YBhg. Dato' Sri  Mustapa Mohamed",
+//   position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
+//   organization: "",
+//   image: "/images/panel/mustapa.jpg",
+//   tag: "PEMBENTANG KERTAS 8",
+// },
  {
     name: "Tuan Luqman Hariz",
     position: "Hos dan Wartawan Astro AWANI",
@@ -181,10 +196,17 @@ const sesi5: PanelPerson[] = [
     image: "/images/panel/chang.jpg",
     tag: "UCAPTAMA 5",
   },
+   {
+  name: "YBhg. Dato' Sri  Mustapa Mohamed",
+  position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
+  organization: "",
+  image: "/images/panel/mustapa.jpg",
+  tag: "PEMBENTANG KERTAS 8",
+},
   {
     name: "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Razak",
     position:
-      "Profesor Emeritus Pusat Racun Negara Universiti Universiti Sains Malaysia",
+      "Profesor Emeritus Pusat Racun Negara Universiti Sains Malaysia",
     organization: "",
     image: "/images/panel/zul.jpg",
     tag: "PEMBENTANG KERTAS 9",
@@ -351,25 +373,25 @@ export default function Panel() {
 
           {selectedDay === 2 && (
             <>
-              <PanelSection
-                title="Ucaptama 2"
+              {/* <PanelSection
+                title="Sesi 2"
                 panels={[ucapUtama[1]]}
                 columns={2}
-              />
-              <PanelSection title="Sesi 2" panels={sesi2} columns={3} />
+              /> */}
+              <PanelSection title="Sesi 2" panels={sesi2} columns={4} />
               <PanelSection title="Sesi 3" panels={sesi3} columns={4} />
             </>
           )}
 
           {selectedDay === 3 && (
             <>
-              <PanelSection
+              {/* <PanelSection
                 title="Ucaptama 4"
                 panels={[ucapUtama[2]]}
                 columns={2}
-              />
+              /> */}
               <PanelSection title="Sesi 4" panels={sesi4} columns={3} />
-              <PanelSection title="Sesi 5" panels={sesi5} columns={3} />
+              <PanelSection title="Sesi 5" panels={sesi5} columns={4} />
               <PanelSection
                 title="Rumusan Persidangan dan Majlis Penutupan"
                 panels={[ucapUtama[3]]}
@@ -458,8 +480,8 @@ function PanelSection({
            className={`group relative isolate flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
             
   panel.name === "Sultan Nazrin Muizzuddin Shah"||
-    panel.name === "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj" ||
-    panel.name.trim() === "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar" ||
+    // panel.name === "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj" ||
+    panel.name === "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar" ||
     panel.name === "YAB Dato' Seri Anwar Ibrahim"
       
     ? "col-span-2 mx-auto w-1/2"

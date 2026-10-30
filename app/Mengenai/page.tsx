@@ -196,7 +196,7 @@ export default function MengenaiDialog() {
             className="conference-sweep group relative left-1/2 isolate min-h-[460px] w-screen -translate-x-1/2 overflow-hidden bg-[#102653] sm:min-h-[520px] lg:min-h-[600px]"
           >
             <motion.img
-              src="/images/desktop.svg"
+              src="/images/bgts-01.jpg"
               alt="Persidangan Pembinaan Negara Bangsa"
               initial={{ scale: 1.12 }}
               whileInView={{ scale: 1.02 }}
@@ -211,7 +211,7 @@ export default function MengenaiDialog() {
               <div className="flex items-center gap-3">
                 {/* <span className="h-px w-10 bg-amber-300" /> */}
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-white sm:text-sm">
-                  PERSIDANGAN NEGARA BANGSA 2026
+                  PERSIDANGAN PEMBINAAN NEGARA BANGSA 2026
                 </p>
               </div>
               <div className="mt-5 max-w-6xl pb-2 sm:mt-6">
@@ -233,7 +233,7 @@ export default function MengenaiDialog() {
                   </span>
                   <span className="inline-flex items-center gap-2">
                     <MapPinIcon className="h-5 w-5 text-amber-300" />
-                    Pusat Konvensyen Antarabangsa Putrajaya (PICC)
+                    Pusat Konvensyen Antarabangsa Putrajaya (PICC), Putrajaya
                   </span>
                 </div>
               </div>
@@ -276,7 +276,7 @@ export default function MengenaiDialog() {
               ))}
             </div>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+          {/* <div className="mt-12 grid gap-4 md:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -294,10 +294,10 @@ export default function MengenaiDialog() {
               transition={{ duration: 0.7, delay: 0.12 }}
               className="group relative min-h-[260px] overflow-hidden bg-[#102653] sm:min-h-[330px]"
             >
-              <img src="/images/desktop.svg" alt="Persidangan Pembinaan Negara Bangsa" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+              <img src="/images/bgn.jpeg" alt="Persidangan Pembinaan Negara Bangsa" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07152f]/65 via-transparent to-transparent" />
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </section>
       {/* 2.0 OBJEKTIF PERSIDANGAN */}

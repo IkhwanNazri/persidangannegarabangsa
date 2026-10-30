@@ -18,7 +18,7 @@ const schedules = {
   {
     session: "MAJLIS PERASMIAN PERSIDANGAN NEGARA BANGSA",
     hari: "30 November",
-    venue: "Dewan Perdana - 11:00 Pagi - 1:00 tghari",
+    venue: "Dewan Perdana - 11:00 pg - 1:00 tghari",
 
     events: [
       {
@@ -39,8 +39,8 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Keberangkatan tiba DYMM Paduka Seri Sultan Perak Darul Ridzuan, ",
-        description: "Sultan Nazrin Muizzuddin Shah",
+        title: "Keberangkatan tiba DYMM Paduka Seri Sultan , ",
+        description: "Sultan",
       },
 
       {
@@ -59,20 +59,20 @@ const schedules = {
 
       {
         time: "",
-        type: "MAJLIS PERASMIAN",
-        title: "Ucapan Alu-Aluan Menjunjung Kasih oleh YB Menteri Perpaduan Negara",
-        description: "",
+        type: "UCAPAN",
+        title: "Ucapan Alu-Aluan Menjunjung Kasih",
+        description: "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
       },
       {
         time: "",
         type: "UCAPTAMA DIRAJA DAN TITAH PERASMIAN",
         title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
-        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM Paduka Seri Sultan Perak Darul Ridzuan",
+        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM Paduka Seri Sultan .",
       },
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Sesi bergambar bersama DYMM Paduka Seri Sultan Perak Darul Ridzuan",
+        title: "Sesi bergambar bersama DYMM Paduka Seri Sultan ",
         description: "",
       },
 
@@ -83,7 +83,7 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Keberangkatan DYMM Paduka Seri Sultan Perak Darul Ridzuan,",
+        title: "Keberangkatan DYMM Paduka Seri Sultan Meninggalkan Majlis",
         description: "",
       },
     ],
@@ -112,7 +112,7 @@ const schedules = {
           time: "",
           title: "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa",
           description:
-            "YBhg. Prof Emeritus Datuk Dr. Shad Saleem Faruqi - Felo Penyelidik Utama Fakulti Undang-Undang Universiti Malaya",
+            "YBhg. Prof Emeritus Datuk Dr. Shad Saleem Faruqi - Felo Penyelidik Kanan Universiti Malaya",
           type: "KERTAS 1",
         },
 
@@ -166,7 +166,7 @@ const schedules = {
         title:
           "Nilai, Seni, Bahasa dan Budaya: Jiwa dan Warisan Negara Bangsa",
         description:
-          "YBhg. Prof. Dr. Juli a/l Edo - Ahli Panel Majlis Kebudayaan Negara (MAKEN) ",
+          "YBhg. Prof. Dr. Juli Edo - Ahli Panel Majlis Kebudayaan Negara (MAKEN) ",
       },
       {
         time: "",
@@ -194,7 +194,7 @@ const schedules = {
 
   {
     session:
-      "SESI 3: KEPELBAGAIAN, KEHARMONIAN DAN KESPADUAN SOSIAL",
+      "SESI 3: KEPELBAGAIAN, KEHARMONIAN DAN KESEPADUAN SOSIAL",
        hari: "1 Disember",
     venue: "Putra Hall B - 2:30 ptg - 4:30 ptg",
     events: [
@@ -202,7 +202,7 @@ const schedules = {
         time: "",
         type: "UCAPTAMA 3",
         title:
-          "Memperkasa Perpaduan, Memperkukuh Kesepaduan, Menjayakan Penyatuan",
+          "Memperkasa Perpaduan, Memperkukuh Kesepaduan, Menjayakan Penyatupaduan",
         description:
           "YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
       },
@@ -219,7 +219,7 @@ const schedules = {
         title:
           "Interaksi Rentas Etnik Sebagai Wahana Penyatuan Negara Bangsa",
         description:
-          "YBhg. Prof Emeritus Datuk Azizan Baharudin - Pusat Dialog Peradaban (UMCCD)Universiti Malaya",
+          "YBhg. Prof Emeritus Datuk Azizan Baharudin - Pusat Dialog Peradaban Universiti Malaya",
       },
      
       // {
@@ -297,7 +297,7 @@ const schedules = {
         title:
           "Pembangunan Ekonomi Inklusif: Memperluas Penyertaan dan Kesejahteraan Rakyat",
         description:
-          "YBhg. Tan Sri Dato’ Sri Nazir Razak - Pengerusi Yayasan Tun Razak",
+          "YBhg. Dato' Sri  Mustapa Mohamed - Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
       },
       {
         time: "",
@@ -305,7 +305,7 @@ const schedules = {
         title:
           "Modal Insan Berkualiti, Negara Bangsa Berdaya Saing",
         description:
-          "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Raza",
+          "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Razak - Profesor Emeritus Pusat Racun Negara Universiti Sains Malaysia",
       },
       
       // {
@@ -340,19 +340,20 @@ const schedules = {
         description: "",
       },
 
-      {
+    {
         time: "",
         type: "KETIBAAN",
         title:
-          "Ketibaan YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
-        description: "",
+          "Ketibaan Menteri Perpaduan Negara",
+        description: "YB Datuk Aaron Ago Dagang",
       },
 
       {
         time: "",
         type: "KETIBAAN",
-        title: "Ketibaan YAB Datuk Seri Anwar Ibrahim",
-        description: "",
+        title:
+          "Ketibaan Perdana Menteri ",
+        description: "YAB Datuk Seri Anwar Ibrahim ",
       },
 
       {
@@ -379,14 +380,14 @@ const schedules = {
       {
         time: "",
         type: "UCAPAN",
-        title: "Ucapan Alu-Aluan oleh YB Menteri Perpaduan Negara",
-        description: "YB Datuk Aaron Ago Dagang",
+        title: "Ucapan Alu-Aluan",
+        description: "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
       },
 
       {
         time: "",
         type: "RUMUSAN & MAJLIS PENUTUP",
-        title: "Rumusan dan Penutup",
+        title: "Ucapan Rumusan dan Penutup",
         description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
       },
 
@@ -423,21 +424,21 @@ const dayInfo: Record<
   "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN": {
     name: "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN",
     date: "30 November 2026",
-    masa: "11:00 Pagi - 1:00 tghari",
+    masa: "11:00 pg - 1:00 tghari",
     tempat:"Dewan Perdana",
   },
 
   "PERSIDANGAN PEMBINAAN NEGARA BANGSA": {
     name: "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     date: "30 NOVEMBER - 2 Disember 2026",
-    masa: "8:00 Pagi - 4:30 Petang",
+    masa: "8:00 pg - 4:30 ptg",
     tempat:"Putra Hall B",
   },
 
   "SESI RUMUSAN DAN MAJLIS PENUTUP": {
     name: "SESI RUMUSAN DAN MAJLIS PENUTUP",
     date: "2 Disember 2026",
-    masa: "2:30 Petang - 4:30 Petang",
+    masa: "2:30 ptg - 4:30 ptg",
     tempat:"Dewan Perdana",
   },
 };

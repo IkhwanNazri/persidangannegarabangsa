@@ -276,7 +276,7 @@ export default function Hero() {
     <div className="relative z-10 flex min-w-0 flex-1 flex-col justify-center px-4 py-3">
       <span className="mb-2 text-xs font-semibold tracking-[0.2em] text-white font-poppins">LOKASI</span>
       <span className="break-words text-sm font-medium leading-5 sm:text-base">
-        Pusat Konvensyen Antarabangsa Putrajaya (PICC)
+        Pusat Konvensyen Antarabangsa Putrajaya (PICC), Putrajaya
       </span>
     </div>
     <MapPinIcon className="pointer-events-none absolute right-2 top-4 h-16 w-16 text-white/30" />
@@ -348,7 +348,7 @@ export default function Hero() {
       <div className="min-w-0">
         <p className="mb-2 text-[10px] font-bold tracking-[0.2em] text-white font-poppins xl:text-xs">LOKASI</p>
         <p className="break-words text-sm font-poppins font-bold leading-relaxed text-white xl:text-base">
-          Pusat Konvensyen Antarabangsa Putrajaya (PICC)
+          Pusat Konvensyen Antarabangsa Putrajaya (PICC), Putrajaya
         </p>
       </div>
     </div>

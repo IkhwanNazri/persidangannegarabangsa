@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const sponsors = [
   {
     name: "Kementerian Perpaduan Negara",
-    image: "/images/logo.PNG",
+    image: "/images/rakan/kpn.jpg",
   },
   {
     name: "Institut Kefahaman Islam Malaysia",
@@ -17,7 +17,7 @@ const sponsors = [
     image: "/images/rakan/mbm.png",
   },
   {
-    name: "Institut Intergriti Malaysia",
+    name: "Institut Integriti Malaysia",
     image: "/images/rakan/iim.png",
   },
   {
@@ -58,7 +58,7 @@ const sponsors = [
   },
   {
     name: "Kementerian Pengangkutan Malaysia",
-    image: "/images/rakan/mot.png",
+    image: "/images/rakan/MOT.png",
   },
   {
     name: "FINAS",

@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const sponsors = [
   {
     name: "Kementerian Perpaduan Negara",
-    image: "/images/rakan/kpn.jpg",
+    image: "/images/rakan/logokpn.png",
   },
   {
     name: "Institut Kefahaman Islam Malaysia",

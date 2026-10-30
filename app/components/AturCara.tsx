@@ -39,8 +39,8 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Keberangkatan tiba DYMM Paduka Seri Sultan , ",
-        description: "Sultan",
+        title: "Keberangkatan tiba DYMM  Sultan Selangor  ",
+        description: "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj",
       },
 
       {
@@ -67,12 +67,12 @@ const schedules = {
         time: "",
         type: "UCAPTAMA DIRAJA DAN TITAH PERASMIAN",
         title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
-        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM Paduka Seri Sultan .",
+        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM Sultan Selangor ",
       },
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Sesi bergambar bersama DYMM Paduka Seri Sultan ",
+        title: "Sesi bergambar bersama DYMM Sultan Selangor ",
         description: "",
       },
 
@@ -83,7 +83,7 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Keberangkatan DYMM Paduka Seri Sultan Meninggalkan Majlis",
+        title: "Keberangkatan DYMM Sultan Selangor Meninggalkan Majlis",
         description: "",
       },
     ],

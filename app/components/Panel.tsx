@@ -15,13 +15,13 @@ type PanelPerson = {
 };
 
 const ucapUtama: PanelPerson[] = [
-  // {
-  //   name: "Sultan Nazrin Muizzuddin Shah",
-  //   position: "DYMM Paduka Seri Sultan Perak Darul Ridzuan",
-  //   organization: "Ucaptama Diraja Dan Titah Perasmian",
-  //   image: "/images/panel/sultan",
-  //   tag: "UCAPTAMA DIRAJA",
-  // },
+  {
+    name: "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj",
+    position: "DYMM Sultan Selangor Darul Ehsan",
+    organization: "",
+    image: "/images/panel/sultan",
+    tag: "UCAPTAMA DIRAJA",
+  },
   {
     name: "",
     position: "",
@@ -479,7 +479,7 @@ function PanelSection({
             transition={{ duration: 0.5, delay: (index % columns) * 0.07 }}
            className={`group relative isolate flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
             
-  panel.name === "Sultan Nazrin Muizzuddin Shah"||
+  panel.name.trim() === "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj"||
     // panel.name === "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj" ||
     panel.name === "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar" ||
     panel.name === "YAB Dato' Seri Anwar Ibrahim"

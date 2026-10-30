@@ -7,7 +7,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "html5-qrcode": "^2.3.8",
-    "lucide-react": "^1.49.0",
+    "lucide-react": "^1.65.0",
     "motion": "^13.4.6",
     "next": "^16.3.8",
     "qrcode.react": "^4.2.0",

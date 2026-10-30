@@ -33,16 +33,16 @@ export default function Footer() {
       {/* Content */}
       <div className="relative mx-auto max-w-[1366px] px-6 py-8 md:px-10 lg:px-12">
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.25fr_1fr_1fr_1.2fr]">
+        <div className="grid grid-cols- items-center  gap-8 md:grid-cols-2 lg:grid-cols-[1.25fr_1fr_1fr_1.2fr]">
 
           {/* HUBUNGI KAMI */}
-          <div>
+          <div className="mx-auto justify-center items-center lg:px-50">
             <h3 className="mb-5 text-[18px] font-bold">
               HUBUNGI KAMI
             </h3>
 
             <div className="space-y-1.5 text-[13px] leading-5">
-              <p className="font-bold">
+              <p className="font-bold whitespace-nowrap">
                 KEMENTERIAN PERPADUAN NEGARA
               </p>
 
@@ -62,10 +62,15 @@ export default function Footer() {
                 <span>pro[at]perpaduan[dot]gov[dot]my</span>
               </div>
             </div>
+            {/* <div className="whitespace-nowrap mx-auto text-center  mt-6">
+              <p className="font-light text-xs mx-auto  text-center items-center justify-center ">
+               Paparan terbaik menggunakan pelayar Mozilla Firefox dan Google Chrome dengan resolusi skrin 1366x768.Hakcipta Terpelihara @ 2026 Kementerian Perpaduan Negara
+              </p>
+            </div> */}
           </div>
 
           {/* TAG AWAN */}
-          <div>
+          {/* <div>
             <h3 className="mb-5 text-[18px] font-bold">
               TAG AWAN
             </h3>
@@ -87,22 +92,30 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* PAUTAN */}
-          <div>
+          {/* <div>
             <ul className="space-y-1 text-[13px] leading-5">
               <li>• &nbsp;Penafian</li>
               <li>• &nbsp;Dasar Privasi</li>
               <li>• &nbsp;Dasar Keselamatan</li>
               <li>• &nbsp;Peta Laman</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* INFO + SOCIAL */}
           <div className="flex flex-col justify-between">
+            <Image
+                src="/images/qr.webp"
+                alt="QR Perpaduan Negara"
+                width={500}
+                height={500}
+                sizes="100vw"
+                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+              />
 
-            <div className="text-[12px] leading-5">
+            {/* <div className="text-[12px] leading-5">
               <p>
                 Paparan terbaik menggunakan pelayar Mozilla
               </p>
@@ -112,51 +125,89 @@ export default function Footer() {
               <p>1366x768.</p>
 
               <p>
-                Hakcipta Terpelihara @ 2021 Kementerian
+                Hakcipta Terpelihara @ 2026 Kementerian
               </p>
               <p>Perpaduan Negara</p>
-            </div>
+            </div> */}
 
-            {/* SOCIAL */}
-            {/* <div className="mt-6 flex items-center gap-2">
+            
+            <div className="mt-2 flex items-center gap-2">
               <a
-                href="#"
+                href="https://www.facebook.com/PerpaduanNegara"
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
               >
-                <Facebook size={17} fill="white" />
+               <Image
+                src="/images/icon/facebook.png"
+                alt=""
+                width={500}
+                height={500}
+                sizes="100vw"
+                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+              />
+              </a>
+              <a
+                href="https://twitter.com/PerpaduanNegara"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+              >
+               <Image
+                src="/images/icon/twitter.webp"
+                alt=""
+                width={500}
+                height={500}
+                sizes="100vw"
+                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+              />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCGcsPzjDxzp_XUivH93WDwQ"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+              >
+               <Image
+                src="/images/icon/youtube.webp"
+                alt=""
+                width={500}
+                height={500}
+                sizes="100vw"
+                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+              />
+              </a>
+              <a
+                href="https://www.instagram.com/perpaduannegara/"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+              >
+               <Image
+                src="/images/icon/ig.webp"
+                alt=""
+                width={500}
+                height={500}
+                sizes="100vw"
+                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+              />
+              </a>
+              <a
+                href="https://www.perpaduan.gov.my/index.php/bm/perkhidmatann/perkhidmatan-lainn/e-penyertaann/rss"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+              >
+               <Image
+                src="/images/icon/rss.webp"
+                alt=""
+                width={500}
+                height={500}
+                sizes="100vw"
+                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+              />
               </a>
 
-              <a
-                href="#"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#29ABE2]"
-              >
-                <Twitter size={17} fill="white" />
-              </a>
-
-              <a
-                href="#"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F44336]"
-              >
-                <Youtube size={17} fill="white" />
-              </a>
-
-              <a
-                href="#"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#E4405F]"
-              >
-                <Instagram size={17} />
-              </a>
-
-              <a
-                href="#"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F58220]"
-              >
-                <Rss size={17} />
-              </a>
-            </div> */}
+              
+            </div>
 
           </div>
         </div>
+        <div className="whitespace-nowrap mx-auto text-center  mt-6">
+              <p className="font-light text-xs mx-auto  text-center items-center justify-center ">
+               Paparan terbaik menggunakan pelayar Mozilla Firefox dan Google Chrome dengan resolusi skrin 1366x768.Hakcipta Terpelihara @ 2026 Kementerian Perpaduan Negara
+              </p>
+            </div>
       </div>
     </footer>
   );

@@ -109,10 +109,10 @@ export default function Footer() {
             <Image
                 src="/images/qr.webp"
                 alt="QR Perpaduan Negara"
-                width={500}
-                height={500}
-                sizes="100vw"
-                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+                width={100}
+                height={100}
+                sizes="50vw"
+                className="block max-h-40 w-[100px] sm:w-[260px]  object-contain"
               />
 
             {/* <div className="text-[12px] leading-5">
@@ -131,23 +131,23 @@ export default function Footer() {
             </div> */}
 
             
-            <div className="mt-2 flex items-center gap-2">
+            <div className=" flex items-center gap-2 mx-auto">
               <a
                 href="https://www.facebook.com/PerpaduanNegara"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4267B2]"
               >
                <Image
                 src="/images/icon/facebook.png"
                 alt=""
-                width={500}
-                height={500}
+                width={100}
+                height={100}
                 sizes="100vw"
-                className="block max-h-96 w-[220px] sm:w-[260px]  object-cover"
+                className="block max-h-96 w-[100px] sm:w-[260px]  object-cover"
               />
               </a>
               <a
                 href="https://twitter.com/PerpaduanNegara"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4267B2]"
               >
                <Image
                 src="/images/icon/twitter.webp"
@@ -160,7 +160,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.youtube.com/channel/UCGcsPzjDxzp_XUivH93WDwQ"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4267B2]"
               >
                <Image
                 src="/images/icon/youtube.webp"
@@ -173,7 +173,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.instagram.com/perpaduannegara/"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4267B2]"
               >
                <Image
                 src="/images/icon/ig.webp"
@@ -186,7 +186,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.perpaduan.gov.my/index.php/bm/perkhidmatann/perkhidmatan-lainn/e-penyertaann/rss"
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4267B2]"
+                className="flex h-6 w-6 items-center justify-center rounded-full bg-[#4267B2]"
               >
                <Image
                 src="/images/icon/rss.webp"

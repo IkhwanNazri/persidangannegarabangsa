@@ -13,7 +13,7 @@ import {
 
 const navItems = [
   { label: "Utama", href: "#home", icon: HomeIcon },
-  { label: "Pengenalan", href: "#pengenalan", icon: InformationCircleIcon },
+  { label: "Pengenalan", href: "#mengenai", icon: InformationCircleIcon },
   { label: "Atur Cara", href: "#aturcara", icon: CalendarDaysIcon },
   { label: "Panel", href: "#panel", icon: UserIcon },
   { label: "Rakan Strategik", href: "#rakan", icon: SwatchIcon },
@@ -26,7 +26,7 @@ const navItems = [
 
 const mobileItems = navItems.filter(
   (item) =>
-    ["#home", "#pengenalan", "#aturcara", "#rsvp"].includes(item.href)
+    ["#home", "#mengenai", "#aturcara", "#rsvp"].includes(item.href)
 );
 
 export default function Navbar() {

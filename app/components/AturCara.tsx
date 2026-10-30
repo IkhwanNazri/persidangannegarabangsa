@@ -104,7 +104,7 @@ const schedules = {
           time: "",
           title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
           description:
-            " YAA Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
+            " YAA Tun Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
           type: "UCAPTAMA 1",
         },
 
@@ -120,25 +120,31 @@ const schedules = {
           time: "",
           title: "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa",
           description:
-            "Tuan Eddin Khoo - Felo Kanan Institut Kajian Strategik dan Antarabangsa (ISIS) Malaysia",
+            "Tuan Eddin Khoo - Felo Kanan Institut Kajian Strategik dan Antarabangsa Malaysia (ISIS) ",
           type: "KERTAS 2",
         },
-        // {
-        //   time: "2:30 - 4:30 ptg",
-        //   title: "Moderator",
-        //   description:
-        //     "YBrs. Dr. Sheila Ramalingam - Fakulti Undang-Undang Universiti Malaya",
-          
-        // },
-
         
-        // {
-        //   time: "4:30 ptg",
-        //   title: "Penutup Hari",
-        //   description: "Minum Petang & Bersurai",
-        //   type: "PENUTUP HARI",
-        // },
       ],
+      
+    },
+
+    {
+      session:
+      "BUAL BICARA SENI",
+       hari: "1 Disember",
+    venue: "Putra Hall B - 9:00 pg - 10:30 pg",
+    events: [
+       {
+        time: "",
+        type: "BUAL BICARA SENI",
+        title:
+          "Panggung Kehidupan, Cerminan Bangsa",
+        description:
+          "Tuan Mohd Sabri Yunus - Seniman Malaysia",
+      },
+
+
+    ],
     },
 
 
@@ -146,19 +152,22 @@ const schedules = {
 
 
   {
+    
+    
     session:
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
        hari: "1 Disember",
     venue: "Putra Hall B - 11:00 pg - 1:00 ptg",
     events: [
     
+     
       {
         time: "",
         type: "UCAPTAMA 2",
         title:
-          "Naratif Sejarah Inklusif: Memperkukuh Identiti Nasional dalam Kepelbagaian",
+          "Sejarah, Identiti dan Kesatuan: Membina Negara Bangsa",
         description:
-          "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
+          "YBhg. Prof Emeritus Dato’ Dr. Abdul Rahman Embong -  Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
       },
       {
         time: "",
@@ -172,9 +181,9 @@ const schedules = {
         time: "",
         type: "Kertas 4",
         title:
-          "Sejarah, Identiti dan Kesatuan: Membina Negara Bangsa",
+          "Legasi Sejarah Politik Identiti: Cabaran Membina Negara Bangsa",
         description:
-          "YBhg. Prof Emeritus Dato’ Dr. Abdul Rahman Embong -  Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
+          "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi - Ahli Majlis Penasihat Perpaduan Negara (MPPN) ",
       },
       // {
       //   time: "",
@@ -240,27 +249,27 @@ const schedules = {
 
 {
     session:
-      "SESI 4: POLITIK DAN CABARAN DALAM MEMBINA NEGARA BANGSA",
+      "SESI 4: SYARAHAN NEGARAWAN ",
        hari: "2 Disember",
     venue: "Putra Hall B - 9:00 pg - 11:00 pg",
     events: [
      
       {
         time: "",
-        type: "Ucaptama 4",
+        type: "SYARAHAN NEGARAWAN",
         title:
           "Keterangkuman dan Kesaksamaan Rentas Wilayah",
         description:
           "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar - Tuan Yang Terutama Yang di-Pertua Negeri Sarawak",
       },
-      {
-        time: "",
-        type: "Kertas 7",
-        title:
-          "Politik Berasaskan Kaum & Agama dan Cabaran Membina Negara Bangsa",
-        description:
-          "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi - Ahli Majlis Penasihat Perpaduan Negara ",
-      },
+      // {
+      //   time: "",
+      //   type: "Kertas 7",
+      //   title:
+      //     "Politik Berasaskan Kaum & Agama dan Cabaran Membina Negara Bangsa",
+      //   description:
+      //     "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi - Ahli Majlis Penasihat Perpaduan Negara ",
+      // },
     
       // {
       //   time: "",
@@ -285,7 +294,7 @@ const schedules = {
     events: [
       {
         time: "",
-        type: "UCAPTAMA 5",
+        type: "UCAPTAMA 4",
         title:
           "Komunikasi Sivil: Mengurus Naratif Untuk Keharmonian",
         description:

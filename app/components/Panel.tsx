@@ -22,13 +22,7 @@ const ucapUtama: PanelPerson[] = [
     image: "/images/panel/sultan",
     tag: "UCAPTAMA DIRAJA",
   },
-  {
-    name: "",
-    position: "",
-    organization: "",
-    image: "/images/panel/sultan",
-    tag: "UCAPTAMA DIRAJA",
-  },
+  
   {
     name: "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj",
     position: "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
@@ -41,7 +35,7 @@ const ucapUtama: PanelPerson[] = [
     position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
     image: "/images/panel/sarawak.png",
-    tag: "UCAPTAMA 4",
+    tag: "SYARAHAN NEGARAWAN",
   },
     {
     name: "YAB Dato' Seri Anwar Ibrahim",
@@ -89,12 +83,31 @@ const sesi1: PanelPerson[] = [
   },
 ];
 
-const sesi2: PanelPerson[] = [
+const bualBicara: PanelPerson[] = 
+[
   {
-    name: "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj",
-    position: "Kebawah Duli Paduka Baginda Tengku Ampuan Pahang",
+     name: "Tuan Mohd Sabri Yunus",
+     position: "Seniman Malaysia",
+     organization: "",
+     image: "/images/panel/",
+     tag: "BUAL BICARA SENI",
+   },
+ {
+    name: "Tuan Luqman Hariz",
+    position: "Hos dan Wartawan Astro AWANI",
     organization: "",
-    image: "/images/panel/tunku.png",
+    image: "/images/panel/luqman.jpeg",
+    tag: "MODERATOR",
+  },
+]
+
+const sesi2: PanelPerson[] = [
+  
+  {
+    name: "YBhg. Prof. Emeritus Dato’ Dr. Abdul Rahman Embong",
+    position: "Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
+    organization: "",
+    image: "/images/panel/tunku",
     tag: "UCAPTAMA 2",
   },
   {
@@ -105,12 +118,19 @@ const sesi2: PanelPerson[] = [
     image: "/images/panel/juli.png",
     tag: "PEMBENTANG KERTAS 3",
   },
-  {
-    name: "YBhg. Prof. Emeritus Dato’ Dr. Abdul Rahman Embong",
-    position:
-      "Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
+  // {
+  //   name: "YBhg. Prof. Emeritus Dato’ Dr. Abdul Rahman Embong",
+  //   position:
+  //     "Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
+  //   organization: "",
+  //   image: "/images/panel/emerti.",
+  //   tag: "PEMBENTANG KERTAS 4",
+  // },
+   {
+    name: "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi",
+    position: "Ahli Majlis Penasihat Perpaduan Negara (MPPN)",
     organization: "",
-    image: "/images/panel/emerti.",
+    image: "/images/panel/tajudin.jpeg",
     tag: "PEMBENTANG KERTAS 4",
   },
   {
@@ -161,30 +181,18 @@ const sesi4: PanelPerson[] = [
     position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
     image: "/images/panel/sarawak.png",
-    tag: "UCAPTAMA 4",
+    tag: "SYARAHAN NEGARAWAN",
   },
-  {
-    name: "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi",
-    position: "Ahli Majlis Penasihat Perpaduan Negara (MPPN)",
-    organization: "",
-    image: "/images/panel/tajudin.jpeg",
-    tag: "PEMBENTANG KERTAS 7",
-  },
- 
-//   {
-//   name: "YBhg. Dato' Sri  Mustapa Mohamed",
-//   position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
-//   organization: "",
-//   image: "/images/panel/mustapa.jpg",
-//   tag: "PEMBENTANG KERTAS 8",
-// },
+  
+
  {
-    name: "Tuan Luqman Hariz",
-    position: "Hos dan Wartawan Astro AWANI",
+    name: "YBhg. Prof. Madya Dato’ Dr. Mohamed Azam Mohamed Adil",
+    position: "Ketua Pengarah, Institut Kefahaman Islam Malaysia (IKIM)",
     organization: "",
-    image: "/images/panel/luqman.jpeg",
+    image: "/images/panel/luqman",
     tag: "MODERATOR",
   },
+
 ];
 
 const sesi5: PanelPerson[] = [
@@ -374,10 +382,11 @@ export default function Panel() {
           {selectedDay === 2 && (
             <>
               {/* <PanelSection
-                title="Sesi 2"
-                panels={[ucapUtama[1]]}
+                title="Bual Bicara Seni"
+                panels={[bualBicara[1]]}
                 columns={2}
               /> */}
+              <PanelSection title="Bual Bicara Seni" panels={bualBicara} columns={2} />
               <PanelSection title="Sesi 2" panels={sesi2} columns={4} />
               <PanelSection title="Sesi 3" panels={sesi3} columns={4} />
             </>
@@ -390,7 +399,7 @@ export default function Panel() {
                 panels={[ucapUtama[2]]}
                 columns={2}
               /> */}
-              <PanelSection title="Sesi 4" panels={sesi4} columns={3} />
+              <PanelSection title="Sesi 4" panels={sesi4} columns={2} />
               <PanelSection title="Sesi 5" panels={sesi5} columns={4} />
               <PanelSection
                 title="Rumusan Persidangan dan Majlis Penutupan"
@@ -404,7 +413,7 @@ export default function Panel() {
         {/* LIHAT SEMUA PEMBENTANG */}
         <div className="mt-10 flex justify-center">
           <a
-            href="/#"
+            href="/#panel"
             className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border-2 border-[#062F63] px-8 py-4 font-poppins text-sm font-semibold text-[#062F63] transition-all duration-500 after:absolute after:bottom-0 after:left-5 after:z-0 after:h-1 after:w-1 after:translate-y-full after:rounded-md after:bg-[#062F63] after:transition-all after:duration-700 hover:after:scale-[300] hover:text-white"
           >
             <span className="relative z-10">Lihat Semua Pembentang</span>
@@ -480,7 +489,7 @@ function PanelSection({
            className={`group relative isolate flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
             
   panel.name.trim() === "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj"||
-    // panel.name === "Tunku Azizah Aminah Maimunah Iskandariah binti Almarhum Sultan Iskandar Al-Haj" ||
+
     panel.name === "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar" ||
     panel.name === "YAB Dato' Seri Anwar Ibrahim"
       

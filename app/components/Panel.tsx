@@ -411,7 +411,7 @@ export default function Panel() {
         </motion.div>
 
         {/* LIHAT SEMUA PEMBENTANG */}
-        <div className="mt-10 flex justify-center">
+        {/* <div className="mt-10 flex justify-center">
           <a
             href="/#panel"
             className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border-2 border-[#062F63] px-8 py-4 font-poppins text-sm font-semibold text-[#062F63] transition-all duration-500 after:absolute after:bottom-0 after:left-5 after:z-0 after:h-1 after:w-1 after:translate-y-full after:rounded-md after:bg-[#062F63] after:transition-all after:duration-700 hover:after:scale-[300] hover:text-white"
@@ -419,7 +419,7 @@ export default function Panel() {
             <span className="relative z-10">Lihat Semua Pembentang</span>
             <ArrowUpRightIcon className="relative z-10 ml-3 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </a>
-        </div>
+        </div> */}
 
         {/* BOTTOM DECORATION */}
         <motion.div

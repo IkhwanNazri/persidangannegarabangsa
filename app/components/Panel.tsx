@@ -37,13 +37,13 @@ const ucapUtama: PanelPerson[] = [
     image: "/images/panel/tunku.png",
     tag: "UCAPTAMA 2",
   },
-  // {
-  //   name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
-  //   position: "TYT Yang di-Pertua Negeri Sarawak",
-  //   organization: "",
-  //   image: "/images/panel/sarawak",
-  //   tag: "SYARAHAN NEGARAWAN",
-  // },
+  {
+    name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
+    position: "TYT Yang di-Pertua Negeri Sarawak",
+    organization: "",
+    image: "/images/panel/sarawak",
+    tag: "SYARAHAN NEGARAWAN",
+  },
     {
     name: "YAB Dato' Seri Anwar Ibrahim",
     position: "Perdana Menteri Malaysia",
@@ -187,7 +187,7 @@ const sesi4: PanelPerson[] = [
     name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
     position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
-    image: "/images/panel/sarawak.PNG",
+    image: "/images/panel/sarawak.png",
     tag: "SYARAHAN NEGARAWAN",
   },
   

@@ -205,7 +205,7 @@ export default function RSVP() {
           </h2>
 
           <p className="mt-3 font-poppins text-md text-white">
-            Persidangan Pembinaan Negara Bangsa 2026
+            Persidangan Pembinaan Negara Bangsa 
           </p>
         </div>
 

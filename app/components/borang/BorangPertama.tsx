@@ -530,7 +530,7 @@ if (!result.emailSent) {
   open: true,
   type: "success",
   title: "Pendaftaran Berjaya",
-  message: `Pra Pendaftaran Kehadiran ke Persidangan Negara Bangsa 2026 telah berjaya direkodkan`,
+  message: `Pra Pendaftaran Kehadiran ke Persidangan Pembinaan Negara Bangsa telah berjaya direkodkan`,
 });
   setLoading(false);
   return;
@@ -652,7 +652,7 @@ if (currentDay < 3) {
     open: true,
     type: "success",
     title: `HARI ${currentDay} BERJAYA`,
-    message: `Pra Pendaftaran Kehadiran ke Persidangan Negara Bangsa 2026 telah berjaya direkodkan`,
+    message: `Pra Pendaftaran Kehadiran ke Persidangan Pembinaan  Negara Bangsa telah berjaya direkodkan`,
   });
   setLoading(false);
   return;
@@ -662,7 +662,7 @@ setModal({
   open: true,
   type: "success",
   title: "PENDAFTARAN BERJAYA",
-  message: "Pra Pendaftaran Kehadiran ke Persidangan Negara Bangsa 2026 telah berjaya direkodkan",
+  message: "Pra Pendaftaran Kehadiran ke Persidangan Pembinaan Negara Bangsa  telah berjaya direkodkan",
 });
   } catch (error) {
     setModal({
@@ -763,9 +763,9 @@ setModal({
               {participant.id}
             </p>
           </div>
-                <div className="mt-7">
+                {/* <div className="mt-7">
                 <Tentatif />
-              </div>
+              </div> */}
  
 
                 <div className="mt-7 rounded-xl border border-slate-100 bg-slate-50 p-4">
@@ -794,7 +794,7 @@ setModal({
 
                   </div>
 
-                  ```tsx
+                 
 <div className="mt-4 grid gap-2 sm:grid-cols-2">
 
   <LockedField

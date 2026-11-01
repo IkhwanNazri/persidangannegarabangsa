@@ -16,9 +16,9 @@ import { useState } from "react";
 const schedules = {
   "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN": [
   {
-    session: "MAJLIS PERASMIAN PERSIDANGAN NEGARA BANGSA",
+    session: "MAJLIS PERASMIAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     hari: "30 November",
-    venue: "Dewan Perdana - 11:00 pg - 1:00 tghari",
+    venue: "Dewan Perdana, Aras C - 11:00 pg - 1:00 tghari",
 
     events: [
       {
@@ -36,12 +36,12 @@ const schedules = {
         description: "YB Datuk Aaron Ago Dagang",
       },
 
-      {
-        time: "",
-        type: "MAJLIS PERASMIAN",
-        title: "Keberangkatan tiba DYMM  Sultan Selangor  ",
-        description: "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj",
-      },
+      // {
+      //   time: "",
+      //   type: "MAJLIS PERASMIAN",
+      //   title: "Keberangkatan tiba DYMM  Sultan Selangor  ",
+      //   description: "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj",
+      // },
 
       {
         time: "",
@@ -67,12 +67,12 @@ const schedules = {
         time: "",
         type: "UCAPTAMA DIRAJA DAN TITAH PERASMIAN",
         title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
-        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM Sultan Selangor ",
+        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM  ",
       },
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Sesi bergambar bersama DYMM Sultan Selangor ",
+        title: "Sesi bergambar bersama DYMM  ",
         description: "",
       },
 
@@ -80,12 +80,12 @@ const schedules = {
 
       
 
-      {
-        time: "",
-        type: "MAJLIS PERASMIAN",
-        title: "Keberangkatan DYMM Sultan Selangor Meninggalkan Majlis",
-        description: "",
-      },
+      // {
+      //   time: "",
+      //   type: "MAJLIS PERASMIAN",
+      //   title: "Keberangkatan DYMM Sultan Selangor Meninggalkan Majlis",
+      //   description: "",
+      // },
     ],
   },
 ],
@@ -97,7 +97,7 @@ const schedules = {
       session:
         "SESI 1: PERLEMBAGAAN DAN RUKUN NEGARA TERAS PEMBINAAN NEGARA BANGSA",
          hari: "30 November",
-      venue: "Putra Hall B - 2:30 ptg - 4:30 ptg",
+      venue: "Dewan Purta B2, Aras C - 2:30 ptg - 4:30 ptg",
 
       events: [
         {
@@ -132,7 +132,7 @@ const schedules = {
       session:
       "BUAL BICARA SENI",
        hari: "1 Disember",
-    venue: "Putra Hall B - 9:00 pg - 10:30 pg",
+    venue: "Dewan Purta B2, Aras C - 9:00 pg - 10:30 pg",
     events: [
        {
         time: "",
@@ -157,7 +157,7 @@ const schedules = {
     session:
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
        hari: "1 Disember",
-    venue: "Putra Hall B - 11:00 pg - 1:00 ptg",
+    venue: "Dewan Purta B2, Aras C - 11:00 pg - 1:00 ptg",
     events: [
     
      
@@ -205,7 +205,7 @@ const schedules = {
     session:
       "SESI 3: KEPELBAGAIAN, KEHARMONIAN DAN KESEPADUAN SOSIAL",
        hari: "1 Disember",
-    venue: "Putra Hall B - 2:30 ptg - 4:30 ptg",
+    venue: "Dewan Purta B2, Aras C - 2:30 ptg - 4:30 ptg",
     events: [
       {
         time: "",
@@ -251,7 +251,7 @@ const schedules = {
     session:
       "SESI 4: SYARAHAN NEGARAWAN ",
        hari: "2 Disember",
-    venue: "Putra Hall B - 9:00 pg - 11:00 pg",
+    venue: "Dewan Purta B2, Aras C - 9:00 pg - 11:00 pg",
     events: [
      
       {
@@ -290,7 +290,7 @@ const schedules = {
     session:
       "SESI 5: TRANSFORMASI NEGARA BANGSA: NARATIF NASIONAL, EKONOMI INKLUSIF DAN MODAL INSAN",
        hari: "2 Disember",
-    venue: "Putra Hall B - 11:00 pg - 1:00 ptg",
+    venue: "Dewan Purta B2, Aras C - 11:00 pg - 1:00 ptg",
     events: [
       {
         time: "",
@@ -339,7 +339,7 @@ const schedules = {
   {
     session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP",
      hari: "2 Disember",
-    venue: "Dewan Perdana - 2.30 ptg -4.30 ptg ",
+    venue: "Dewan Perdana, Aras C - 2.30 ptg -4.30 ptg ",
 
     events: [
       {
@@ -362,7 +362,7 @@ const schedules = {
         type: "KETIBAAN",
         title:
           "Ketibaan Perdana Menteri ",
-        description: "YAB Datuk Seri Anwar Ibrahim ",
+        description: "YAB Dato' Seri Anwar Ibrahim ",
       },
 
       {
@@ -434,21 +434,21 @@ const dayInfo: Record<
     name: "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN",
     date: "30 November 2026",
     masa: "11:00 pg - 1:00 tghari",
-    tempat:"Dewan Perdana",
+    tempat:"Dewan Perdana, Aras C",
   },
 
   "PERSIDANGAN PEMBINAAN NEGARA BANGSA": {
     name: "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     date: "30 NOVEMBER - 2 Disember 2026",
     masa: "8:00 pg - 4:30 ptg",
-    tempat:"Putra Hall B",
+    tempat:"Dewan Purta B2, Aras C",
   },
 
   "SESI RUMUSAN DAN MAJLIS PENUTUP": {
     name: "SESI RUMUSAN DAN MAJLIS PENUTUP",
     date: "2 Disember 2026",
     masa: "2:30 ptg - 4:30 ptg",
-    tempat:"Dewan Perdana",
+    tempat:"Dewan Perdana, Aras C",
   },
 };
 
@@ -561,7 +561,7 @@ export default function AturCara() {
 
           <p className="mx-auto mt-6 max-w-[650px] font-poppins text-sm leading-7 text-slate-900 sm:text-base sm:leading-8">
             Ikuti rangkaian program dan sesi perbincangan sepanjang
-            Persidangan Pembinaan Negara Bangsa 2026.
+            Persidangan Pembinaan Negara Bangsa.
           </p>
         </motion.div>
 

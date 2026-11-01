@@ -15,9 +15,16 @@ type PanelPerson = {
 };
 
 const ucapUtama: PanelPerson[] = [
+  // {
+  //   name: "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj",
+  //   position: "DYMM Sultan Selangor Darul Ehsan",
+  //   organization: "",
+  //   image: "/images/panel/sultan",
+  //   tag: "UCAPTAMA DIRAJA",
+  // },
   {
-    name: "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj",
-    position: "DYMM Sultan Selangor Darul Ehsan",
+    name: "",
+    position: "",
     organization: "",
     image: "/images/panel/sultan",
     tag: "UCAPTAMA DIRAJA",
@@ -34,14 +41,14 @@ const ucapUtama: PanelPerson[] = [
     name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
     position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
-    image: "/images/panel/sarawak.png",
+    image: "/images/panel/sarawak.jpg",
     tag: "SYARAHAN NEGARAWAN",
   },
     {
     name: "YAB Dato' Seri Anwar Ibrahim",
     position: "Perdana Menteri Malaysia",
     organization: "",
-    image: "/images/panel/anwar.png",
+    image: "/images/panel/anwaribrahim.png",
     tag: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
   },
 
@@ -70,7 +77,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Felo Kanan Institut Kajian Strategik dan Antarabangsa (ISIS) Malaysia",
     organization: "",
-    image: "/images/panel/edin",
+    image: "/images/panel/edin.png",
     tag: "PEMBENTANG KERTAS 2",
   },
   {
@@ -96,7 +103,7 @@ const bualBicara: PanelPerson[] =
     name: "Tuan Luqman Hariz",
     position: "Hos dan Wartawan Astro AWANI",
     organization: "",
-    image: "/images/panel/luqman.jpeg",
+    image: "/images/panel/luqman.png",
     tag: "MODERATOR",
   },
 ]
@@ -107,7 +114,7 @@ const sesi2: PanelPerson[] = [
     name: "YBhg. Prof. Emeritus Dato’ Dr. Abdul Rahman Embong",
     position: "Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/tunku",
+    image: "/images/panel/emerti.png",
     tag: "UCAPTAMA 2",
   },
   {
@@ -137,7 +144,7 @@ const sesi2: PanelPerson[] = [
     name: "YBrs. Dr. Gregory Anak Kiyai@Keai",
     position: "Pensyarah Kanan Program Seni Rupa Fakulti Seni Kreatif Universiti Malaya",
     organization: "",
-    image: "/images/panel/gregory.jpeg",
+    image: "/images/panel/gregory.png",
     tag: "MODERATOR",
   },
 ];
@@ -148,7 +155,7 @@ const sesi3: PanelPerson[] = [
     position:
       "Profesor Ulung Institut Kajian Etnik (KITA), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/ulung.",
+    image: "/images/panel/ulung.png",
     tag: "UCAPTAMA 3",
   },
   {
@@ -170,7 +177,7 @@ const sesi3: PanelPerson[] = [
     position:
       "Pengarah Jabatan penyelarasan Kawasan Parlimen Kumpulan Rentas Parti Parlimen Malaysia Untuk Matlamat Pembangunan Mampan (APPGM-SDG)",
     organization: "",
-    image: "/images/panel/teo.jpeg",
+    image: "/images/panel/teo.png",
     tag: "MODERATOR",
   },
 ];
@@ -180,7 +187,7 @@ const sesi4: PanelPerson[] = [
     name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
     position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
-    image: "/images/panel/sarawak.png",
+    image: "/images/panel/tyt.png",
     tag: "SYARAHAN NEGARAWAN",
   },
   
@@ -224,7 +231,7 @@ const sesi5: PanelPerson[] = [
     position:
       "Penyelidik Kanan Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
     organization: "",
-    image: "/images/panel/kalidd.",
+    image: "/images/panel/khalid.png",
     tag: "MODERATOR",
   },
 ];

@@ -40,12 +40,12 @@ export default function Hero() {
 
       <div className="absolute inset-0 " />
 
-      <motion.div
+      {/* <motion.div
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="pointer-events-none absolute -right-2 -top-28 h-170 w-[6px] rotate-32 bg-[#FFD21C] sm:h-[800px]"
-      />
+      /> */}
 
       <motion.div
         initial={{ opacity: 0 }}

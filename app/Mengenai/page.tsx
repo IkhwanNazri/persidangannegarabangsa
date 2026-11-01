@@ -211,7 +211,7 @@ export default function MengenaiDialog() {
               <div className="flex items-center gap-3">
                 {/* <span className="h-px w-10 bg-amber-300" /> */}
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-white sm:text-sm">
-                  PERSIDANGAN PEMBINAAN NEGARA BANGSA 2026
+                  PERSIDANGAN PEMBINAAN NEGARA BANGSA 
                 </p>
               </div>
               <div className="mt-5 max-w-6xl pb-2 sm:mt-6">

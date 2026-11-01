@@ -187,7 +187,7 @@ const sesi4: PanelPerson[] = [
     name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
     position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
-    image: "/images/panel/tyt.png",
+    image: "/images/panel/sarawak.PNG",
     tag: "SYARAHAN NEGARAWAN",
   },
   

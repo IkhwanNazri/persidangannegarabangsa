@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Background mobile dan tablet */}
 <div className="absolute inset-0 lg:hidden">
   <Image
-    src="/images/bgsmart-01.jpg"
+    src="/images/bgsmarts-01.jpg"
     alt="Background Mobile"
     fill
     priority
@@ -27,7 +27,7 @@ export default function Hero() {
 {/* Background desktop */}
 <div className="absolute inset-0 hidden lg:block">
   <Image
-    src="/images/bgts-01.jpg"
+    src="/images/bgs.jpg"
     alt="Background Desktop"
     fill
     priority

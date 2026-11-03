@@ -55,6 +55,12 @@ const schedules = {
         title: "Nyanyian Lagu Negaraku",
         description: "",
       },
+      {
+        time: "",
+        type: "MAJLIS PERASMIAN",
+        title: " Bacaan Lafaz Ikrar Rukun Negara",
+        description: "",
+      },
 
       {
         time: "",
@@ -66,7 +72,7 @@ const schedules = {
       {
         time: "",
         type: "UCAPAN",
-        title: "Ucapan Alu-Aluan Menjunjung Kasih",
+        title: "Ucapan Alu-Aluan",
         description: "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
       },
       {
@@ -84,7 +90,19 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Sesi bergambar bersama DYMM  ",
+        title: "Sesi bergambar bersama Perasmi  ",
+        description: "",
+      },
+      {
+        time: "",
+        type: "MAJLIS PERASMIAN",
+        title: "Sesi Lawatan Tapak Pameran  ",
+        description: "",
+      },
+      {
+        time: "",
+        type: "MAJLIS PERASMIAN",
+        title: "Perasmi meninggalkan Majlis",
         description: "",
       },
 
@@ -349,7 +367,7 @@ const schedules = {
 
 "MAJLIS PENUTUPAN": [
   {
-    session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP",
+    session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
      hari: "2 Disember",
     venue: "Dewan Perdana, Aras C - 2.30 ptg -4.30 ptg ",
 
@@ -379,21 +397,21 @@ const schedules = {
 
       {
         time: "",
-        type: "MAJLIS PENUTUP",
+        type: "MAJLIS PENUTUPAN",
         title: "Nyanyian Lagu Negaraku",
         description: "",
       },
 
       {
         time: "",
-        type: "MAJLIS PENUTUP",
+        type: "MAJLIS PENUTUPAN",
         title: "Bacaan Lafaz Ikrar Rukun Negara",
         description: "",
       },
 
       {
         time: "",
-        type: "MAJLIS PENUTUP",
+        type: "MAJLIS PENUTUPAN",
         title: "Bacaan Doa",
         description: "",
       },
@@ -407,7 +425,7 @@ const schedules = {
 
       {
         time: "",
-        type: "RUMUSAN & MAJLIS PENUTUP",
+        type: "RUMUSAN & MAJLIS PENUTUPAN",
         title: "Ucapan Rumusan dan Penutup",
         description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
       },
@@ -595,7 +613,7 @@ export default function AturCara() {
               const subtitles = [
                 "Ucaptama dan Majlis Perasmian",
                 "Rangkaian sesi perbincangan selama tiga hari",
-                "Rumusan persidangan dan majlis penutup rasmi",
+                "Rumusan persidangan dan majlis penutupan rasmi",
               ];
               const dates = ["30 NOVEMBER 2026", "30 NOV – 2 DIS 2026", "2 DISEMBER 2026"];
               const symbols = ["01", "02", "03"];

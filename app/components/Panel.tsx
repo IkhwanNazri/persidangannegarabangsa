@@ -216,7 +216,7 @@ const sesi5: PanelPerson[] = [
   position: "Presiden Persatuan Bangsa-Bangsa Bersatu Malaysia (UNAM)",
   organization: "",
   image: "/images/panel/mustapa.jpg",
-  tag: "PEMBENTANG KERTAS 8",
+  tag: "PEMBENTANG KERTAS 7",
 },
   {
     name: "YBhg. Prof. Emeritus Tan Sri Dato’ Dzulkifli bin Abdul Razak",
@@ -224,7 +224,7 @@ const sesi5: PanelPerson[] = [
       "Profesor Emeritus Pusat Racun Negara Universiti Sains Malaysia",
     organization: "",
     image: "/images/panel/zul.jpg",
-    tag: "PEMBENTANG KERTAS 9",
+    tag: "PEMBENTANG KERTAS 8",
   },
   {
     name: "YBrs. Dr. Muhammed Abdul Khalid",
@@ -378,7 +378,7 @@ export default function Panel() {
           {selectedDay === 1 && (
             <>
               <PanelSection
-                title="Ucaptama Diraja dan Majlis Perasmian"
+                title="Ucaptama  dan Majlis Perasmian"
                 panels={[ucapUtama[0]]}
                 columns={2}
               />

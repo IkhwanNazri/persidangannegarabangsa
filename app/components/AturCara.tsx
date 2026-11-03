@@ -302,7 +302,7 @@ const schedules = {
       },
       {
         time: "",
-        type: "Kertas 8",
+        type: "Kertas 7",
         title:
           "Pembangunan Ekonomi Inklusif: Memperluas Penyertaan dan Kesejahteraan Rakyat",
         description:
@@ -310,7 +310,7 @@ const schedules = {
       },
       {
         time: "",
-        type: "Kertas 9",
+        type: "Kertas 8",
         title:
           "Modal Insan Berkualiti, Negara Bangsa Berdaya Saing",
         description:
@@ -576,12 +576,12 @@ export default function AturCara() {
           >
             {(Object.keys(schedules) as Day[]).map((day, index) => {
               const cardTitles = [
-                "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN",
+                "UCAPTAMA DAN MAJLIS PERASMIAN",
                 "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
                 "SESI RUMUSAN DAN MAJLIS PENUTUP",
               ];
               const subtitles = [
-                "Majlis perasmian dan Ucaptama Diraja",
+                "Ucaptama dan Majlis Perasmian",
                 "Rangkaian sesi perbincangan selama tiga hari",
                 "Rumusan persidangan dan majlis penutup rasmi",
               ];

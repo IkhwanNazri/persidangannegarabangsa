@@ -49,7 +49,7 @@ const cards: RSVPCard[] = [
   {
     id: "perasmian",
     number: "01",
-    title: "UCAPTAMA DIRAJA",
+    title: "UCAPTAMA & MAJLIS PERASMIAN",
     date: "30 NOVEMBER 2026",
     description:
       "Majlis Perasmian Persidangan Pembinaan Negara Bangsa.",
@@ -66,7 +66,7 @@ const cards: RSVPCard[] = [
   {
     id: "Persidangan",
     number: "02",
-    title: "PERSIDANGAN",
+    title: "SESI PERSIDANGAN",
     date: "30 NOVEMBER • 1 DISEMBER • 2 DISEMBER 2026",
     description:
       "Daftar kehadiran untuk Persidangan Pembinaan  Negara Bangsa selama tiga hari.",
@@ -119,7 +119,7 @@ const cards: RSVPCard[] = [
   {
     id: "penutup",
     number: "03",
-    title: "MAJLIS PENUTUP",
+    title: "MAJLIS PENUTUPAN",
     date: "2 DISEMBER 2026",
     description:
       "Sesi Rumusan dan Majlis Penutupan Persidangan Pembinaan Negara Bangsa..",
@@ -252,14 +252,14 @@ export default function RSVP() {
         ? "https://forms.gle/JJ7XVdxgoAwRTv7h8"
         : `/borang/borangpertama?type=${card.id}`
   }
-                    className={`mt-auto flex h-[48px] w-full items-center justify-center gap-3 rounded-xl font-montserrat text-md font-bold tracking-wide text-white transition-all duration-300 ${
+                    className={`mt-auto flex h-[48px] w-full items-center justify-center gap-3 text-center px-6 rounded-xl font-montserrat text-xs font-bold tracking-wide text-white transition-all duration-300 whitespace-nowrap ${
                       registered
                         ? "bg-[#062F63] hover:bg-[#E30620]"
                         : "bg-[#E30620] hover:bg-[#062F63]"
                     }`}
                   >
                     {registered ? "TAMBAH / LIHAT SESI" : `DAFTAR ${card.title}`}
-                    <ArrowRightIcon className="h-4 w-4" />
+                    {/* <ArrowRightIcon className="h-4 w-4" /> */}
                   </Link>
                   
 

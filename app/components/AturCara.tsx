@@ -14,7 +14,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 const schedules = {
-  "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN": [
+  "UCAPTAMA DAN MAJLIS PERASMIAN": [
   {
     session: "MAJLIS PERASMIAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     hari: "30 November",
@@ -46,6 +46,12 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
+        title: "Ketibaan Perasmi",
+        description: "",
+      },
+      {
+        time: "",
+        type: "MAJLIS PERASMIAN",
         title: "Nyanyian Lagu Negaraku",
         description: "",
       },
@@ -62,6 +68,12 @@ const schedules = {
         type: "UCAPAN",
         title: "Ucapan Alu-Aluan Menjunjung Kasih",
         description: "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
+      },
+      {
+        time: "",
+        type: "Ucapatama dan Perasmian",
+        title: "Bersama Membina Negara Bangsa",
+        description: "Perasmi",
       },
       {
         time: "",
@@ -335,7 +347,7 @@ const schedules = {
 
 ],
 
-"SESI RUMUSAN DAN MAJLIS PENUTUP": [
+"MAJLIS PENUTUPAN": [
   {
     session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP",
      hari: "2 Disember",
@@ -430,8 +442,8 @@ const dayInfo: Record<
     tempat: string;
   }
 > = {
-  "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN": {
-    name: "UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN",
+  "UCAPTAMA DAN MAJLIS PERASMIAN": {
+    name: "UCAPTAMA DAN MAJLIS PERASMIAN",
     date: "30 November 2026",
     masa: "11:00 pg - 1:00 tghari",
     tempat:"Dewan Perdana, Aras C",
@@ -444,8 +456,8 @@ const dayInfo: Record<
     tempat:"Dewan Putra B2, Aras C",
   },
 
-  "SESI RUMUSAN DAN MAJLIS PENUTUP": {
-    name: "SESI RUMUSAN DAN MAJLIS PENUTUP",
+  "MAJLIS PENUTUPAN": {
+    name: "MAJLIS PENUTUPAN",
     date: "2 Disember 2026",
     masa: "2:30 ptg - 4:30 ptg",
     tempat:"Dewan Perdana, Aras C",
@@ -456,7 +468,7 @@ const dayInfo: Record<
 
 export default function AturCara() {
   const [activeDay, setActiveDay] =
-    useState<Day>("UCAPTAMA DIRAJA DAN MAJLIS PERASMIAN");
+    useState<Day>("UCAPTAMA DAN MAJLIS PERASMIAN");
   const [showDetails, setShowDetails] = useState(false);
 
   /*
@@ -578,7 +590,7 @@ export default function AturCara() {
               const cardTitles = [
                 "UCAPTAMA DAN MAJLIS PERASMIAN",
                 "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
-                "SESI RUMUSAN DAN MAJLIS PENUTUP",
+                "MAJLIS PENUTUPAN",
               ];
               const subtitles = [
                 "Ucaptama dan Majlis Perasmian",

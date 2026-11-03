@@ -27,7 +27,7 @@ const ucapUtama: PanelPerson[] = [
     position: "",
     organization: "",
     image: "/images/panel/sultan",
-    tag: "UCAPTAMA DIRAJA",
+    tag: "UCAPTAMA",
   },
   
   {

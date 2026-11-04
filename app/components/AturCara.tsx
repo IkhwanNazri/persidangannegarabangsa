@@ -81,12 +81,12 @@ const schedules = {
         title: "Bersama Membina Negara Bangsa",
         description: "Perasmi",
       },
-      {
-        time: "",
-        type: "UCAPTAMA DIRAJA DAN TITAH PERASMIAN",
-        title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
-        description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM  ",
-      },
+      // {
+      //   time: "",
+      //   type: "UCAPTAMA DIRAJA DAN TITAH PERASMIAN",
+      //   title: "Institusi Raja Berperlembagaan:Payung Kedamaian dan Tonggak Keharmonian Negara",
+      //   description: "Ucaptama Diraja dan Titah Perasmian oleh DYMM  ",
+      // },
       {
         time: "",
         type: "MAJLIS PERASMIAN",

@@ -8,14 +8,14 @@ const ACCESS_KEY = process.env.URUSETIA_ACCESS_KEY;
 export async function POST(request: NextRequest) {
   try {
     // Semak akses urus setia
-    const cookie = request.cookies.get("pnb_scan_access")?.value;
+    // const cookie = request.cookies.get("pnb_scan_access")?.value;
 
-    if (!ACCESS_KEY || cookie !== ACCESS_KEY) {
-      return NextResponse.json(
-        { success: false, error: "Unauthorized" },
-        { status: 401 }
-      );
-    }
+    // if (!ACCESS_KEY || cookie !== ACCESS_KEY) {
+    //   return NextResponse.json(
+    //     { success: false, error: "Unauthorized" },
+    //     { status: 401 }
+    //   );
+    // }
 
     const { action, id } = await request.json();
 

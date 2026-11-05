@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Html5Qrcode } from "html5-qrcode";
 
-const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
+// const SCRIPT_URL =
+//   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
 
 export default function ScanQR() {
   const scannerRef = useRef<Html5Qrcode | null>(null);
@@ -23,13 +23,16 @@ export default function ScanQR() {
     setParticipant(null);
 
     try {
-      const response = await fetch(SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify({
-          action: "scan_participant",
-          id,
-        }),
-      });
+      const response = await fetch("/api/attendance", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    action: "scan_participant",
+    id,
+  }),
+});
 
       const data = await response.json();
 
@@ -58,13 +61,16 @@ export default function ScanQR() {
     setCheckingIn(true);
 
     try {
-      const response = await fetch(SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify({
-          action: "check_in",
-          id,
-        }),
-      });
+      const response = await fetch("/api/attendance", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    action: "check_in",
+    id,
+  }),
+});
 
       const data = await response.json();
 

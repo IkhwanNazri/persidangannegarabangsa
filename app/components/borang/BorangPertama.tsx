@@ -44,8 +44,8 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 
-const API_URL =
-  "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
+// const API_URL =
+//   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
 
 type SessionId =
   | "perasmian"
@@ -471,7 +471,7 @@ kategoriOku: form.kategoriOku,
   };
 
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch("/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
@@ -602,7 +602,7 @@ const allSessions: SessionId[] = participant.sessions;
 
 
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch("/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "text/plain;charset=utf-8",

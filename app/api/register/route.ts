@@ -6,10 +6,11 @@ export const dynamic = "force-dynamic";
 export async function POST(request: NextRequest) {
   try {
     const scriptUrl = process.env.GOOGLE_SCRIPT_URL;
+    const scriptSecret = process.env.GOOGLE_SCRIPT_SECRET;
 
-    if (!scriptUrl) {
+    if (!scriptUrl || !scriptSecret) {
       return NextResponse.json(
-        { success: false, error: "Google Script URL tidak dikonfigurasi." },
+        { success: false, error: "Google Script configuration missing." },
         { status: 500 }
       );
     }
@@ -23,24 +24,33 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const testMode =
+  process.env.NODE_ENV === "development" &&
+  process.env.TEST_MODE === "true";
+    const testEmail = (process.env.TEST_EMAIL || "").trim().toLowerCase();
+    const submittedEmail = String(payload.email || "").trim().toLowerCase();
+
+    // Kebenaran testing ditentukan oleh server, bukan browser.
+    const allowExistingUpdate =
+      testMode &&
+      testEmail !== "" &&
+      submittedEmail === testEmail;
+
     const response = await fetch(scriptUrl, {
       method: "POST",
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({
+        ...payload,
+        allowExistingUpdate,
+        secret: scriptSecret,
+      }),
       cache: "no-store",
       redirect: "follow",
     });
 
     const text = await response.text();
-
-    console.log("GOOGLE SCRIPT DEBUG:", {
-      status: response.status,
-      finalUrl: response.url,
-      contentType: response.headers.get("content-type"),
-      body: text.slice(0, 1000),
-    });
 
     try {
       const result = JSON.parse(text);

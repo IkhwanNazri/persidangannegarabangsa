@@ -46,8 +46,8 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Ketibaan Perasmi",
-        description: "",
+        title: "Ketibaan Timbalan Perdana Menteri",
+        description: "YAB Datuk Amar Sri Haji Fadillah Haji Yusof",
       },
       {
         time: "",
@@ -77,9 +77,9 @@ const schedules = {
       },
       {
         time: "",
-        type: "Ucapatama dan Perasmian",
+        type: "Ucapatama dan Perasmian ",
         title: "Bersama Membina Negara Bangsa",
-        description: "Perasmi",
+        description: "YAB Timbalan Perdana Menteri",
       },
       // {
       //   time: "",
@@ -90,7 +90,7 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Sesi bergambar bersama Perasmi  ",
+        title: "Sesi bergambar bersama YAB Timbalan Perdana Menteri  ",
         description: "",
       },
       {
@@ -102,7 +102,7 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Perasmi meninggalkan Majlis",
+        title: "YAB Timbalan Perdana Menteri meninggalkan Majlis",
         description: "",
       },
 

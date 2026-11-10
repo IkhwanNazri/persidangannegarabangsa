@@ -1,0 +1,3 @@
+Contact: mailto:bpsmkpn@perpaduan.gov.my
+Preferred-Languages: ms, en
+Canonical: https://negarabangsa.perpaduan.gov.my/.well-known/security.txt

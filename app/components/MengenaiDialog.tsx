@@ -23,7 +23,7 @@ const contents = [
     color: "bg-[#E30620]",
   },
   {
-    title: "4.0 PELAKSANAAN PERSIDANGAN",
+    title: "3.0 PELAKSANAAN PERSIDANGAN",
     text: "",
     icon: LightBulbIcon,
     color: "bg-[#FFD21C]",
@@ -141,7 +141,7 @@ export default function MengenaiDialog() {
                         {item.title}
                       </h3>
 
-                      {item.title.startsWith("4.0") ? (
+                      {item.title.startsWith("3.0") ? (
                         <div className="mt-3 overflow-hidden rounded-lg border border-slate-300 bg-white">
                           <table className="w-full table-fixed border-collapse text-left font-poppins text-sm text-slate-800 sm:text-base">
                             <tbody>

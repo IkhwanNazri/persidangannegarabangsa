@@ -41,8 +41,8 @@ subsets: ["latin"],
 
 
 export const metadata: Metadata = {
-  title: "Persidangan Negara Bangsa",
-  description: "Persidangan Negara Bangsa 2026",
+  title: "Persidangan Pembinaan Negara Bangsa",
+  description: "Persidangan Pembinaan Negara Bangsa 2026",
   icons: {
     icon: "/icon.png",
   },

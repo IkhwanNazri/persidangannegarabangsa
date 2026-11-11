@@ -1,9 +1,10 @@
 
 import { NextRequest, NextResponse } from "next/server";
+  import { SCAN_COOKIE, isValidScanCookie } from "@/app/lib/scanAccess";
 
 const SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
 const API_SECRET = process.env.GOOGLE_SCRIPT_SECRET;
-const ACCESS_KEY = process.env.URUSETIA_ACCESS_KEY;
+// const ACCESS_KEY = process.env.URUSETIA_ACCESS_KEY;
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,6 +17,14 @@ export async function POST(request: NextRequest) {
     //     { status: 401 }
     //   );
     // }
+      const cookie = request.cookies.get(SCAN_COOKIE)?.value;
+
+  if (!isValidScanCookie(cookie)) {
+    return NextResponse.json(
+      { success: false, error: "Akses tamat atau tidak sah. Sila scan QR akses urus setia." },
+      { status: 401 }
+    );
+  }
 
     const { action, id } = await request.json();
 

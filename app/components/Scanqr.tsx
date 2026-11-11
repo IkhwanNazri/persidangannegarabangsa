@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Html5Qrcode } from "html5-qrcode";
+let scanQueue: Promise<void> = Promise.resolve();
 
 // const SCRIPT_URL =
 //   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
@@ -96,32 +97,36 @@ export default function ScanQR() {
   // QR SCANNER
   // =========================
   useEffect(() => {
-    const scanner = new Html5Qrcode("qr-reader");
+  let cancelled = false;
+  let scanner: Html5Qrcode | null = null;
 
+  scanQueue = scanQueue.then(async () => {
+    if (cancelled) return;
+    scanner = new Html5Qrcode("qr-reader");
     scannerRef.current = scanner;
-
-    scanner.start(
-      { facingMode: "environment" },
-      {
-        fps: 10,
-        qrbox: {
-          width: 250,
-          height: 250,
+    await scanner
+      .start(
+        { facingMode: "environment" },
+        { fps: 10, qrbox: { width: 250, height: 250 } },
+        async (decodedText) => {
+          await scanner?.stop();
+          await scanParticipant(decodedText);
         },
-      },
-      async (decodedText) => {
-        await scanner.stop();
-        await scanParticipant(decodedText);
-      },
-      () => {}
-    );
+        () => {}
+      )
+      .catch(() => {});
+  });
 
-    return () => {
-      if (scanner.isScanning) {
-        scanner.stop().catch(() => {});
-      }
-    };
-  }, []);
+  return () => {
+    cancelled = true;
+    scanQueue = scanQueue
+      .then(async () => {
+        if (scanner?.isScanning) await scanner.stop();
+        scanner?.clear();
+      })
+      .catch(() => {});
+  };
+}, []);
 
   const isSuccess =
     result.toLowerCase().includes("berjaya") ||

@@ -11,10 +11,10 @@ export default function ScanAccessPage() {
       );
 
       const key = params.get("key");
-      console.log("URL KEY DEBUG:", {
-  received: !!key,
-  length: key?.length,
-});
+//       console.log("URL KEY DEBUG:", {
+//   received: !!key,
+//   length: key?.length,
+// });
 
       if (!key) {
         document.body.innerText = "Pautan akses tidak sah.";

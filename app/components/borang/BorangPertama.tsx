@@ -44,8 +44,6 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 
-// const API_URL =
-//   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
 
 type SessionId =
   | "perasmian"
@@ -438,7 +436,8 @@ function getNextDay(): DayId | null {
   setLoading(true);
 
   const data: Participant = {
-    id: `PNB-${Date.now()}`,
+    // id: `PNB-${Date.now()}`,
+    id: "",
     name: form.name.trim(),
     email: form.email.trim(),
     phone: form.phone.trim(),
@@ -478,7 +477,7 @@ kategoriOku: form.kategoriOku,
       },
       body: JSON.stringify({
         action: "register",
-        id: data.id,
+        // id: data.id,
         name: data.name,
         email: data.email,
         phone: data.phone,
@@ -505,12 +504,15 @@ kategoriOku: data.kategoriOku,
   throw new Error(result.error || "Pendaftaran gagal.");
 }
 
-if (!result.emailSent) {
-  throw new Error(
-    "EMAIL ERROR: " +
-    (result.emailError || "Tiada error diterima daripada Apps Script.")
-  );
-}
+// if (!result.emailSent) {
+//   throw new Error(
+//     "EMAIL ERROR: " +
+//     (result.emailError || "Tiada error diterima daripada Apps Script.")
+//   );
+// }
+   const emailNote = result.emailSent
+     ? ""
+     : " Email QR tidak dapat dihantar. Sila simpan atau screenshot QR di skrin ini.";
 
     if (result.id) {
       data.id = result.id;
@@ -530,7 +532,7 @@ if (!result.emailSent) {
   open: true,
   type: "success",
   title: "Pendaftaran Berjaya",
-  message: `Pra Pendaftaran Kehadiran ke Persidangan Pembinaan Negara Bangsa telah berjaya direkodkan`,
+  message : `Pra Pendaftaran Kehadiran ke Persidangan Pembinaan Negara Bangsa telah berjaya direkodkan` + emailNote,
 });
   setLoading(false);
   return;
@@ -540,7 +542,7 @@ setModal({
   open: true,
   type: "success",
   title: "PENDAFTARAN BERJAYA",
-  message: "Semua pendaftaran kehadiran anda telah berjaya disimpan.",
+  message: "Semua pendaftaran kehadiran anda telah berjaya disimpan." + emailNote,
 });
   } catch (error) {
     setModal({

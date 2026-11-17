@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Html5Qrcode } from "html5-qrcode";
+// import { Html5Qrcode } from "html5-qrcode";
 let scanQueue: Promise<void> = Promise.resolve();
+import { enqueue } from "@/app/lib/offlineQueue";
+import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 
 // const SCRIPT_URL =
 //   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
@@ -10,10 +12,19 @@ let scanQueue: Promise<void> = Promise.resolve();
 export default function ScanQR() {
   const scannerRef = useRef<Html5Qrcode | null>(null);
 
+
+  const [manualId, setManualId] = useState("");
   const [result, setResult] = useState("");
   const [participant, setParticipant] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [checkingIn, setCheckingIn] = useState(false);
+
+  const saveOffline = (id: string) => {
+  const added = enqueue(id.trim());
+  setResult(added
+    ? `TIADA INTERNET: Kehadiran ${id} disimpan dalam telefon. Akan dihantar automatik bila ada internet.`
+    : `Peserta ${id} sudah direkodkan (offline).`);
+};
 
   // =========================
   // SCAN PESERTA
@@ -22,6 +33,7 @@ export default function ScanQR() {
     setLoading(true);
     setResult("");
     setParticipant(null);
+    if (!navigator.onLine) { saveOffline(id); setLoading(false); return; }
 
     try {
       const response = await fetch("/api/attendance", {
@@ -49,7 +61,7 @@ export default function ScanQR() {
       await checkInParticipant(data.participant.id);
     } catch (error) {
       console.error(error);
-      setResult("Gagal berhubung dengan server.");
+      saveOffline(id);
     } finally {
       setLoading(false);
     }
@@ -87,7 +99,7 @@ export default function ScanQR() {
       );
     } catch (error) {
       console.error(error);
-      setResult("Gagal merekodkan kehadiran.");
+     saveOffline(id);
     } finally {
       setCheckingIn(false);
     }
@@ -96,21 +108,39 @@ export default function ScanQR() {
   // =========================
   // QR SCANNER
   // =========================
-  useEffect(() => {
+ useEffect(() => {
   let cancelled = false;
+  let busy = false;
   let scanner: Html5Qrcode | null = null;
 
   scanQueue = scanQueue.then(async () => {
     if (cancelled) return;
-    scanner = new Html5Qrcode("qr-reader");
+    scanner = new Html5Qrcode("qr-reader", {
+      verbose: false,
+      formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE],
+      experimentalFeatures: { useBarCodeDetectorIfSupported: true },
+    });
     scannerRef.current = scanner;
+
     await scanner
       .start(
         { facingMode: "environment" },
-        { fps: 10, qrbox: { width: 250, height: 250 } },
+        {
+          fps: 15,
+          qrbox: (w, h) => {
+            const s = Math.floor(Math.min(w, h) * 0.7);
+            return { width: s, height: s };
+          },
+        },
         async (decodedText) => {
-          await scanner?.stop();
-          await scanParticipant(decodedText);
+          if (busy) return;
+          busy = true;
+          scanner?.pause(true);
+          await scanParticipant(decodedText.trim());
+          setTimeout(() => {
+            try { scanner?.resume(); } catch {}
+            busy = false;
+          }, 2500);
         },
         () => {}
       )
@@ -133,7 +163,9 @@ export default function ScanQR() {
     result.toLowerCase().includes("hadir");
 
   const isDuplicate =
+ 
     result.toLowerCase().includes("sudah direkodkan");
+     const isOffline = result.startsWith("TIADA INTERNET");
 
   return (
     <main className="min-h-screen bg-[#F5F7FA]">
@@ -238,12 +270,14 @@ export default function ScanQR() {
             ) : result ? (
               <div
                 className={`rounded-2xl px-4 py-4 text-center ${
-                  isSuccess
-                    ? "bg-green-50 text-slate-600"
-                    : isDuplicate
-                    ? "bg-amber-50 text-amber-700"
-                    : "bg-red-50 text-red-700"
-                }`}
+      isOffline
+        ? "border-2 border-orange-400 bg-orange-50 text-orange-800"
+        : isSuccess
+        ? "bg-green-50 text-slate-600"
+        : isDuplicate
+        ? "bg-amber-50 text-amber-700"
+        : "bg-red-50 text-red-700"
+    }`}
               >
                 <p className="font-poppins text-sm font-semibold">
                   {result}
@@ -257,6 +291,29 @@ export default function ScanQR() {
               </div>
             )}
           </div>
+          {/* <form
+  onSubmit={(e) => {
+    e.preventDefault();
+    const v = manualId.trim();
+    if (v) { scanParticipant(v); setManualId(""); }
+  }}
+  className="flex gap-2 px-5 pb-5"
+>
+  <input
+    value={manualId}
+    onChange={(e) => setManualId(e.target.value)}
+    placeholder="Masukkan ID peserta (PNB-...)"
+    className="flex-1 rounded-xl border border-slate-200 px-3 py-2 font-mono text-sm"
+  />
+  <button
+    type="submit"
+    disabled={loading || checkingIn}
+    className="rounded-xl bg-[#062F63] px-4 py-2 font-poppins text-sm font-semibold text-white disabled:opacity-50"
+  >
+    Rekod
+  </button>
+</form> */}
+
         </div>
 
         {/* PARTICIPANT */}

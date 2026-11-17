@@ -1,4 +1,5 @@
 import ScanQR from "@/app/components/Scanqr";
+import OfflineSync from "@/app/components/OfflineSync";
 
 export default function ScanPage() {
   return (
@@ -8,6 +9,7 @@ export default function ScanPage() {
         backgroundColor: "#F5F7FA",
       }}
     >
+       <OfflineSync />
       <ScanQR />
     </main>
   );

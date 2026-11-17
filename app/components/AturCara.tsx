@@ -14,7 +14,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 const schedules = {
-  "UCAPTAMA DAN MAJLIS PERASMIAN": [
+  "UCAPTAMA DAN MAJLIS PEMBUKAAN": [
   {
     session: "MAJLIS PERASMIAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     hari: "30 November",
@@ -46,8 +46,8 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Ketibaan Timbalan Perdana Menteri",
-        description: "YAB Datuk Amar Sri Haji Fadillah Haji Yusof",
+        title: "Ketibaan Timbalan Perdana Menteri merangkap Menteri Peralihan Tenaga dan Tranformasi Air (PETRA)",
+        description: "YAB Datuk Amar Haji Fadillah Haji Yusof",
       },
       {
         time: "",
@@ -77,7 +77,7 @@ const schedules = {
       },
       {
         time: "",
-        type: "Ucapatama dan Perasmian ",
+        type: "Ucapatama dan Pembukaan ",
         title: "Bersama Membina Negara Bangsa",
         description: "YAB Timbalan Perdana Menteri",
       },
@@ -90,13 +90,19 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
+        title: "Tayangan Montaj  ",
+        description: "",
+      },
+      {
+        time: "",
+        type: "MAJLIS PERASMIAN",
         title: "Sesi bergambar bersama YAB Timbalan Perdana Menteri  ",
         description: "",
       },
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Sesi Lawatan Tapak Pameran  ",
+        title: "YAB Timbalan Perdana Menteri melawat runag pameran  ",
         description: "",
       },
       {
@@ -140,7 +146,7 @@ const schedules = {
 
         {
           time: "",
-          title: "Perlembagaan Persekutuan: Tiang Seri Kedaulatan dan Kesatuan Negara Bangsa",
+          title: "Perlembagaan Persekutuan: Tiang Seri dan Kesatuan Negara Bangsa",
           description:
             "YBhg. Prof Emeritus Datuk Dr. Shad Saleem Faruqi - Felo Penyelidik Kanan Universiti Malaya",
           type: "KERTAS 1",
@@ -150,7 +156,7 @@ const schedules = {
           time: "",
           title: "Penghayatan Rukun Negara: Memperkukuh Perpaduan dan Membina Jati Diri Bangsa",
           description:
-            "Tuan Eddin Khoo - Felo Kanan Institut Kajian Strategik dan Antarabangsa Malaysia (ISIS) ",
+            "YBhg. Datuk Prof. Madya Dr. Shamrahayu Ab Aziz - Pensyarah Kuliyyah Undang-Undang Ahmad IbrahimUniversiti Islam Antarabangsa Malaysia",
           type: "KERTAS 2",
         },
         
@@ -170,7 +176,7 @@ const schedules = {
         title:
           "Panggung Kehidupan, Cerminan Bangsa",
         description:
-          "Tuan Mohd Sabri Yunus - Seniman Malaysia",
+          "Tuan Mohd Sabri Yunus | Puan Angeline Tan | Tuan Sathiya -Pelakon Pi Mai Pi Mai Tang Tu ",
       },
 
 
@@ -195,7 +201,7 @@ const schedules = {
         time: "",
         type: "UCAPTAMA 2",
         title:
-          "Sejarah, Identiti dan Kesatuan: Membina Negara Bangsa",
+          "Biru Kad Pengenalan Kita: Literasi Sejarah, Identiti Nasional dan Keutuhan Negara Bangsa",
         description:
           "YBhg. Prof Emeritus Dato’ Dr. Abdul Rahman Embong -  Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
       },
@@ -205,13 +211,13 @@ const schedules = {
         title:
           "Nilai, Seni, Bahasa dan Budaya: Jiwa dan Warisan Negara Bangsa",
         description:
-          "YBhg. Prof. Dr. Juli Edo - Ahli Panel Majlis Kebudayaan Negara (MAKEN) ",
+          "YBhg. Prof. Dr. Zaid Ahmad - Professor, Jabatan Sejarah dan Tamadun Islam Antarabangsa Malaysia ",
       },
       {
         time: "",
         type: "Kertas 4",
         title:
-          "Legasi Sejarah Politik Identiti: Cabaran Membina Negara Bangsa",
+          "Sejarah dan Legasi Politik Identiti: Cabaran Membina Negara Bangsa",
         description:
           "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi - Ahli Majlis Penasihat Perpaduan Negara (MPPN) ",
       },
@@ -241,7 +247,7 @@ const schedules = {
         time: "",
         type: "UCAPTAMA 3",
         title:
-          "Memperkasa Perpaduan, Memperkukuh Kesepaduan, Menjayakan Penyatupaduan",
+          "Evolusi Kefahaman Tentang Negara-Bangsa dan Hubungan dengan Isu Perpaduan di Malaysia: Sebuah Pemerhatian",
         description:
           "YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
       },
@@ -258,7 +264,7 @@ const schedules = {
         title:
           "Interaksi Rentas Etnik Sebagai Wahana Penyatuan Negara Bangsa",
         description:
-          "YBhg. Prof Emeritus Datuk Azizan Baharudin - Pusat Dialog Peradaban Universiti Malaya",
+          "YBhg. Prof Emeritus Datuk Azizan Baharudin - Penasihat, Pusat Dialog Peradaban Universiti Malaya",
       },
      
       // {
@@ -290,7 +296,7 @@ const schedules = {
         title:
           "Keterangkuman dan Kesaksamaan Rentas Wilayah",
         description:
-          "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar - Tuan Yang Terutama Yang di-Pertua Negeri Sarawak",
+          "TYT Yang di-Pertua Negeri Sarawak Tun Pehin Sri Dr. Haji Wan Junaidi Tuanku Jaafar Yang di-Pertua Negeri SarawaK",
       },
       // {
       //   time: "",
@@ -365,7 +371,7 @@ const schedules = {
 
 ],
 
-"MAJLIS PENUTUPAN": [
+"RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN": [
   {
     session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
      hari: "2 Disember",
@@ -426,8 +432,14 @@ const schedules = {
       {
         time: "",
         type: "RUMUSAN & MAJLIS PENUTUPAN",
-        title: "Ucapan Rumusan dan Penutup",
+        title: "Ucapan Rumusan Persidangan dan Penutup",
         description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
+      },
+      {
+        time: "",
+        type: "MAJLIS PENUTUPAN",
+        title: "Tayangan Montaj",
+        description: "",
       },
 
       {
@@ -436,6 +448,20 @@ const schedules = {
         title: "Sesi bergambar bersama YAB Perdana Menteri",
         description: "",
       },
+      
+      {
+        time: "",
+        type: "MAJLIS PENUTUPAN",
+        title: "YAB Perdana Menteri meninggalkan Majlis",
+        description: "",
+      },
+      {
+        time: "",
+        type: "MAJLIS PENUTUPAN",
+        title: "YAB Perdana Menteri melawat ruang pameran",
+        description: "",
+      },
+       
 
     
 
@@ -460,8 +486,8 @@ const dayInfo: Record<
     tempat: string;
   }
 > = {
-  "UCAPTAMA DAN MAJLIS PERASMIAN": {
-    name: "UCAPTAMA DAN MAJLIS PERASMIAN",
+  "UCAPTAMA DAN MAJLIS PEMBUKAAN": {
+    name: "UCAPTAMA DAN MAJLIS PEMBUKAAN",
     date: "30 November 2026",
     masa: "11:00 pg - 1:00 tghari",
     tempat:"Dewan Perdana, Aras C",
@@ -474,8 +500,8 @@ const dayInfo: Record<
     tempat:"Dewan Putra B2, Aras C",
   },
 
-  "MAJLIS PENUTUPAN": {
-    name: "MAJLIS PENUTUPAN",
+  "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN": {
+    name: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
     date: "2 Disember 2026",
     masa: "2:30 ptg - 4:30 ptg",
     tempat:"Dewan Perdana, Aras C",
@@ -486,7 +512,7 @@ const dayInfo: Record<
 
 export default function AturCara() {
   const [activeDay, setActiveDay] =
-    useState<Day>("UCAPTAMA DAN MAJLIS PERASMIAN");
+    useState<Day>("UCAPTAMA DAN MAJLIS PEMBUKAAN");
   const [showDetails, setShowDetails] = useState(false);
 
   /*
@@ -606,12 +632,12 @@ export default function AturCara() {
           >
             {(Object.keys(schedules) as Day[]).map((day, index) => {
               const cardTitles = [
-                "UCAPTAMA DAN MAJLIS PERASMIAN",
+                "UCAPTAMA DAN MAJLIS PEMBUKAAN",
                 "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
-                "MAJLIS PENUTUPAN",
+                "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
               ];
               const subtitles = [
-                "Ucaptama dan Majlis Perasmian",
+                "Ucaptama dan Majlis Pembukaan",
                 "Rangkaian sesi perbincangan selama tiga hari",
                 "Rumusan persidangan dan majlis penutupan rasmi",
               ];
@@ -743,7 +769,7 @@ export default function AturCara() {
         <div className="mt-14 flex flex-wrap justify-center gap-4 ">
   {/* VIEW PDF */}
   <a
-    href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA.pdf"
+    href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA%20NEW.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center gap-3 rounded-xl bg-[#062F63] px-7 py-4 font-poppins text-xs font-bold uppercase tracking-[.12em] text-white transition hover:bg-[#E30620]"
@@ -754,7 +780,7 @@ export default function AturCara() {
 
   {/* DOWNLOAD PDF */}
   <a
-  href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA.pdf"
+  href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA%20NEW.pdf"
   download
   className="group inline-flex items-center gap-3 rounded-xl bg-[#E30620] px-7 py-4 font-poppins text-xs font-bold uppercase tracking-[.12em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#062F63] hover:shadow-xl"
 >

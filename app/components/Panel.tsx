@@ -73,9 +73,9 @@ const sesi1: PanelPerson[] = [
     tag: "PEMBENTANG KERTAS 1",
   },
   {
-    name: "Tuan Eddin Khoo",
+    name: "YBhg. Datuk Prof Madya Dr. Shamrahayu Ab Aziz",
     position:
-      "Felo Kanan Institut Kajian Strategik dan Antarabangsa (ISIS) Malaysia",
+      "Pensyarah Kuliyyah Undang-Undang Ahmad IbrahimUniversiti Islam Antarabangsa Malaysia",
     organization: "",
     image: "/images/panel/edin.png",
     tag: "PEMBENTANG KERTAS 2",
@@ -94,6 +94,20 @@ const bualBicara: PanelPerson[] =
 [
   {
      name: "Tuan Mohd Sabri Yunus",
+     position: "Seniman Malaysia",
+     organization: "",
+     image: "/images/panel/sabriyunos.jpeg",
+     tag: "BUAL BICARA SENI",
+   },
+  {
+     name: "Puan Angelline Tan",
+     position: "Seniman Malaysia",
+     organization: "",
+     image: "/images/panel/",
+     tag: "BUAL BICARA SENI",
+   },
+  {
+     name: "Tuan Sathiya",
      position: "Seniman Malaysia",
      organization: "",
      image: "/images/panel/",
@@ -118,11 +132,11 @@ const sesi2: PanelPerson[] = [
     tag: "UCAPTAMA 2",
   },
   {
-    name: "YBhg. Prof. Dr. Juli Edo",
+    name: "YBhg. Prof. Dr. Zaid Ahmad",
     position:
-      "Ahli Majlis Kebudayaan Negara (MAKEN)",
+      "Professor, Jabatan Sejarah dan Tamadun Islam Antarabangsa Malaysia",
     organization: "",
-    image: "/images/panel/juli.png",
+    image: "/images/panel/",
     tag: "PEMBENTANG KERTAS 3",
   },
   // {
@@ -227,11 +241,11 @@ const sesi5: PanelPerson[] = [
     tag: "PEMBENTANG KERTAS 8",
   },
   {
-    name: "YBrs. Dr. Muhammed Abdul Khalid",
+    name: "YBhg, Dato' Dr. Ashraf Md Hashim",
     position:
-      "Penyelidik Kanan Institut Kajian Malaysia dan Antarabangsa (IKMAS), Universiti Kebangsaan Malaysia",
+      "Timbalan Pengerusi, Institut Kefahaman Islam Malaysia (IKIM)",
     organization: "",
-    image: "/images/panel/khalid.png",
+    image: "/images/panel/",
     tag: "MODERATOR",
   },
 ];
@@ -393,7 +407,7 @@ export default function Panel() {
                 panels={[bualBicara[1]]}
                 columns={2}
               /> */}
-              <PanelSection title="Bual Bicara Seni" panels={bualBicara} columns={2} />
+              <PanelSection title="Bual Bicara Seni" panels={bualBicara} columns={4} />
               <PanelSection title="Sesi 2" panels={sesi2} columns={4} />
               <PanelSection title="Sesi 3" panels={sesi3} columns={4} />
             </>

@@ -119,10 +119,10 @@ const cards: RSVPCard[] = [
   {
     id: "penutup",
     number: "03",
-    title: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
+    title: "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN",
     date: "2 DISEMBER 2026",
     description:
-      "Sesi Rumusan dan Majlis Penutupan Persidangan Pembinaan Negara Bangsa..",
+      "Sesi Rumusan dan Majlis Perasmian Penutupan Persidangan Pembinaan Negara Bangsa..",
     sessions: [
       {
         id: "penutup",
@@ -229,7 +229,7 @@ export default function RSVP() {
                     {card.number}
                   </div>
 
-                  <h3 className="mt-7 font-jakarta text-[25px] font-black tracking-[-1px] text-[#062F63]">
+                  <h3 className="mt-7 font-poppins text-[25px] font-semibold tracking-[-1px] text-[#062F63]">
                     {card.title}
                   </h3>
 

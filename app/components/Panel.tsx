@@ -49,7 +49,7 @@ const ucapUtama: PanelPerson[] = [
     position: "Perdana Menteri Malaysia",
     organization: "",
     image: "/images/panel/anwaribrahim.png",
-    tag: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
+    tag: "RUMUSAN PERSIDANGAN & MAJLIS PERASMIAN PENUTUPAN",
   },
 
  ];
@@ -424,7 +424,7 @@ export default function Panel() {
               <PanelSection title="Sesi 4" panels={sesi4} columns={2} />
               <PanelSection title="Sesi 5" panels={sesi5} columns={4} />
               <PanelSection
-                title="Rumusan Persidangan dan Majlis Penutupan"
+                title="Rumusan Persidangan dan Majlis Perasmian Penutupan"
                 panels={[ucapUtama[3]]}
                 columns={2}
               />

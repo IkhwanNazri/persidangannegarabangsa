@@ -136,11 +136,18 @@ const schedules = {
       venue: "Dewan Putra B2, Aras C - 2:30 ptg - 4:30 ptg",
 
       events: [
+        // {
+        //   time: "",
+        //   title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
+        //   description:
+        //     " YAA Tun Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
+        //   type: "UCAPTAMA 1",
+        // },
         {
           time: "",
-          title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
+          title: "Negara-Bangsa: Membina Kembali Kefahaman",
           description:
-            " YAA Tun Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
+            " YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
           type: "UCAPTAMA 1",
         },
 
@@ -371,9 +378,9 @@ const schedules = {
 
 ],
 
-"RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN": [
+"RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN": [
   {
-    session: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
+    session: "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN",
      hari: "2 Disember",
     venue: "Dewan Perdana, Aras C - 2.30 ptg -4.30 ptg ",
 
@@ -500,8 +507,8 @@ const dayInfo: Record<
     tempat:"Dewan Putra B2, Aras C",
   },
 
-  "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN": {
-    name: "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
+  "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN": {
+    name: "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN",
     date: "2 Disember 2026",
     masa: "2:30 ptg - 4:30 ptg",
     tempat:"Dewan Perdana, Aras C",
@@ -634,7 +641,7 @@ export default function AturCara() {
               const cardTitles = [
                 "UCAPTAMA DAN MAJLIS PEMBUKAAN",
                 "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
-                "RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUPAN",
+                "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN",
               ];
               const subtitles = [
                 "Ucaptama dan Majlis Pembukaan",

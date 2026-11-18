@@ -182,7 +182,7 @@ export default function Tentatif() {
                 </p>
 
                 <p className="mt-1 font-bold uppercase leading-6 text-[#062F63]">
-                  RUMUSAN PERSIDANGAN DAN MAJLIS PENUTUP
+                  RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUP
                 </p>
 
                 <p className="mt-1 text-sm text-slate-600">

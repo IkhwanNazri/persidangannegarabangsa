@@ -23,10 +23,10 @@ const ucapUtama: PanelPerson[] = [
   //   tag: "UCAPTAMA DIRAJA",
   // },
   {
-    name: "",
-    position: "",
+    name: "YAB Datuk Amar Haji Fadillah Haji Yusof",
+    position: "Timbalan Perdana Menteri",
     organization: "",
-    image: "/images/panel/sultan",
+    image: "/images/panel/YAB Datuk Amar Haji Fadillah Haji Yusof.png",
     tag: "UCAPTAMA",
   },
   
@@ -201,7 +201,7 @@ const sesi4: PanelPerson[] = [
     name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
     position: "TYT Yang di-Pertua Negeri Sarawak",
     organization: "",
-    image: "/images/panel/pehin.png",
+    image: "/images/panel/YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi Tuanku Jaafar.png",
     tag: "SYARAHAN NEGARAWAN",
   },
   
@@ -210,7 +210,7 @@ const sesi4: PanelPerson[] = [
     name: "YBhg. Prof. Madya Dato’ Dr. Mohamed Azam Mohamed Adil",
     position: "Ketua Pengarah, Institut Kefahaman Islam Malaysia (IKIM)",
     organization: "",
-    image: "/images/panel/luqman",
+    image: "/images/panel/YBhg. Prof. Madya Dato Dr. Mohamed Azam.png",
     tag: "MODERATOR",
   },
 
@@ -396,6 +396,7 @@ export default function Panel() {
                 panels={[ucapUtama[0]]}
                 columns={2}
               />
+              
               <PanelSection title="Sesi 1" panels={sesi1} columns={4} />
             </>
           )}
@@ -509,8 +510,8 @@ function PanelSection({
             transition={{ duration: 0.5, delay: (index % columns) * 0.07 }}
            className={`group relative isolate flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
             
-  panel.name.trim() === "Sultan Sharafuddin Idris Shah Al-Haj ibni Almarhum Sultan Salahuddin Abdul Aziz Shah Al-Haj"||
-
+  panel.name.trim() === "YAB Datuk Amar Haji Fadillah Haji Yusof"||
+            
     panel.name === "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar" ||
     panel.name === "YAB Dato' Seri Anwar Ibrahim"
       

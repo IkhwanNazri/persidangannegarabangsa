@@ -103,14 +103,14 @@ const bualBicara: PanelPerson[] =
      name: "Puan Angelline Tan",
      position: "Seniman Malaysia",
      organization: "",
-     image: "/images/panel/",
+     image: "/images/panel/Puan Angeline Tan.jpeg",
      tag: "BUAL BICARA SENI",
    },
   {
      name: "Tuan Sathiya",
      position: "Seniman Malaysia",
      organization: "",
-     image: "/images/panel/",
+     image: "/images/panel/Tuan Sathiya.png",
      tag: "BUAL BICARA SENI",
    },
  {
@@ -136,7 +136,7 @@ const sesi2: PanelPerson[] = [
     position:
       "Professor, Jabatan Sejarah dan Tamadun Islam Antarabangsa Malaysia",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/YBhg. Prof. Dr. Zaid Ahmad (2).jpeg",
     tag: "PEMBENTANG KERTAS 3",
   },
   // {
@@ -392,7 +392,7 @@ export default function Panel() {
           {selectedDay === 1 && (
             <>
               <PanelSection
-                title="Ucaptama  dan Majlis Perasmian"
+                title="Ucaptama  dan Majlis Pembukaan"
                 panels={[ucapUtama[0]]}
                 columns={2}
               />

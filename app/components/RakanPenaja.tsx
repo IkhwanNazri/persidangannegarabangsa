@@ -3,11 +3,8 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 
-const sponsors = [
-  {
-    name: "Kementerian Perpaduan Negara",
-    image: "/images/rakan/logokpn.png",
-  },
+const strategiks = [
+ 
   {
     name: "Institut Kefahaman Islam Malaysia",
     image: "/images/rakan/ikim.png",
@@ -20,6 +17,14 @@ const sponsors = [
     name: "Institut Integriti Malaysia",
     image: "/images/rakan/iim.png",
   },
+ 
+];
+const kolaborasis = [
+  {
+    name: "Kementerian Perpaduan Negara",
+    image: "/images/rakan/logokpn.png",
+  },
+
   {
     name: "Majlis Perbandaran Kota Bharu",
     image: "/images/rakan/mpkb.png",
@@ -151,6 +156,62 @@ export default function RakanPenaja() {
           SLIDER
       ===================================================== */}
 
+              <div className="relative mt-14">
+          <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-5">
+              {strategiks.map((strategik, index) => (
+                <div
+                  key={`center-${strategik.name}-${index}`}
+                  className="group flex min-h-[180px] w-[180px] shrink-0 flex-col items-center justify-center gap-3 px-6 transition-all duration-300 hover:bg-white hover:border-[#C8A23A]/60 hover:shadow-[0_12px_30px_rgba(6,47,99,.08)] sm:h-[135px] sm:w-[210px]"
+                >
+                  <Image
+                    src={strategik.image}
+                    alt={strategik.name}
+                    width={220}
+                    height={140}
+                    className="mx-auto max-h-[80px] w-full object-contain transition-all group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-[90px] sm:h-[170px]"
+                  />
+
+                  <h3 className="w-full whitespace-normal break-words text-center font-poppins text-sm font-semibold leading-4 text-[#062F63] sm:text-base">
+                    {strategik.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      {/* rakan kolaborasi */}
+      <div className="relative z-10 mx-auto py-6 mt-10 max-w-7xl px-6 text-center sm:px-10 lg:px-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+         
+
+          <h2 className="mt-3 font-montserrat text-4xl font-bold uppercase tracking-[-1.5px] text-[#062F63] sm:text-5xl lg:text-6xl">
+            Rakan <span className="text-[#E30620]"> Kolaborasi Korporat</span>
+          </h2>
+
+       
+
+          {/* Divider */}
+          <div className="mx-auto mt-10 flex w-fit items-center gap-3">
+            <span className="h-px w-14 bg-[#C8A23A]" />
+            <span className="h-2.5 w-2.5 rotate-45 bg-[#C8A23A]" />
+            <span className="h-px w-7 bg-[#C8A23A]" />
+            <span className="h-2 w-2 rotate-45 bg-[#C8A23A]/60" />
+            <span className="h-px w-14 bg-[#C8A23A]" />
+          </div>
+        </motion.div>
+      </div>
+
+      {/* =====================================================
+          SLIDER
+      ===================================================== */}
+
       <div className="relative mt-14">
         {/* Fade kiri */}
         <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-24  sm:w-40" />
@@ -171,60 +232,27 @@ export default function RakanPenaja() {
               ease: "linear",
             }}
           >
-            {[...sponsors, ...sponsors].map((sponsor, index) => (
+            {[...kolaborasis, ...kolaborasis].map((kolaborasi, index) => (
               <div
-                key={`left-${sponsor.name}-${index}`}
+                key={`left-${kolaborasi.name}-${index}`}
                 className="group flex min-h-[180px] w-[180px] shrink-0 flex-col items-center justify-center gap-3 px-6 transition-all duration-300 hover:bg-white hover:border-[#C8A23A]/60 hover:shadow-[0_12px_30px_rgba(6,47,99,.08)] sm:h-[135px] sm:w-[210px]"
               >
                 <Image
-                  src={sponsor.image}
-                  alt={sponsor.name}
+                  src={kolaborasi.image}
+                  alt={kolaborasi.name}
                   width={220}
                   height={140}
                   className="max-h-[80px] w-full  object-contain transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-[90px] sm:h-[170px]"
                 />
                 <h3 className="w-full whitespace-normal break-words text-center font-poppins text-sm font-semibold leading-4 text-[#062F63] sm:text-base">
-          {sponsor.name}
+          {kolaborasi.name}
         </h3>
               </div>
             ))}
           </motion.div>
         </div>
 
-        {/* ROW 2 — KANAN */}
-        <div className="mt-5 overflow-hidden">
-          <motion.div
-            className="flex w-max items-center gap-5"
-            animate={{
-              x: ["-50%", "0%"],
-            }}
-            transition={{
-              duration: 32,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
-            {[...sponsors.slice().reverse(), ...sponsors.slice().reverse()].map(
-              (sponsor, index) => (
-                <div
-                  key={`right-${sponsor.name}-${index}`}
-                  className="group flex min-h-[180px] w-[180px] flex-col gap-3  shrink-0 items-center justify-center px-6 transition-all duration-300 hover:border-[#C8A23A]/60 hover:bg-white sm:h-[135px] sm:w-[210px] hover:shadow-[0_12px_30px_rgba(6,47,99,.08)]"
-                >
-                  <Image
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    width={220}
-                    height={140}
-                    className="max-h-[80px] w-full max-w-[150px] object-contain  transition-all duration-500  sm:max-h-[90px] sm:max-w-[175px]"
-                  />
-                   <h3 className="w-full whitespace-normal break-words text-center font-poppins text-sm font-semibold leading-4 text-[#062F63] sm:text-base">
-          {sponsor.name}
-        </h3>
-                </div>
-              )
-            )}
-          </motion.div>
-        </div>
+       
       </div>
 
       {/* =====================================================

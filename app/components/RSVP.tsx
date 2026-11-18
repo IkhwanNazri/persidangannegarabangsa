@@ -252,7 +252,7 @@ export default function RSVP() {
         ? "https://forms.gle/JJ7XVdxgoAwRTv7h8"
         : `/borang/borangpertama?type=${card.id}`
   }
-                    className={`mt-auto flex h-[48px] w-full items-center justify-center gap-3 text-center px-6 rounded-xl font-montserrat text-xs font-bold tracking-wide text-white transition-all duration-300 whitespace-nowrap ${
+                    className={`mt-auto flex h-[60px] w-full items-center justify-center gap-3 text-center px-6 py-4 rounded-xl font-montserrat text-xs font-bold tracking-wide text-white transition-all duration-300 whitespace-normal ${
                       registered
                         ? "bg-[#062F63] hover:bg-[#E30620]"
                         : "bg-[#E30620] hover:bg-[#062F63]"

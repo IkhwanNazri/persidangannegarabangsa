@@ -6,6 +6,7 @@ export const gelaran = [
   "Datuk Wira",
   "Datuk",
   "Dato'",
+  "Dr'",
   "Tuan",
   "Puan",
   

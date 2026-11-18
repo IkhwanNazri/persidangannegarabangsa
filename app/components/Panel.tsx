@@ -73,11 +73,11 @@ const sesi1: PanelPerson[] = [
     tag: "PEMBENTANG KERTAS 1",
   },
   {
-    name: "YBhg. Datuk Prof Madya Dr. Shamrahayu Ab Aziz",
+    name: "YBhg. Datuk Prof. Madya Dr. Shamrahayu Ab Aziz",
     position:
       "Pensyarah Kuliyyah Undang-Undang Ahmad IbrahimUniversiti Islam Antarabangsa Malaysia",
     organization: "",
-    image: "/images/panel/edin.png",
+    image: "/images/panel/YBhg. Datuk Prof. Madya Dr. Shamrahayu Ab Aziz.jpeg",
     tag: "PEMBENTANG KERTAS 2",
   },
   {
@@ -241,11 +241,11 @@ const sesi5: PanelPerson[] = [
     tag: "PEMBENTANG KERTAS 8",
   },
   {
-    name: "YBhg, Dato' Dr. Ashraf Md Hashim",
+    name: "YBhg. Dato’ Dr. Ashraf Md Hashim",
     position:
       "Timbalan Pengerusi, Institut Kefahaman Islam Malaysia (IKIM)",
     organization: "",
-    image: "/images/panel/",
+    image: "/images/panel/YBhg. Dato’ Dr. Ashraf Md Hashim.png",
     tag: "MODERATOR",
   },
 ];

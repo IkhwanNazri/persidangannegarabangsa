@@ -102,7 +102,7 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "YAB Timbalan Perdana Menteri melawat runag pameran  ",
+        title: "YAB Timbalan Perdana Menteri melawat ruang pameran  ",
         description: "",
       },
       {

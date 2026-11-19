@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-    const { action, id } = await request.json();
+    const { action, id, scannedAt } = await request.json();
 
     if (!["scan_participant", "check_in"].includes(action)) {
       return NextResponse.json(
@@ -45,9 +45,15 @@ export async function POST(request: NextRequest) {
     const response = await fetch(SCRIPT_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
+      // body: JSON.stringify({
+      //   action,
+      //   id,
+      //   secret: API_SECRET,
+      // }),
+            body: JSON.stringify({
         action,
         id,
+        scannedAt: typeof scannedAt === "string" ? scannedAt : undefined,
         secret: API_SECRET,
       }),
       cache: "no-store",

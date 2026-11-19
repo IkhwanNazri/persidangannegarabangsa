@@ -29,6 +29,25 @@ export default function ScanQR() {
   // =========================
   // SCAN PESERTA
   // =========================
+
+
+    // QR akses urus setia (pautan /scan/access#key=...) diimbas dalam app
+  const activateAccess = async (text: string) => {
+    const key = new URLSearchParams(text.split("#")[1] || "").get("key");
+    if (!key) { setResult("QR akses tidak sah."); return; }
+    try {
+      const res = await fetch("/api/attendance/access", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key }),
+      });
+      const data = await res.json();
+      setResult(data.success ? "Akses urus setia diaktifkan. Sila imbas QR peserta." : "Akses ditolak.");
+    } catch {
+      setResult("Gagal aktifkan akses. Perlukan internet.");
+    }
+  };
+
   const scanParticipant = async (id: string) => {
     setLoading(true);
     setResult("");
@@ -136,7 +155,10 @@ export default function ScanQR() {
           if (busy) return;
           busy = true;
           scanner?.pause(true);
-          await scanParticipant(decodedText.trim());
+          // await scanParticipant(decodedText.trim());
+                    const text = decodedText.trim();
+          if (text.includes("/scan/access#")) await activateAccess(text);
+          else await scanParticipant(text);
           setTimeout(() => {
             try { scanner?.resume(); } catch {}
             busy = false;

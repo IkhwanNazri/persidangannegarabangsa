@@ -1,5 +1,5 @@
 // Service worker untuk /scan sahaja (scope: /scan)
-const CACHE = "pnb-scan-v2";
+const CACHE = "pnb-scan-v3";
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.add("/scan")));

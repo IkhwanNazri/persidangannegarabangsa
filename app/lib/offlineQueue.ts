@@ -1,6 +1,7 @@
 const QUEUE_KEY = "pnb_offline_queue";
 const FAILED_KEY = "pnb_offline_failed";
 const DUPLICATE_WINDOW_MS = 5 * 60 * 1000; // abaikan scan ID sama dalam 5 minit
+const itemKey = (item: QueueItem) => `${item.id}|${item.scannedAt}`;// Kunci unik setiap scan
 
 export type QueueItem = { id: string; scannedAt: string };
 export type FailedItem = QueueItem & { error: string };
@@ -38,10 +39,48 @@ export const enqueue = (id: string) => {
   return true;
 };
 
+// export const syncQueue = async () => {
+//   const queue = getQueue();
+//   const remaining: QueueItem[] = [];
+//   const failed = getFailed();
+
+//   for (let i = 0; i < queue.length; i++) {
+//     const item = queue[i];
+//     try {
+//       const res = await fetch("/api/attendance", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({ action: "check_in", id: item.id }),
+//       });
+
+//       // Akses tamat / server bermasalah: simpan baki, cuba lagi nanti
+//       if (res.status === 401 || res.status >= 500) {
+//         remaining.push(...queue.slice(i));
+//         break;
+//       }
+
+//       const data = await res.json();
+//       const duplicate = /sudah direkodkan/i.test(data.error || data.message || "");
+//       if (!data.success && !duplicate) {
+//         failed.push({ ...item, error: data.error || "Gagal" });
+//       }
+//     } catch {
+//       remaining.push(...queue.slice(i)); // masih offline
+//       break;
+//     }
+//   }
+
+//   write(QUEUE_KEY, remaining);
+//   write(FAILED_KEY, failed);
+// };
+
+
+
+
 export const syncQueue = async () => {
-  const queue = getQueue();
+  const queue = getQueue(); // salinan masa mula
   const remaining: QueueItem[] = [];
-  const failed = getFailed();
+  const newFailed: FailedItem[] = [];
 
   for (let i = 0; i < queue.length; i++) {
     const item = queue[i];
@@ -49,7 +88,9 @@ export const syncQueue = async () => {
       const res = await fetch("/api/attendance", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "check_in", id: item.id }),
+        // body: JSON.stringify({ action: "check_in", id: item.id }),
+               body: JSON.stringify({ action: "check_in", id: item.id, scannedAt: item.scannedAt }),
+
       });
 
       // Akses tamat / server bermasalah: simpan baki, cuba lagi nanti
@@ -61,7 +102,7 @@ export const syncQueue = async () => {
       const data = await res.json();
       const duplicate = /sudah direkodkan/i.test(data.error || data.message || "");
       if (!data.success && !duplicate) {
-        failed.push({ ...item, error: data.error || "Gagal" });
+        newFailed.push({ ...item, error: data.error || "Gagal" });
       }
     } catch {
       remaining.push(...queue.slice(i)); // masih offline
@@ -69,6 +110,10 @@ export const syncQueue = async () => {
     }
   }
 
-  write(QUEUE_KEY, remaining);
-  write(FAILED_KEY, failed);
+  // Kekalkan scan yang masuk semasa sync sedang berjalan
+  const sentKeys = new Set(queue.map(itemKey));
+  const addedDuringSync = getQueue().filter((item) => !sentKeys.has(itemKey(item)));
+
+  write(QUEUE_KEY, [...remaining, ...addedDuringSync]);
+  write(FAILED_KEY, [...getFailed(), ...newFailed]);
 };

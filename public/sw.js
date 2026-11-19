@@ -2,7 +2,7 @@
 const CACHE = "pnb-scan-v3";
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.add("/scan")));
+  e.waitUntil(caches.open(CACHE).then((c) => c.add("/scan", "/images/splash.svg")));
   self.skipWaiting();
 });
 
@@ -43,7 +43,7 @@ self.addEventListener("fetch", (e) => {
   }
 
   // JS/CSS/font Next.js: cache dulu
-  if (url.pathname.startsWith("/_next/static/")) {
+  if (url.pathname.startsWith("/_next/static/") || url.pathname.startsWith("/images/")) {
     e.respondWith(
       caches.match(req).then((hit) => hit || fetch(req).then((res) => putCache(req, res)))
     );

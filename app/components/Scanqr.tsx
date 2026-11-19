@@ -3,8 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 // import { Html5Qrcode } from "html5-qrcode";
 let scanQueue: Promise<void> = Promise.resolve();
-import { enqueue } from "@/app/lib/offlineQueue";
+// import { enqueue } from "@/app/lib/offlineQueue";
+import { enqueue, getQueue } from "@/app/lib/offlineQueue";
 import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
+
 
 // const SCRIPT_URL =
 //   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
@@ -18,6 +20,15 @@ export default function ScanQR() {
   const [participant, setParticipant] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [checkingIn, setCheckingIn] = useState(false);
+    // Padam mesej offline bila semua scan dah berjaya sync
+  useEffect(() => {
+    const clearOfflineMessage = () => {
+      if (getQueue().length > 0) return;
+      setResult((prev) => (/TIADA INTERNET|\(offline\)/.test(prev) ? "" : prev));
+    };
+    window.addEventListener("pnb-queue", clearOfflineMessage);
+    return () => window.removeEventListener("pnb-queue", clearOfflineMessage);
+  }, []);
 
   const saveOffline = (id: string) => {
   const added = enqueue(id.trim());

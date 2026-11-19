@@ -249,7 +249,7 @@ const schedules = {
           title: "Negara-Bangsa: Membina Kembali Kefahaman",
           description:
             " YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
-          type: "UCAPTAMA 1",
+          type: "UCAPTAMA 3",
         },
       {
         time: "",

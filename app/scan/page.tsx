@@ -4,7 +4,7 @@ import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   manifest: "/scan.webmanifest",
-  appleWebApp: { capable: true, title: "Imbas PNB", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "Negara Bangsa Scanner", statusBarStyle: "default" },
   icons: { apple: "/icons/scan-192.png" },
 };
 export const viewport: Viewport = { themeColor: "#062F63" };

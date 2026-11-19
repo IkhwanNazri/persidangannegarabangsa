@@ -1,7 +1,7 @@
 {
   "id": "/scan",
-  "name": "Imbas Kehadiran PNB",
-  "short_name": "Imbas PNB",
+  "name": "Negara Bangsa Scanner",
+  "short_name": "Negara Bangsa Scanner",
   "start_url": "/scan",
   "scope": "/scan",
   "display": "standalone",

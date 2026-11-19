@@ -59,6 +59,83 @@ export default function ScanQR() {
     }
   };
 
+//   const scanParticipant = async (id: string) => {
+//     setLoading(true);
+//     setResult("");
+//     setParticipant(null);
+//     if (!navigator.onLine) { saveOffline(id); setLoading(false); return; }
+
+//     try {
+//       const response = await fetch("/api/attendance", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({
+//     action: "scan_participant",
+//     id,
+//   }),
+// });
+
+//       const data = await response.json();
+
+//       if (!data.success) {
+//         setParticipant(null);
+//         setResult(data.error || "Peserta tidak dijumpai.");
+//         return;
+//       }
+
+//       setParticipant(data.participant);
+
+//       // TERUS REKOD HADIR
+//       await checkInParticipant(data.participant.id);
+//     } catch (error) {
+//       console.error(error);
+//       saveOffline(id);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   // =========================
+//   // REKOD KEHADIRAN
+//   // =========================
+//   const checkInParticipant = async (id: string) => {
+//     setCheckingIn(true);
+
+//     try {
+//       const response = await fetch("/api/attendance", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({
+//     action: "check_in",
+//     id,
+//   }),
+// });
+
+//       const data = await response.json();
+
+//       if (!data.success) {
+//         setResult(
+//           data.error || "Kehadiran gagal direkodkan."
+//         );
+//         return;
+//       }
+
+//       setResult(
+//         data.message || "Kehadiran berjaya direkodkan."
+//       );
+//     } catch (error) {
+//       console.error(error);
+//      saveOffline(id);
+//     } finally {
+//       setCheckingIn(false);
+//     }
+//   };
+
+  // Satu request sahaja: check_in terus pulangkan maklumat peserta
   const scanParticipant = async (id: string) => {
     setLoading(true);
     setResult("");
@@ -66,74 +143,31 @@ export default function ScanQR() {
     if (!navigator.onLine) { saveOffline(id); setLoading(false); return; }
 
     try {
-      const response = await fetch("/api/attendance", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    action: "scan_participant",
-    id,
-  }),
-});
+      const res = await fetch("/api/attendance", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "check_in", id }),
+      });
 
-      const data = await response.json();
+      if (res.status === 401) { setResult("Akses tamat. Sila imbas QR akses urus setia."); return; }
+      if (res.status >= 500) { saveOffline(id); return; }
 
-      if (!data.success) {
-        setParticipant(null);
-        setResult(data.error || "Peserta tidak dijumpai.");
-        return;
-      }
+      const data = await res.json();
 
-      setParticipant(data.participant);
+      // Ralat sementara: simpan dalam queue, sync akan cuba lagi
+      if (/lock timeout|server error|too many times/i.test(data.error || "")) { saveOffline(id); return; }
 
-      // TERUS REKOD HADIR
-      await checkInParticipant(data.participant.id);
-    } catch (error) {
-      console.error(error);
+      if (data.participant) setParticipant(data.participant);
+      setResult(data.success
+        ? data.message || "Kehadiran berjaya direkodkan."
+        : data.error || "Kehadiran gagal direkodkan.");
+    } catch {
       saveOffline(id);
     } finally {
       setLoading(false);
     }
   };
 
-  // =========================
-  // REKOD KEHADIRAN
-  // =========================
-  const checkInParticipant = async (id: string) => {
-    setCheckingIn(true);
-
-    try {
-      const response = await fetch("/api/attendance", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    action: "check_in",
-    id,
-  }),
-});
-
-      const data = await response.json();
-
-      if (!data.success) {
-        setResult(
-          data.error || "Kehadiran gagal direkodkan."
-        );
-        return;
-      }
-
-      setResult(
-        data.message || "Kehadiran berjaya direkodkan."
-      );
-    } catch (error) {
-      console.error(error);
-     saveOffline(id);
-    } finally {
-      setCheckingIn(false);
-    }
-  };
 
   // =========================
   // QR SCANNER

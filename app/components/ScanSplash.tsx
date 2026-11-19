@@ -28,8 +28,10 @@ export default function ScanSplash() {
       }`}
     >
       <img src="/icons/scan-512.png" alt="" className="h-28 w-28 rounded-3xl  " />
-      <p className="mt-5 font-poppins text-lg font-bold text-white">Persidangan Pembinaan Negara Bangsa</p>
-      <p className="mt-1 font-poppins text-xs text-white/70">Imbas Kehadiran Urus Setia</p>
+      <p className="mt-5 font-poppins text-lg font-bold text-white">Persidangan Pembinaan</p>
+      <br/>
+       <p className="mt-5 font-poppins text-lg font-bold text-white">Negara Bangsa</p>
+      <p className="mt-1 font-poppins text-xs text-white/70">Urus Setia</p>
     </div>
   );
 }

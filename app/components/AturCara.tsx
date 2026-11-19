@@ -16,7 +16,7 @@ import { useState } from "react";
 const schedules = {
   "UCAPTAMA DAN MAJLIS PEMBUKAAN": [
   {
-    session: "MAJLIS PERASMIAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
+    session: "MAJLIS PEMBUKAAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     hari: "30 November",
     venue: "Dewan Perdana, Aras C - 11:00 pg - 1:00 tghari",
 
@@ -136,20 +136,14 @@ const schedules = {
       venue: "Dewan Putra B2, Aras C - 2:30 ptg - 4:30 ptg",
 
       events: [
-        // {
-        //   time: "",
-        //   title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
-        //   description:
-        //     " YAA Tun Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
-        //   type: "UCAPTAMA 1",
-        // },
         {
           time: "",
-          title: "Negara-Bangsa: Membina Kembali Kefahaman",
+          title: "Perlembagaan Persekutuan dan Rukun Negara: Tonggak Negara Bangsa",
           description:
-            " YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
+            " YAA Tun Wan Ahmad Farid Wan Salleh - Ketua Hakim Negara",
           type: "UCAPTAMA 1",
         },
+        
 
         {
           time: "",
@@ -251,13 +245,12 @@ const schedules = {
     venue: "Dewan Putra B2, Aras C - 2:30 ptg - 4:30 ptg",
     events: [
       {
-        time: "",
-        type: "UCAPTAMA 3",
-        title:
-          "Evolusi Kefahaman Tentang Negara-Bangsa dan Hubungan dengan Isu Perpaduan di Malaysia: Sebuah Pemerhatian",
-        description:
-          "YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
-      },
+          time: "",
+          title: "Negara-Bangsa: Membina Kembali Kefahaman",
+          description:
+            " YBhg. Prof Ulung Datuk Dr. Shamsul Amri Baharuddin - Profesor Ulung Institut Kajian Etnik (KITA) Universiti Kebangsaan Malaysia",
+          type: "UCAPTAMA 1",
+        },
       {
         time: "",
         type: "Kertas 5",
@@ -303,7 +296,7 @@ const schedules = {
         title:
           "Keterangkuman dan Kesaksamaan Rentas Wilayah",
         description:
-          "TYT Yang di-Pertua Negeri Sarawak Tun Pehin Sri Dr. Haji Wan Junaidi Tuanku Jaafar Yang di-Pertua Negeri SarawaK",
+          "TYT Yang di-Pertua Negeri Sarawak Tun Pehin Sri Dr. Haji Wan Junaidi Tuanku Jaafar - Yang di-Pertua Negeri SarawaK",
       },
       // {
       //   time: "",

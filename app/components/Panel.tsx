@@ -24,7 +24,7 @@ const ucapUtama: PanelPerson[] = [
   // },
   {
     name: "YAB Datuk Amar Haji Fadillah Haji Yusof",
-    position: "Timbalan Perdana Menteri",
+    position: "Timbalan Perdana Menteri merangkap Menteri Peralihan Tenaga dan Transformasi Air (PETRA)",
     organization: "",
     image: "/images/panel/YAB Datuk Amar Haji Fadillah Haji Yusof.png",
     tag: "UCAPTAMA",
@@ -77,7 +77,7 @@ const sesi1: PanelPerson[] = [
     position:
       "Pensyarah Kuliyyah Undang-Undang Ahmad IbrahimUniversiti Islam Antarabangsa Malaysia",
     organization: "",
-    image: "/images/panel/YBhg. Datuk Prof. Madya Dr. Shamrahayu Ab Aziz.jpeg",
+    image: "/images/panel/YBhg. Datuk Prof. Madya Dr. Shamrahayu Ab Aziz.png",
     tag: "PEMBENTANG KERTAS 2",
   },
   {
@@ -94,21 +94,21 @@ const bualBicara: PanelPerson[] =
 [
   {
      name: "Tuan Mohd Sabri Yunus",
-     position: "Seniman Malaysia",
+     position: "Pelakon Pi Mai Pi Mai Tang Tu",
      organization: "",
      image: "/images/panel/sabriyunos.jpeg",
      tag: "BUAL BICARA SENI",
    },
   {
      name: "Puan Angelline Tan",
-     position: "Seniman Malaysia",
+     position: "Pelakon Pi Mai Pi Mai Tang Tu",
      organization: "",
      image: "/images/panel/Puan Angeline Tan.jpeg",
      tag: "BUAL BICARA SENI",
    },
   {
      name: "Tuan Sathiya",
-     position: "Seniman Malaysia",
+     position: "Pelakon Pi Mai Pi Mai Tang Tu",
      organization: "",
      image: "/images/panel/Tuan Sathiya.png",
      tag: "BUAL BICARA SENI",
@@ -198,8 +198,8 @@ const sesi3: PanelPerson[] = [
 
 const sesi4: PanelPerson[] = [
   {
-    name: "YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi bin Tuanku Jaafar ",
-    position: "TYT Yang di-Pertua Negeri Sarawak",
+    name: "TYT Yang di-Pertua Negeri Sarawak Tun Pehin Sri Dr. Haji Wan Junaidi Tuanku Jaafar ",
+    position: "Yang di-Pertua Negeri Sarawak",
     organization: "",
     image: "/images/panel/YABhg. Tun Pehin Sri Dr. Haji Wan Junaidi Tuanku Jaafar.png",
     tag: "SYARAHAN NEGARAWAN",

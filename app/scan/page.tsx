@@ -2,6 +2,8 @@ import ScanQR from "@/app/components/Scanqr";
 import OfflineSync from "@/app/components/OfflineSync";
 import type { Metadata, Viewport } from "next";
 import ScanSplash from "@/app/components/ScanSplash";
+// tukar import ScanQR kepada:
+import ScanShell from "@/app/components/ScanShell";
 
 export const metadata: Metadata = {
   manifest: "/scan.webmanifest",
@@ -19,8 +21,13 @@ export default function ScanPage() {
       }}
     >
          <ScanSplash />
-       <OfflineSync />
-      <ScanQR />
+
+           <div className="mx-auto w-full max-w-md">
+        <OfflineSync />
+      </div>
+     
+      {/* <ScanQR /> */}
+      <ScanShell />
     </main>
   );
 }

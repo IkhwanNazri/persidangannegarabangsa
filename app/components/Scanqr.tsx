@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 // import { Html5Qrcode } from "html5-qrcode";
 let scanQueue: Promise<void> = Promise.resolve();
 // import { enqueue } from "@/app/lib/offlineQueue";
-import { enqueue, getQueue } from "@/app/lib/offlineQueue";
+// import { enqueue, getQueue } from "@/app/lib/offlineQueue";
+import { enqueue, getQueue, logOnlineScan } from "@/app/lib/offlineQueue";
 import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 
 
@@ -156,6 +157,7 @@ export default function ScanQR() {
 
       // Ralat sementara: simpan dalam queue, sync akan cuba lagi
       if (/lock timeout|server error|too many times/i.test(data.error || "")) { saveOffline(id); return; }
+            logOnlineScan(id, data);
 
       if (data.participant) setParticipant(data.participant);
       setResult(data.success

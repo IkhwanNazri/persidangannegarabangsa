@@ -1,19 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { clearFailed, getFailed, getQueue, syncQueue, type FailedItem } from "@/app/lib/offlineQueue";
+import { getQueue, syncQueue } from "@/app/lib/offlineQueue";
 
 export default function OfflineSync() {
   const [online, setOnline] = useState(true);
   const [pending, setPending] = useState(0);
-  const [failed, setFailed] = useState<FailedItem[]>([]);
   const [syncing, setSyncing] = useState(false);
   const lock = useRef(false);
 
-  const refresh = () => {
-    setPending(getQueue().length);
-    setFailed(getFailed());
-  };
+  const refresh = () => setPending(getQueue().length);
 
   const sync = async () => {
     if (lock.current || !navigator.onLine || getQueue().length === 0) return;
@@ -29,7 +25,7 @@ export default function OfflineSync() {
   };
 
   useEffect(() => {
-    if ("serviceWorker" in navigator) {
+     if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js", { scope: "/scan" }).catch(() => {});
     }
 
@@ -60,10 +56,10 @@ export default function OfflineSync() {
   return (
     <div className="mx-auto w-full max-w-2xl px-4 pt-4 sm:px-6">
       <div className={`flex items-center justify-between rounded-2xl border px-4 py-3 font-poppins text-xs ${
-  online ? "border-slate-200 bg-white" : "border-red-300 bg-red-50"
-}`}>
+        online ? "border-slate-200 bg-white" : "border-red-300 bg-red-50"
+      }`}>
         <span className={`font-semibold ${online ? "text-green-700" : "text-red-600"}`}>
-         {online ? "● Online" : "● Offline: scan tetap boleh"}
+          {online ? "● Online" : "● Offline: scan tetap boleh"}
         </span>
         <span className="text-slate-500">
           {syncing ? "Sedang sync..." : `Belum sync: ${pending}`}
@@ -76,22 +72,6 @@ export default function OfflineSync() {
           Sync
         </button>
       </div>
-
-      {failed.length > 0 && (
-        <div className="mt-2 rounded-2xl bg-red-50 px-4 py-3 font-poppins text-xs text-red-700">
-          <p className="font-semibold">ID gagal semasa sync (sila semak):</p>
-          <ul className="mt-1 font-mono">
-            {failed.map((f, i) => (
-              <li key={i}>
-                {f.id} ({new Date(f.scannedAt).toLocaleTimeString("ms-MY")}): {f.error}
-              </li>
-            ))}
-          </ul>
-          <button onClick={() => { clearFailed(); refresh(); }} className="mt-2 underline">
-            Kosongkan senarai
-          </button>
-        </div>
-      )}
     </div>
   );
 }

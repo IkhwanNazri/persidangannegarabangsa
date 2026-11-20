@@ -131,14 +131,7 @@ const sesi2: PanelPerson[] = [
     image: "/images/panel/emerti.png",
     tag: "UCAPTAMA 2",
   },
-  {
-    name: "YBhg. Prof. Dr. Zaid Ahmad",
-    position:
-      "Professor, Jabatan Sejarah dan Tamadun Islam Antarabangsa Malaysia",
-    organization: "",
-    image: "/images/panel/YBhg. Prof. Dr. Zaid Ahmad (2).jpeg",
-    tag: "PEMBENTANG KERTAS 3",
-  },
+ 
   // {
   //   name: "YBhg. Prof. Emeritus Dato’ Dr. Abdul Rahman Embong",
   //   position:
@@ -152,6 +145,14 @@ const sesi2: PanelPerson[] = [
     position: "Ahli Majlis Penasihat Perpaduan Negara (MPPN)",
     organization: "",
     image: "/images/panel/tajudin.jpeg",
+    tag: "PEMBENTANG KERTAS 3",
+  },
+   {
+    name: "YBhg. Prof. Dr. Zaid Ahmad",
+    position:
+      "Professor, Jabatan Sejarah dan Tamadun Islam Antarabangsa Malaysia",
+    organization: "",
+    image: "/images/panel/YBhg. Prof. Dr. Zaid Ahmad (2).jpeg",
     tag: "PEMBENTANG KERTAS 4",
   },
   {

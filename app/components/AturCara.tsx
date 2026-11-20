@@ -206,22 +206,23 @@ const schedules = {
         description:
           "YBhg. Prof Emeritus Dato’ Dr. Abdul Rahman Embong -  Mantan Felo Utama Institut Kajian Malaysia dan Antarabangsa (IKMAS) Universiti Kebangsaan Malaysia",
       },
-      {
+       {
         time: "",
         type: "Kertas 3",
-        title:
-          "Nilai, Seni, Bahasa dan Budaya: Jiwa dan Warisan Negara Bangsa",
-        description:
-          "YBhg. Prof. Dr. Zaid Ahmad - Professor, Jabatan Sejarah dan Tamadun Islam Antarabangsa Malaysia ",
-      },
-      {
-        time: "",
-        type: "Kertas 4",
         title:
           "Sejarah dan Legasi Politik Identiti: Cabaran Membina Negara Bangsa",
         description:
           "YBhg. Prof. Dr. Mohd. Tajuddin bin Mohd Rasdi - Ahli Majlis Penasihat Perpaduan Negara (MPPN) ",
       },
+      {
+        time: "",
+        type: "Kertas 4",
+        title:
+          "Nilai, Seni, Bahasa dan Budaya: Jiwa dan Warisan Negara Bangsa",
+        description:
+          "YBhg. Prof. Dr. Zaid Ahmad - Professor, Jabatan Sejarah dan Tamadun Islam Antarabangsa Malaysia ",
+      },
+     
       // {
       //   time: "",
         

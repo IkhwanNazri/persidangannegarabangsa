@@ -11,6 +11,10 @@ import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 
 // const SCRIPT_URL =
 //   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
+// Getaran maklum balas. Android sahaja: iPhone tidak menyokong Vibration API.
+const vibrate = (pattern: number | number[]) => {
+  try { navigator.vibrate?.(pattern); } catch {}
+};
 
 export default function ScanQR() {
   const scannerRef = useRef<Html5Qrcode | null>(null);
@@ -36,6 +40,7 @@ export default function ScanQR() {
   setResult(added
     ? `TIADA INTERNET: Kehadiran ${id} disimpan dalam telefon. Akan dihantar automatik bila ada internet.`
     : `Peserta ${id} sudah direkodkan (offline).`);
+    vibrate(200);
 };
 
   // =========================
@@ -55,6 +60,7 @@ export default function ScanQR() {
       });
       const data = await res.json();
       setResult(data.success ? "Akses urus setia diaktifkan. Sila imbas QR peserta." : "Akses ditolak.");
+      
     } catch {
       setResult("Gagal aktifkan akses. Perlukan internet.");
     }
@@ -163,7 +169,10 @@ export default function ScanQR() {
       setResult(data.success
         ? data.message || "Kehadiran berjaya direkodkan."
         : data.error || "Kehadiran gagal direkodkan.");
-    } catch {
+         vibrate(data.success ? 80 : [80, 60, 80]);
+    }
+    
+    catch {
       saveOffline(id);
     } finally {
       setLoading(false);

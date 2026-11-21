@@ -13,6 +13,8 @@ export type LogItem = QueueItem & {
   detail?: string;
   sessionName?: string;
   message?: string;
+  session?: string;      // sesi semasa (id), contoh "sesi-2"
+  sessions?: string[];   // semua sesi yang dah HADIR
 };
 
 const itemKey = (item: QueueItem) => `${item.id}|${item.scannedAt}`; // kunci unik setiap scan
@@ -56,6 +58,8 @@ const toLogFields = (data: any): Partial<LogItem> => {
     detail: data.participant?.kategoriLain,
     sessionName: data.sessionName,
     message: data.success ? data.message : data.error,
+     session: data.session,
+    sessions: data.participant?.sessions,
   };
 };
 

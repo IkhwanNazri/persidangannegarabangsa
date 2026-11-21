@@ -27,8 +27,11 @@ const unlockAudio = () => {
   } catch {}
 };
 
+let soundEnabled = false; // status bunyi, kekal sepanjang app dibuka
+
 const beep = (freq: number, ms: number, delay = 0) => {
-  if (!audioCtx) return;
+  if (!audioCtx || !soundEnabled) return; // ← senyap bila dimatikan
+  // ... selebihnya kekal sama
   const t = audioCtx.currentTime + delay / 1000;
   const osc = audioCtx.createOscillator();
   const gain = audioCtx.createGain();
@@ -82,13 +85,21 @@ export default function ScanQR({ active = true }: { active?: boolean }) {
   //   return () => window.removeEventListener("pointerdown", unlockAudio);
   // }, []);
     // Bunyi & getaran hanya dibenarkan selepas sentuhan pertama
-  useEffect(() => {
-    const unlock = () => { unlockAudio(); setSoundOn(true); };
-    window.addEventListener("pointerdown", unlock, { once: true });
-    return () => window.removeEventListener("pointerdown", unlock);
-  }, []);
+  // useEffect(() => {
+  //   const unlock = () => { unlockAudio(); setSoundOn(true); };
+  //   window.addEventListener("pointerdown", unlock, { once: true });
+  //   return () => window.removeEventListener("pointerdown", unlock);
+  // }, []);
 
-    const [soundOn, setSoundOn] = useState(false);
+     const [soundOn, setSoundOn] = useState(() => soundEnabled);
+
+  const toggleSound = () => {
+    unlockAudio();           // ketikan ini juga buka kunci bunyi iPhone & getaran Android
+    const next = !soundOn;
+    soundEnabled = next;
+    setSoundOn(next);
+    if (next) beep(1046, 80); // bip pendek: pengesahan bunyi hidup
+  };
 
       const activeRef = useRef(active);
 
@@ -387,18 +398,26 @@ export default function ScanQR({ active = true }: { active?: boolean }) {
               id="qr-reader"
               className="w-full overflow-hidden rounded-2xl"
             />
-                   {!soundOn && (
-              <button
-                aria-label="Hidupkan bunyi"
-                className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur active:scale-95"
-              >
-                {/* Ikon speaker senyap */}
+                              <button
+              onClick={toggleSound}
+              aria-label={soundOn ? "Matikan bunyi" : "Hidupkan bunyi"}
+              aria-pressed={soundOn}
+              className={`absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full backdrop-blur transition-colors active:scale-95 ${
+                soundOn ? "bg-white/90 text-[#062F63]" : "bg-black/55 text-white"
+              }`}
+            >
+              {soundOn ? (
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M11 5 6 9H3v6h3l5 4V5z" />
+                  <path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14" />
+                </svg>
+              ) : (
                 <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M11 5 6 9H3v6h3l5 4V5z" />
                   <path d="m22 9-6 6M16 9l6 6" />
                 </svg>
-              </button>
-            )}
+              )}
+            </button>
 
             {/* SCAN FRAME */}
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">

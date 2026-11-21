@@ -387,12 +387,17 @@ export default function ScanQR({ active = true }: { active?: boolean }) {
               id="qr-reader"
               className="w-full overflow-hidden rounded-2xl"
             />
-                 {!soundOn && (
-              <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center">
-                <span className="rounded-full bg-black/60 px-3 py-1.5 font-poppins text-xs text-white backdrop-blur">
-                  Ketik skrin untuk hidupkan bunyi
-                </span>
-              </div>
+                   {!soundOn && (
+              <button
+                aria-label="Hidupkan bunyi"
+                className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur active:scale-95"
+              >
+                {/* Ikon speaker senyap */}
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M11 5 6 9H3v6h3l5 4V5z" />
+                  <path d="m22 9-6 6M16 9l6 6" />
+                </svg>
+              </button>
             )}
 
             {/* SCAN FRAME */}
@@ -602,7 +607,7 @@ export default function ScanQR({ active = true }: { active?: boolean }) {
         {/* FOOTER */}
         <p className="mt-6 text-center font-poppins text-xs text-slate-400">
           Persidangan Pembinaan Negara Bangsa
-           <span className="mt-1 block font-mono text-[10px] text-slate-300">pnb-scan-{APP_VERSION}</span>
+           <span className="mt-1 block font-mono text-[10px] text-slate-900">pnb-scan-{APP_VERSION}</span>
         </p>
 
       </div>

@@ -12,8 +12,46 @@ import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 // const SCRIPT_URL =
 //   "https://script.google.com/macros/s/AKfycbyv7S5cQ5by4oePsuMTSJAxHkJlthvV6VubIbDM5ZxI_pdbs2B5b3rI5i9yVn2JFTSsnQ/exec";
 // Getaran maklum balas. Android sahaja: iPhone tidak menyokong Vibration API.
+// const vibrate = (pattern: number | number[]) => {
+//   try { navigator.vibrate?.(pattern); } catch {}
+// };
+// Maklum balas scan: getaran (Android) + bunyi bip (semua peranti, termasuk iPhone & laptop)
+let audioCtx: AudioContext | null = null;
+
+const unlockAudio = () => {
+  try {
+    audioCtx ??= new (window.AudioContext || (window as any).webkitAudioContext)();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+  } catch {}
+};
+
+const beep = (freq: number, ms: number, delay = 0) => {
+  if (!audioCtx) return;
+  const t = audioCtx.currentTime + delay / 1000;
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.frequency.value = freq;
+  osc.connect(gain);
+  gain.connect(audioCtx.destination);
+  gain.gain.setValueAtTime(0.25, t);
+  gain.gain.exponentialRampToValueAtTime(0.001, t + ms / 1000);
+  osc.start(t);
+  osc.stop(t + ms / 1000);
+};
+
 const vibrate = (pattern: number | number[]) => {
   try { navigator.vibrate?.(pattern); } catch {}
+};
+
+type Feedback = "detect" | "success" | "error" | "offline";
+
+const feedback = (kind: Feedback) => {
+  try {
+    if (kind === "detect") { vibrate(30); return; }              // QR dibaca: ketik pendek
+    if (kind === "success") { vibrate(80); beep(1046, 150); }     // satu bip tinggi
+    if (kind === "error") { vibrate([80, 60, 80]); beep(330, 150); beep(330, 150, 200); } // dua bip rendah
+    if (kind === "offline") { vibrate(200); beep(660, 300); }     // satu bip panjang
+  } catch {}
 };
 
 export default function ScanQR() {
@@ -35,13 +73,26 @@ export default function ScanQR() {
     return () => window.removeEventListener("pnb-queue", clearOfflineMessage);
   }, []);
 
+    // iPhone hanya benarkan bunyi selepas sentuhan pertama
+  useEffect(() => {
+    window.addEventListener("pointerdown", unlockAudio, { once: true });
+    return () => window.removeEventListener("pointerdown", unlockAudio);
+  }, []);
+//   const saveOffline = (id: string) => {
+//   const added = enqueue(id.trim());
+//   setResult(added
+//     ? `TIADA INTERNET: Kehadiran ${id} disimpan dalam telefon. Akan dihantar automatik bila ada internet.`
+//     : `Peserta ${id} sudah direkodkan (offline).`);
+//      feedback("offline");
+// };
+
   const saveOffline = (id: string) => {
-  const added = enqueue(id.trim());
-  setResult(added
-    ? `TIADA INTERNET: Kehadiran ${id} disimpan dalam telefon. Akan dihantar automatik bila ada internet.`
-    : `Peserta ${id} sudah direkodkan (offline).`);
-    vibrate(200);
-};
+    const added = enqueue(id.trim());
+    setResult(added
+      ? `TIADA INTERNET: Kehadiran ${id} disimpan dalam telefon. Akan dihantar automatik bila ada internet.`
+      : `Peserta ${id} sudah direkodkan (offline).`);
+    feedback(added ? "offline" : "error");
+  };
 
   // =========================
   // SCAN PESERTA
@@ -169,7 +220,8 @@ export default function ScanQR() {
       setResult(data.success
         ? data.message || "Kehadiran berjaya direkodkan."
         : data.error || "Kehadiran gagal direkodkan.");
-         vibrate(data.success ? 80 : [80, 60, 80]);
+        //  vibrate(data.success ? 80 : [80, 60, 80]);
+         feedback(data.success ? "success" : "error");
     }
     
     catch {
@@ -211,6 +263,7 @@ export default function ScanQR() {
           if (busy) return;
           busy = true;
           scanner?.pause(true);
+                 feedback("detect");
           // await scanParticipant(decodedText.trim());
                     const text = decodedText.trim();
           if (text.includes("/scan/access#")) await activateAccess(text);

@@ -7,6 +7,8 @@ let scanQueue: Promise<void> = Promise.resolve();
 // import { enqueue, getQueue } from "@/app/lib/offlineQueue";
 import { enqueue, getQueue, logOnlineScan } from "@/app/lib/offlineQueue";
 import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
+import { APP_VERSION } from "@/app/lib/version";
+
 
 
 // const SCRIPT_URL =
@@ -47,14 +49,15 @@ type Feedback = "detect" | "success" | "error" | "offline";
 
 const feedback = (kind: Feedback) => {
   try {
-    if (kind === "detect") { vibrate(30); return; }              // QR dibaca: ketik pendek
+    // if (kind === "detect") { vibrate(30); return; }              // QR dibaca: ketik pendek
+        if (kind === "detect") { vibrate(70); beep(1500, 40); return; } // QR dibaca: getar + "tik"
     if (kind === "success") { vibrate(80); beep(1046, 150); }     // satu bip tinggi
     if (kind === "error") { vibrate([80, 60, 80]); beep(330, 150); beep(330, 150, 200); } // dua bip rendah
     if (kind === "offline") { vibrate(200); beep(660, 300); }     // satu bip panjang
   } catch {}
 };
 
-export default function ScanQR() {
+export default function ScanQR({ active = true }: { active?: boolean }) {
   const scannerRef = useRef<Html5Qrcode | null>(null);
 
 
@@ -73,11 +76,30 @@ export default function ScanQR() {
     return () => window.removeEventListener("pnb-queue", clearOfflineMessage);
   }, []);
 
-    // iPhone hanya benarkan bunyi selepas sentuhan pertama
+  //   // iPhone hanya benarkan bunyi selepas sentuhan pertama
+  // useEffect(() => {
+  //   window.addEventListener("pointerdown", unlockAudio, { once: true });
+  //   return () => window.removeEventListener("pointerdown", unlockAudio);
+  // }, []);
+    // Bunyi & getaran hanya dibenarkan selepas sentuhan pertama
   useEffect(() => {
-    window.addEventListener("pointerdown", unlockAudio, { once: true });
-    return () => window.removeEventListener("pointerdown", unlockAudio);
+    const unlock = () => { unlockAudio(); setSoundOn(true); };
+    window.addEventListener("pointerdown", unlock, { once: true });
+    return () => window.removeEventListener("pointerdown", unlock);
   }, []);
+
+    const [soundOn, setSoundOn] = useState(false);
+
+      const activeRef = useRef(active);
+
+  // Jeda scanner bila tab Rekod dibuka, sambung bila kembali ke Imbas
+  useEffect(() => {
+    activeRef.current = active;
+    try {
+      if (active) scannerRef.current?.resume();
+      else scannerRef.current?.pause(true);
+    } catch {}
+  }, [active]);
 //   const saveOffline = (id: string) => {
 //   const added = enqueue(id.trim());
 //   setResult(added
@@ -260,7 +282,7 @@ export default function ScanQR() {
           },
         },
         async (decodedText) => {
-          if (busy) return;
+         if (busy || !activeRef.current) return;
           busy = true;
           scanner?.pause(true);
                  feedback("detect");
@@ -365,6 +387,13 @@ export default function ScanQR() {
               id="qr-reader"
               className="w-full overflow-hidden rounded-2xl"
             />
+                 {!soundOn && (
+              <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center">
+                <span className="rounded-full bg-black/60 px-3 py-1.5 font-poppins text-xs text-white backdrop-blur">
+                  Ketik skrin untuk hidupkan bunyi
+                </span>
+              </div>
+            )}
 
             {/* SCAN FRAME */}
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -573,6 +602,7 @@ export default function ScanQR() {
         {/* FOOTER */}
         <p className="mt-6 text-center font-poppins text-xs text-slate-400">
           Persidangan Pembinaan Negara Bangsa
+           <span className="mt-1 block font-mono text-[10px] text-slate-300">pnb-scan-{APP_VERSION}</span>
         </p>
 
       </div>

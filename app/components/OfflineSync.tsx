@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { getQueue, syncQueue } from "@/app/lib/offlineQueue";
+import { APP_VERSION } from "@/app/lib/version";
 
 export default function OfflineSync() {
   const [online, setOnline] = useState(true);
@@ -26,7 +27,7 @@ export default function OfflineSync() {
 
   useEffect(() => {
      if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js", { scope: "/scan" }).catch(() => {});
+     navigator.serviceWorker.register(`/sw.js?v=${APP_VERSION}`, { scope: "/scan" }).catch(() => {});
     }
 
     setOnline(navigator.onLine);

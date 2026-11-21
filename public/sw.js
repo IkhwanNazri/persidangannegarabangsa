@@ -1,5 +1,6 @@
 // Service worker untuk /scan sahaja (scope: /scan)
-const CACHE = "pnb-scan-v4";
+const VERSION = new URL(self.location).searchParams.get("v") || "dev";
+const CACHE = "pnb-scan-" + VERSION;
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.add("/scan", "/images/splash.svg")));

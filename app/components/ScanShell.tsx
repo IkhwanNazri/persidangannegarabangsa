@@ -45,7 +45,13 @@ export default function ScanShell() {
   return (
     <>
       {/* Kamera ditutup bila tukar ke tab Rekod (jimat bateri, elak scan tak sengaja) */}
-           <div className="mx-auto w-full max-w-md pb-32">{tab === "scan" ? <ScanQR /> : <ScanLog />}</div>
+           {/* <div className="mx-auto w-full max-w-md pb-32">{tab === "scan" ? <ScanQR /> : <ScanLog />}</div> */}
+           <div className="mx-auto w-full max-w-md pb-32">
+        <div className={tab === "scan" ? "" : "hidden"}>
+          <ScanQR active={tab === "scan"} />
+        </div>
+        {tab === "log" && <ScanLog />}
+      </div>
 
             <nav className="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-center px-4 pb-[max(env(safe-area-inset-bottom),60px)] font-poppins">
         <div className={`pointer-events-auto flex items-center gap-1 rounded-full p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)] ${NAV_GLASS}`}>

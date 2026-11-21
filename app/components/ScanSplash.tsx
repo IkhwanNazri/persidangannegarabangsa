@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { APP_VERSION } from "@/app/lib/version";
 
 export default function ScanSplash() {
   const [show, setShow] = useState(false);
@@ -32,6 +33,9 @@ export default function ScanSplash() {
       <br/>
        <p className="mt-5 font-poppins text-lg font-bold text-white">Negara Bangsa</p>
       <p className="mt-1 font-poppins text-xs text-white/70">Urus Setia</p>
+      <p className="absolute bottom-8 font-mono text-[10px] tracking-wider text-white/50">
+        pnb-scan-{APP_VERSION}
+      </p>
     </div>
   );
 }

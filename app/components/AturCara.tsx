@@ -133,7 +133,7 @@ const schedules = {
       session:
         "SESI 1: PERLEMBAGAAN DAN RUKUN NEGARA TERAS PEMBINAAN NEGARA BANGSA",
          hari: "30 November",
-      venue: "Dewan Putra B2, Aras C - 2:30 ptg - 4:30 ptg",
+      venue: "Dewan Perdana - 2:30 ptg - 4:30 ptg",
 
       events: [
         {
@@ -169,7 +169,7 @@ const schedules = {
       session:
       "BUAL BICARA SENI",
        hari: "1 Disember",
-    venue: "Dewan Putra B2, Aras C - 9:00 pg - 10:30 pg",
+    venue: "Dewan Perdana - 9:00 pg - 10:30 pg",
     events: [
        {
         time: "",
@@ -194,7 +194,7 @@ const schedules = {
     session:
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
        hari: "1 Disember",
-    venue: "Dewan Putra B2, Aras C - 11:00 pg - 1:00 ptg",
+    venue: "Dewan Perdana - 11:00 pg - 1:00 ptg",
     events: [
     
      
@@ -243,7 +243,7 @@ const schedules = {
     session:
       "SESI 3: KEPELBAGAIAN, KEHARMONIAN DAN KESEPADUAN SOSIAL",
        hari: "1 Disember",
-    venue: "Dewan Putra B2, Aras C - 2:30 ptg - 4:30 ptg",
+    venue: "Dewan Perdana - 2:30 ptg - 4:30 ptg",
     events: [
       {
           time: "",
@@ -288,7 +288,7 @@ const schedules = {
     session:
       "SESI 4: SYARAHAN NEGARAWAN ",
        hari: "2 Disember",
-    venue: "Dewan Putra B2, Aras C - 9:00 pg - 11:00 pg",
+    venue: "Dewan Perdana - 9:00 pg - 11:00 pg",
     events: [
      
       {
@@ -327,7 +327,7 @@ const schedules = {
     session:
       "SESI 5: TRANSFORMASI NEGARA BANGSA: NARATIF NASIONAL, EKONOMI INKLUSIF DAN MODAL INSAN",
        hari: "2 Disember",
-    venue: "Dewan Putra B2, Aras C - 11:00 pg - 1:00 ptg",
+    venue: "Dewan Perdana - 11:00 pg - 1:00 ptg",
     events: [
       {
         time: "",
@@ -498,7 +498,7 @@ const dayInfo: Record<
     name: "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     date: "30 NOVEMBER - 2 Disember 2026",
     masa: "8:00 pg - 4:30 ptg",
-    tempat:"Dewan Putra B2, Aras C",
+    tempat:"Dewan Perdana",
   },
 
   "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN": {

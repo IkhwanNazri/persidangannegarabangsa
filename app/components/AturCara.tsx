@@ -822,7 +822,7 @@ export default function AturCara() {
 
   {/* VIEW ATUR CARA */}
   <a
-    href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA%20NEW.pdf"
+    href="https://heyzine.com/flip-book/4f0737ed53.html"
     target="_blank"
     rel="noopener noreferrer"
     className={`${BTN_GLOSSY} ${BTN_BIRU}`}
@@ -832,7 +832,7 @@ export default function AturCara() {
 
   {/* DOWNLOAD ATUR CARA */}
   <a
-    href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA%20NEW.pdf"
+    href="/images/Buku%20Atur%20Cara%20Persidangan%20Pembinaan%20Negara%20Bangsa%202026.pdf"
     download
     className={`${BTN_GLOSSY} ${BTN_MERAH}`}
   >

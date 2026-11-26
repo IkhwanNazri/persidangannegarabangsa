@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { motion } from "motion/react";
+import PanelModal from "./PanelModal";
+import { getPanelBio } from "../data/panelBios";
 
 type PanelPerson = {
   name: string;
@@ -12,6 +14,7 @@ type PanelPerson = {
   organization: string;
   image: string;
   tag: string;
+  bio?: string;
 };
 
 const ucapUtama: PanelPerson[] = [
@@ -63,6 +66,7 @@ const sesi1: PanelPerson[] = [
     organization: "",
     image: "/images/panel/yaa.png",
     tag: "UCAPTAMA 1",
+    bio: "Berpengalaman dalam ketiga-tiga cabang kerajaan, termasuk sebagai Ahli Dewan Negara dan Timbalan Menteri. Beliau pernah beramal sebagai peguam bela dan peguam cara sebelum dilantik sebagai Pesuruhjaya Kehakiman pada 2015. Beliau seterusnya berkhidmat sebagai Hakim Mahkamah Tinggi dan Hakim Mahkamah Rayuan sebelum dilantik sebagai Ketua Hakim Negara pada 28 Julai 2025.",
   },
   {
     name: "YBhg. Prof Emeritus Datuk Dr. Shad Saleem Faruqi",
@@ -481,6 +485,8 @@ function PanelSection({
   const containerWidth =
     columns === 2 ? "max-w-[900px]" : "max-w-full";
 
+      const [selected, setSelected] = useState<PanelPerson | null>(null);
+
   return (
     <section className="mt-10 sm:mt-14">
       <div className="mb-5 text-center sm:mb-7">
@@ -509,7 +515,11 @@ function PanelSection({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: (index % columns) * 0.07 }}
-           className={`group relative isolate flex min-w-0 flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
+                        onClick={() => setSelected(panel)}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setSelected(panel)}
+            role="button"
+            tabIndex={0}
+           className={`group relative isolate flex min-w-0 cursor-pointer flex-col overflow-hidden rounded-[18px] border border-[#D9DDF0] bg-white shadow-[0_7px_22px_rgba(36,16,93,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(36,16,93,0.18)] sm:rounded-[24px] ${
             
   panel.name.trim() === "YAB Datuk Amar Haji Fadillah Haji Yusof"||
             
@@ -558,11 +568,22 @@ function PanelSection({
                 </p>
               )}
 
-              <div className="mx-auto mt-3 h-0.5 w-9 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+               {getPanelBio(panel.name) ? (
+                <span className="mx-auto mt-auto inline-flex items-center gap-1 rounded-full  px-3 py-1 pt-1 font-poppins text-[9px] font-semibold text-[#062F63] transition group-hover:bg-[#062F63] group-hover:text-white sm:mt-4 sm:px-4 sm:py-1.5 sm:text-xs">
+                  Lihat Profil
+                  <ArrowUpRightIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                </span>
+              ) : (
+                <div className="mx-auto mt-3 h-0.5 w-9 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+              )}
             </div>
           </motion.article>
         ))}
       </div>
+                 <PanelModal
+        person={selected && { ...selected, bio: selected.bio ?? getPanelBio(selected.name) }}
+        onClose={() => setSelected(null)}
+      />
     </section>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Flipbook from "./Flipbook";
 
 import {
   CalendarDaysIcon,
@@ -8,10 +9,43 @@ import {
   ChevronRightIcon,
   ChevronDownIcon,
     ArrowDownTrayIcon,
+    EyeIcon,
   TrophyIcon,
 } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
+// ===== STYLE BUTTON GLOSSY (macam gambar) =====
+const BTN_GLOSSY =
+  "group relative flex w-full items-center justify-start gap-3 overflow-hidden whitespace-nowrap rounded-2xl px-5 py-4 font-montserrat text-[11px] font-extrabold uppercase tracking-[.06em] text-white ring-1 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 sm:justify-center sm:gap-4 sm:px-7 sm:text-sm sm:tracking-[.08em]";
+
+const BTN_BIRU =
+  "bg-gradient-to-b from-[#1F63E8] via-[#0A3BAA] to-[#062A85] ring-[#3B82FF]/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-3px_8px_rgba(0,0,0,0.3),0_14px_26px_-10px_rgba(10,59,170,0.7)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-3px_8px_rgba(0,0,0,0.3),0_20px_34px_-10px_rgba(10,59,170,0.85)]";
+
+const BTN_MERAH =
+  "bg-gradient-to-b from-[#FF4D4D] via-[#D90A20] to-[#9A0414] ring-[#FF6B6B]/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.35),inset_0_-3px_8px_rgba(0,0,0,0.3),0_14px_26px_-10px_rgba(217,10,32,0.7)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-3px_8px_rgba(0,0,0,0.3),0_20px_34px_-10px_rgba(217,10,32,0.85)]";
+
+/** Kilauan kaca + garis pemisah + ikon + teks */
+function IsiGlossy({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <>
+      {/* kilau atas */}
+      <span className="pointer-events-none absolute inset-x-2 top-[2px] h-[45%] rounded-t-[14px] rounded-b-md bg-gradient-to-b from-white/30 to-transparent" />
+      {/* sheen melengkung kanan atas */}
+      <span className="pointer-events-none absolute -right-8 -top-8 h-16 w-2/3 -rotate-6 rounded-[100%] bg-white/10" />
+      {/* sinaran lalu masa hover */}
+      <span className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-white/20 opacity-0 transition-all duration-700 group-hover:left-[120%] group-hover:opacity-100" />
+
+      <span className="relative z-10">{icon}</span>
+      <span className="relative z-10 h-6 w-px bg-white/35" />
+      <span className="relative z-10">{label}</span>
+    </>
+  );
+}
+
+const BUKU_PROGRAM_PAGES = Array.from(
+  { length: 12 },
+  (_, i) => `/images/buku-program/${String(i + 1).padStart(2, "0")}.jpg`
+);
 
 const schedules = {
   "UCAPTAMA DAN MAJLIS PEMBUKAAN": [
@@ -532,6 +566,7 @@ export default function AturCara() {
       [sessionKey]: !prev[sessionKey],
     }));
   };
+  const [flipbookOpen, setFlipbookOpen] = useState(false);
 
   const changeDay = (day: Day) => {
     setActiveDay(day);
@@ -767,30 +802,55 @@ export default function AturCara() {
           </motion.div>
         )}
 
-        <div className="mt-14 flex flex-wrap justify-center gap-4 ">
-  {/* VIEW PDF */}
+<div className="mx-auto mt-14 grid w-full max-w-[340px] grid-cols-1 gap-4 sm:max-w-[720px] sm:grid-cols-2 sm:gap-5">
+  {/* VIEW BUKU PROGRAM */}
+  <button
+    type="button"
+    onClick={() => setFlipbookOpen(true)}
+    className={`${BTN_GLOSSY} ${BTN_BIRU}`}
+  >
+    <IsiGlossy icon={<EyeIcon className="h-6 w-6" />} label="View Buku Program" />
+  </button>
+
+  {/* DOWNLOAD BUKU PROGRAM */}
+  <a href="/images/BUKU%20PROGRAM.pdf" download className={`${BTN_GLOSSY} ${BTN_MERAH}`}>
+    <IsiGlossy
+      icon={<ArrowDownTrayIcon className="h-6 w-6 transition-transform duration-300 group-hover:translate-y-0.5" />}
+      label="Download Buku Program"
+    />
+  </a>
+
+  {/* VIEW ATUR CARA */}
   <a
     href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA%20NEW.pdf"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center gap-3 rounded-xl bg-[#062F63] px-7 py-4 font-poppins text-xs font-bold uppercase tracking-[.12em] text-white transition hover:bg-[#E30620]"
+    className={`${BTN_GLOSSY} ${BTN_BIRU}`}
   >
-    <ArrowDownTrayIcon className="h-5 w-5" />
-    <span>View Atur Cara</span>
+    <IsiGlossy icon={<EyeIcon className="h-6 w-6" />} label="View Atur Cara" />
   </a>
 
-  {/* DOWNLOAD PDF */}
+  {/* DOWNLOAD ATUR CARA */}
   <a
-  href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA%20NEW.pdf"
-  download
-  className="group inline-flex items-center gap-3 rounded-xl bg-[#E30620] px-7 py-4 font-poppins text-xs font-bold uppercase tracking-[.12em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#062F63] hover:shadow-xl"
->
-  <ArrowDownTrayIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1" />
-  <span>Download Atur Cara</span>
-</a>
+    href="/images/ATUR%20CARA%20TENTATIF%20PERSIDANGAN%20PEMBINAAN%20NEGARA%20BANGSA%20NEW.pdf"
+    download
+    className={`${BTN_GLOSSY} ${BTN_MERAH}`}
+  >
+    <IsiGlossy
+      icon={<ArrowDownTrayIcon className="h-6 w-6 transition-transform duration-300 group-hover:translate-y-0.5" />}
+      label="Download Atur Cara"
+    />
+  </a>
 </div>
 
         </div>
+              <Flipbook
+        pages={BUKU_PROGRAM_PAGES}
+        downloadSrc="/images/BUKU%20PROGRAM.pdf"
+        open={flipbookOpen}
+        onClose={() => setFlipbookOpen(false)}
+        title="Buku Program"
+      />
      
     </section>
   );

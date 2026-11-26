@@ -6,6 +6,7 @@ import RSVP from "./components/RSVP";
 import Panel from "./components/Panel";
 import RakanPenaja from "./components/RakanPenaja";
 import Footer from "./components/Footer";
+import Prakata from "./components/Prakata";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       <main>
         <section id="home">
           <Hero />
+        </section>
+        <section id="prakata">
+              <Prakata />
         </section>
 
         <section id="mengenai">

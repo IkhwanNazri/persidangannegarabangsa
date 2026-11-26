@@ -19,7 +19,7 @@ const strategiks = [
   },
   {
     name: "Institut Malaysia Merdeka",
-    image: "/images/rakan/institut malaysia merdeka.JPEG",
+    image: "/images/rakan/institut malaysia merdeka.jpeg",
   },
  
 ];

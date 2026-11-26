@@ -14,13 +14,13 @@ const STATUS: Record<LogStatus, { label: string; dot: string; text: string }> = 
 
 // Ikut susunan lajur dalam Google Sheet
 const SESSIONS = [
-  { id: "perasmian", label: "Perasmian" },
-  { id: "sesi-1", label: "Sesi 1" },
-  { id: "sesi-2", label: "Sesi 2" },
-  { id: "sesi-3", label: "Sesi 3" },
-  { id: "sesi-4", label: "Sesi 4" },
-  { id: "sesi-5", label: "Sesi 5" },
-  { id: "penutup", label: "Penutup" },
+  { id: "hari-1", label: "Hari 1" },
+  { id: "hari-2", label: "Hari 2" },
+  { id: "hari-3", label: "Hari 3" },
+  // { id: "sesi-3", label: "Sesi 3" },
+  // { id: "sesi-4", label: "Sesi 4" },
+  // { id: "sesi-5", label: "Sesi 5" },
+  // { id: "penutup", label: "Penutup" },
 ];
 
 const formatTime = (iso: string) =>

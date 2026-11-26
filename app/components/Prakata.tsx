@@ -110,7 +110,7 @@ function UcapanBlock({ item, reverse }: { item: Ucapan; reverse: boolean }) {
         >
           <div
             className={`absolute -inset-3 rounded-[32px] border-2 border-[#D4AF37]/60 ${
-              reverse ? "translate-x-3 translate-y-3" : "-translate-x-3 translate-y-3"
+              reverse ? "" : ""
             }`}
           />
           <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]  shadow-[0_18px_40px_rgba(31,42,122,0.18)]">

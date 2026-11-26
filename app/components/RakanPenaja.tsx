@@ -17,6 +17,10 @@ const strategiks = [
     name: "Institut Integriti Malaysia",
     image: "/images/rakan/iim.png",
   },
+  {
+    name: "Institut Malaysia Merdeka",
+    image: "/images/rakan/institut malaysia merdeka.JPEG",
+  },
  
 ];
 const kolaborasis = [

@@ -52,7 +52,7 @@ const schedules = {
   {
     session: "MAJLIS PEMBUKAAN PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     hari: "30 November",
-    venue: "Dewan Perdana, Aras C - 11:00 pg - 1:00 tghari",
+    venue: "Dewan Perdana, Aras C - 11.00 pg - 1.00 tghari",
 
     events: [
       {
@@ -92,7 +92,7 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: " Bacaan Lafaz Ikrar Rukun Negara",
+        title: "Lafaz Ikrar Rukun Negara",
         description: "",
       },
 
@@ -100,6 +100,12 @@ const schedules = {
         time: "",
         type: "MAJLIS PERASMIAN",
         title: "Bacaan Doa",
+        description: "",
+      },
+      {
+        time: "",
+        type: "MAJLIS PERASMIAN",
+        title: "Persembahan Bicara Berirama",
         description: "",
       },
 
@@ -113,7 +119,7 @@ const schedules = {
         time: "",
         type: "Ucapatama dan Pembukaan ",
         title: "Bersama Membina Negara Bangsa",
-        description: "YAB Timbalan Perdana Menteri",
+        description: "YAB Timbalan Perdana Menteri merangkap Menteri Peralihan Tenaga dan Transformasi Air (PETRA)",
       },
       // {
       //   time: "",
@@ -124,7 +130,7 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PERASMIAN",
-        title: "Tayangan Montaj  ",
+        title: "Gimik Perasmian Pembukaan ",
         description: "",
       },
       {
@@ -167,7 +173,7 @@ const schedules = {
       session:
         "SESI 1: PERLEMBAGAAN DAN RUKUN NEGARA TERAS PEMBINAAN NEGARA BANGSA",
          hari: "30 November",
-      venue: "Dewan Perdana, Aras C  - 2:30 ptg - 4:30 ptg",
+      venue: "Dewan Perdana, Aras C  - 2.30 ptg - 4.30 ptg",
 
       events: [
         {
@@ -203,7 +209,7 @@ const schedules = {
       session:
       "BUAL BICARA SENI",
        hari: "1 Disember",
-    venue: "Dewan Perdana, Aras C - 9:00 pg - 10:30 pg",
+    venue: "Dewan Perdana, Aras C - 9.00 pg - 10.30 pg",
     events: [
        {
         time: "",
@@ -228,7 +234,7 @@ const schedules = {
     session:
       "SESI 2: WARISAN DAN SEJARAH: AKAR IDENTITI NASIONAL",
        hari: "1 Disember",
-    venue: "Dewan Perdana, Aras C - 11:00 pg - 1:00 ptg",
+    venue: "Dewan Perdana, Aras C - 11.00 pg - 1.00 ptg",
     events: [
     
      
@@ -277,7 +283,7 @@ const schedules = {
     session:
       "SESI 3: KEPELBAGAIAN, KEHARMONIAN DAN KESEPADUAN SOSIAL",
        hari: "1 Disember",
-    venue: "Dewan Perdana, Aras C - 2:30 ptg - 4:30 ptg",
+    venue: "Dewan Perdana, Aras C - 2.30 ptg - 4.30 ptg",
     events: [
       {
           time: "",
@@ -322,7 +328,7 @@ const schedules = {
     session:
       "SESI 4: SYARAHAN NEGARAWAN ",
        hari: "2 Disember",
-    venue: "Dewan Perdana, Aras C - 9:00 pg - 11:00 pg",
+    venue: "Dewan Perdana, Aras C - 9.00 pg - 11.00 pg",
     events: [
      
       {
@@ -361,7 +367,7 @@ const schedules = {
     session:
       "SESI 5: TRANSFORMASI NEGARA BANGSA: NARATIF NASIONAL, EKONOMI INKLUSIF DAN MODAL INSAN",
        hari: "2 Disember",
-    venue: "Dewan Perdana, Aras C - 11:00 pg - 1:00 ptg",
+    venue: "Dewan Perdana, Aras C - 11.00 pg - 1.00 ptg",
     events: [
       {
         time: "",
@@ -446,14 +452,14 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PENUTUPAN",
-        title: "Bacaan Lafaz Ikrar Rukun Negara",
+        title: "Lafaz Ikrar Rukun Negara",
         description: "",
       },
 
       {
         time: "",
         type: "MAJLIS PENUTUPAN",
-        title: "Bacaan Doa",
+        title: "Persembahan Tarian Kebudayaan",
         description: "",
       },
 
@@ -464,17 +470,18 @@ const schedules = {
         description: "YB Datuk Aaron Ago Dagang, Menteri Perpaduan Negara",
       },
 
-      {
-        time: "",
-        type: "RUMUSAN & MAJLIS PENUTUPAN",
-        title: "Ucapan Rumusan Persidangan dan Penutup",
-        description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
-      },
+      
       {
         time: "",
         type: "MAJLIS PENUTUPAN",
         title: "Tayangan Montaj",
         description: "",
+      },
+      {
+        time: "",
+        type: "RUMUSAN & MAJLIS PENUTUPAN",
+        title: "Ucapan Rumusan Persidangan dan Penutup",
+        description: "YAB Dato' Seri Anwar Ibrahim, Perdana Menteri",
       },
 
       {
@@ -487,13 +494,13 @@ const schedules = {
       {
         time: "",
         type: "MAJLIS PENUTUPAN",
-        title: "YAB Perdana Menteri meninggalkan Majlis",
+        title: "YAB Perdana Menteri melawat ruang pameran",
         description: "",
       },
       {
         time: "",
         type: "MAJLIS PENUTUPAN",
-        title: "YAB Perdana Menteri melawat ruang pameran",
+        title: "YAB Perdana Menteri meninggalkan Majlis",
         description: "",
       },
        
@@ -524,21 +531,21 @@ const dayInfo: Record<
   "UCAPTAMA DAN MAJLIS PEMBUKAAN": {
     name: "UCAPTAMA DAN MAJLIS PEMBUKAAN",
     date: "30 November 2026",
-    masa: "11:00 pg - 1:00 tghari",
+    masa: "11.00 pg - 1.00 tghari",
     tempat:"Dewan Perdana, Aras C",
   },
 
   "PERSIDANGAN PEMBINAAN NEGARA BANGSA": {
     name: "PERSIDANGAN PEMBINAAN NEGARA BANGSA",
     date: "30 NOVEMBER - 2 Disember 2026",
-    masa: "8:00 pg - 4:30 ptg",
+    masa: "8.00 pg - 4.30 ptg",
     tempat:"Dewan Perdana, Aras C",
   },
 
   "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN": {
     name: "RUMUSAN PERSIDANGAN DAN MAJLIS PERASMIAN PENUTUPAN",
     date: "2 Disember 2026",
-    masa: "2:30 ptg - 4:30 ptg",
+    masa: "2.30 ptg - 4.30 ptg",
     tempat:"Dewan Perdana, Aras C",
   },
 };

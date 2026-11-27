@@ -119,8 +119,23 @@ export default function Flipbook({
           mobileScrollSupport: false,
         });
         flip.on("flip", (e) => setPage(Number(e.data)));
-        flip.loadFromImages(pages);
-        // page-flip set min-width = minWidth pada element (dalam loadFromImages); buang supaya tak overflow
+
+        // Guna mod HTML (<img> sebenar), bukan loadFromImages (canvas). Mod canvas tak kira
+        // devicePixelRatio, jadi gambar nampak pecah/kabur kat phone (skrin 2x/3x).
+        const pageEls = pages.map((src, i) => {
+          const pageEl = document.createElement("div");
+          pageEl.style.background = "#fff";
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = `Muka ${i + 1}`;
+          img.draggable = false;
+          img.decoding = "async";
+          img.style.cssText = "display:block;width:100%;height:100%;object-fit:contain;user-select:none;";
+          pageEl.appendChild(img);
+          return pageEl;
+        });
+        flip.loadFromHTML(pageEls);
+        // page-flip set min-width = minWidth pada element (dalam loadFromHTML); buang supaya tak overflow
         el.style.minWidth = "0";
         window.dispatchEvent(new Event("resize"));
         flipRef.current = flip;
